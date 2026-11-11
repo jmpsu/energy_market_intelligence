@@ -1,0 +1,4 @@
+plant,capacity_MW,heat_rate_MMBtu_per_MWh,fuel_needed_MMBtu_per_h,output_MW,fuel_burn_MMBtu_per_h,lost_MW,margin_USD_per_MWh,lost_margin_USD_per_h
+P1,400,7.0,2800.0,400.0,2800.0,0.0,38.0,0.0
+P2,300,8.0,2400.0,275.0,2200.0,25.0,32.0,800.0
+P3,200,10.0,2000.0,0.0,0.0,200.0,20.0,4000.0

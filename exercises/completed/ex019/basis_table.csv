@@ -1,0 +1,8 @@
+hub,region,price_day1,price_day2,basis_day1,basis_day2,basis_change,type
+Waha,Permian,1.1,-0.4,-2.15,-3.65,-1.5,supply_area_discount
+AECO,Alberta,2.15,2.05,-1.1,-1.2000000000000002,-0.10000000000000009,supply_area_discount
+Dawn,Ontario,2.8,3.1,-0.4500000000000002,-0.1499999999999999,0.30000000000000027,supply_area_discount
+Chicago,Midwest,3.1,3.3,-0.1499999999999999,0.04999999999999982,0.19999999999999973,supply_area_discount
+Henry_Hub,Gulf,3.25,3.25,0.0,0.0,0.0,benchmark
+SoCal,California,3.95,4.4,0.7000000000000002,1.1500000000000004,0.4500000000000002,market_area_premium
+Algonquin,New_England,8.75,10.25,5.5,7.0,1.5,market_area_premium

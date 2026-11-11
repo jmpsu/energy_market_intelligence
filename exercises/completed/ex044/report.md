@@ -1,0 +1,42 @@
+# ex044 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+mtm_day1_USD: 26500
+
+mtm_day2_USD: 118000
+
+weekly_pnl_USD: 91500
+
+P1_pnl_USD: 60000
+
+P2_pnl_USD: -7500
+
+P3_pnl_USD: 30000
+
+P4_pnl_USD: -15000
+
+P5_pnl_USD: 12000
+
+P6_pnl_USD: 12000
+
+net_position_gal: 4200000
+
+net_position_bbl: 100000
+
+gross_notional_USD: 5057000
+
+largest_pnl_product: Propane
+
+propane_net_gal: 500000
+
+propane_flat_price_pnl_USD: 2500
+
+propane_basis_pnl_USD: 50000
+
+propane_total_pnl_USD: 52500
+
+propane_basis_move_USD_per_gal: 0.025
+
+NOTE: Propane P&L = net gallons x Conway move + Belvieu gallons x basis move: the spread leg, not outright price, drives the result.
+
+NOTE: Two price dates only; no VaR, no forward tenor, no physical logistics or storage costs.
+

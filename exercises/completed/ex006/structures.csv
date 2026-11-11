@@ -1,0 +1,4 @@
+structure,customer_rate_change_pct_now,who_carries_shock_now,supplier_margin_USD_per_MWh_now
+regulated_utility_average_cost,0.0,utility until fuel-clause true-up,-23.85000000000001
+competitive_fixed_price_retail,0.0,retailer (unless hedged),-23.85000000000001
+index_pass_through_retail,19.59737058340181,customer,6.0

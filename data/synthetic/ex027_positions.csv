@@ -1,0 +1,7 @@
+position_id,hub,position_MMBtu,trade_price
+R1,Henry_Hub,300000,3.20
+R2,Waha,150000,1.00
+R3,Algonquin,-80000,8.50
+R4,Dawn,-100000,2.85
+R5,AECO,120000,2.20
+R6,Henry_Hub,-350000,3.30

@@ -1,0 +1,74 @@
+section: '4.10'
+title: Infrastructure disruption and scenario analysis
+exercise: EX-036
+lessons:
+- id: L04.10.1
+  title: Outage scenario design
+  objective: Explain outage scenario design and show it in the EX-036 output.
+  prerequisites:
+  - L04.09.5
+  market_lesson: An outage scenario states which asset fails, by how much and for how long. [K]
+  north_american_example: 'EX-036 (Simulate a Winter Gas Supply Disruption) on synthetic North American data: peak_demand_Bcf_d = 25.26 [EX]'
+  terminal_activity: python3 emi.py run 036 | grep '^peak_demand_Bcf_d:'
+  expected_result: 'peak_demand_Bcf_d: 25.26'
+  professional_application: Model how extreme weather, production declines, pipeline constraints, and storage withdrawals affect regional markets.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.09.5
+  after: L04.10.2
+  status: written_command_verified
+- id: L04.10.2
+  title: Rerouting and alternative paths
+  objective: Explain rerouting and alternative paths and show it in the EX-036 output.
+  prerequisites:
+  - L04.10.1
+  market_lesson: Gas reroutes over alternative paths until they fill. [K]
+  north_american_example: 'EX-036 (Simulate a Winter Gas Supply Disruption) on synthetic North American data: peak_day = 4 [EX]'
+  terminal_activity: python3 emi.py run 036 | grep '^peak_day:'
+  expected_result: 'peak_day: 4'
+  professional_application: Model how extreme weather, production declines, pipeline constraints, and storage withdrawals affect regional markets.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.10.1
+  after: L04.10.3
+  status: written_command_verified
+- id: L04.10.3
+  title: Storage response
+  objective: Explain storage response and show it in the EX-036 output.
+  prerequisites:
+  - L04.10.2
+  market_lesson: Storage near the market covers the gap up to its deliverability. [K]
+  north_american_example: 'EX-036 (Simulate a Winter Gas Supply Disruption) on synthetic North American data: production_lost_Bcf = 9 [EX]'
+  terminal_activity: python3 emi.py run 036 | grep '^production_lost_Bcf:'
+  expected_result: 'production_lost_Bcf: 9'
+  professional_application: Model how extreme weather, production declines, pipeline constraints, and storage withdrawals affect regional markets.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.10.2
+  after: L04.10.4
+  status: written_command_verified
+- id: L04.10.4
+  title: Price and basis impacts
+  objective: Explain price and basis impacts and show it in the EX-036 output.
+  prerequisites:
+  - L04.10.3
+  market_lesson: What cannot be rerouted shows up as price spikes and wider basis. [K]
+  north_american_example: 'EX-036 (Simulate a Winter Gas Supply Disruption) on synthetic North American data: total_shortfall_Bcf = 6.8 [EX]'
+  terminal_activity: python3 emi.py run 036 | grep '^total_shortfall_Bcf:'
+  expected_result: 'total_shortfall_Bcf: 6.8'
+  professional_application: Model how extreme weather, production declines, pipeline constraints, and storage withdrawals affect regional markets.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.10.3
+  after: L04.10.5
+  status: written_command_verified
+- id: L04.10.5
+  title: Winter disruption stress case
+  objective: Explain winter disruption stress case and show it in the EX-036 output.
+  prerequisites:
+  - L04.10.4
+  market_lesson: A winter stress case combines high demand with lost supply on the same days. [K]
+  north_american_example: 'EX-036 (Simulate a Winter Gas Supply Disruption) on synthetic North American data: shortfall_days = 3,4,5 [EX]'
+  terminal_activity: python3 emi.py run 036 | grep '^shortfall_days:'
+  expected_result: 'shortfall_days: 3,4,5'
+  professional_application: Model how extreme weather, production declines, pipeline constraints, and storage withdrawals affect regional markets.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.10.4
+  after: L05.01.1
+  status: written_command_verified

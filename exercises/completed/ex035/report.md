@@ -1,0 +1,28 @@
+# ex035 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+United_States_residual_Bcf_d: 8
+
+Canada_residual_Bcf_d: 1.2
+
+Mexico_residual_Bcf_d: 0.5
+
+United_States_import_break_Bcf_d: 4.5
+
+Canada_import_break_Bcf_d: -3
+
+Mexico_import_break_Bcf_d: 0
+
+United_States_export_break_Bcf_d: -5
+
+Canada_export_break_Bcf_d: 5
+
+Mexico_export_break_Bcf_d: 0
+
+countries_fully_reconciled: Mexico
+
+total_remaining_capacity_Bcf_d: 10.5
+
+NOTE: Country totals may include LNG or third-country trade that the pipeline flow table omits; the breaks are flagged, not corrected.
+
+NOTE: No country balance closes to zero: residuals need a balancing item or a data correction.
+

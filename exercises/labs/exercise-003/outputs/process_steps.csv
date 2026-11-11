@@ -1,0 +1,10 @@
+process_step,volume_bcf
+Wellhead production,1.0
+Processing plant inlet,0.99
+Residue gas after processing,0.91
+Gas available after transmission fuel,0.895
+Direct delivery to city gate,0.695
+Storage injection,0.2
+Storage withdrawal,0.18
+Total city gate receipts,0.875
+End-user delivery,0.87

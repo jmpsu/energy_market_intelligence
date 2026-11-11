@@ -1,0 +1,74 @@
+section: '7.6'
+title: Renewable generation and forecasting
+exercise: EX-062
+lessons:
+- id: L07.06.1
+  title: Wind and solar forecast methods
+  objective: Explain wind and solar forecast methods and show it in the EX-062 output.
+  prerequisites:
+  - L07.05.5
+  market_lesson: Wind and solar forecasts combine weather models with plant data. [K]
+  north_american_example: 'EX-062 (Model Renewable Generation Forecast Errors) on synthetic North American data: mae_MW = 8.416667 [EX]'
+  terminal_activity: python3 emi.py run 062 | grep '^mae_MW:'
+  expected_result: 'mae_MW: 8.416667'
+  professional_application: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.05.5
+  after: L07.06.2
+  status: written_command_verified
+- id: L07.06.2
+  title: Forecast error metrics
+  objective: Explain forecast error metrics and show it in the EX-062 output.
+  prerequisites:
+  - L07.06.1
+  market_lesson: Error is measured with MAE, RMSE and bias. [K]
+  north_american_example: 'EX-062 (Model Renewable Generation Forecast Errors) on synthetic North American data: bias_MW = -2 [EX]'
+  terminal_activity: python3 emi.py run 062 | grep '^bias_MW:'
+  expected_result: 'bias_MW: -2'
+  professional_application: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.06.1
+  after: L07.06.3
+  status: written_command_verified
+- id: L07.06.3
+  title: Financial exposure from forecast error
+  objective: Explain financial exposure from forecast error and show it in the EX-062 output.
+  prerequisites:
+  - L07.06.2
+  market_lesson: A forecast miss is bought or sold at the real-time price. [K]
+  north_american_example: 'EX-062 (Model Renewable Generation Forecast Errors) on synthetic North American data: mape_pct = 35.290738 [EX]'
+  terminal_activity: python3 emi.py run 062 | grep '^mape_pct:'
+  expected_result: 'mape_pct: 35.290738'
+  professional_application: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.06.2
+  after: L07.06.4
+  status: written_command_verified
+- id: L07.06.4
+  title: Net load
+  objective: Explain net load and show it in the EX-062 output.
+  prerequisites:
+  - L07.06.3
+  market_lesson: Net load is demand minus wind and solar. [K]
+  north_american_example: 'EX-062 (Model Renewable Generation Forecast Errors) on synthetic North American data: rmse_MW = 10.161201 [EX]'
+  terminal_activity: python3 emi.py run 062 | grep '^rmse_MW:'
+  expected_result: 'rmse_MW: 10.161201'
+  professional_application: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.06.3
+  after: L07.06.5
+  status: written_command_verified
+- id: L07.06.5
+  title: Forecast evaluation
+  objective: Explain forecast evaluation and show it in the EX-062 output.
+  prerequisites:
+  - L07.06.4
+  market_lesson: Evaluate forecasts against a naive benchmark. [K]
+  north_american_example: 'EX-062 (Model Renewable Generation Forecast Errors) on synthetic North American data: da_revenue_USD = 73150 [EX]'
+  terminal_activity: python3 emi.py run 062 | grep '^da_revenue_USD:'
+  expected_result: 'da_revenue_USD: 73150'
+  professional_application: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.06.4
+  after: L07.07.1
+  status: written_command_verified

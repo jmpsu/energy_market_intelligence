@@ -1,0 +1,74 @@
+section: '2.7'
+title: Storage, injection, and withdrawal
+exercise: EX-025
+lessons:
+- id: L02.07.1
+  title: Storage facility types
+  objective: Explain storage facility types and show it in the EX-025 output.
+  prerequisites:
+  - L02.06.5
+  market_lesson: Depleted reservoirs hold the most gas; salt caverns cycle fastest; aquifers sit between. [K]
+  north_american_example: 'EX-025 (Calculate Gas Storage Arbitrage) on synthetic North American data: interpretation = inventory = end-of-month; opening = December close [EX]'
+  terminal_activity: python3 emi.py run 025 | grep '^interpretation:'
+  expected_result: 'interpretation: inventory = end-of-month; opening = December close'
+  professional_application: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.06.5
+  after: L02.07.2
+  status: written_command_verified
+- id: L02.07.2
+  title: Working gas vs base gas
+  objective: Explain working gas vs base gas and show it in the EX-025 output.
+  prerequisites:
+  - L02.07.1
+  market_lesson: Working gas can be withdrawn; base gas stays to hold pressure. [K]
+  north_american_example: 'EX-025 (Calculate Gas Storage Arbitrage) on synthetic North American data: all_months_within_limits = True [EX]'
+  terminal_activity: python3 emi.py run 025 | grep '^all_months_within_limits:'
+  expected_result: 'all_months_within_limits: True'
+  professional_application: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.07.1
+  after: L02.07.3
+  status: written_command_verified
+- id: L02.07.3
+  title: Injection and withdrawal ratchets
+  objective: Explain injection and withdrawal ratchets and show it in the EX-025 output.
+  prerequisites:
+  - L02.07.2
+  market_lesson: Ratchets cut allowed injection or withdrawal rates as inventory moves. [K]
+  north_american_example: 'EX-025 (Calculate Gas Storage Arbitrage) on synthetic North American data: total_injected_MMBtu = 90000 [EX]'
+  terminal_activity: python3 emi.py run 025 | grep '^total_injected_MMBtu:'
+  expected_result: 'total_injected_MMBtu: 90000'
+  professional_application: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.07.2
+  after: L02.07.4
+  status: written_command_verified
+- id: L02.07.4
+  title: Seasonal storage cycle
+  objective: Explain seasonal storage cycle and show it in the EX-025 output.
+  prerequisites:
+  - L02.07.3
+  market_lesson: Storage fills in the low-demand months and empties in winter. [K]
+  north_american_example: 'EX-025 (Calculate Gas Storage Arbitrage) on synthetic North American data: total_withdrawn_MMBtu = 90000 [EX]'
+  terminal_activity: python3 emi.py run 025 | grep '^total_withdrawn_MMBtu:'
+  expected_result: 'total_withdrawn_MMBtu: 90000'
+  professional_application: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.07.3
+  after: L02.07.5
+  status: written_command_verified
+- id: L02.07.5
+  title: Deliverability vs inventory
+  objective: Explain deliverability vs inventory and show it in the EX-025 output.
+  prerequisites:
+  - L02.07.4
+  market_lesson: 'Deliverability is the daily rate, not the inventory: plenty of gas in the ground can still be too slow on a peak day. [K]'
+  north_american_example: 'EX-025 (Calculate Gas Storage Arbitrage) on synthetic North American data: purchase_cost_USD = 257142.857143 [EX]'
+  terminal_activity: python3 emi.py run 025 | grep '^purchase_cost_USD:'
+  expected_result: 'purchase_cost_USD: 257142.857143'
+  professional_application: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.07.4
+  after: L02.08.1
+  status: written_command_verified

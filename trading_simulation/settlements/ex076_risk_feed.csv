@@ -1,0 +1,3 @@
+trade_id,commodity,location,signed_volume,price,price_mark,timestamp,provider,mtm_USD
+TR001,Natural_Gas,Henry_Hub,100000,3.2,3.25,2026-01-05T08:00:00,Provider_A,4999.999999999982
+TR003,Electricity,PJM_West,16000,45.0,45.5,2026-01-05T09:00:00,Provider_A,8000.0

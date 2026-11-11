@@ -1,0 +1,5 @@
+origin,destination,flow_Bcf_d,available_capacity_Bcf_d,remaining_capacity_Bcf_d,utilization_pct
+United States,Canada,5.0,7.0,2.0,71.42857142857143
+Canada,United States,3.0,5.0,2.0,60.0
+United States,Mexico,25.0,30.0,5.0,83.33333333333334
+Mexico,United States,0.5,2.0,1.5,25.0

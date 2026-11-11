@@ -1,0 +1,74 @@
+section: '6.3'
+title: PJM, MISO, SPP, ERCOT, CAISO, NYISO, and ISO-NE
+exercise: EX-045
+lessons:
+- id: L06.03.1
+  title: PJM and MISO features
+  objective: Explain pJM and MISO features and show it in the EX-045 output.
+  prerequisites:
+  - L06.02.5
+  market_lesson: PJM and MISO are large multi-state markets with nodal energy pricing. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: markets = 7 [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^markets:'
+  expected_result: 'markets: 7'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.02.5
+  after: L06.03.2
+  status: written_command_verified
+- id: L06.03.2
+  title: SPP and ERCOT features
+  objective: Explain sPP and ERCOT features and show it in the EX-045 output.
+  prerequisites:
+  - L06.03.1
+  market_lesson: SPP covers the central plains; ERCOT is an energy-only Texas market under state oversight. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: highest_rt_price_market = ISO_NE [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^highest_rt_price_market:'
+  expected_result: 'highest_rt_price_market: ISO_NE'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.03.1
+  after: L06.03.3
+  status: written_command_verified
+- id: L06.03.3
+  title: CAISO and Western EIM
+  objective: Explain cAISO and Western EIM and show it in the EX-045 output.
+  prerequisites:
+  - L06.03.2
+  market_lesson: CAISO runs California and a wider Western real-time imbalance market. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: largest_rt_minus_da_market = ERCOT [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^largest_rt_minus_da_market:'
+  expected_result: 'largest_rt_minus_da_market: ERCOT'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.03.2
+  after: L06.03.4
+  status: written_command_verified
+- id: L06.03.4
+  title: NYISO and ISO-NE features
+  objective: Explain nYISO and ISO-NE features and show it in the EX-045 output.
+  prerequisites:
+  - L06.03.3
+  market_lesson: NYISO and ISO-NE are single-state and six-state markets with tight gas dependence. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: largest_rt_minus_da_USD_per_MWh = 7 [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^largest_rt_minus_da_USD_per_MWh:'
+  expected_result: 'largest_rt_minus_da_USD_per_MWh: 7'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.03.3
+  after: L06.03.5
+  status: written_command_verified
+- id: L06.03.5
+  title: Cross-market comparison
+  objective: Explain cross-market comparison and show it in the EX-045 output.
+  prerequisites:
+  - L06.03.4
+  market_lesson: Markets differ in capacity mechanisms, scarcity pricing and settlement detail. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: highest_renewable_share_market = SPP [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^highest_renewable_share_market:'
+  expected_result: 'highest_renewable_share_market: SPP'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.03.4
+  after: L06.04.1
+  status: written_command_verified

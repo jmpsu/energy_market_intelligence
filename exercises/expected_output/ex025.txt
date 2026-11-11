@@ -1,0 +1,15 @@
+ex025 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+interpretation: inventory = end-of-month; opening = December close
+all_months_within_limits: True
+total_injected_MMBtu: 90000
+total_withdrawn_MMBtu: 90000
+purchase_cost_USD: 257142.857143
+sales_revenue_USD: 423720
+operating_fees_USD: 12600
+gross_margin_USD: 166577.142857
+net_margin_USD: 153977.142857
+no_storage_margin_USD: 0
+lp_optimal_net_margin_USD: 200711.020408
+lp_optimal_cycled_MMBtu: 110000
+NOTE: Read as start-of-month, the supplied inventory path violates September and October capacity limits; end-of-month is the only reading consistent with the limits.
+NOTE: No discounting, no bid-offer, forward prices assumed locked in (intrinsic value only).

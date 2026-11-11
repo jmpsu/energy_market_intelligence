@@ -1,0 +1,30 @@
+# ex042 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+Ethane_feed_cost_c_per_lb_ethylene: 10.144177
+
+Ethane_cash_cost_c_per_lb_ethylene: 13.144177
+
+Ethane_margin_c_per_lb_ethylene: 8.855823
+
+Ethane_breakeven_feed_price_USD_per_gal: 0.440154
+
+Propane_feed_cost_c_per_lb_ethylene: 40.622884
+
+Propane_cash_cost_c_per_lb_ethylene: 25.622884
+
+Propane_margin_c_per_lb_ethylene: -3.622884
+
+Propane_breakeven_feed_price_USD_per_gal: 0.655788
+
+preferred_feed: Ethane
+
+ethane_advantage_c_per_lb: 12.478707
+
+ethane_annual_margin_USD_million: 292.242165
+
+ethane_feed_bbl_per_d_at_capacity: 92922.467352
+
+NOTE: Yields, co-product credits and conversion costs are single-number synthetic assumptions; real crackers use full yield slates by feed and severity.
+
+NOTE: Ethylene price is a hypothetical input, not a quote.
+

@@ -1,0 +1,3 @@
+scenario,demand_MW,outage_generator,outage_capacity_MW
+Baseline,5500,None,0
+Outage,5500,GAS_02,1200

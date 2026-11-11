@@ -1,0 +1,74 @@
+section: '11.8'
+title: Adoption, retention, revenue, and customer value
+exercise: EX-098
+lessons:
+- id: L11.08.1
+  title: Adoption metrics
+  objective: Explain adoption metrics and show it in the EX-098 output.
+  prerequisites:
+  - L11.07.5
+  market_lesson: Adoption metrics count active use. [K]
+  north_american_example: 'EX-098 (Build Product Performance Metrics) on synthetic North American data: adoption_wau_pct_of_licensed = 46 [EX]'
+  terminal_activity: python3 emi.py run 098 | grep '^adoption_wau_pct_of_licensed:'
+  expected_result: 'adoption_wau_pct_of_licensed: 46'
+  professional_application: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.07.5
+  after: L11.08.2
+  status: written_command_verified
+- id: L11.08.2
+  title: Retention and churn
+  objective: Explain retention and churn and show it in the EX-098 output.
+  prerequisites:
+  - L11.08.1
+  market_lesson: Retention is customers kept; churn is customers lost. [K]
+  north_american_example: 'EX-098 (Build Product Performance Metrics) on synthetic North American data: week8_retention_of_week1_users_pct = 47.826087 [EX]'
+  terminal_activity: python3 emi.py run 098 | grep '^week8_retention_of_week1_users_pct:'
+  expected_result: 'week8_retention_of_week1_users_pct: 47.826087'
+  professional_application: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.08.1
+  after: L11.08.3
+  status: written_command_verified
+- id: L11.08.3
+  title: Revenue metrics
+  objective: Explain revenue metrics and show it in the EX-098 output.
+  prerequisites:
+  - L11.08.2
+  market_lesson: Revenue metrics include recurring revenue and net revenue retention. [K]
+  north_american_example: 'EX-098 (Build Product Performance Metrics) on synthetic North American data: data_completeness_pct = 85.714286 [EX]'
+  terminal_activity: python3 emi.py run 098 | grep '^data_completeness_pct:'
+  expected_result: 'data_completeness_pct: 85.714286'
+  professional_application: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.08.2
+  after: L11.08.4
+  status: written_command_verified
+- id: L11.08.4
+  title: Customer value measurement
+  objective: Explain customer value measurement and show it in the EX-098 output.
+  prerequisites:
+  - L11.08.3
+  market_lesson: Customer value is the outcome achieved. [K]
+  north_american_example: 'EX-098 (Build Product Performance Metrics) on synthetic North American data: model_backcast_mae_USD_per_MWh = 1.549857 [EX]'
+  terminal_activity: python3 emi.py run 098 | grep '^model_backcast_mae_USD_per_MWh:'
+  expected_result: 'model_backcast_mae_USD_per_MWh: 1.549857'
+  professional_application: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.08.3
+  after: L11.08.5
+  status: written_command_verified
+- id: L11.08.5
+  title: KPI dashboard
+  objective: Explain kPI dashboard and show it in the EX-098 output.
+  prerequisites:
+  - L11.08.4
+  market_lesson: A KPI dashboard shows a few metrics with targets. [K]
+  north_american_example: 'EX-098 (Build Product Performance Metrics) on synthetic North American data: net_revenue_retention_pct = 90.4 [EX]'
+  terminal_activity: python3 emi.py run 098 | grep '^net_revenue_retention_pct:'
+  expected_result: 'net_revenue_retention_pct: 90.4'
+  professional_application: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.08.4
+  after: L11.09.1
+  status: written_command_verified

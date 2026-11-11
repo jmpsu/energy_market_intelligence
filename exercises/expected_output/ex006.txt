@@ -1,0 +1,10 @@
+ex006 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+retail_cost_USD_per_MWh: 121.7
+wholesale_energy_share_pct: 36.976171
+shock_pct: 50
+retail_cost_after_shock: 145.55
+retail_cost_change_pct: 19.597371
+unhedged_fixed_retailer_loss_USD_per_MWh: 23.85
+pass_through_ratio: 0.391947
+NOTE: A 50% wholesale move changes the retail cost far less because most of the bill is not energy.
+NOTE: Synthetic cost stack; real tariffs differ by state and utility.

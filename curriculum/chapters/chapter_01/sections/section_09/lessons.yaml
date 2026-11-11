@@ -1,0 +1,74 @@
+section: '1.9'
+title: Market-data sources and industry information
+exercise: EX-007
+lessons:
+- id: L01.09.1
+  title: Price reporting agencies and indices
+  objective: Explain price reporting agencies and indices and show it in the EX-007 output.
+  prerequisites:
+  - L01.08.5
+  market_lesson: Price reporting agencies survey trades and publish indices that contracts settle against. [K]
+  north_american_example: 'EX-007 (Build an Energy Market Reference Database) on synthetic North American data: tables = dim_location,location,ref_pipeline_segment,ref_power_market [EX]'
+  terminal_activity: python3 emi.py run 007 | grep '^tables:'
+  expected_result: 'tables: dim_location,location,ref_pipeline_segment,ref_power_market'
+  professional_application: Create structured records for major North American energy hubs, pipelines, power markets, and trading locations.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.08.5
+  after: L01.09.2
+  status: written_command_verified
+- id: L01.09.2
+  title: ISO/RTO public data
+  objective: Explain iSO/RTO public data and show it in the EX-007 output.
+  prerequisites:
+  - L01.09.1
+  market_lesson: ISOs publish prices, load, generation and constraints, usually free and in bulk. [K]
+  north_american_example: 'EX-007 (Build an Energy Market Reference Database) on synthetic North American data: locations = 14 [EX]'
+  terminal_activity: python3 emi.py run 007 | grep '^locations:'
+  expected_result: 'locations: 14'
+  professional_application: Create structured records for major North American energy hubs, pipelines, power markets, and trading locations.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.09.1
+  after: L01.09.3
+  status: written_command_verified
+- id: L01.09.3
+  title: EIA and regulatory datasets
+  objective: Explain eIA and regulatory datasets and show it in the EX-007 output.
+  prerequisites:
+  - L01.09.2
+  market_lesson: EIA and regulators publish production, storage, flows and filings; coverage is broad, timing is lagged. [K]
+  north_american_example: 'EX-007 (Build an Energy Market Reference Database) on synthetic North American data: gas_locations = 5 [EX]'
+  terminal_activity: python3 emi.py run 007 | grep '^gas_locations:'
+  expected_result: 'gas_locations: 5'
+  professional_application: Create structured records for major North American energy hubs, pipelines, power markets, and trading locations.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.09.2
+  after: L01.09.4
+  status: written_command_verified
+- id: L01.09.4
+  title: Pipeline electronic bulletin boards
+  objective: Explain pipeline electronic bulletin boards and show it in the EX-007 output.
+  prerequisites:
+  - L01.09.3
+  market_lesson: Pipeline bulletin boards post capacity, scheduled volumes and notices each cycle. [K]
+  north_american_example: 'EX-007 (Build an Energy Market Reference Database) on synthetic North American data: ngl_locations = 2 [EX]'
+  terminal_activity: python3 emi.py run 007 | grep '^ngl_locations:'
+  expected_result: 'ngl_locations: 2'
+  professional_application: Create structured records for major North American energy hubs, pipelines, power markets, and trading locations.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.09.3
+  after: L01.09.5
+  status: written_command_verified
+- id: L01.09.5
+  title: Data licensing and provenance
+  objective: Explain data licensing and provenance and show it in the EX-007 output.
+  prerequisites:
+  - L01.09.4
+  market_lesson: Licences limit redistribution and derived use; a product must track where every data point came from. [K]
+  north_american_example: 'EX-007 (Build an Energy Market Reference Database) on synthetic North American data: power_markets = 7 [EX]'
+  terminal_activity: python3 emi.py run 007 | grep '^power_markets:'
+  expected_result: 'power_markets: 7'
+  professional_application: Create structured records for major North American energy hubs, pipelines, power markets, and trading locations.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.09.4
+  after: L01.10.1
+  status: written_command_verified

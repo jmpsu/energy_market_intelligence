@@ -1,0 +1,4 @@
+block,MW,hours
+base,1000,8760
+intermediate,600,4000
+peak,400,500

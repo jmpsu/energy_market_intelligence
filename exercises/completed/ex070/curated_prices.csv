@@ -1,0 +1,7 @@
+timestamp,commodity,location,price,unit,currency,provider,raw_id
+2026-01-05T08:00:00,Natural_Gas,AECO,2.15,MMBtu,USD,Provider_A,4
+2026-01-05T08:00:00,Natural_Gas,Henry_Hub,3.25,MMBtu,USD,Provider_A,1
+2026-01-05T08:00:00,Natural_Gas,Waha,1.1,MMBtu,USD,Provider_A,3
+2026-01-05T09:00:00,Electricity,ERCOT_North,52.0,MWh,USD,Provider_A,7
+2026-01-05T09:00:00,Electricity,PJM_West,45.5,MWh,USD,Provider_A,5
+2026-01-05T10:00:00,Natural_Gas,Waha,-0.4,MMBtu,USD,Provider_A,9

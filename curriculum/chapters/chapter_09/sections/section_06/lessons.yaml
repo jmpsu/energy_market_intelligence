@@ -1,0 +1,74 @@
+section: '9.6'
+title: VaR and Expected Shortfall
+exercise: EX-081
+lessons:
+- id: L09.06.1
+  title: VaR concepts
+  objective: Explain vaR concepts and show it in the EX-081 output.
+  prerequisites:
+  - L09.05.5
+  market_lesson: VaR is the loss not exceeded at a confidence level over a horizon. [K]
+  north_american_example: 'EX-081 (Calculate Value at Risk) on synthetic North American data: observations = 500 [EX]'
+  terminal_activity: python3 emi.py run 081 | grep '^observations:'
+  expected_result: 'observations: 500'
+  professional_application: Estimate portfolio losses at a specified confidence level and holding period.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.05.5
+  after: L09.06.2
+  status: written_command_verified
+- id: L09.06.2
+  title: Parametric VaR
+  objective: Explain parametric VaR and show it in the EX-081 output.
+  prerequisites:
+  - L09.06.1
+  market_lesson: Parametric VaR assumes normal returns. [K]
+  north_american_example: 'EX-081 (Calculate Value at Risk) on synthetic North American data: portfolio_daily_vol_USD = 142938.498174 [EX]'
+  terminal_activity: python3 emi.py run 081 | grep '^portfolio_daily_vol_USD:'
+  expected_result: 'portfolio_daily_vol_USD: 142938.498174'
+  professional_application: Estimate portfolio losses at a specified confidence level and holding period.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.06.1
+  after: L09.06.3
+  status: written_command_verified
+- id: L09.06.3
+  title: Historical simulation
+  objective: Explain historical simulation and show it in the EX-081 output.
+  prerequisites:
+  - L09.06.2
+  market_lesson: Historical simulation replays past returns. [K]
+  north_american_example: 'EX-081 (Calculate Value at Risk) on synthetic North American data: parametric_var95_USD = 235112.907152 [EX]'
+  terminal_activity: python3 emi.py run 081 | grep '^parametric_var95_USD:'
+  expected_result: 'parametric_var95_USD: 235112.907152'
+  professional_application: Estimate portfolio losses at a specified confidence level and holding period.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.06.2
+  after: L09.06.4
+  status: written_command_verified
+- id: L09.06.4
+  title: Monte Carlo VaR
+  objective: Explain monte Carlo VaR and show it in the EX-081 output.
+  prerequisites:
+  - L09.06.3
+  market_lesson: Monte Carlo VaR simulates price paths. [K]
+  north_american_example: 'EX-081 (Calculate Value at Risk) on synthetic North American data: parametric_var99_USD = 332524.671345 [EX]'
+  terminal_activity: python3 emi.py run 081 | grep '^parametric_var99_USD:'
+  expected_result: 'parametric_var99_USD: 332524.671345'
+  professional_application: Estimate portfolio losses at a specified confidence level and holding period.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.06.3
+  after: L09.06.5
+  status: written_command_verified
+- id: L09.06.5
+  title: Expected Shortfall
+  objective: Explain expected Shortfall and show it in the EX-081 output.
+  prerequisites:
+  - L09.06.4
+  market_lesson: Expected Shortfall averages the losses beyond VaR. [K]
+  north_american_example: 'EX-081 (Calculate Value at Risk) on synthetic North American data: historical_var95_USD = 229811.6 [EX]'
+  terminal_activity: python3 emi.py run 081 | grep '^historical_var95_USD:'
+  expected_result: 'historical_var95_USD: 229811.6'
+  professional_application: Estimate portfolio losses at a specified confidence level and holding period.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.06.4
+  after: L09.07.1
+  status: written_command_verified

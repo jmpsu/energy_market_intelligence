@@ -1,0 +1,74 @@
+section: '9.3'
+title: Energy price forecasting
+exercise: EX-077
+lessons:
+- id: L09.03.1
+  title: Forecast horizons
+  objective: Explain forecast horizons and show it in the EX-077 output.
+  prerequisites:
+  - L09.02.5
+  market_lesson: Short horizons lean on weather and current data; long horizons on fundamentals. [K]
+  north_american_example: 'EX-077 (Build a Natural Gas Price Forecast) on synthetic North American data: train_rows = 300 [EX]'
+  terminal_activity: python3 emi.py run 077 | grep '^train_rows:'
+  expected_result: 'train_rows: 300'
+  professional_application: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.02.5
+  after: L09.03.2
+  status: written_command_verified
+- id: L09.03.2
+  title: Time-series models
+  objective: Explain time-series models and show it in the EX-077 output.
+  prerequisites:
+  - L09.03.1
+  market_lesson: Time-series models use the series' own past. [K]
+  north_american_example: 'EX-077 (Build a Natural Gas Price Forecast) on synthetic North American data: test_rows = 99 [EX]'
+  terminal_activity: python3 emi.py run 077 | grep '^test_rows:'
+  expected_result: 'test_rows: 99'
+  professional_application: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.03.1
+  after: L09.03.3
+  status: written_command_verified
+- id: L09.03.3
+  title: Regression with fundamentals
+  objective: Explain regression with fundamentals and show it in the EX-077 output.
+  prerequisites:
+  - L09.03.2
+  market_lesson: Regression adds drivers such as weather and storage. [K]
+  north_american_example: 'EX-077 (Build a Natural Gas Price Forecast) on synthetic North American data: intercept = 0.270758 [EX]'
+  terminal_activity: python3 emi.py run 077 | grep '^intercept:'
+  expected_result: 'intercept: 0.270758'
+  professional_application: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.03.2
+  after: L09.03.4
+  status: written_command_verified
+- id: L09.03.4
+  title: Forecast evaluation
+  objective: Explain forecast evaluation and show it in the EX-077 output.
+  prerequisites:
+  - L09.03.3
+  market_lesson: Evaluate out of sample against a naive forecast. [K]
+  north_american_example: 'EX-077 (Build a Natural Gas Price Forecast) on synthetic North American data: coef_lag_price = 0.889493 [EX]'
+  terminal_activity: python3 emi.py run 077 | grep '^coef_lag_price:'
+  expected_result: 'coef_lag_price: 0.889493'
+  professional_application: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.03.3
+  after: L09.03.5
+  status: written_command_verified
+- id: L09.03.5
+  title: Model selection
+  objective: Explain model selection and show it in the EX-077 output.
+  prerequisites:
+  - L09.03.4
+  market_lesson: Prefer the simplest model that beats the benchmark. [K]
+  north_american_example: 'EX-077 (Build a Natural Gas Price Forecast) on synthetic North American data: coef_hdd = 0.004145 [EX]'
+  terminal_activity: python3 emi.py run 077 | grep '^coef_hdd:'
+  expected_result: 'coef_hdd: 0.004145'
+  professional_application: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.03.4
+  after: L09.04.1
+  status: written_command_verified

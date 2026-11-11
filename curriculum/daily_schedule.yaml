@@ -1,0 +1,86 @@
+days:
+  1:
+    chapter: 1
+    title: North American Energy Market Architecture
+    tier1: []
+  2:
+    chapter: 2
+    title: North American Natural Gas Physical Markets
+    tier1:
+    - EX-015
+  3:
+    chapter: 3
+    title: Natural Gas Pricing, Trading, and Risk
+    tier1:
+    - EX-021
+    - EX-023
+    - EX-025
+  4:
+    chapter: 4
+    title: Pipeline Networks, LNG, and Cross-Border Markets
+    tier1:
+    - EX-033
+  5:
+    chapter: 5
+    title: North American NGL Markets
+    tier1:
+    - EX-039
+    - EX-040
+  6:
+    chapter: 6
+    title: North American Wholesale Electricity Markets
+    tier1:
+    - EX-047
+    - EX-048
+    - EX-056
+  7:
+    chapter: 7
+    title: Generation, Renewables, Storage, and Asset Optimization
+    tier1:
+    - EX-055
+    - EX-063
+    - EX-065
+  8:
+    chapter: 8
+    title: Energy Trading Workflows and Enterprise Systems
+    tier1:
+    - EX-070
+    - EX-071
+  9:
+    chapter: 9
+    title: Quantitative Analytics, Forecasting, and Portfolio Risk
+    tier1:
+    - EX-077
+    - EX-081
+    - EX-082
+    - EX-084
+  10:
+    chapter: 9
+    title: Quantitative Analytics, Forecasting, and Portfolio Risk
+    tier1:
+    - EX-077
+    - EX-081
+    - EX-082
+    - EX-084
+  11:
+    chapter: 10
+    title: Modeling, Simulation, Optimization, and Data Engineering
+    tier1:
+    - EX-090
+    - EX-094
+  12:
+    chapter: 10
+    title: Modeling, Simulation, Optimization, and Data Engineering
+    tier1:
+    - EX-090
+    - EX-094
+  13:
+    chapter: 11
+    title: Energy Software Product Strategy and Leadership
+    tier1:
+    - EX-095
+  14:
+    chapter: 12
+    title: Integrated Energy Market Intelligence and Product Leadership Capstone
+    tier1:
+    - EX-100

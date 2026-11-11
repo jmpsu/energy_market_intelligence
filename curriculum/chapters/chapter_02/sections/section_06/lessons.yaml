@@ -1,0 +1,74 @@
+section: '2.6'
+title: Pipeline topology, capacity, and constraints
+exercise: EX-014
+lessons:
+- id: L02.06.1
+  title: Nameplate vs operational capacity
+  objective: Explain nameplate vs operational capacity and show it in the EX-014 output.
+  prerequisites:
+  - L02.05.5
+  market_lesson: Nameplate is design capacity; operational capacity is what the pipeline can move today. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Permian_to_Gulf_utilization_pct = 99.459459 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Permian_to_Gulf_utilization_pct:'
+  expected_result: 'Permian_to_Gulf_utilization_pct: 99.459459'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.05.5
+  after: L02.06.2
+  status: written_command_verified
+- id: L02.06.2
+  title: Contracted vs available capacity
+  objective: Explain contracted vs available capacity and show it in the EX-014 output.
+  prerequisites:
+  - L02.06.1
+  market_lesson: Contracted capacity is sold under firm agreements; available capacity is what remains to sell. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Appalachia_to_NE_utilization_pct = 78.666667 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Appalachia_to_NE_utilization_pct:'
+  expected_result: 'Appalachia_to_NE_utilization_pct: 78.666667'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.06.1
+  after: L02.06.3
+  status: written_command_verified
+- id: L02.06.3
+  title: Throughput and utilization
+  objective: Explain throughput and utilization and show it in the EX-014 output.
+  prerequisites:
+  - L02.06.2
+  market_lesson: Utilisation is scheduled volume divided by operational capacity. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Midcon_to_Chicago_utilization_pct = 64 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Midcon_to_Chicago_utilization_pct:'
+  expected_result: 'Midcon_to_Chicago_utilization_pct: 64'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.06.2
+  after: L02.06.4
+  status: written_command_verified
+- id: L02.06.4
+  title: Bottlenecks and constraint points
+  objective: Explain bottlenecks and constraint points and show it in the EX-014 output.
+  prerequisites:
+  - L02.06.3
+  market_lesson: A constraint point is a segment or compressor that fills before the rest of the system. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Rockies_to_West_utilization_pct = 100.555556 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Rockies_to_West_utilization_pct:'
+  expected_result: 'Rockies_to_West_utilization_pct: 100.555556'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.06.3
+  after: L02.06.5
+  status: written_command_verified
+- id: L02.06.5
+  title: Constraint impact on price
+  objective: Explain constraint impact on price and show it in the EX-014 output.
+  prerequisites:
+  - L02.06.4
+  market_lesson: When a constraint binds, prices upstream fall and prices downstream rise. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: constrained_segments = Permian_to_Gulf [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^constrained_segments:'
+  expected_result: 'constrained_segments: Permian_to_Gulf'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.06.4
+  after: L02.07.1
+  status: written_command_verified

@@ -1,0 +1,4 @@
+technology,fixed_cost_USD_per_MW_yr,variable_cost_USD_per_MWh,capacity_MW,energy_MWh,capacity_factor_pct,total_cost_USD
+Baseload,300000,8,1000.0,8760000.0,100.0,370080000.0
+Combined_Cycle,120000,30,600.0,2400000.0,45.662100456621005,144000000.0
+Combustion_Turbine,60000,60,400.0,200000.0,5.707762557077626,36000000.0

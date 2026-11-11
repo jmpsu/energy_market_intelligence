@@ -1,0 +1,26 @@
+# ex046 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+iso_spot_seller: 42
+
+bilateral_physical_with_wheeling_seller: 45
+
+iso_plus_cfd_at_gen_node_seller: 45
+
+iso_plus_cfd_at_load_node_seller: 39
+
+iso_spot_buyer: 48
+
+bilateral_physical_with_wheeling_buyer: 50.515464
+
+iso_plus_cfd_at_gen_node_buyer: 51
+
+iso_plus_cfd_at_load_node_buyer: 45
+
+congestion_USD_per_MWh: 6
+
+congestion_total_USD: 9600
+
+MWh: 1600
+
+NOTE: In every ISO structure someone holds the 6 USD/MWh node-to-node difference; an FTR is the instrument that hedges it (EX-056, EX-058).
+

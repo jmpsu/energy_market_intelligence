@@ -1,0 +1,74 @@
+section: '10.9'
+title: Model calibration, validation, and reproducibility
+exercise: EX-094
+lessons:
+- id: L10.09.1
+  title: Calibration methods
+  objective: Explain calibration methods and show it in the EX-094 output.
+  prerequisites:
+  - L10.08.5
+  market_lesson: Calibration tunes parameters so outputs match observations. [K]
+  north_american_example: 'EX-094 (Build a Simulation Validation Framework) on synthetic North American data: hours = 48 [EX]'
+  terminal_activity: python3 emi.py run 094 | grep '^hours:'
+  expected_result: 'hours: 48'
+  professional_application: Compare model outputs against historical observations and independent calculations; identify calibration errors and structural limitations.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.08.5
+  after: L10.09.2
+  status: written_command_verified
+- id: L10.09.2
+  title: Backcasting
+  objective: Explain backcasting and show it in the EX-094 output.
+  prerequisites:
+  - L10.09.1
+  market_lesson: Backcasting runs the model on a past period. [K]
+  north_american_example: 'EX-094 (Build a Simulation Validation Framework) on synthetic North American data: energy_balance_all_hours = True [EX]'
+  terminal_activity: python3 emi.py run 094 | grep '^energy_balance_all_hours:'
+  expected_result: 'energy_balance_all_hours: True'
+  professional_application: Compare model outputs against historical observations and independent calculations; identify calibration errors and structural limitations.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.09.1
+  after: L10.09.3
+  status: written_command_verified
+- id: L10.09.3
+  title: Validation metrics
+  objective: Explain validation metrics and show it in the EX-094 output.
+  prerequisites:
+  - L10.09.2
+  market_lesson: Validation metrics quantify error. [K]
+  north_american_example: 'EX-094 (Build a Simulation Validation Framework) on synthetic North American data: model_prices_are_stack_costs = True [EX]'
+  terminal_activity: python3 emi.py run 094 | grep '^model_prices_are_stack_costs:'
+  expected_result: 'model_prices_are_stack_costs: True'
+  professional_application: Compare model outputs against historical observations and independent calculations; identify calibration errors and structural limitations.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.09.2
+  after: L10.09.4
+  status: written_command_verified
+- id: L10.09.4
+  title: Reproducibility and versioning
+  objective: Explain reproducibility and versioning and show it in the EX-094 output.
+  prerequisites:
+  - L10.09.3
+  market_lesson: Version inputs, code and outputs so runs reproduce. [K]
+  north_american_example: 'EX-094 (Build a Simulation Validation Framework) on synthetic North American data: validation_mae_raw = 6.674167 [EX]'
+  terminal_activity: python3 emi.py run 094 | grep '^validation_mae_raw:'
+  expected_result: 'validation_mae_raw: 6.674167'
+  professional_application: Compare model outputs against historical observations and independent calculations; identify calibration errors and structural limitations.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.09.3
+  after: L10.09.5
+  status: written_command_verified
+- id: L10.09.5
+  title: Validation framework
+  objective: Explain validation framework and show it in the EX-094 output.
+  prerequisites:
+  - L10.09.4
+  market_lesson: A validation framework runs the checks every time. [K]
+  north_american_example: 'EX-094 (Build a Simulation Validation Framework) on synthetic North American data: validation_bias_raw = -5.136667 [EX]'
+  terminal_activity: python3 emi.py run 094 | grep '^validation_bias_raw:'
+  expected_result: 'validation_bias_raw: -5.136667'
+  professional_application: Compare model outputs against historical observations and independent calculations; identify calibration errors and structural limitations.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.09.4
+  after: L10.10.1
+  status: written_command_verified

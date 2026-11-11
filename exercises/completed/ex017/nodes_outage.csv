@@ -1,0 +1,8 @@
+node_id,supply_Bcf_d,delivery_Bcf_d,unmet_Bcf_d
+APPALACHIA,10.0,0.0,0.0
+PERMIAN,20.0,0.0,0.0
+HAYNESVILLE,20.0,0.0,0.0
+HUB_EAST,0.0,20.0,5.0
+HUB_GULF,0.0,20.0,0.0
+HUB_WEST,0.0,10.0,5.0
+STORAGE_A,0.0,0.0,0.0

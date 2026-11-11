@@ -1,0 +1,74 @@
+section: '7.9'
+title: Long-duration and seasonal storage
+exercise: EX-064
+lessons:
+- id: L07.09.1
+  title: Long-duration storage technologies
+  objective: Explain long-duration storage technologies and show it in the EX-064 output.
+  prerequisites:
+  - L07.08.5
+  market_lesson: Long-duration storage includes pumped hydro and other multi-hour to multi-day technologies. [K]
+  north_american_example: 'EX-064 (Analyze Dunkelflaute Conditions) on synthetic North American data: daily_gap_in_lull_MWh = 3120 [EX]'
+  terminal_activity: python3 emi.py run 064 | grep '^daily_gap_in_lull_MWh:'
+  expected_result: 'daily_gap_in_lull_MWh: 3120'
+  professional_application: Simulate prolonged periods of low wind and solar generation and quantify the resulting scarcity exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.08.5
+  after: L07.09.2
+  status: written_command_verified
+- id: L07.09.2
+  title: Seasonal balancing
+  objective: Explain seasonal balancing and show it in the EX-064 output.
+  prerequisites:
+  - L07.09.1
+  market_lesson: Seasonal balancing needs far more energy than daily shifting. [K]
+  north_american_example: 'EX-064 (Analyze Dunkelflaute Conditions) on synthetic North American data: lull_energy_gap_MWh = 15600 [EX]'
+  terminal_activity: python3 emi.py run 064 | grep '^lull_energy_gap_MWh:'
+  expected_result: 'lull_energy_gap_MWh: 15600'
+  professional_application: Simulate prolonged periods of low wind and solar generation and quantify the resulting scarcity exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.09.1
+  after: L07.09.3
+  status: written_command_verified
+- id: L07.09.3
+  title: Dunkelflaute exposure
+  objective: Explain dunkelflaute exposure and show it in the EX-064 output.
+  prerequisites:
+  - L07.09.2
+  market_lesson: A dunkelflaute is a multi-day stretch of low wind and solar. [K]
+  north_american_example: 'EX-064 (Analyze Dunkelflaute Conditions) on synthetic North American data: storage_discharged_MWh = 5000 [EX]'
+  terminal_activity: python3 emi.py run 064 | grep '^storage_discharged_MWh:'
+  expected_result: 'storage_discharged_MWh: 5000'
+  professional_application: Simulate prolonged periods of low wind and solar generation and quantify the resulting scarcity exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.09.2
+  after: L07.09.4
+  status: written_command_verified
+- id: L07.09.4
+  title: Duration valuation
+  objective: Explain duration valuation and show it in the EX-064 output.
+  prerequisites:
+  - L07.09.3
+  market_lesson: Each added hour of duration earns less than the one before. [K]
+  north_american_example: 'EX-064 (Analyze Dunkelflaute Conditions) on synthetic North American data: unserved_MWh = 10600 [EX]'
+  terminal_activity: python3 emi.py run 064 | grep '^unserved_MWh:'
+  expected_result: 'unserved_MWh: 10600'
+  professional_application: Simulate prolonged periods of low wind and solar generation and quantify the resulting scarcity exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.09.3
+  after: L07.09.5
+  status: written_command_verified
+- id: L07.09.5
+  title: Storage adequacy contribution
+  objective: Explain storage adequacy contribution and show it in the EX-064 output.
+  prerequisites:
+  - L07.09.4
+  market_lesson: Storage counts toward adequacy only for as long as it can discharge. [K]
+  north_american_example: 'EX-064 (Analyze Dunkelflaute Conditions) on synthetic North American data: unserved_days = 4 [EX]'
+  terminal_activity: python3 emi.py run 064 | grep '^unserved_days:'
+  expected_result: 'unserved_days: 4'
+  professional_application: Simulate prolonged periods of low wind and solar generation and quantify the resulting scarcity exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.09.4
+  after: L07.10.1
+  status: written_command_verified

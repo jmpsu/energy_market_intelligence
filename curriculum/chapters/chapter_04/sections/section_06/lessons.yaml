@@ -1,0 +1,74 @@
+section: '4.6'
+title: Canadian natural gas infrastructure and AECO
+exercise: EX-011
+lessons:
+- id: L04.06.1
+  title: WCSB and Montney supply
+  objective: Explain wCSB and Montney supply and show it in the EX-011 output.
+  prerequisites:
+  - L04.05.5
+  market_lesson: Western Canada's basin, led by the Montney, supplies Canada and exports to the US. [K]
+  north_american_example: 'EX-011 (Analyze Canadian Natural Gas Supply) on synthetic North American data: total_2026_Bcf_d = 19 [EX]'
+  terminal_activity: python3 emi.py run 011 | grep '^total_2026_Bcf_d:'
+  expected_result: 'total_2026_Bcf_d: 19'
+  professional_application: Compare production from the Montney, Duvernay, and Western Canadian Sedimentary Basin.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.05.5
+  after: L04.06.2
+  status: written_command_verified
+- id: L04.06.2
+  title: NGTL and Canadian mainline systems
+  objective: Explain nGTL and Canadian mainline systems and show it in the EX-011 output.
+  prerequisites:
+  - L04.06.1
+  market_lesson: Large gathering and mainline systems move that gas to Alberta markets and export points. [K]
+  north_american_example: 'EX-011 (Analyze Canadian Natural Gas Supply) on synthetic North American data: total_growth_pct = 2.702703 [EX]'
+  terminal_activity: python3 emi.py run 011 | grep '^total_growth_pct:'
+  expected_result: 'total_growth_pct: 2.702703'
+  professional_application: Compare production from the Montney, Duvernay, and Western Canadian Sedimentary Basin.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.06.1
+  after: L04.06.3
+  status: written_command_verified
+- id: L04.06.3
+  title: AECO pricing and basis
+  objective: Explain aECO pricing and basis and show it in the EX-011 output.
+  prerequisites:
+  - L04.06.2
+  market_lesson: AECO is the Alberta benchmark and usually trades below Henry Hub. [K]
+  north_american_example: 'EX-011 (Analyze Canadian Natural Gas Supply) on synthetic North American data: Montney_netback = 1.25 [EX]'
+  terminal_activity: python3 emi.py run 011 | grep '^Montney_netback:'
+  expected_result: 'Montney_netback: 1.25'
+  professional_application: Compare production from the Montney, Duvernay, and Western Canadian Sedimentary Basin.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.06.2
+  after: L04.06.4
+  status: written_command_verified
+- id: L04.06.4
+  title: Export points to the US
+  objective: Explain export points to the US and show it in the EX-011 output.
+  prerequisites:
+  - L04.06.3
+  market_lesson: Exports cross into the US Northwest, Midwest and Northeast. [K]
+  north_american_example: 'EX-011 (Analyze Canadian Natural Gas Supply) on synthetic North American data: Duvernay_netback = 1.55 [EX]'
+  terminal_activity: python3 emi.py run 011 | grep '^Duvernay_netback:'
+  expected_result: 'Duvernay_netback: 1.55'
+  professional_application: Compare production from the Montney, Duvernay, and Western Canadian Sedimentary Basin.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.06.3
+  after: L04.06.5
+  status: written_command_verified
+- id: L04.06.5
+  title: Canada-US flow economics
+  objective: Explain canada-US flow economics and show it in the EX-011 output.
+  prerequisites:
+  - L04.06.4
+  market_lesson: Canadian gas flows south when the price difference covers transport. [K]
+  north_american_example: 'EX-011 (Analyze Canadian Natural Gas Supply) on synthetic North American data: Other_WCSB_netback = -0.1 [EX]'
+  terminal_activity: python3 emi.py run 011 | grep '^Other_WCSB_netback:'
+  expected_result: 'Other_WCSB_netback: -0.1'
+  professional_application: Compare production from the Montney, Duvernay, and Western Canadian Sedimentary Basin.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.06.4
+  after: L04.07.1
+  status: written_command_verified

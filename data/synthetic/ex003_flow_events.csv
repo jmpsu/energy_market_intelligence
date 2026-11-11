@@ -1,0 +1,16 @@
+event_id,event_name,stage,volume_bcf,classification,notes
+E01,Wellhead gas produced,Production,1.000,source,Raw wet gas production at the wellhead
+E02,Gathering fuel and metering variance,Gathering,0.010,consumption,Combined gathering fuel and modeled measurement variance
+E03,Gas received at processing plant,Gathering,0.990,intermediate,Wellhead volume less gathering fuel and variance
+E04,NGL extraction shrinkage,Processing,0.070,byproduct_equivalent,Gas-volume equivalent removed during natural gas liquids recovery
+E05,Processing plant fuel,Processing,0.010,consumption,Gas burned to operate processing equipment
+E06,Residue gas leaving processing,Processing,0.910,intermediate,Gas remaining after processing fuel and NGL shrinkage
+E07,Transmission compressor fuel,Transmission,0.015,consumption,Gas consumed by transmission compressors
+E08,Residue gas available for allocation,Transmission,0.895,intermediate,Gas remaining after transmission compressor fuel
+E09,Direct delivery to city gate,Delivery,0.695,delivery,Transmission pipeline volume delivered directly to the city gate
+E10,Storage injection,Storage,0.200,storage_injection,Gas injected into underground storage
+E11,Storage withdrawal,Storage,0.180,storage_withdrawal,Gas later withdrawn from the modeled storage inventory
+E12,Storage inventory remaining,Storage,0.020,inventory,Gas remaining in storage at the end of the modeled period
+E13,Total gas received at city gate,City gate,0.875,delivery,Direct delivery plus storage withdrawal
+E14,Distribution fuel and unaccounted-for gas,Distribution,0.005,consumption,Combined distribution fuel and unaccounted-for gas assumption
+E15,Gas delivered to end users,End use,0.870,delivery,Final modeled volume delivered to end users

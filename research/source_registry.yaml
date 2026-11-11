@@ -1,0 +1,92 @@
+note: Registered from file metadata only. No paper has been read, no finding or equation extracted, no lesson linked. Copy the PDFs into research/original_papers/.
+sources:
+- id: SRC-043b2f12
+  title_from_filename: Intra-day Seasonality and Abnormal Returns in the Brent Crude Oil Futures Market
+  file: Intra-day_Seasonality_and_Abnormal_Returns_in_the_Brent_Crude_Oil_Futures_Market.pdf
+  pages: 27
+  sha256: 44a6b785e78f11dfe87e355ce71739c5dba163b90ac4d9a17b0f932d520eef58
+  provided_by: learner upload
+  read_status: not_read
+  extracted_findings: null
+  linked_lessons: []
+- id: SRC-200016f5
+  title_from_filename: Coalition formation and bargaining power for the North American natural gas market
+  file: Coalition_formation_and_bargaining_power_for_the_North_American_natural_gas_market.pdf
+  pages: 31
+  sha256: e025a2ded514768cb7b50b001ed4542fee7bc675df23b8d4f4b11ded86d423b8
+  provided_by: learner upload
+  read_status: not_read
+  extracted_findings: null
+  linked_lessons: []
+- id: SRC-2580ae25
+  title_from_filename: Good and bad volatility - Asymmetric spillovers and cost transmission in European electricity markets
+  file: Good_and_bad_volatility_-_Asymmetric_spillovers_and_cost_transmission_in_European_electricity_markets.pdf
+  pages: 21
+  sha256: 0a09ca7ea5f0ce065756179286aa25cdcbd734ba8e94efd0514e3c3b1559fc34
+  provided_by: learner upload
+  read_status: not_read
+  extracted_findings: null
+  linked_lessons: []
+- id: SRC-5bff6076
+  title_from_filename: A Supply and Demand Based Volatility Model for Energy Prices - the Relationship between Supply Curve Shape and Volatility
+  file: A_Supply_and_Demand_Based_Volatility_Model_for_Energy_Prices_-_the_Relationship_between_Supply_Curve_Shape_and_Volatility.pdf
+  pages: 33
+  sha256: b5fa50dbe4495a0cb50d99fc3b399441711afceb06d4568380a20c7471e91354
+  provided_by: learner upload
+  read_status: not_read
+  extracted_findings: null
+  linked_lessons: []
+- id: SRC-d5cea798
+  title_from_filename: European Natural Gas through the 2020s
+  file: European_Natural_Gas_through_the_2020s.pdf
+  pages: 107
+  sha256: 867d7b318bb4e5d7ac5fc459c6562dd224d05b92be5e06efbcbf270df0f2252f
+  provided_by: learner upload
+  read_status: not_read
+  extracted_findings: null
+  linked_lessons: []
+- id: SRC-e5e136ae
+  title_from_filename: A time series segmentation algorithm based on visibility graph spectral clustering and modularity optimization
+  file: A_time_series_segmentation_algorithm_based_on_visibility_graph_spectral_clustering_and_modularity_optimization.pdf
+  pages: 27
+  sha256: 8fb1627a9eba0e5472940899133732ea698dc866a1bf92e0141c0fee9a422275
+  provided_by: learner upload
+  read_status: not_read
+  extracted_findings: null
+  linked_lessons: []
+- id: SRC-e66230c9
+  title_from_filename: Shocks from the Russian invasion of Ukraine on agricultural and energy commodities
+  file: Shocks_from_the_Russian_invasion_of_Ukraine_on_agricultural_and_energy_commodities.pdf
+  pages: 31
+  sha256: 6e27a8e42fd7aee43b03a396612a8d805d50ad050322a354c8c49b4587c26ab8
+  provided_by: learner upload
+  read_status: not_read
+  extracted_findings: null
+  linked_lessons: []
+- id: SRC-f5c11434
+  title_from_filename: European electricity wholesale market integration
+  file: European_electricity_wholesale_market_integration.pdf
+  pages: 74
+  sha256: d38f5cd0915732f601de9b9b06dfb2674c2fcda7eb0e016c1fb5f11a20488df2
+  provided_by: learner upload
+  read_status: not_read
+  extracted_findings: null
+  linked_lessons: []
+- id: SRC-f9133171
+  title_from_filename: Optimal dispatch and design of energy storage systems under progressive loading
+  file: Optimal_dispatch_and_design_of_energy_storage_systems_under_progressive_loading.pdf
+  pages: 13
+  sha256: 33672d87889bdf31c53e8db981ae6cdfd27a3ec62c735cadcf9bd7fcc974d552
+  provided_by: learner upload
+  read_status: not_read
+  extracted_findings: null
+  linked_lessons: []
+- id: SRC-fc8280ab
+  title_from_filename: Understanding World Commodity Prices - Returns Volatility and Diversification
+  file: Understanding_World_Commodity_Prices_-_Returns_Volatility_and_Diversification.pdf
+  pages: 44
+  sha256: 981ac8e9d58e6c4c2f67eb5cd8b10791fa4cc1953104357a5d005c4f17db5440
+  provided_by: learner upload
+  read_status: not_read
+  extracted_findings: null
+  linked_lessons: []

@@ -1,0 +1,74 @@
+section: '7.3'
+title: Gas-fired generation economics
+exercise: EX-061
+lessons:
+- id: L07.03.1
+  title: Combined-cycle vs peaker economics
+  objective: Explain combined-cycle vs peaker economics and show it in the EX-061 output.
+  prerequisites:
+  - L07.02.5
+  market_lesson: A combined cycle has higher capital cost and lower heat rate than a peaker, so it runs more hours. [K]
+  north_american_example: 'EX-061 (Optimize a Natural Gas-Fired Generator) on synthetic North American data: marginal_cost_USD_per_MWh = 26.4 [EX]'
+  terminal_activity: python3 emi.py run 061 | grep '^marginal_cost_USD_per_MWh:'
+  expected_result: 'marginal_cost_USD_per_MWh: 26.4'
+  professional_application: Determine when a generator should operate based on gas prices, electricity prices, heat rate, and operating constraints.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.02.5
+  after: L07.03.2
+  status: written_command_verified
+- id: L07.03.2
+  title: Start-up and cycling costs
+  objective: Explain start-up and cycling costs and show it in the EX-061 output.
+  prerequisites:
+  - L07.03.1
+  market_lesson: Each start costs fuel and wear; cycling raises maintenance. [K]
+  north_american_example: 'EX-061 (Optimize a Natural Gas-Fired Generator) on synthetic North American data: committed_start_hour = 1 [EX]'
+  terminal_activity: python3 emi.py run 061 | grep '^committed_start_hour:'
+  expected_result: 'committed_start_hour: 1'
+  professional_application: Determine when a generator should operate based on gas prices, electricity prices, heat rate, and operating constraints.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.03.1
+  after: L07.03.3
+  status: written_command_verified
+- id: L07.03.3
+  title: Capacity factor drivers
+  objective: Explain capacity factor drivers and show it in the EX-061 output.
+  prerequisites:
+  - L07.03.2
+  market_lesson: Capacity factor depends on where the unit sits in the merit order. [K]
+  north_american_example: 'EX-061 (Optimize a Natural Gas-Fired Generator) on synthetic North American data: committed_end_hour = 24 [EX]'
+  terminal_activity: python3 emi.py run 061 | grep '^committed_end_hour:'
+  expected_result: 'committed_end_hour: 24'
+  professional_application: Determine when a generator should operate based on gas prices, electricity prices, heat rate, and operating constraints.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.03.2
+  after: L07.03.4
+  status: written_command_verified
+- id: L07.03.4
+  title: Fuel supply arrangements
+  objective: Explain fuel supply arrangements and show it in the EX-061 output.
+  prerequisites:
+  - L07.03.3
+  market_lesson: Fuel can be firm, interruptible or bought daily. [K]
+  north_american_example: 'EX-061 (Optimize a Natural Gas-Fired Generator) on synthetic North American data: committed_run_hours = 24 [EX]'
+  terminal_activity: python3 emi.py run 061 | grep '^committed_run_hours:'
+  expected_result: 'committed_run_hours: 24'
+  professional_application: Determine when a generator should operate based on gas prices, electricity prices, heat rate, and operating constraints.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.03.3
+  after: L07.03.5
+  status: written_command_verified
+- id: L07.03.5
+  title: Unit margin analysis
+  objective: Explain unit margin analysis and show it in the EX-061 output.
+  prerequisites:
+  - L07.03.4
+  market_lesson: Unit margin is power revenue less fuel, variable O&M and start costs. [K]
+  north_american_example: 'EX-061 (Optimize a Natural Gas-Fired Generator) on synthetic North American data: committed_profit_USD = 408700 [EX]'
+  terminal_activity: python3 emi.py run 061 | grep '^committed_profit_USD:'
+  expected_result: 'committed_profit_USD: 408700'
+  professional_application: Determine when a generator should operate based on gas prices, electricity prices, heat rate, and operating constraints.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.03.4
+  after: L07.04.1
+  status: written_command_verified

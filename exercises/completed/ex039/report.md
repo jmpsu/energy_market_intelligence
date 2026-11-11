@@ -1,0 +1,24 @@
+# ex039 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+composition_sums_to_one: True
+
+purity_value_USD_per_barrel: 28.0518
+
+weighted_price_USD_per_gallon: 0.6679
+
+cost_USD_per_barrel: 26.04
+
+frac_margin_USD_per_barrel: 2.0118
+
+total_margin_USD: 100590
+
+breakeven_ygrade_USD_per_gallon: 0.5979
+
+largest_value_component: Natural_Gasoline
+
+ethane_volume_share_pct: 40
+
+ethane_value_share_pct: 14.073963
+
+NOTE: Reuses the EX-040 price table. No transport to the fractionator, no product losses, no storage or timing.
+

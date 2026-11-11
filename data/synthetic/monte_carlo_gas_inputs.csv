@@ -1,0 +1,8 @@
+parameter,value,unit
+initial_price,3.25,USD_per_MMBtu
+annualized_volatility,0.65,fraction
+annualized_drift,0.05,fraction
+simulation_days,30,days
+simulations,10000,count
+trading_days_per_year,252,days
+random_seed,42,integer

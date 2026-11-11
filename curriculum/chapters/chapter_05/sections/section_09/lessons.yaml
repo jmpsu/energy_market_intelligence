@@ -1,0 +1,68 @@
+section: '5.9'
+title: Fractionation, Mont Belvieu, and Conway
+lessons:
+- id: L05.09.1
+  title: Fractionation process
+  prerequisite: L05.08.5
+  status: written
+  objective: Describe fractionation.
+  market_lesson: Fractionators split mixed NGLs into purity products [S3]. Capacity can run full, which backs barrels up and widens differentials [S9].
+  example: 'EX-039: frac fee 0.07 USD/gal on a 42-gallon barrel is 2.94 USD/bbl.'
+  terminal_activity: python3 emi.py run 039
+  expected_result: 'cost_USD_per_barrel: 26.04'
+  professional_application: Frac capacity utilisation is a leading indicator for Y-grade discounts.
+  product_implication: Capacity and utilisation series per hub are essential market data.
+  builds_on: L05.08.5
+  leads_to: L05.09.2
+- id: L05.09.2
+  title: Mont Belvieu hub
+  prerequisite: L05.09.1
+  status: written
+  objective: Characterise Mont Belvieu.
+  market_lesson: Mont Belvieu, Texas is the larger of the two main US NGL hubs for trading, storage and fractionation, serving Gulf Coast and export demand [S9]. Several Mont Belvieu propane price assessments exist (non-TET, TET/LST) [S15][S12].
+  example: 'Synthetic Mont Belvieu propane: 0.720 then 0.750 USD/gal.'
+  terminal_activity: python3 emi.py run 040
+  expected_result: '2026-01-12_Propane_profit_USD: 33000'
+  professional_application: Always ask which Belvieu price a contract references.
+  product_implication: Price series need a precise location and assessment identifier, not just Mont Belvieu.
+  builds_on: L05.09.1
+  leads_to: L05.09.3
+- id: L05.09.3
+  title: Conway hub
+  prerequisite: L05.09.2
+  status: written
+  objective: Characterise Conway.
+  market_lesson: Conway, Kansas is the smaller hub, with far less storage than Mont Belvieu [S9][S14]. Constraints tend to hit the smaller Conway hub harder [K].
+  example: 'EIA data cited by RBN: about 18% of US NGL volumes moved to or through Conway in 2023 [S9].'
+  terminal_activity: python3 emi.py run 040
+  expected_result: Conway is below Mont Belvieu for every product on both synthetic dates.
+  professional_application: Conway is the Midcontinent price marker; its spread to Belvieu is a traded relationship.
+  product_implication: Hub attributes (storage, frac capacity, connectivity) are reference data users expect.
+  builds_on: L05.09.2
+  leads_to: L05.09.4
+- id: L05.09.4
+  title: Regional basis
+  prerequisite: L05.09.3
+  status: written
+  objective: Compute regional basis.
+  market_lesson: Basis = Mont Belvieu - Conway. The spread usually reflects transport cost but blows out under constraints or cold weather, and can invert [S15][S12].
+  example: 'Synthetic propane basis: 0.065 then 0.090 USD/gal. OPIS: Conway propane traded above Belvieu from September to December 2022 [S12].'
+  terminal_activity: python3 emi.py run 044
+  expected_result: 'propane_basis_move_USD_per_gal: 0.025'
+  professional_application: Basis is where most NGL trading P&L is made and lost.
+  product_implication: Basis must be computed from two dated, sourced prices; show both legs.
+  builds_on: L05.09.3
+  leads_to: L05.09.5
+- id: L05.09.5
+  title: Arbitrage economics
+  prerequisite: L05.09.4
+  status: written
+  objective: Decide whether the arbitrage is open.
+  market_lesson: Ship when basis exceeds transport plus handling. Net margin = basis - logistics cost [EX].
+  example: 'Logistics 0.057 USD/gal. Propane on 2026-01-12: 0.090 - 0.057 = 0.033, or 33,000 USD on 1,000,000 gal. Ethane never clears.'
+  terminal_activity: python3 emi.py run 040
+  expected_result: 'products_never_positive: Ethane; best_shipment: 2026-01-12 Propane'
+  professional_application: Marketers run this screen every day for every product.
+  product_implication: An arbitrage screen with editable costs is a daily-use feature.
+  builds_on: L05.09.4
+  leads_to: L05.10.1

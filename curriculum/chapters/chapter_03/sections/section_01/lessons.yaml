@@ -1,0 +1,74 @@
+section: '3.1'
+title: Henry Hub and benchmark pricing
+exercise: EX-019
+lessons:
+- id: L03.01.1
+  title: Henry Hub as benchmark
+  objective: Explain henry Hub as benchmark and show it in the EX-019 output.
+  prerequisites:
+  - L02.10.5
+  market_lesson: Henry Hub in Louisiana is the delivery point of the main US gas futures contract and the pricing reference for most deals. [K]
+  north_american_example: 'EX-019 (Calculate Regional Gas Basis) on synthetic North American data: Waha_basis_day1 = -2.15 [EX]'
+  terminal_activity: python3 emi.py run 019 | grep '^Waha_basis_day1:'
+  expected_result: 'Waha_basis_day1: -2.15'
+  professional_application: Compare Henry Hub with Waha, AECO, Dawn, Algonquin Citygate, and other regional pricing locations.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L02.10.5
+  after: L03.01.2
+  status: written_command_verified
+- id: L03.01.2
+  title: NYMEX NG contract specification
+  objective: Explain nYMEX NG contract specification and show it in the EX-019 output.
+  prerequisites:
+  - L03.01.1
+  market_lesson: The contract is a standard monthly volume in MMBtu for physical delivery at the hub. [K]
+  north_american_example: 'EX-019 (Calculate Regional Gas Basis) on synthetic North American data: AECO_basis_day1 = -1.1 [EX]'
+  terminal_activity: python3 emi.py run 019 | grep '^AECO_basis_day1:'
+  expected_result: 'AECO_basis_day1: -1.1'
+  professional_application: Compare Henry Hub with Waha, AECO, Dawn, Algonquin Citygate, and other regional pricing locations.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.01.1
+  after: L03.01.3
+  status: written_command_verified
+- id: L03.01.3
+  title: Settlement and expiry mechanics
+  objective: Explain settlement and expiry mechanics and show it in the EX-019 output.
+  prerequisites:
+  - L03.01.2
+  market_lesson: Trading in a month ends shortly before delivery; the final settlement price is widely used in indices. [K]
+  north_american_example: 'EX-019 (Calculate Regional Gas Basis) on synthetic North American data: Dawn_basis_day1 = -0.45 [EX]'
+  terminal_activity: python3 emi.py run 019 | grep '^Dawn_basis_day1:'
+  expected_result: 'Dawn_basis_day1: -0.45'
+  professional_application: Compare Henry Hub with Waha, AECO, Dawn, Algonquin Citygate, and other regional pricing locations.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.01.2
+  after: L03.01.4
+  status: written_command_verified
+- id: L03.01.4
+  title: Prompt month and price reporting
+  objective: Explain prompt month and price reporting and show it in the EX-019 output.
+  prerequisites:
+  - L03.01.3
+  market_lesson: The prompt month is the nearest contract; published prices come from exchanges and price reporting agencies. [K]
+  north_american_example: 'EX-019 (Calculate Regional Gas Basis) on synthetic North American data: Chicago_basis_day1 = -0.15 [EX]'
+  terminal_activity: python3 emi.py run 019 | grep '^Chicago_basis_day1:'
+  expected_result: 'Chicago_basis_day1: -0.15'
+  professional_application: Compare Henry Hub with Waha, AECO, Dawn, Algonquin Citygate, and other regional pricing locations.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.01.3
+  after: L03.01.5
+  status: written_command_verified
+- id: L03.01.5
+  title: Benchmark limits as a regional proxy
+  objective: Explain benchmark limits as a regional proxy and show it in the EX-019 output.
+  prerequisites:
+  - L03.01.4
+  market_lesson: Henry Hub does not tell you the price in a constrained region; that is what basis measures. [K]
+  north_american_example: 'EX-019 (Calculate Regional Gas Basis) on synthetic North American data: Henry_Hub_basis_day1 = 0 [EX]'
+  terminal_activity: python3 emi.py run 019 | grep '^Henry_Hub_basis_day1:'
+  expected_result: 'Henry_Hub_basis_day1: 0'
+  professional_application: Compare Henry Hub with Waha, AECO, Dawn, Algonquin Citygate, and other regional pricing locations.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.01.4
+  after: L03.02.1
+  status: written_command_verified

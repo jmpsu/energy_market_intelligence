@@ -1,0 +1,9 @@
+from_node,to_node,asset_type,capacity_Bcf_d,flow_Bcf_d,in_min_cut,utilization_pct
+Permian_Basin,Processing_Plant,gathering,8,7,False,87.5
+Processing_Plant,Pipeline_A,pipeline,5,4,False,80.0
+Processing_Plant,Pipeline_B,pipeline,4,3,False,75.0
+Pipeline_A,Market_Hub,pipeline,5,4,False,80.0
+Pipeline_B,Market_Hub,pipeline,3,3,False,100.0
+Market_Hub,LNG_Terminal,pipeline,6,6,True,100.0
+Market_Hub,Storage,pipeline,2,1,False,50.0
+Storage,LNG_Terminal,pipeline,1,1,True,100.0

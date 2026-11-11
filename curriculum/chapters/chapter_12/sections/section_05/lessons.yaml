@@ -1,0 +1,74 @@
+section: '12.5'
+title: Renewable and storage scenario modeling
+exercise: EX-065
+lessons:
+- id: L12.05.1
+  title: Renewable scenario generation
+  objective: Explain renewable scenario generation and show it in the EX-065 output.
+  prerequisites:
+  - L12.04.5
+  market_lesson: Renewable scenarios span plausible output paths. [K]
+  north_american_example: 'EX-065 (Optimize a Combined Renewable and Storage Portfolio) on synthetic North American data: direct_solar_revenue_USD = 55910 [EX]'
+  terminal_activity: python3 emi.py run 065 | grep '^direct_solar_revenue_USD:'
+  expected_result: 'direct_solar_revenue_USD: 55910'
+  professional_application: Calculate dispatch decisions across solar generation, battery storage, and market purchases.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.04.5
+  after: L12.05.2
+  status: written_command_verified
+- id: L12.05.2
+  title: Storage dispatch under scenarios
+  objective: Explain storage dispatch under scenarios and show it in the EX-065 output.
+  prerequisites:
+  - L12.05.1
+  market_lesson: Storage dispatch is optimised in each. [K]
+  north_american_example: 'EX-065 (Optimize a Combined Renewable and Storage Portfolio) on synthetic North American data: solar_plus_storage_revenue_USD = 69590 [EX]'
+  terminal_activity: python3 emi.py run 065 | grep '^solar_plus_storage_revenue_USD:'
+  expected_result: 'solar_plus_storage_revenue_USD: 69590'
+  professional_application: Calculate dispatch decisions across solar generation, battery storage, and market purchases.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.05.1
+  after: L12.05.3
+  status: written_command_verified
+- id: L12.05.3
+  title: Shortfall analysis
+  objective: Explain shortfall analysis and show it in the EX-065 output.
+  prerequisites:
+  - L12.05.2
+  market_lesson: Shortfall analysis finds when supply misses load. [K]
+  north_american_example: 'EX-065 (Optimize a Combined Renewable and Storage Portfolio) on synthetic North American data: storage_uplift_USD = 13680 [EX]'
+  terminal_activity: python3 emi.py run 065 | grep '^storage_uplift_USD:'
+  expected_result: 'storage_uplift_USD: 13680'
+  professional_application: Calculate dispatch decisions across solar generation, battery storage, and market purchases.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.05.2
+  after: L12.05.4
+  status: written_command_verified
+- id: L12.05.4
+  title: Value of storage
+  objective: Explain value of storage and show it in the EX-065 output.
+  prerequisites:
+  - L12.05.3
+  market_lesson: Storage value is the margin with it less the margin without. [K]
+  north_american_example: 'EX-065 (Optimize a Combined Renewable and Storage Portfolio) on synthetic North American data: energy_charged_MWh = 266.666667 [EX]'
+  terminal_activity: python3 emi.py run 065 | grep '^energy_charged_MWh:'
+  expected_result: 'energy_charged_MWh: 266.666667'
+  professional_application: Calculate dispatch decisions across solar generation, battery storage, and market purchases.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.05.3
+  after: L12.05.5
+  status: written_command_verified
+- id: L12.05.5
+  title: Scenario comparison
+  objective: Explain scenario comparison and show it in the EX-065 output.
+  prerequisites:
+  - L12.05.4
+  market_lesson: Compare scenarios on margin and shortfall. [K]
+  north_american_example: 'EX-065 (Optimize a Combined Renewable and Storage Portfolio) on synthetic North American data: energy_discharged_MWh = 240 [EX]'
+  terminal_activity: python3 emi.py run 065 | grep '^energy_discharged_MWh:'
+  expected_result: 'energy_discharged_MWh: 240'
+  professional_application: Calculate dispatch decisions across solar generation, battery storage, and market purchases.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.05.4
+  after: L12.06.1
+  status: written_command_verified

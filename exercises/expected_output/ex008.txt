@@ -1,0 +1,12 @@
+ex008 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+Producer_immediate_pnl_USD_per_d: 400000
+Pipeline_immediate_pnl_USD_per_d: 0
+Gas_Generator_immediate_pnl_USD_per_d: -168000
+Regulated_Utility_immediate_pnl_USD_per_d: -600000
+Trader_immediate_pnl_USD_per_d: -200000
+power_price_rise_USD_per_MWh: 7
+generator_breakeven_pass_through: 1
+winners: Producer
+losers: Gas_Generator,Regulated_Utility,Trader
+NOTE: Generator keeps its margin only if power rises by heat rate x gas move (pass-through = 1.0).
+NOTE: Positions and hedge ratios are synthetic.

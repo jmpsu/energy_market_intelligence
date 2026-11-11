@@ -1,0 +1,22 @@
+# ex067 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+peak_load_shed_GW: 22
+
+shed_days: 4
+
+unserved_GWh: 1104
+
+energy_cost_USD: 46303200000
+
+energy_cost_at_normal_price_USD: 453600000
+
+cost_multiple_of_normal: 102.079365
+
+worst_day: 3
+
+min_gas_supply_pct: 55
+
+corr_gas_supply_available_generation: 0.982273
+
+NOTE: Daily averages; price pinned at a cap parameter whenever load is shed. Not a reconstruction: every number is invented to show the mechanism (gas supply loss -> generation loss -> shedding -> scarcity pricing).
+

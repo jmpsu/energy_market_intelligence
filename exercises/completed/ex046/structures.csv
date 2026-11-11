@@ -1,0 +1,5 @@
+structure,seller_USD_per_MWh,buyer_USD_per_MWh,risk_allocation,seller_revenue_USD,buyer_cost_USD,gap_USD_per_MWh
+iso_spot,42.0,48.0,both exposed to spot; congestion 6 between nodes,67200.0,76800.0,6.0
+bilateral_physical_with_wheeling,45.0,50.51546391752577,price fixed; buyer pays wheeling and losses,72000.0,80824.74226804123,5.515463917525771
+iso_plus_cfd_at_gen_node,45.0,51.0,seller fixed; buyer keeps node-to-node basis,72000.0,81600.0,6.0
+iso_plus_cfd_at_load_node,39.0,45.0,buyer fixed; seller keeps node-to-node basis,62400.0,72000.0,6.0

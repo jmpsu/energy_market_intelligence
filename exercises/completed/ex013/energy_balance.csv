@@ -1,0 +1,5 @@
+stream,MMBtu_per_d,pct_of_inlet
+inlet_raw_gas,250000.0,100.0
+ngl_shrink,80967.50303,32.38700121200001
+plant_fuel,5000.0,2.0
+residue_gas,164032.49696999998,65.61299878799998

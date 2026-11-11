@@ -1,0 +1,5 @@
+mode,shipped_bbl,cost_USD,avg_cost_USD_per_bbl
+marine,10000.0,40000.0,4.0
+pipeline,70000.0,123000.0,1.7571428571428571
+rail,20000.0,83500.0,4.175
+truck,0.0,0.0,

@@ -1,0 +1,18 @@
+ex047 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+mean_da_price: 62.125
+mean_rt_price: 68.833333
+mean_dart_spread: -6.708333
+hours_rt_above_da: 11
+rt_price_std: 54.065714
+da_price_std: 32.538021
+peak_mean_dart_spread: -30.5
+offpeak_mean_dart_spread: 1.222222
+da_revenue_USD: 447300
+rt_settlement_USD: -44500
+two_settlement_revenue_USD: 402800
+rt_only_revenue_USD: 451100
+outage_buyback_cost_USD: 44500
+da_revenue_lost_equivalent_USD: 27500
+virtual_inc_pnl_USD: -8050
+NOTE: One synthetic day; a DA-RT premium needs many days to estimate.
+NOTE: A unit that trips in a high-price real-time hour buys back its day-ahead award at the real-time price: the buy-back cost exceeds the day-ahead revenue for those MWh.

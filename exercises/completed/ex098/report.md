@@ -1,0 +1,28 @@
+# ex098 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+adoption_wau_pct_of_licensed: 46
+
+week8_retention_of_week1_users_pct: 47.826087
+
+runtime_p50_min: 27.25
+
+runtime_p95_min: 59.94
+
+data_completeness_pct: 85.714286
+
+model_backcast_mae_USD_per_MWh: 1.549857
+
+net_revenue_retention_pct: 90.4
+
+gross_revenue_retention_pct: 83.2
+
+kpis_meeting_target: 3
+
+kpis_missing_target: adoption_wau_pct_of_licensed,week8_retention_of_week1_users_pct,data_completeness_pct,net_revenue_retention_pct,gross_revenue_retention_pct
+
+active_users_ever: 40
+
+licensed_seats: 50
+
+NOTE: Usage log, accounts and targets are synthetic. Data-quality and model-accuracy KPIs are read live from EX-070 and EX-094, so the scorecard moves when the product does.
+

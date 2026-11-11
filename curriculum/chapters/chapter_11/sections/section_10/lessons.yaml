@@ -1,0 +1,74 @@
+section: '11.10'
+title: Executive communication and cross-functional leadership
+exercise: EX-100
+lessons:
+- id: L11.10.1
+  title: Executive narrative
+  objective: Explain executive narrative and show it in the EX-100 output.
+  prerequisites:
+  - L11.09.5
+  market_lesson: An executive narrative leads with the decision. [K]
+  north_american_example: 'EX-100 (Complete an Integrated Energy Portfolio Capstone) on synthetic North American data: Base_portfolio_value_USD = 1617201.470588 [EX]'
+  terminal_activity: python3 emi.py run 100 | grep '^Base_portfolio_value_USD:'
+  expected_result: 'Base_portfolio_value_USD: 1617201.470588'
+  professional_application: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.09.5
+  after: L11.10.2
+  status: written_command_verified
+- id: L11.10.2
+  title: Decision memo
+  objective: Explain decision memo and show it in the EX-100 output.
+  prerequisites:
+  - L11.10.1
+  market_lesson: A decision memo gives options, evidence and recommendation. [K]
+  north_american_example: 'EX-100 (Complete an Integrated Energy Portfolio Capstone) on synthetic North American data: Gas_Spike_portfolio_value_USD = 2579646.764706 [EX]'
+  terminal_activity: python3 emi.py run 100 | grep '^Gas_Spike_portfolio_value_USD:'
+  expected_result: 'Gas_Spike_portfolio_value_USD: 2579646.764706'
+  professional_application: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.10.1
+  after: L11.10.3
+  status: written_command_verified
+- id: L11.10.3
+  title: Cross-functional alignment
+  objective: Explain cross-functional alignment and show it in the EX-100 output.
+  prerequisites:
+  - L11.10.2
+  market_lesson: Cross-functional alignment precedes the meeting. [K]
+  north_american_example: 'EX-100 (Complete an Integrated Energy Portfolio Capstone) on synthetic North American data: Power_Scarcity_portfolio_value_USD = 3037356.176471 [EX]'
+  terminal_activity: python3 emi.py run 100 | grep '^Power_Scarcity_portfolio_value_USD:'
+  expected_result: 'Power_Scarcity_portfolio_value_USD: 3037356.176471'
+  professional_application: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.10.2
+  after: L11.10.4
+  status: written_command_verified
+- id: L11.10.4
+  title: Managing trade-offs
+  objective: Explain managing trade-offs and show it in the EX-100 output.
+  prerequisites:
+  - L11.10.3
+  market_lesson: Trade-offs are stated, not hidden. [K]
+  north_american_example: 'EX-100 (Complete an Integrated Energy Portfolio Capstone) on synthetic North American data: Pipeline_Disruption_portfolio_value_USD = 1947938.058824 [EX]'
+  terminal_activity: python3 emi.py run 100 | grep '^Pipeline_Disruption_portfolio_value_USD:'
+  expected_result: 'Pipeline_Disruption_portfolio_value_USD: 1947938.058824'
+  professional_application: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.10.3
+  after: L11.10.5
+  status: written_command_verified
+- id: L11.10.5
+  title: Board-level presentation
+  objective: Explain board-level presentation and show it in the EX-100 output.
+  prerequisites:
+  - L11.10.4
+  market_lesson: A board presentation is short, numeric and ends with an ask. [K]
+  north_american_example: 'EX-100 (Complete an Integrated Energy Portfolio Capstone) on synthetic North American data: Renewable_Shortfall_portfolio_value_USD = 2128587.352941 [EX]'
+  terminal_activity: python3 emi.py run 100 | grep '^Renewable_Shortfall_portfolio_value_USD:'
+  expected_result: 'Renewable_Shortfall_portfolio_value_USD: 2128587.352941'
+  professional_application: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.10.4
+  after: L12.01.1
+  status: written_command_verified

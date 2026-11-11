@@ -1,0 +1,11 @@
+ex014 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+Permian_to_Gulf_utilization_pct: 99.459459
+Appalachia_to_NE_utilization_pct: 78.666667
+Midcon_to_Chicago_utilization_pct: 64
+Rockies_to_West_utilization_pct: 100.555556
+constrained_segments: Permian_to_Gulf
+data_errors: Rockies_to_West
+fully_subscribed_but_underused: none
+total_release_candidate_MMBtu_d: 460000
+NOTE: Sold-out is not the same as full: contracted-but-unused capacity is what the secondary market trades.
+NOTE: One segment is scheduled above operational capacity on purpose: a data-quality check.

@@ -1,0 +1,9 @@
+arc_id,origin,destination,mode,capacity_bbl_base,cost_USD_per_bbl,shipped_bbl_base,at_capacity,capacity_bbl_outage,shipped_bbl_outage
+A1,Conway,Mont_Belvieu,pipeline,45000.0,1.9,45000.0,True,22500.0,22500.0
+A2,Conway,Mont_Belvieu,rail,30000.0,4.5,15000.0,False,30000.0,30000.0
+A3,Conway,Mont_Belvieu,truck,10000.0,7.0,0.0,False,10000.0,2500.0
+A4,Conway,East_Coast_Export,rail,15000.0,5.5,0.0,False,15000.0,5000.0
+A5,Marcellus,East_Coast_Export,pipeline,25000.0,1.5,25000.0,True,25000.0,25000.0
+A6,Marcellus,East_Coast_Export,rail,20000.0,3.2,5000.0,False,20000.0,0.0
+A7,Marcellus,Mont_Belvieu,rail,20000.0,6.0,0.0,False,20000.0,0.0
+A8,Marcellus,Mont_Belvieu,marine,30000.0,4.0,10000.0,False,30000.0,15000.0

@@ -1,0 +1,32 @@
+# ex084 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+Gas_Collapse_change_USD: -533522.647059
+
+Mild_Winter_change_USD: -496127.941176
+
+Power_Collapse_change_USD: -416113.235294
+
+Renewable_Drought_Low_Price_change_USD: -256144.294118
+
+Base_change_USD: 0
+
+Gas_Spike_Flat_Power_change_USD: 1242850
+
+Fuel_Cutoff_Scarcity_change_USD: 7043727.941176
+
+worst_scenario: Gas_Collapse
+
+worst_loss_USD: -533522.647059
+
+worst_loss_main_driver: gas_book_value_change_USD
+
+stress_loss_limit_USD: -300000
+
+scenarios_breaching_limit: Gas_Collapse,Mild_Winter,Power_Collapse
+
+loss_scenarios: 4
+
+NOTE: EX-100's supplied scenarios contain no loss case; these scenarios add falling-price and gas-up/power-flat cases, which are the ones that hurt a long-asset portfolio.
+
+NOTE: Same simplifications as EX-100: gas book as long inventory, one power day, demand obligation not priced.
+

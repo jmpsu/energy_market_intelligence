@@ -1,0 +1,5 @@
+segment,nameplate_MMBtu_d,operational_MMBtu_d,contracted_firm_MMBtu_d,scheduled_MMBtu_d,operational_derate_pct,unsubscribed_MMBtu_d,operationally_available_MMBtu_d,utilization_pct,contracted_but_unused_MMBtu_d,status
+Permian_to_Gulf,2000000,1850000,1850000,1840000,7.499999999999996,0,10000,99.45945945945947,10000,constrained
+Appalachia_to_NE,1500000,1500000,1450000,1180000,0.0,50000,320000,78.66666666666666,270000,open
+Midcon_to_Chicago,1200000,1000000,820000,640000,16.666666666666664,180000,360000,64.0,180000,open
+Rockies_to_West,900000,900000,900000,905000,0.0,0,-5000,100.55555555555556,0,DATA_ERROR_overscheduled

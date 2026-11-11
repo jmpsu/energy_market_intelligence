@@ -1,0 +1,22 @@
+# ex036 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+peak_demand_Bcf_d: 25.26
+
+peak_day: 4
+
+production_lost_Bcf: 9
+
+total_shortfall_Bcf: 6.8
+
+shortfall_days: 3,4,5
+
+days_imports_at_cap: 5
+
+storage_withdrawn_Bcf: 20.6
+
+peak_day_supply_gap_before_storage: 9.26
+
+NOTE: Demand rises and supply falls on the same days: the two effects compound.
+
+NOTE: Hypothetical region and numbers; no price formation, no demand curtailment priority.
+

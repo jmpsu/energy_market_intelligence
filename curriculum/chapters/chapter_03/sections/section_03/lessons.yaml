@@ -1,0 +1,74 @@
+section: '3.3'
+title: Cash markets and monthly index pricing
+exercise: EX-024
+lessons:
+- id: L03.03.1
+  title: Day-ahead cash trading
+  objective: Explain day-ahead cash trading and show it in the EX-024 output.
+  prerequisites:
+  - L03.02.5
+  market_lesson: Day-ahead cash gas trades for next-day flow at each location. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: locked_all_in_price = 2.5 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^locked_all_in_price:'
+  expected_result: 'locked_all_in_price: 2.5'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.02.5
+  after: L03.03.2
+  status: written_command_verified
+- id: L03.03.2
+  title: Bidweek and monthly index
+  objective: Explain bidweek and monthly index and show it in the EX-024 output.
+  prerequisites:
+  - L03.03.1
+  market_lesson: Bidweek deals at the end of a month set the monthly index for the next one. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: unhedged_cost_range_USD = 1054000 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^unhedged_cost_range_USD:'
+  expected_result: 'unhedged_cost_range_USD: 1054000'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.03.1
+  after: L03.03.3
+  status: written_command_verified
+- id: L03.03.3
+  title: Gas Daily vs Inside FERC style indices
+  objective: Explain gas Daily vs Inside FERC style indices and show it in the EX-024 output.
+  prerequisites:
+  - L03.03.2
+  market_lesson: Daily indices average each day's cash trades; monthly indices come from bidweek. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: hh_hedged_cost_range_USD = 279000 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^hh_hedged_cost_range_USD:'
+  expected_result: 'hh_hedged_cost_range_USD: 279000'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.03.2
+  after: L03.03.4
+  status: written_command_verified
+- id: L03.03.4
+  title: Index vs fixed price deals
+  objective: Explain index vs fixed price deals and show it in the EX-024 output.
+  prerequisites:
+  - L03.03.3
+  market_lesson: An index deal floats with the published price; a fixed-price deal locks it. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: fully_hedged_cost_range_USD = 0 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^fully_hedged_cost_range_USD:'
+  expected_result: 'fully_hedged_cost_range_USD: 0'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.03.3
+  after: L03.03.5
+  status: written_command_verified
+- id: L03.03.5
+  title: Index exposure in a book
+  objective: Explain index exposure in a book and show it in the EX-024 output.
+  prerequisites:
+  - L03.03.4
+  market_lesson: A book's index exposure is the volume that will price at a not-yet-known index. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: residual_risk_after_hh_hedge = basis [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^residual_risk_after_hh_hedge:'
+  expected_result: 'residual_risk_after_hh_hedge: basis'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.03.4
+  after: L03.04.1
+  status: written_command_verified

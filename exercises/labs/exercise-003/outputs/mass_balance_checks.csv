@@ -1,0 +1,9 @@
+check,calculated_bcf,reported_bcf,residual_bcf,passed
+Gathering balance,0.99,0.99,0.0,True
+Processing balance,0.9099999999999999,0.91,-1.1102230246251565e-16,True
+Transmission fuel balance,0.895,0.895,0.0,True
+Transmission allocation balance,0.895,0.895,0.0,True
+Storage inventory balance,0.2,0.19999999999999998,2.7755575615628914e-17,True
+City gate receipt balance,0.875,0.875,0.0,True
+Distribution balance,0.87,0.87,0.0,True
+Overall gas-volume accounting bridge,1.0,1.0,0.0,True

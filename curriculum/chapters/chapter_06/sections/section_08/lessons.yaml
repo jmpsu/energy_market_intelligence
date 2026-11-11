@@ -1,0 +1,74 @@
+section: '6.8'
+title: Transmission constraints and network topology
+exercise: EX-056
+lessons:
+- id: L06.08.1
+  title: Thermal and stability limits
+  objective: Explain thermal and stability limits and show it in the EX-056 output.
+  prerequisites:
+  - L06.07.5
+  market_lesson: Lines are limited by heating, voltage and stability. [K]
+  north_american_example: 'EX-056 (Model Transmission Congestion) on synthetic North American data: lmp_bus_1 = 20 [EX]'
+  terminal_activity: python3 emi.py run 056 | grep '^lmp_bus_1:'
+  expected_result: 'lmp_bus_1: 20'
+  professional_application: Simulate a transmission constraint and calculate its effect on nodal electricity prices.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.07.5
+  after: L06.08.2
+  status: written_command_verified
+- id: L06.08.2
+  title: Contingency (N-1) constraints
+  objective: Explain contingency (N-1) constraints and show it in the EX-056 output.
+  prerequisites:
+  - L06.08.1
+  market_lesson: Operators keep the system secure against the loss of any single element (N-1). [K]
+  north_american_example: 'EX-056 (Model Transmission Congestion) on synthetic North American data: lmp_bus_2 = 50 [EX]'
+  terminal_activity: python3 emi.py run 056 | grep '^lmp_bus_2:'
+  expected_result: 'lmp_bus_2: 50'
+  professional_application: Simulate a transmission constraint and calculate its effect on nodal electricity prices.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.08.1
+  after: L06.08.3
+  status: written_command_verified
+- id: L06.08.3
+  title: PTDF and shift factors
+  objective: Explain pTDF and shift factors and show it in the EX-056 output.
+  prerequisites:
+  - L06.08.2
+  market_lesson: A shift factor says how much of an injection at a node flows on a given line. [K]
+  north_american_example: 'EX-056 (Model Transmission Congestion) on synthetic North American data: lmp_bus_3 = 80 [EX]'
+  terminal_activity: python3 emi.py run 056 | grep '^lmp_bus_3:'
+  expected_result: 'lmp_bus_3: 80'
+  professional_application: Simulate a transmission constraint and calculate its effect on nodal electricity prices.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.08.2
+  after: L06.08.4
+  status: written_command_verified
+- id: L06.08.4
+  title: Congestion patterns
+  objective: Explain congestion patterns and show it in the EX-056 output.
+  prerequisites:
+  - L06.08.3
+  market_lesson: The same constraints bind repeatedly, creating predictable congestion patterns. [K]
+  north_american_example: 'EX-056 (Model Transmission Congestion) on synthetic North American data: gen_bus_1_MW = 150 [EX]'
+  terminal_activity: python3 emi.py run 056 | grep '^gen_bus_1_MW:'
+  expected_result: 'gen_bus_1_MW: 150'
+  professional_application: Simulate a transmission constraint and calculate its effect on nodal electricity prices.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.08.3
+  after: L06.08.5
+  status: written_command_verified
+- id: L06.08.5
+  title: Constraint impact analysis
+  objective: Explain constraint impact analysis and show it in the EX-056 output.
+  prerequisites:
+  - L06.08.4
+  market_lesson: Constraint analysis shows who gains and who pays when a limit binds. [K]
+  north_american_example: 'EX-056 (Model Transmission Congestion) on synthetic North American data: gen_bus_2_MW = 150 [EX]'
+  terminal_activity: python3 emi.py run 056 | grep '^gen_bus_2_MW:'
+  expected_result: 'gen_bus_2_MW: 150'
+  professional_application: Simulate a transmission constraint and calculate its effect on nodal electricity prices.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.08.4
+  after: L06.09.1
+  status: written_command_verified

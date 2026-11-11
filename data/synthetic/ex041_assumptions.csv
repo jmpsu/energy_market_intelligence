@@ -1,0 +1,4 @@
+parameter,value,unit
+opening_inventory,45,MMbbl
+minimum_operating_inventory,30,MMbbl
+cold_winter_demand_multiplier,1.20,multiple

@@ -1,0 +1,74 @@
+section: '8.9'
+title: Credit and counterparty management
+exercise: EX-073
+lessons:
+- id: L08.09.1
+  title: Credit exposure calculation
+  objective: Explain credit exposure calculation and show it in the EX-073 output.
+  prerequisites:
+  - L08.08.5
+  market_lesson: Credit exposure is what a counterparty would owe if it defaulted today. [K]
+  north_american_example: 'EX-073 (Simulate Counterparty Credit Exposure) on synthetic North American data: CP_A_exposure_USD = 600000 [EX]'
+  terminal_activity: python3 emi.py run 073 | grep '^CP_A_exposure_USD:'
+  expected_result: 'CP_A_exposure_USD: 600000'
+  professional_application: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.08.5
+  after: L08.09.2
+  status: written_command_verified
+- id: L08.09.2
+  title: Limits and collateral
+  objective: Explain limits and collateral and show it in the EX-073 output.
+  prerequisites:
+  - L08.09.1
+  market_lesson: Limits cap exposure; collateral reduces it. [K]
+  north_american_example: 'EX-073 (Simulate Counterparty Credit Exposure) on synthetic North American data: CP_B_exposure_USD = 150000 [EX]'
+  terminal_activity: python3 emi.py run 073 | grep '^CP_B_exposure_USD:'
+  expected_result: 'CP_B_exposure_USD: 150000'
+  professional_application: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.09.1
+  after: L08.09.3
+  status: written_command_verified
+- id: L08.09.3
+  title: Master agreements (ISDA, NAESB, EEI)
+  objective: Explain master agreements (ISDA, NAESB, EEI) and show it in the EX-073 output.
+  prerequisites:
+  - L08.09.2
+  market_lesson: Master agreements such as ISDA, NAESB and EEI set default and netting terms. [K]
+  north_american_example: 'EX-073 (Simulate Counterparty Credit Exposure) on synthetic North American data: CP_C_exposure_USD = 400000 [EX]'
+  terminal_activity: python3 emi.py run 073 | grep '^CP_C_exposure_USD:'
+  expected_result: 'CP_C_exposure_USD: 400000'
+  professional_application: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.09.2
+  after: L08.09.4
+  status: written_command_verified
+- id: L08.09.4
+  title: Margining
+  objective: Explain margining and show it in the EX-073 output.
+  prerequisites:
+  - L08.09.3
+  market_lesson: Margin calls move collateral as exposure changes. [K]
+  north_american_example: 'EX-073 (Simulate Counterparty Credit Exposure) on synthetic North American data: CP_D_exposure_USD = 150000 [EX]'
+  terminal_activity: python3 emi.py run 073 | grep '^CP_D_exposure_USD:'
+  expected_result: 'CP_D_exposure_USD: 150000'
+  professional_application: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.09.3
+  after: L08.09.5
+  status: written_command_verified
+- id: L08.09.5
+  title: Credit monitoring
+  objective: Explain credit monitoring and show it in the EX-073 output.
+  prerequisites:
+  - L08.09.4
+  market_lesson: Credit monitoring compares exposure to limits daily. [K]
+  north_american_example: 'EX-073 (Simulate Counterparty Credit Exposure) on synthetic North American data: total_exposure_USD = 1300000 [EX]'
+  terminal_activity: python3 emi.py run 073 | grep '^total_exposure_USD:'
+  expected_result: 'total_exposure_USD: 1300000'
+  professional_application: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.09.4
+  after: L08.10.1
+  status: written_command_verified

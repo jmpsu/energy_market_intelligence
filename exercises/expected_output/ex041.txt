@@ -1,0 +1,16 @@
+ex041 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+peak_inventory_MMbbl: 97.88
+peak_month: Sep
+base_ending_inventory_MMbbl: 48.13
+base_min_inventory_MMbbl: 48.13
+build_season_injection_MMbbl: 52.88
+winter_draw_MMbbl: 49.75
+export_share_of_production_pct: 67.241379
+winter_to_summer_demand_ratio: 2.416667
+cold_winter_min_inventory_MMbbl: 22.9
+cold_winter_months_below_minimum: Feb,Mar
+cold_winter_extra_draw_MMbbl: 25.23
+min_days_of_supply_base: 15.524242
+NOTE: Exports held flat every month; in practice exports respond to the US-overseas price spread and dock capacity.
+NOTE: National balance: regional (PADD 2 vs PADD 3) tightness and Conway-Mont Belvieu spreads are not captured (see EX-040).
+NOTE: No price response to inventory.

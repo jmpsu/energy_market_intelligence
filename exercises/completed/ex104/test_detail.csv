@@ -1,0 +1,16 @@
+sample_id,product,volume_gal,component,measured,limit_type,limit_liquid_vol_pct,pass
+S4,Ethane,800000,methane,0.9,max,1.5,True
+S5,Ethane,600000,methane,2.2,max,1.5,False
+S1,Propane,500000,ethane,2.1,max,5.0,True
+S2,Propane,400000,ethane,6.2,max,5.0,False
+S3,Propane,300000,ethane,1.0,max,5.0,True
+S4,Ethane,800000,ethane,96.1,min,95.0,True
+S5,Ethane,600000,ethane,94.3,min,95.0,False
+S1,Propane,500000,propane,96.4,min,90.0,True
+S2,Propane,400000,propane,92.0,min,90.0,True
+S3,Propane,300000,propane,95.6,min,90.0,True
+S4,Ethane,800000,propane,3.0,max,3.5,True
+S5,Ethane,600000,propane,3.5,max,3.5,True
+S1,Propane,500000,butanes_plus,1.5,max,2.5,True
+S2,Propane,400000,butanes_plus,1.8,max,2.5,True
+S3,Propane,300000,butanes_plus,3.4,max,2.5,False

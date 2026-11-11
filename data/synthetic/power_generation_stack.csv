@@ -1,0 +1,8 @@
+generator,technology,available_capacity_MW,marginal_cost_USD_per_MWh
+GAS_01,Natural_Gas,1500,35
+GAS_02,Natural_Gas,1200,42
+COAL_01,Coal,1000,48
+NUCLEAR_01,Nuclear,800,12
+WIND_01,Wind,700,0
+SOLAR_01,Solar,500,0
+GAS_03,Natural_Gas,1000,65

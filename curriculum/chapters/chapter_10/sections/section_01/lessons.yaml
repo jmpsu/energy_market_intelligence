@@ -1,0 +1,74 @@
+section: '10.1'
+title: Mathematical foundations of energy-market models
+exercise: EX-090
+lessons:
+- id: L10.01.1
+  title: Optimization problem structure
+  objective: Explain optimization problem structure and show it in the EX-090 output.
+  prerequisites:
+  - L09.10.5
+  market_lesson: An optimisation has decision variables, an objective and constraints. [K]
+  north_american_example: 'EX-090 (Build a Gas Network Simulation) on synthetic North American data: base_transport_cost_USD_per_d = 19750000 [EX]'
+  terminal_activity: python3 emi.py run 090 | grep '^base_transport_cost_USD_per_d:'
+  expected_result: 'base_transport_cost_USD_per_d: 19750000'
+  professional_application: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L09.10.5
+  after: L10.01.2
+  status: written_command_verified
+- id: L10.01.2
+  title: Objective functions
+  objective: Explain objective functions and show it in the EX-090 output.
+  prerequisites:
+  - L10.01.1
+  market_lesson: The objective is cost to minimise or margin to maximise. [K]
+  north_american_example: 'EX-090 (Build a Gas Network Simulation) on synthetic North American data: disrupted_transport_cost_USD_per_d = 19750000 [EX]'
+  terminal_activity: python3 emi.py run 090 | grep '^disrupted_transport_cost_USD_per_d:'
+  expected_result: 'disrupted_transport_cost_USD_per_d: 19750000'
+  professional_application: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.01.1
+  after: L10.01.3
+  status: written_command_verified
+- id: L10.01.3
+  title: Constraints and bounds
+  objective: Explain constraints and bounds and show it in the EX-090 output.
+  prerequisites:
+  - L10.01.2
+  market_lesson: Constraints express physical and contractual limits. [K]
+  north_american_example: 'EX-090 (Build a Gas Network Simulation) on synthetic North American data: base_unmet_Bcf_d = 5 [EX]'
+  terminal_activity: python3 emi.py run 090 | grep '^base_unmet_Bcf_d:'
+  expected_result: 'base_unmet_Bcf_d: 5'
+  professional_application: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.01.2
+  after: L10.01.4
+  status: written_command_verified
+- id: L10.01.4
+  title: Duality and shadow prices
+  objective: Explain duality and shadow prices and show it in the EX-090 output.
+  prerequisites:
+  - L10.01.3
+  market_lesson: A shadow price is the objective change per unit of constraint relaxed; LMPs are shadow prices. [K]
+  north_american_example: 'EX-090 (Build a Gas Network Simulation) on synthetic North American data: disrupted_unmet_Bcf_d = 5 [EX]'
+  terminal_activity: python3 emi.py run 090 | grep '^disrupted_unmet_Bcf_d:'
+  expected_result: 'disrupted_unmet_Bcf_d: 5'
+  professional_application: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.01.3
+  after: L10.01.5
+  status: written_command_verified
+- id: L10.01.5
+  title: Formulating a market model
+  objective: Explain formulating a market model and show it in the EX-090 output.
+  prerequisites:
+  - L10.01.4
+  market_lesson: 'Formulate first on paper: variables, objective, constraints. [K]'
+  north_american_example: 'EX-090 (Build a Gas Network Simulation) on synthetic North American data: base_binding_edges = P001,P004,P005,P007,P008 [EX]'
+  terminal_activity: python3 emi.py run 090 | grep '^base_binding_edges:'
+  expected_result: 'base_binding_edges: P001,P004,P005,P007,P008'
+  professional_application: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.01.4
+  after: L10.02.1
+  status: written_command_verified

@@ -1,0 +1,16 @@
+day,average_temperature_F,HDD,HDD_recalculated,HDD_matches,cumulative_HDD
+1,35,30,30,True,30
+2,38,27,27,True,57
+3,42,23,23,True,80
+4,28,37,37,True,117
+5,31,34,34,True,151
+6,45,20,20,True,171
+7,40,25,25,True,196
+8,33,32,32,True,228
+9,29,36,36,True,264
+10,36,29,29,True,293
+11,41,24,24,True,317
+12,44,21,21,True,338
+13,30,35,35,True,373
+14,34,31,31,True,404
+15,39,26,26,True,430

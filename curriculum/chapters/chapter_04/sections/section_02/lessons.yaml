@@ -1,0 +1,74 @@
+section: '4.2'
+title: Pipeline tariffs and transportation rights
+exercise: EX-016
+lessons:
+- id: L04.02.1
+  title: Tariff structure
+  objective: Explain tariff structure and show it in the EX-016 output.
+  prerequisites:
+  - L04.01.5
+  market_lesson: A tariff lists the services, rates and rules a pipeline must offer every shipper. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: breakeven_load_factor = 0.849057 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^breakeven_load_factor:'
+  expected_result: 'breakeven_load_factor: 0.849057'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.01.5
+  after: L04.02.2
+  status: written_command_verified
+- id: L04.02.2
+  title: Rate design and reservation charges
+  objective: Explain rate design and reservation charges and show it in the EX-016 output.
+  prerequisites:
+  - L04.02.1
+  market_lesson: Most fixed costs are recovered through the reservation charge. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: firm_unit_cost_at_100pct = 0.47 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^firm_unit_cost_at_100pct:'
+  expected_result: 'firm_unit_cost_at_100pct: 0.47'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.02.1
+  after: L04.02.3
+  status: written_command_verified
+- id: L04.02.3
+  title: Receipt and delivery rights
+  objective: Explain receipt and delivery rights and show it in the EX-016 output.
+  prerequisites:
+  - L04.02.2
+  market_lesson: A contract names primary receipt and delivery points where the shipper has the highest priority. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: firm_unit_cost_at_50pct = 0.92 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^firm_unit_cost_at_50pct:'
+  expected_result: 'firm_unit_cost_at_50pct: 0.92'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.02.2
+  after: L04.02.4
+  status: written_command_verified
+- id: L04.02.4
+  title: Path and segmentation rights
+  objective: Explain path and segmentation rights and show it in the EX-016 output.
+  prerequisites:
+  - L04.02.3
+  market_lesson: Shippers may split a path into segments or use other points at lower priority. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: spread = 0.8 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^spread:'
+  expected_result: 'spread: 0.8'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.02.3
+  after: L04.02.5
+  status: written_command_verified
+- id: L04.02.5
+  title: Reading a tariff rate sheet
+  objective: Explain reading a tariff rate sheet and show it in the EX-016 output.
+  prerequisites:
+  - L04.02.4
+  market_lesson: A rate sheet gives reservation, usage and fuel for each service and zone. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: firm_monthly_margin_USD = 414000 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^firm_monthly_margin_USD:'
+  expected_result: 'firm_monthly_margin_USD: 414000'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.02.4
+  after: L04.03.1
+  status: written_command_verified

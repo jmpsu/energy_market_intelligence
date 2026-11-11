@@ -1,0 +1,74 @@
+section: '1.8'
+title: Energy commodities and financial instruments
+exercise: EX-024
+lessons:
+- id: L01.08.1
+  title: Commodity units and conversions
+  objective: Explain commodity units and conversions and show it in the EX-024 output.
+  prerequisites:
+  - L01.07.5
+  market_lesson: Gas is priced per MMBtu, measured in Mcf or Bcf; power in MWh; NGLs in gallons or barrels. Conversions are the first check on any number. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: locked_all_in_price = 2.5 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^locked_all_in_price:'
+  expected_result: 'locked_all_in_price: 2.5'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.07.5
+  after: L01.08.2
+  status: written_command_verified
+- id: L01.08.2
+  title: Futures and forwards
+  objective: Explain futures and forwards and show it in the EX-024 output.
+  prerequisites:
+  - L01.08.1
+  market_lesson: A future is exchange-traded and margined; a forward is a bilateral contract for later delivery. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: unhedged_cost_range_USD = 1054000 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^unhedged_cost_range_USD:'
+  expected_result: 'unhedged_cost_range_USD: 1054000'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.08.1
+  after: L01.08.3
+  status: written_command_verified
+- id: L01.08.3
+  title: Swaps and basis instruments
+  objective: Explain swaps and basis instruments and show it in the EX-024 output.
+  prerequisites:
+  - L01.08.2
+  market_lesson: A swap exchanges a fixed price for a floating index; a basis instrument prices a location relative to a benchmark. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: hh_hedged_cost_range_USD = 279000 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^hh_hedged_cost_range_USD:'
+  expected_result: 'hh_hedged_cost_range_USD: 279000'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.08.2
+  after: L01.08.4
+  status: written_command_verified
+- id: L01.08.4
+  title: Options and structured products
+  objective: Explain options and structured products and show it in the EX-024 output.
+  prerequisites:
+  - L01.08.3
+  market_lesson: Options give the right, not the obligation, to buy or sell; structured products bundle several of these. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: fully_hedged_cost_range_USD = 0 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^fully_hedged_cost_range_USD:'
+  expected_result: 'fully_hedged_cost_range_USD: 0'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.08.3
+  after: L01.08.5
+  status: written_command_verified
+- id: L01.08.5
+  title: Environmental and capacity products
+  objective: Explain environmental and capacity products and show it in the EX-024 output.
+  prerequisites:
+  - L01.08.4
+  market_lesson: Capacity, renewable certificates and emissions allowances are separate products with their own prices. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: residual_risk_after_hh_hedge = basis [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^residual_risk_after_hh_hedge:'
+  expected_result: 'residual_risk_after_hh_hedge: basis'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.08.4
+  after: L01.09.1
+  status: written_command_verified

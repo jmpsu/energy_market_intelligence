@@ -1,0 +1,74 @@
+section: '4.3'
+title: Firm and interruptible transportation
+exercise: EX-016
+lessons:
+- id: L04.03.1
+  title: Firm service priority
+  objective: Explain firm service priority and show it in the EX-016 output.
+  prerequisites:
+  - L04.02.5
+  market_lesson: Primary firm service is scheduled first and cut last. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: breakeven_load_factor = 0.849057 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^breakeven_load_factor:'
+  expected_result: 'breakeven_load_factor: 0.849057'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.02.5
+  after: L04.03.2
+  status: written_command_verified
+- id: L04.03.2
+  title: Interruptible service economics
+  objective: Explain interruptible service economics and show it in the EX-016 output.
+  prerequisites:
+  - L04.03.1
+  market_lesson: Interruptible service is cheap per unit but flows only when capacity is spare. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: firm_unit_cost_at_100pct = 0.47 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^firm_unit_cost_at_100pct:'
+  expected_result: 'firm_unit_cost_at_100pct: 0.47'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.03.1
+  after: L04.03.3
+  status: written_command_verified
+- id: L04.03.3
+  title: Secondary firm and out-of-path
+  objective: Explain secondary firm and out-of-path and show it in the EX-016 output.
+  prerequisites:
+  - L04.03.2
+  market_lesson: Secondary firm ranks between primary firm and interruptible. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: firm_unit_cost_at_50pct = 0.92 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^firm_unit_cost_at_50pct:'
+  expected_result: 'firm_unit_cost_at_50pct: 0.92'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.03.2
+  after: L04.03.4
+  status: written_command_verified
+- id: L04.03.4
+  title: Curtailment order
+  objective: Explain curtailment order and show it in the EX-016 output.
+  prerequisites:
+  - L04.03.3
+  market_lesson: Under constraint, the pipeline cuts interruptible, then secondary, then primary pro rata. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: spread = 0.8 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^spread:'
+  expected_result: 'spread: 0.8'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.03.3
+  after: L04.03.5
+  status: written_command_verified
+- id: L04.03.5
+  title: Firm vs interruptible cost comparison
+  objective: Explain firm vs interruptible cost comparison and show it in the EX-016 output.
+  prerequisites:
+  - L04.03.4
+  market_lesson: Firm wins at high load factors; interruptible wins when capacity is rarely needed. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: firm_monthly_margin_USD = 414000 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^firm_monthly_margin_USD:'
+  expected_result: 'firm_monthly_margin_USD: 414000'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.03.4
+  after: L04.04.1
+  status: written_command_verified

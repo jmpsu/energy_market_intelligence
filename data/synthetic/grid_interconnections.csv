@@ -1,0 +1,4 @@
+interconnection,peak_demand_GW,gas_generation_GW,coal_generation_GW,nuclear_generation_GW,renewables_generation_GW,other_generation_GW,interconnection_transfer_GW
+Eastern,620,190,105,95,155,75,1.5
+Western,165,38,12,18,78,19,1.2
+ERCOT,85,42,8,5,25,5,0.0

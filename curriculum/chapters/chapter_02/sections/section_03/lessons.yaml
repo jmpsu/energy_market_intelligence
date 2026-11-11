@@ -1,0 +1,74 @@
+section: '2.3'
+title: Dry gas, associated gas, and gas composition
+exercise: EX-013
+lessons:
+- id: L02.03.1
+  title: Methane and heavier hydrocarbons
+  objective: Explain methane and heavier hydrocarbons and show it in the EX-013 output.
+  prerequisites:
+  - L02.02.5
+  market_lesson: Raw gas is mostly methane with ethane, propane, butanes and heavier components plus impurities. [K]
+  north_american_example: 'EX-013 (Model Raw Gas Processing) on synthetic North American data: mode = recover [EX]'
+  terminal_activity: python3 emi.py run 013 | grep '^mode:'
+  expected_result: 'mode: recover'
+  professional_application: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.02.5
+  after: L02.03.2
+  status: written_command_verified
+- id: L02.03.2
+  title: Heat content and Btu measurement
+  objective: Explain heat content and Btu measurement and show it in the EX-013 output.
+  prerequisites:
+  - L02.03.1
+  market_lesson: Gas is sold on energy (MMBtu), so heat content converts volume to value. [K]
+  north_american_example: 'EX-013 (Model Raw Gas Processing) on synthetic North American data: inlet_Mcf_per_d = 200000 [EX]'
+  terminal_activity: python3 emi.py run 013 | grep '^inlet_Mcf_per_d:'
+  expected_result: 'inlet_Mcf_per_d: 200000'
+  professional_application: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.03.1
+  after: L02.03.3
+  status: written_command_verified
+- id: L02.03.3
+  title: Associated gas and oil-price linkage
+  objective: Explain associated gas and oil-price linkage and show it in the EX-013 output.
+  prerequisites:
+  - L02.03.2
+  market_lesson: Associated gas is a by-product of oil wells; it flows whatever the gas price while oil economics work. [K]
+  north_american_example: 'EX-013 (Model Raw Gas Processing) on synthetic North American data: inlet_MMBtu_per_d = 250000 [EX]'
+  terminal_activity: python3 emi.py run 013 | grep '^inlet_MMBtu_per_d:'
+  expected_result: 'inlet_MMBtu_per_d: 250000'
+  professional_application: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.03.2
+  after: L02.03.4
+  status: written_command_verified
+- id: L02.03.4
+  title: Pipeline quality specifications
+  objective: Explain pipeline quality specifications and show it in the EX-013 output.
+  prerequisites:
+  - L02.03.3
+  market_lesson: Pipelines set limits on heat content, dew point and contaminants; off-spec gas can be refused. [K]
+  north_american_example: 'EX-013 (Model Raw Gas Processing) on synthetic North American data: ngl_bbl_per_d = 23319.228571 [EX]'
+  terminal_activity: python3 emi.py run 013 | grep '^ngl_bbl_per_d:'
+  expected_result: 'ngl_bbl_per_d: 23319.228571'
+  professional_application: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.03.3
+  after: L02.03.5
+  status: written_command_verified
+- id: L02.03.5
+  title: Wet vs dry gas economics
+  objective: Explain wet vs dry gas economics and show it in the EX-013 output.
+  prerequisites:
+  - L02.03.4
+  market_lesson: Wet gas earns extra NGL revenue but needs processing; dry gas does not. [K]
+  north_american_example: 'EX-013 (Model Raw Gas Processing) on synthetic North American data: shrink_MMBtu_per_d = 80967.50303 [EX]'
+  terminal_activity: python3 emi.py run 013 | grep '^shrink_MMBtu_per_d:'
+  expected_result: 'shrink_MMBtu_per_d: 80967.50303'
+  professional_application: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.03.4
+  after: L02.04.1
+  status: written_command_verified

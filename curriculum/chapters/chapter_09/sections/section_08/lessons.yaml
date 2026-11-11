@@ -1,0 +1,74 @@
+section: '9.8'
+title: Funding, liquidity, and counterparty risk
+exercise: EX-073
+lessons:
+- id: L09.08.1
+  title: Margin and funding needs
+  objective: Explain margin and funding needs and show it in the EX-073 output.
+  prerequisites:
+  - L09.07.5
+  market_lesson: Price moves create margin calls that need cash. [K]
+  north_american_example: 'EX-073 (Simulate Counterparty Credit Exposure) on synthetic North American data: CP_A_exposure_USD = 600000 [EX]'
+  terminal_activity: python3 emi.py run 073 | grep '^CP_A_exposure_USD:'
+  expected_result: 'CP_A_exposure_USD: 600000'
+  professional_application: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.07.5
+  after: L09.08.2
+  status: written_command_verified
+- id: L09.08.2
+  title: Liquidity risk
+  objective: Explain liquidity risk and show it in the EX-073 output.
+  prerequisites:
+  - L09.08.1
+  market_lesson: Liquidity risk is being unable to trade or fund without large cost. [K]
+  north_american_example: 'EX-073 (Simulate Counterparty Credit Exposure) on synthetic North American data: CP_B_exposure_USD = 150000 [EX]'
+  terminal_activity: python3 emi.py run 073 | grep '^CP_B_exposure_USD:'
+  expected_result: 'CP_B_exposure_USD: 150000'
+  professional_application: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.08.1
+  after: L09.08.3
+  status: written_command_verified
+- id: L09.08.3
+  title: Counterparty default risk
+  objective: Explain counterparty default risk and show it in the EX-073 output.
+  prerequisites:
+  - L09.08.2
+  market_lesson: Counterparty default risk is loss when the other side fails. [K]
+  north_american_example: 'EX-073 (Simulate Counterparty Credit Exposure) on synthetic North American data: CP_C_exposure_USD = 400000 [EX]'
+  terminal_activity: python3 emi.py run 073 | grep '^CP_C_exposure_USD:'
+  expected_result: 'CP_C_exposure_USD: 400000'
+  professional_application: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.08.2
+  after: L09.08.4
+  status: written_command_verified
+- id: L09.08.4
+  title: Credit valuation adjustment basics
+  objective: Explain credit valuation adjustment basics and show it in the EX-073 output.
+  prerequisites:
+  - L09.08.3
+  market_lesson: Credit valuation adjustment prices expected default loss. [K]
+  north_american_example: 'EX-073 (Simulate Counterparty Credit Exposure) on synthetic North American data: CP_D_exposure_USD = 150000 [EX]'
+  terminal_activity: python3 emi.py run 073 | grep '^CP_D_exposure_USD:'
+  expected_result: 'CP_D_exposure_USD: 150000'
+  professional_application: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.08.3
+  after: L09.08.5
+  status: written_command_verified
+- id: L09.08.5
+  title: Liquidity stress
+  objective: Explain liquidity stress and show it in the EX-073 output.
+  prerequisites:
+  - L09.08.4
+  market_lesson: A liquidity stress asks whether cash covers margin in a bad week. [K]
+  north_american_example: 'EX-073 (Simulate Counterparty Credit Exposure) on synthetic North American data: total_exposure_USD = 1300000 [EX]'
+  terminal_activity: python3 emi.py run 073 | grep '^total_exposure_USD:'
+  expected_result: 'total_exposure_USD: 1300000'
+  professional_application: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.08.4
+  after: L09.09.1
+  status: written_command_verified

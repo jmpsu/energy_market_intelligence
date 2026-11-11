@@ -1,0 +1,74 @@
+section: '1.10'
+title: The energy value chain and integrated market modeling
+exercise: EX-009
+lessons:
+- id: L01.10.1
+  title: Wellhead-to-burner-tip value chain
+  objective: Explain wellhead-to-burner-tip value chain and show it in the EX-009 output.
+  prerequisites:
+  - L01.09.5
+  market_lesson: 'Value is added or lost at each step from wellhead to burner tip: gathering, processing, transport, distribution. [K]'
+  north_american_example: 'EX-009 (Construct an Integrated Energy Market Dashboard) on synthetic North American data: days = 60 [EX]'
+  terminal_activity: python3 emi.py run 009 | grep '^days:'
+  expected_result: 'days: 60'
+  professional_application: Combine gas prices, electricity prices, production, storage, weather, and generation data into one analytical view.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.09.5
+  after: L01.10.2
+  status: written_command_verified
+- id: L01.10.2
+  title: Fuel-to-power conversion link
+  objective: Explain fuel-to-power conversion link and show it in the EX-009 output.
+  prerequisites:
+  - L01.10.1
+  market_lesson: A gas plant converts MMBtu to MWh at its heat rate, which ties the gas price to the power price. [K]
+  north_american_example: 'EX-009 (Construct an Integrated Energy Market Dashboard) on synthetic North American data: corr_gas_power = 0.566886 [EX]'
+  terminal_activity: python3 emi.py run 009 | grep '^corr_gas_power:'
+  expected_result: 'corr_gas_power: 0.566886'
+  professional_application: Combine gas prices, electricity prices, production, storage, weather, and generation data into one analytical view.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.10.1
+  after: L01.10.3
+  status: written_command_verified
+- id: L01.10.3
+  title: Value capture at each stage
+  objective: Explain value capture at each stage and show it in the EX-009 output.
+  prerequisites:
+  - L01.10.2
+  market_lesson: 'Each stage captures a margin: fees for infrastructure, spreads for traders, spark spread for generators. [K]'
+  north_american_example: 'EX-009 (Construct an Integrated Energy Market Dashboard) on synthetic North American data: corr_hdd_gas = 0.791867 [EX]'
+  terminal_activity: python3 emi.py run 009 | grep '^corr_hdd_gas:'
+  expected_result: 'corr_hdd_gas: 0.791867'
+  professional_application: Combine gas prices, electricity prices, production, storage, weather, and generation data into one analytical view.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.10.2
+  after: L01.10.4
+  status: written_command_verified
+- id: L01.10.4
+  title: Integrated gas-power modeling rationale
+  objective: Explain integrated gas-power modeling rationale and show it in the EX-009 output.
+  prerequisites:
+  - L01.10.3
+  market_lesson: Modeling gas and power together captures feedback that separate models miss. [K]
+  north_american_example: 'EX-009 (Construct an Integrated Energy Market Dashboard) on synthetic North American data: corr_hdd_storage_change = -0.99849 [EX]'
+  terminal_activity: python3 emi.py run 009 | grep '^corr_hdd_storage_change:'
+  expected_result: 'corr_hdd_storage_change: -0.99849'
+  professional_application: Combine gas prices, electricity prices, production, storage, weather, and generation data into one analytical view.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.10.3
+  after: L01.10.5
+  status: written_command_verified
+- id: L01.10.5
+  title: Building a reference model of the chain
+  objective: Explain building a reference model of the chain and show it in the EX-009 output.
+  prerequisites:
+  - L01.10.4
+  market_lesson: A reference model fixes locations, units and identifiers so every later analysis joins cleanly. [K]
+  north_american_example: 'EX-009 (Construct an Integrated Energy Market Dashboard) on synthetic North American data: mean_implied_heat_rate = 12.333135 [EX]'
+  terminal_activity: python3 emi.py run 009 | grep '^mean_implied_heat_rate:'
+  expected_result: 'mean_implied_heat_rate: 12.333135'
+  professional_application: Combine gas prices, electricity prices, production, storage, weather, and generation data into one analytical view.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.10.4
+  after: L02.01.1
+  status: written_command_verified

@@ -1,0 +1,68 @@
+section: '5.8'
+title: Natural gasoline and product specifications
+lessons:
+- id: L05.08.1
+  title: Natural gasoline uses
+  prerequisite: L05.07.5
+  status: written
+  objective: Define natural gasoline.
+  market_lesson: 'Natural gasoline is pentanes-plus: C5 and heavier [S1][S13].'
+  example: It is 9.7% of the synthetic plant's barrels in recovery mode.
+  terminal_activity: python3 emi.py run 037
+  expected_result: 'Natural_Gasoline_bbl_per_d: 2259.52'
+  professional_application: It is the highest-priced NGL per gallon and the closest to crude.
+  product_implication: 'Naming varies (C5+, pentanes-plus, natural gasoline): the product needs an alias table.'
+  builds_on: L05.07.5
+  leads_to: L05.08.2
+- id: L05.08.2
+  title: Diluent demand
+  prerequisite: L05.08.1
+  status: written
+  objective: State its uses.
+  market_lesson: Natural gasoline is used as a gasoline blendstock and as an ethanol denaturant [S13]. It is also used as diluent for heavy crude [K].
+  example: EIA shows 0.17 million b/d of US natural gasoline exports in 2022 [S5].
+  terminal_activity: grep Natural_Gasoline data/synthetic/ngl_regional_prices.csv
+  expected_result: 'Two rows: 1.450 and 1.480 USD/gal at Mont Belvieu.'
+  professional_application: Demand follows gasoline blending and Canadian heavy-oil output.
+  product_implication: Diluent flows tie the NGL model to Canadian crude data.
+  builds_on: L05.08.1
+  leads_to: L05.08.3
+- id: L05.08.3
+  title: Product specifications
+  prerequisite: L05.08.2
+  status: written
+  objective: See why it dominates barrel value.
+  market_lesson: Value share = volume share x price. A small volume at a high price carries the barrel [EX].
+  example: 'EX-039: 14% of volume but 8.53 of the 28.05 USD barrel (30.4%), the largest value component.'
+  terminal_activity: python3 emi.py run 039
+  expected_result: 'largest_value_component: Natural_Gasoline'
+  professional_application: When crude falls, the heavy end drags the whole NGL barrel down.
+  product_implication: Barrel-value attribution by component is a standard chart.
+  builds_on: L05.08.2
+  leads_to: L05.08.4
+- id: L05.08.4
+  title: Pricing vs crude
+  prerequisite: L05.08.3
+  status: written
+  objective: Price it against crude.
+  market_lesson: The heavy NGLs track crude [S11]; commentary quotes C5+ moves alongside crude moves [K].
+  example: 'EX-044 is short 500,000 gal: a 0.03 USD/gal rise costs 15,000 USD.'
+  terminal_activity: python3 emi.py run 044
+  expected_result: 'P4_pnl_USD: -15000'
+  professional_application: Hedging natural gasoline often uses crude instruments, leaving basis risk.
+  product_implication: Proxy-hedge tracking (NGL vs crude) is a risk-reporting requirement.
+  builds_on: L05.08.3
+  leads_to: L05.08.5
+- id: L05.08.5
+  title: Quality differentials
+  prerequisite: L05.08.4
+  status: written
+  objective: Apply specifications.
+  market_lesson: Purity products must meet composition specifications; off-spec product is discounted or rejected [K]. Purity means at least 90% of one molecule [S3].
+  example: 'Not modeled in this repo: no exercise applies a specification test.'
+  terminal_activity: cat data/synthetic/ex039_ygrade.csv
+  expected_result: Composition only; no spec limits present.
+  professional_application: Quality claims are a routine back-office dispute.
+  product_implication: 'Gap to note: spec limits per product per pipeline are data the model lacks.'
+  builds_on: L05.08.4
+  leads_to: L05.09.1

@@ -1,0 +1,921 @@
+note: Order = day, then tier (1 first), then id. 30-hour track = tier 1 only.
+exercises:
+- id: EX-001
+  title: Map the North American Energy System
+  task: Build a geographic and logical map connecting natural gas production, pipelines, storage, power generation, transmission, and end-use demand.
+  curriculum_chapter: 1
+  tier: 2
+  day: 1
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 1
+- id: EX-002
+  title: Identify Market Participants
+  task: Create a structured dataset of producers, utilities, generators, pipelines, ISOs, RTOs, marketers, traders, and regulators; classify their commercial roles.
+  curriculum_chapter: 1
+  tier: 2
+  day: 1
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 2
+- id: EX-003
+  title: Trace the Natural Gas Supply Chain
+  task: Follow 1 Bcf of natural gas from a production basin through processing, transportation, storage, and final consumption.
+  curriculum_chapter: 1
+  tier: 2
+  day: 1
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 3
+- id: EX-004
+  title: Trace the Electricity Supply Chain
+  task: Model how a natural gas-fired generator converts fuel into electricity and delivers it through the transmission network to consumers.
+  curriculum_chapter: 1
+  tier: 2
+  day: 1
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 4
+- id: EX-005
+  title: Compare North American Grid Interconnections
+  task: Map the Eastern, Western, and ERCOT interconnections; identify their operational independence and major interfaces.
+  curriculum_chapter: 1
+  tier: 2
+  day: 1
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 5
+- id: EX-006
+  title: Compare Wholesale and Retail Markets
+  task: Analyze how wholesale electricity prices translate into retail supply costs under different market structures.
+  curriculum_chapter: 1
+  tier: 2
+  day: 1
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 6
+- id: EX-007
+  title: Build an Energy Market Reference Database
+  task: Create structured records for major North American energy hubs, pipelines, power markets, and trading locations.
+  curriculum_chapter: 1
+  tier: 2
+  day: 1
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 7
+- id: EX-008
+  title: Analyze Energy Market Participants' Incentives
+  task: Model how a producer, pipeline operator, generator, utility, and trader respond differently to the same price shock.
+  curriculum_chapter: 1
+  tier: 2
+  day: 1
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 8
+- id: EX-009
+  title: Construct an Integrated Energy Market Dashboard
+  task: Combine gas prices, electricity prices, production, storage, weather, and generation data into one analytical view.
+  curriculum_chapter: 1
+  tier: 2
+  day: 1
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 9
+- id: EX-015
+  title: Model Pipeline Constraints
+  task: Simulate how a pipeline bottleneck changes regional supply, deliverability, and market prices.
+  curriculum_chapter: 2
+  tier: 1
+  day: 2
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 10
+- id: EX-010
+  title: Compare Major US Gas-Producing Basins
+  task: Analyze production volumes, growth rates, and economic characteristics across the Appalachian, Permian, and Haynesville basins.
+  curriculum_chapter: 2
+  tier: 2
+  day: 2
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 11
+- id: EX-011
+  title: Analyze Canadian Natural Gas Supply
+  task: Compare production from the Montney, Duvernay, and Western Canadian Sedimentary Basin.
+  curriculum_chapter: 2
+  tier: 2
+  day: 2
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 12
+- id: EX-012
+  title: Calculate Wellhead-to-Market Economics
+  task: Model the effects of gathering, processing, transportation, fuel retention, and other costs on realized gas prices.
+  curriculum_chapter: 2
+  tier: 2
+  day: 2
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 13
+- id: EX-013
+  title: Model Raw Gas Processing
+  task: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  curriculum_chapter: 2
+  tier: 2
+  day: 2
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 14
+- id: EX-014
+  title: Analyze Pipeline Capacity
+  task: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  curriculum_chapter: 2
+  tier: 2
+  day: 2
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 15
+- id: EX-016
+  title: Calculate Pipeline Transportation Economics
+  task: Compare firm and interruptible transportation costs under different market conditions.
+  curriculum_chapter: 2
+  tier: 2
+  day: 2
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 16
+- id: EX-017
+  title: Analyze Pipeline Maintenance and Outages
+  task: Quantify how a hypothetical pipeline outage changes regional flows, available capacity, and basis prices.
+  curriculum_chapter: 2
+  tier: 2
+  day: 2
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 17
+- id: EX-018
+  title: Build a North American Gas Infrastructure Network
+  task: Represent production basins, processing plants, pipelines, storage facilities, LNG terminals, and market hubs as a connected network.
+  curriculum_chapter: 2
+  tier: 2
+  day: 2
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 18
+- id: EX-021
+  title: Calculate Basis Trading P&L
+  task: Model a long-basis position across two periods and calculate mark-to-market changes.
+  curriculum_chapter: 3
+  tier: 1
+  day: 3
+  depends_on:
+  - EX-020
+  status: implemented_and_tested
+  sequence: 19
+- id: EX-023
+  title: Build a Natural Gas Forward Curve
+  task: Construct a forward price curve from monthly market observations and calculate its shape.
+  curriculum_chapter: 3
+  tier: 1
+  day: 3
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 20
+- id: EX-025
+  title: Calculate Gas Storage Arbitrage
+  task: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  curriculum_chapter: 3
+  tier: 1
+  day: 3
+  depends_on:
+  - EX-023
+  status: implemented_and_tested
+  sequence: 21
+- id: EX-019
+  title: Calculate Regional Gas Basis
+  task: Compare Henry Hub with Waha, AECO, Dawn, Algonquin Citygate, and other regional pricing locations.
+  curriculum_chapter: 3
+  tier: 2
+  day: 3
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 22
+- id: EX-020
+  title: Model Negative Natural Gas Prices
+  task: Analyze why Waha prices can become negative despite positive Henry Hub prices.
+  curriculum_chapter: 3
+  tier: 2
+  day: 3
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 23
+- id: EX-022
+  title: Analyze Seasonal Gas Price Spreads
+  task: Compare winter and summer prices; calculate calendar spreads and identify seasonal trading opportunities.
+  curriculum_chapter: 3
+  tier: 2
+  day: 3
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 24
+- id: EX-024
+  title: Compare Physical and Financial Gas Contracts
+  task: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  curriculum_chapter: 3
+  tier: 2
+  day: 3
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 25
+- id: EX-026
+  title: Analyze Henry Hub Price Sensitivity
+  task: Simulate how changes in production, LNG exports, weather, and storage affect benchmark prices.
+  curriculum_chapter: 3
+  tier: 2
+  day: 3
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 26
+- id: EX-027
+  title: Build a Regional Gas Trading Portfolio
+  task: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  curriculum_chapter: 3
+  tier: 2
+  day: 3
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 27
+- id: EX-033
+  title: Calculate LNG Export Netbacks
+  task: Compare Henry Hub costs with international LNG selling prices after liquefaction, shipping, and regasification costs.
+  curriculum_chapter: 4
+  tier: 1
+  day: 4
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 28
+- id: EX-030
+  title: Analyze Operational Flow Orders
+  task: Simulate a pipeline constraint and determine how an operational flow order changes shipper behavior.
+  curriculum_chapter: 4
+  tier: 2
+  day: 4
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 29
+- id: EX-031
+  title: Model Gas Storage Operations
+  task: Calculate inventory levels, injection and withdrawal rates, working gas capacity, and remaining deliverability.
+  curriculum_chapter: 4
+  tier: 2
+  day: 4
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 30
+- id: EX-032
+  title: Analyze LNG Feedgas Demand
+  task: Model how LNG terminal utilization affects domestic natural gas demand and regional pricing.
+  curriculum_chapter: 4
+  tier: 2
+  day: 4
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 31
+- id: EX-034
+  title: Compare Henry Hub, TTF, and JKM
+  task: Analyze the relationship between North American, European, and Asian gas benchmarks.
+  curriculum_chapter: 4
+  tier: 2
+  day: 4
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 32
+- id: EX-035
+  title: Model US-Canada-Mexico Gas Flows
+  task: Build a cross-border supply and demand balance incorporating imports, exports, and pipeline constraints.
+  curriculum_chapter: 4
+  tier: 2
+  day: 4
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 33
+- id: EX-036
+  title: Simulate a Winter Gas Supply Disruption
+  task: Model how extreme weather, production declines, pipeline constraints, and storage withdrawals affect regional markets.
+  curriculum_chapter: 4
+  tier: 2
+  day: 4
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 34
+- id: EX-028
+  title: Simulate Daily Gas Nominations
+  task: Build a simplified nomination schedule showing requested quantities, pipeline confirmations, and scheduled volumes.
+  curriculum_chapter: 4
+  tier: 3
+  day: 4
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 35
+- id: EX-029
+  title: Model Pipeline Imbalances
+  task: Calculate the difference between nominated, confirmed, scheduled, and actual gas deliveries.
+  curriculum_chapter: 4
+  tier: 3
+  day: 4
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 36
+- id: EX-039
+  title: Analyze NGL Fractionation Economics
+  task: Calculate the economics of separating mixed NGL streams into individual purity products.
+  curriculum_chapter: 5
+  tier: 1
+  day: 5
+  depends_on:
+  - EX-040
+  status: implemented_and_tested
+  sequence: 37
+- id: EX-040
+  title: Compare Mont Belvieu and Conway Pricing
+  task: Calculate regional NGL basis and transportation economics.
+  curriculum_chapter: 5
+  tier: 1
+  day: 5
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 38
+- id: EX-037
+  title: Calculate Natural Gas Liquids Composition
+  task: Analyze raw gas composition and estimate ethane, propane, butanes, and natural gasoline recovery.
+  curriculum_chapter: 5
+  tier: 2
+  day: 5
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 39
+- id: EX-038
+  title: Model Ethane Rejection
+  task: Calculate when leaving ethane in the gas stream becomes more economical than recovering and transporting it.
+  curriculum_chapter: 5
+  tier: 2
+  day: 5
+  depends_on:
+  - EX-037
+  status: implemented_and_tested
+  sequence: 40
+- id: EX-041
+  title: Model Propane Seasonality
+  task: Analyze seasonal propane demand, inventory levels, exports, and price movements.
+  curriculum_chapter: 5
+  tier: 2
+  day: 5
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 41
+- id: EX-042
+  title: Calculate Ethane Petrochemical Margins
+  task: Compare ethane feedstock costs with hypothetical ethylene selling prices.
+  curriculum_chapter: 5
+  tier: 2
+  day: 5
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 42
+- id: EX-043
+  title: Optimize NGL Transportation
+  task: Compare pipeline, rail, truck, and marine transportation under different capacity and cost constraints.
+  curriculum_chapter: 5
+  tier: 2
+  day: 5
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 43
+- id: EX-044
+  title: Build an Integrated NGL Portfolio
+  task: Calculate product exposure, fractionation margins, regional basis, and total portfolio P&L.
+  curriculum_chapter: 5
+  tier: 2
+  day: 5
+  depends_on:
+  - EX-040
+  status: implemented_and_tested
+  sequence: 44
+- id: EX-047
+  title: Analyze Day-Ahead and Real-Time Markets
+  task: Compare scheduled electricity prices with actual real-time market prices.
+  curriculum_chapter: 6
+  tier: 1
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 45
+- id: EX-048
+  title: Calculate Locational Marginal Prices
+  task: Break down electricity prices into energy, congestion, and marginal loss components.
+  curriculum_chapter: 6
+  tier: 1
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 46
+- id: EX-056
+  title: Model Transmission Congestion
+  task: Simulate a transmission constraint and calculate its effect on nodal electricity prices.
+  curriculum_chapter: 6
+  tier: 1
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 47
+- id: EX-045
+  title: Map North American Electricity Markets
+  task: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  curriculum_chapter: 6
+  tier: 2
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 48
+- id: EX-046
+  title: Compare ISO/RTO and Bilateral Markets
+  task: Model differences between centrally organized wholesale markets and bilateral electricity transactions.
+  curriculum_chapter: 6
+  tier: 2
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 49
+- id: EX-049
+  title: Model Electricity Market Clearing
+  task: Construct a simplified supply stack and determine the market-clearing price.
+  curriculum_chapter: 6
+  tier: 2
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 50
+- id: EX-050
+  title: Analyze Ancillary Services
+  task: Model reserve requirements, regulation, contingency reserves, and their contribution to generator revenue.
+  curriculum_chapter: 6
+  tier: 2
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 51
+- id: EX-051
+  title: Calculate Capacity Market Economics
+  task: Analyze capacity obligations, accreditation, resource adequacy, and capacity revenues.
+  curriculum_chapter: 6
+  tier: 2
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 52
+- id: EX-052
+  title: Model Electricity Market Settlements
+  task: Calculate the financial difference between scheduled quantities, actual generation, and market settlement prices.
+  curriculum_chapter: 6
+  tier: 2
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 53
+- id: EX-057
+  title: Compare Nodal and Zonal Pricing
+  task: Analyze how different market pricing structures affect generators, retailers, and traders.
+  curriculum_chapter: 6
+  tier: 2
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 54
+- id: EX-058
+  title: Calculate Financial Transmission Rights
+  task: Model the financial exposure associated with congestion between two electricity pricing locations.
+  curriculum_chapter: 6
+  tier: 3
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 55
+- id: EX-059
+  title: Analyze Congestion Revenue Rights
+  task: Calculate hypothetical CRR positions and compare expected congestion revenue with realized outcomes.
+  curriculum_chapter: 6
+  tier: 3
+  day: 6
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 56
+- id: EX-055
+  title: Calculate Spark Spreads
+  task: Compare electricity revenue with natural gas fuel costs and variable operating expenses.
+  curriculum_chapter: 7
+  tier: 1
+  day: 7
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 57
+- id: EX-063
+  title: Simulate Battery Energy Storage Arbitrage
+  task: Optimize battery charging and discharging across hourly electricity prices, accounting for efficiency and capacity limits.
+  curriculum_chapter: 7
+  tier: 1
+  day: 7
+  depends_on:
+  - EX-065
+  status: implemented_and_tested
+  sequence: 58
+- id: EX-065
+  title: Optimize a Combined Renewable and Storage Portfolio
+  task: Calculate dispatch decisions across solar generation, battery storage, and market purchases.
+  curriculum_chapter: 7
+  tier: 1
+  day: 7
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 59
+- id: EX-053
+  title: Calculate Generator Dispatch Economics
+  task: Rank generators by marginal operating cost and determine their dispatch order.
+  curriculum_chapter: 7
+  tier: 2
+  day: 7
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 60
+- id: EX-054
+  title: Calculate Heat Rates
+  task: Convert generator fuel consumption into electricity production efficiency.
+  curriculum_chapter: 7
+  tier: 2
+  day: 7
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 61
+- id: EX-060
+  title: Simulate Generator Outages
+  task: Remove generation capacity from a simplified power market and recalculate dispatch and market prices.
+  curriculum_chapter: 7
+  tier: 2
+  day: 7
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 62
+- id: EX-061
+  title: Optimize a Natural Gas-Fired Generator
+  task: Determine when a generator should operate based on gas prices, electricity prices, heat rate, and operating constraints.
+  curriculum_chapter: 7
+  tier: 2
+  day: 7
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 63
+- id: EX-062
+  title: Model Renewable Generation Forecast Errors
+  task: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  curriculum_chapter: 7
+  tier: 2
+  day: 7
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 64
+- id: EX-064
+  title: Analyze Dunkelflaute Conditions
+  task: Simulate prolonged periods of low wind and solar generation and quantify the resulting scarcity exposure.
+  curriculum_chapter: 7
+  tier: 2
+  day: 7
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 65
+- id: EX-070
+  title: Build a Market Data Ingestion Pipeline
+  task: Import historical prices, validate records, detect missing observations, and store clean market data.
+  curriculum_chapter: 8
+  tier: 1
+  day: 8
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 66
+- id: EX-071
+  title: Calculate Daily Trading P&L
+  task: Revalue a portfolio using updated market prices and calculate daily gains and losses.
+  curriculum_chapter: 8
+  tier: 1
+  day: 8
+  depends_on:
+  - EX-023
+  status: implemented_and_tested
+  sequence: 67
+- id: EX-069
+  title: Build a Trade Capture System
+  task: Create a structured trade record containing commodity, counterparty, location, volume, price, delivery period, and contract type.
+  curriculum_chapter: 8
+  tier: 2
+  day: 8
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 68
+- id: EX-072
+  title: Build a Trade Lifecycle
+  task: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  curriculum_chapter: 8
+  tier: 2
+  day: 8
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 69
+- id: EX-073
+  title: Simulate Counterparty Credit Exposure
+  task: Calculate exposure across counterparties and identify concentrations exceeding hypothetical credit limits.
+  curriculum_chapter: 8
+  tier: 2
+  day: 8
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 70
+- id: EX-075
+  title: Reconcile Physical and Financial Positions
+  task: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  curriculum_chapter: 8
+  tier: 2
+  day: 8
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 71
+- id: EX-074
+  title: Build a Physical Gas Scheduling Workflow
+  task: Connect trade quantities to transportation capacity, nominations, confirmations, and delivery schedules.
+  curriculum_chapter: 8
+  tier: 3
+  day: 8
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 72
+- id: EX-076
+  title: Design an ETRM Data Integration
+  task: Build a simplified integration connecting trading records, market data, risk calculations, scheduling, and settlement systems.
+  curriculum_chapter: 8
+  tier: 3
+  day: 8
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 73
+- id: EX-077
+  title: Build a Natural Gas Price Forecast
+  task: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  curriculum_chapter: 9
+  tier: 1
+  day: 9
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 74
+- id: EX-081
+  title: Calculate Value at Risk
+  task: Estimate portfolio losses at a specified confidence level and holding period.
+  curriculum_chapter: 9
+  tier: 1
+  day: 9
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 75
+- id: EX-082
+  title: Calculate Expected Shortfall
+  task: Measure the average loss beyond a specified VaR threshold.
+  curriculum_chapter: 9
+  tier: 1
+  day: 9
+  depends_on:
+  - EX-081
+  status: implemented_and_tested
+  sequence: 76
+- id: EX-084
+  title: Perform Energy Portfolio Stress Testing
+  task: Evaluate portfolio losses under extreme gas prices, electricity scarcity, pipeline outages, and weather events.
+  curriculum_chapter: 9
+  tier: 1
+  day: 9
+  depends_on:
+  - EX-100
+  status: implemented_and_tested
+  sequence: 77
+- id: EX-078
+  title: Analyze Energy Price Volatility
+  task: Calculate rolling volatility and identify periods of unusual market behavior.
+  curriculum_chapter: 9
+  tier: 2
+  day: 9
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 78
+- id: EX-079
+  title: Develop a Power Demand Forecast
+  task: Use weather, calendar effects, and historical consumption to estimate electricity demand.
+  curriculum_chapter: 9
+  tier: 2
+  day: 9
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 79
+- id: EX-080
+  title: Build a Monte Carlo Gas Price Simulation
+  task: Generate thousands of possible future price paths and analyze the resulting distribution.
+  curriculum_chapter: 9
+  tier: 2
+  day: 9
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 80
+- id: EX-086
+  title: Develop a Risk Attribution Engine
+  task: Decompose portfolio P&L into price, basis, volume, volatility, location, and other relevant risk factors.
+  curriculum_chapter: 9
+  tier: 2
+  day: 9
+  depends_on:
+  - EX-071
+  status: implemented_and_tested
+  sequence: 81
+- id: EX-083
+  title: Model Potential Future Exposure
+  task: Estimate how counterparty exposure may evolve under simulated future market conditions.
+  curriculum_chapter: 9
+  tier: 3
+  day: 9
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 82
+- id: EX-085
+  title: Build a Weather Derivatives Valuation Model
+  task: Calculate hypothetical financial exposures linked to heating or cooling degree days.
+  curriculum_chapter: 9
+  tier: 3
+  day: 9
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 83
+- id: EX-090
+  title: Build a Gas Network Simulation
+  task: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  curriculum_chapter: 10
+  tier: 1
+  day: 11
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 84
+- id: EX-094
+  title: Build a Simulation Validation Framework
+  task: Compare model outputs against historical observations and independent calculations; identify calibration errors and structural limitations.
+  curriculum_chapter: 10
+  tier: 1
+  day: 11
+  depends_on:
+  - EX-060
+  status: implemented_and_tested
+  sequence: 85
+- id: EX-087
+  title: Build an Energy Market Data Warehouse
+  task: Design a relational database for prices, generation, transmission, demand, storage, and market participants.
+  curriculum_chapter: 10
+  tier: 2
+  day: 11
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 86
+- id: EX-088
+  title: Develop a Market Data API
+  task: Build an interface that exposes validated market prices and analytical outputs to downstream applications.
+  curriculum_chapter: 10
+  tier: 2
+  day: 11
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 87
+- id: EX-089
+  title: Create a Power Market Simulation
+  task: Build a simplified production-cost model that dispatches generators against hourly demand and operating constraints.
+  curriculum_chapter: 10
+  tier: 2
+  day: 11
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 88
+- id: EX-091
+  title: Develop a Capacity Expansion Model
+  task: Determine which generation resources should be added to meet future electricity demand at minimum modeled cost.
+  curriculum_chapter: 10
+  tier: 3
+  day: 11
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 89
+- id: EX-092
+  title: Benchmark Simulation Performance
+  task: Measure runtime, memory consumption, solver performance, and output quality across different model configurations.
+  curriculum_chapter: 10
+  tier: 3
+  day: 11
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 90
+- id: EX-093
+  title: Optimize Model Execution
+  task: Test scenario batching, caching, parallel processing, model decomposition, and solver configuration against an identical baseline.
+  curriculum_chapter: 10
+  tier: 3
+  day: 11
+  depends_on:
+  - EX-092
+  status: implemented_and_tested
+  sequence: 91
+- id: EX-095
+  title: Conduct Energy Market Customer Discovery
+  task: Translate trader, analyst, scheduler, and portfolio manager workflows into documented product requirements.
+  curriculum_chapter: 11
+  tier: 1
+  day: 13
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 92
+- id: EX-096
+  title: Design a Market Intelligence Product
+  task: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  curriculum_chapter: 11
+  tier: 2
+  day: 13
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 93
+- id: EX-097
+  title: Prioritize a Product Roadmap
+  task: Rank competing feature requests using customer value, commercial impact, technical feasibility, risk, and development effort.
+  curriculum_chapter: 11
+  tier: 2
+  day: 13
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 94
+- id: EX-098
+  title: Build Product Performance Metrics
+  task: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  curriculum_chapter: 11
+  tier: 2
+  day: 13
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 95
+- id: EX-099
+  title: Design an Energy Exemplar Product Integration
+  task: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  curriculum_chapter: 11
+  tier: 2
+  day: 13
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 96
+- id: EX-100
+  title: Complete an Integrated Energy Portfolio Capstone
+  task: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through
+    the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  curriculum_chapter: 12
+  tier: 1
+  day: 14
+  depends_on:
+  - EX-065
+  - EX-055
+  - EX-020
+  - EX-075
+  status: implemented_and_tested
+  sequence: 97
+- id: EX-066
+  title: Model Gas-Electric Coordination
+  task: Simulate how gas pipeline constraints affect the availability and dispatch of gas-fired power generators.
+  curriculum_chapter: 12
+  tier: 2
+  day: 14
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 98
+- id: EX-067
+  title: Analyze Winter Storm Uri
+  task: Reconstruct a simplified extreme-weather scenario involving gas production disruptions, pipeline failures, electricity shortages, and price spikes.
+  curriculum_chapter: 12
+  tier: 2
+  day: 14
+  depends_on: []
+  status: implemented_and_tested
+  sequence: 99
+- id: EX-068
+  title: Build a Multi-Commodity Asset Optimization Model
+  task: Optimize a portfolio containing gas supply, gas-fired generation, renewable assets, storage, and electricity market positions.
+  curriculum_chapter: 12
+  tier: 2
+  day: 14
+  depends_on:
+  - EX-065
+  - EX-090
+  status: implemented_and_tested
+  sequence: 100

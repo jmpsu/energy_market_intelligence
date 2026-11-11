@@ -1,0 +1,74 @@
+section: '1.4'
+title: Electricity and natural gas market differences
+exercise: EX-004
+lessons:
+- id: L01.04.1
+  title: Storability and real-time balance
+  objective: Explain storability and real-time balance and show it in the EX-004 output.
+  prerequisites:
+  - L01.03.5
+  market_lesson: Gas stores in reservoirs and linepack; power has almost no storage, so supply and demand balance every second. [K]
+  north_american_example: 'EX-004 (Trace the Electricity Supply Chain) on synthetic North American data: fuel_MMBtu = 1037000 [EX]'
+  terminal_activity: python3 emi.py run 004 | grep '^fuel_MMBtu:'
+  expected_result: 'fuel_MMBtu: 1037000'
+  professional_application: Model how a natural gas-fired generator converts fuel into electricity and delivers it through the transmission network to consumers.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.03.5
+  after: L01.04.2
+  status: written_command_verified
+- id: L01.04.2
+  title: 'Transport physics: pipelines vs wires'
+  objective: 'Explain transport physics: pipelines vs wires and show it in the EX-004 output.'
+  prerequisites:
+  - L01.04.1
+  market_lesson: Gas moves at pipeline speed over hours to days; power flows near instantly along every parallel path by physics. [K]
+  north_american_example: 'EX-004 (Trace the Electricity Supply Chain) on synthetic North American data: gross_MWh = 148142.857143 [EX]'
+  terminal_activity: python3 emi.py run 004 | grep '^gross_MWh:'
+  expected_result: 'gross_MWh: 148142.857143'
+  professional_application: Model how a natural gas-fired generator converts fuel into electricity and delivers it through the transmission network to consumers.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.04.1
+  after: L01.04.3
+  status: written_command_verified
+- id: L01.04.3
+  title: Gas day vs power hour granularity
+  objective: Explain gas day vs power hour granularity and show it in the EX-004 output.
+  prerequisites:
+  - L01.04.2
+  market_lesson: Gas trades by the gas day; power settles hourly or every five minutes, so power data is far more granular. [K]
+  north_american_example: 'EX-004 (Trace the Electricity Supply Chain) on synthetic North American data: delivered_MWh = 135888.48 [EX]'
+  terminal_activity: python3 emi.py run 004 | grep '^delivered_MWh:'
+  expected_result: 'delivered_MWh: 135888.48'
+  professional_application: Model how a natural gas-fired generator converts fuel into electricity and delivers it through the transmission network to consumers.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.04.2
+  after: L01.04.4
+  status: written_command_verified
+- id: L01.04.4
+  title: Price formation and volatility differences
+  objective: Explain price formation and volatility differences and show it in the EX-004 output.
+  prerequisites:
+  - L01.04.3
+  market_lesson: Limited storage and steep supply curves make power prices spike harder and revert faster than gas prices. [K]
+  north_american_example: 'EX-004 (Trace the Electricity Supply Chain) on synthetic North American data: thermal_efficiency_pct = 48.742857 [EX]'
+  terminal_activity: python3 emi.py run 004 | grep '^thermal_efficiency_pct:'
+  expected_result: 'thermal_efficiency_pct: 48.742857'
+  professional_application: Model how a natural gas-fired generator converts fuel into electricity and delivers it through the transmission network to consumers.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.04.3
+  after: L01.04.5
+  status: written_command_verified
+- id: L01.04.5
+  title: Gas-power interdependence
+  objective: Explain gas-power interdependence and show it in the EX-004 output.
+  prerequisites:
+  - L01.04.4
+  market_lesson: Gas plants often set the power price, and power demand drives gas burn, so each market moves the other. [K]
+  north_american_example: 'EX-004 (Trace the Electricity Supply Chain) on synthetic North American data: fuel_to_customer_efficiency_pct = 44.710848 [EX]'
+  terminal_activity: python3 emi.py run 004 | grep '^fuel_to_customer_efficiency_pct:'
+  expected_result: 'fuel_to_customer_efficiency_pct: 44.710848'
+  professional_application: Model how a natural gas-fired generator converts fuel into electricity and delivers it through the transmission network to consumers.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.04.4
+  after: L01.05.1
+  status: written_command_verified

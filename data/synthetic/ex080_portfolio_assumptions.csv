@@ -1,0 +1,4 @@
+parameter,value,unit
+long_position,100000,MMBtu
+short_position,0,MMBtu
+holding_period,30,days

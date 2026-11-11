@@ -1,0 +1,74 @@
+section: '11.4'
+title: Product vision and strategic positioning
+exercise: EX-096
+lessons:
+- id: L11.04.1
+  title: Vision statement
+  objective: Explain vision statement and show it in the EX-096 output.
+  prerequisites:
+  - L11.03.5
+  market_lesson: A vision statement says who the product serves and what changes for them. [K]
+  north_american_example: 'EX-096 (Design a Market Intelligence Product) on synthetic North American data: requirements = 8 [EX]'
+  terminal_activity: python3 emi.py run 096 | grep '^requirements:'
+  expected_result: 'requirements: 8'
+  professional_application: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.03.5
+  after: L11.04.2
+  status: written_command_verified
+- id: L11.04.2
+  title: Positioning and differentiation
+  objective: Explain positioning and differentiation and show it in the EX-096 output.
+  prerequisites:
+  - L11.04.1
+  market_lesson: Positioning says why it beats alternatives. [K]
+  north_american_example: 'EX-096 (Design a Market Intelligence Product) on synthetic North American data: distinct_users = 8 [EX]'
+  terminal_activity: python3 emi.py run 096 | grep '^distinct_users:'
+  expected_result: 'distinct_users: 8'
+  professional_application: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.04.1
+  after: L11.04.3
+  status: written_command_verified
+- id: L11.04.3
+  title: Value proposition
+  objective: Explain value proposition and show it in the EX-096 output.
+  prerequisites:
+  - L11.04.2
+  market_lesson: The value proposition quantifies the benefit. [K]
+  north_american_example: 'EX-096 (Design a Market Intelligence Product) on synthetic North American data: requirements_with_working_exercise = 8 [EX]'
+  terminal_activity: python3 emi.py run 096 | grep '^requirements_with_working_exercise:'
+  expected_result: 'requirements_with_working_exercise: 8'
+  professional_application: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.04.2
+  after: L11.04.4
+  status: written_command_verified
+- id: L11.04.4
+  title: Strategic bets
+  objective: Explain strategic bets and show it in the EX-096 output.
+  prerequisites:
+  - L11.04.3
+  market_lesson: Strategic bets are the few large choices. [K]
+  north_american_example: 'EX-096 (Design a Market Intelligence Product) on synthetic North American data: requirements_with_automated_test = 8 [EX]'
+  terminal_activity: python3 emi.py run 096 | grep '^requirements_with_automated_test:'
+  expected_result: 'requirements_with_automated_test: 8'
+  professional_application: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.04.3
+  after: L11.04.5
+  status: written_command_verified
+- id: L11.04.5
+  title: Vision narrative
+  objective: Explain vision narrative and show it in the EX-096 output.
+  prerequisites:
+  - L11.04.4
+  market_lesson: The narrative ties them into a story. [K]
+  north_american_example: 'EX-096 (Design a Market Intelligence Product) on synthetic North American data: untested_requirements = none [EX]'
+  terminal_activity: python3 emi.py run 096 | grep '^untested_requirements:'
+  expected_result: 'untested_requirements: none'
+  professional_application: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.04.4
+  after: L11.05.1
+  status: written_command_verified

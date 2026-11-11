@@ -1,0 +1,4 @@
+route,hub_price_USD_per_MMBtu,transport_rate_USD_per_MMBtu,fuel_retention_pct,gathering_USD_per_MMBtu,processing_USD_per_MMBtu,capacity_MMBtu_d
+Sell_at_Waha,1.10,0.00,0.0,0.25,0.15,100000
+Firm_to_Gulf_Coast,3.15,0.60,2.0,0.25,0.15,60000
+Firm_to_West,3.60,0.85,3.5,0.25,0.15,30000

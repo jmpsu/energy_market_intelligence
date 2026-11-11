@@ -1,0 +1,74 @@
+section: '2.9'
+title: Balancing, linepack, OFOs, and operational notices
+exercise: EX-029
+lessons:
+- id: L02.09.1
+  title: Imbalances and tolerances
+  objective: Explain imbalances and tolerances and show it in the EX-029 output.
+  prerequisites:
+  - L02.08.5
+  market_lesson: An imbalance is the gap between what a shipper scheduled and what actually flowed. [K]
+  north_american_example: 'EX-029 (Model Pipeline Imbalances) on synthetic North American data: Alpha_imbalance_pct = 1.5 [EX]'
+  terminal_activity: python3 emi.py run 029 | grep '^Alpha_imbalance_pct:'
+  expected_result: 'Alpha_imbalance_pct: 1.5'
+  professional_application: Calculate the difference between nominated, confirmed, scheduled, and actual gas deliveries.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.08.5
+  after: L02.09.2
+  status: written_command_verified
+- id: L02.09.2
+  title: Linepack as short-term buffer
+  objective: Explain linepack as short-term buffer and show it in the EX-029 output.
+  prerequisites:
+  - L02.09.1
+  market_lesson: Linepack, the gas held in the pipe, absorbs small short-term mismatches. [K]
+  north_american_example: 'EX-029 (Model Pipeline Imbalances) on synthetic North American data: Beta_imbalance_pct = -5 [EX]'
+  terminal_activity: python3 emi.py run 029 | grep '^Beta_imbalance_pct:'
+  expected_result: 'Beta_imbalance_pct: -5'
+  professional_application: Calculate the difference between nominated, confirmed, scheduled, and actual gas deliveries.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.09.1
+  after: L02.09.3
+  status: written_command_verified
+- id: L02.09.3
+  title: Operational flow orders
+  objective: Explain operational flow orders and show it in the EX-029 output.
+  prerequisites:
+  - L02.09.2
+  market_lesson: An operational flow order tightens tolerances when the system is stressed. [K]
+  north_american_example: 'EX-029 (Model Pipeline Imbalances) on synthetic North American data: Gamma_imbalance_pct = 11 [EX]'
+  terminal_activity: python3 emi.py run 029 | grep '^Gamma_imbalance_pct:'
+  expected_result: 'Gamma_imbalance_pct: 11'
+  professional_application: Calculate the difference between nominated, confirmed, scheduled, and actual gas deliveries.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.09.2
+  after: L02.09.4
+  status: written_command_verified
+- id: L02.09.4
+  title: Critical notices and force majeure
+  objective: Explain critical notices and force majeure and show it in the EX-029 output.
+  prerequisites:
+  - L02.09.3
+  market_lesson: Critical notices and force majeure declarations warn of reduced service. [K]
+  north_american_example: 'EX-029 (Model Pipeline Imbalances) on synthetic North American data: Delta_imbalance_pct = 0 [EX]'
+  terminal_activity: python3 emi.py run 029 | grep '^Delta_imbalance_pct:'
+  expected_result: 'Delta_imbalance_pct: 0'
+  professional_application: Calculate the difference between nominated, confirmed, scheduled, and actual gas deliveries.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.09.3
+  after: L02.09.5
+  status: written_command_verified
+- id: L02.09.5
+  title: Imbalance cash-out and penalties
+  objective: Explain imbalance cash-out and penalties and show it in the EX-029 output.
+  prerequisites:
+  - L02.09.4
+  market_lesson: Imbalances beyond tolerance are cashed out at penal prices. [K]
+  north_american_example: 'EX-029 (Model Pipeline Imbalances) on synthetic North American data: Alpha_cashout_USD = 146250 [EX]'
+  terminal_activity: python3 emi.py run 029 | grep '^Alpha_cashout_USD:'
+  expected_result: 'Alpha_cashout_USD: 146250'
+  professional_application: Calculate the difference between nominated, confirmed, scheduled, and actual gas deliveries.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.09.4
+  after: L02.10.1
+  status: written_command_verified

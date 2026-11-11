@@ -1,0 +1,74 @@
+section: '8.8'
+title: P&L attribution and explain
+exercise: EX-071
+lessons:
+- id: L08.08.1
+  title: New-deal P&L
+  objective: Explain new-deal P&L and show it in the EX-071 output.
+  prerequisites:
+  - L08.07.5
+  market_lesson: New-deal P&L is the value of today's trades against today's curve. [K]
+  north_american_example: 'EX-071 (Calculate Daily Trading P&L) on synthetic North American data: mtm_day1_USD = 59500 [EX]'
+  terminal_activity: python3 emi.py run 071 | grep '^mtm_day1_USD:'
+  expected_result: 'mtm_day1_USD: 59500'
+  professional_application: Revalue a portfolio using updated market prices and calculate daily gains and losses.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.07.5
+  after: L08.08.2
+  status: written_command_verified
+- id: L08.08.2
+  title: Price (delta) P&L
+  objective: Explain price (delta) P&L and show it in the EX-071 output.
+  prerequisites:
+  - L08.08.1
+  market_lesson: Delta P&L is existing position times price change. [K]
+  north_american_example: 'EX-071 (Calculate Daily Trading P&L) on synthetic North American data: mtm_day2_USD = 70500 [EX]'
+  terminal_activity: python3 emi.py run 071 | grep '^mtm_day2_USD:'
+  expected_result: 'mtm_day2_USD: 70500'
+  professional_application: Revalue a portfolio using updated market prices and calculate daily gains and losses.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.08.1
+  after: L08.08.3
+  status: written_command_verified
+- id: L08.08.3
+  title: Time and carry effects
+  objective: Explain time and carry effects and show it in the EX-071 output.
+  prerequisites:
+  - L08.08.2
+  market_lesson: Time and carry effects come from moving a day closer to delivery. [K]
+  north_american_example: 'EX-071 (Calculate Daily Trading P&L) on synthetic North American data: daily_pnl_USD = 11000 [EX]'
+  terminal_activity: python3 emi.py run 071 | grep '^daily_pnl_USD:'
+  expected_result: 'daily_pnl_USD: 11000'
+  professional_application: Revalue a portfolio using updated market prices and calculate daily gains and losses.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.08.2
+  after: L08.08.4
+  status: written_command_verified
+- id: L08.08.4
+  title: Unexplained P&L
+  objective: Explain unexplained P&L and show it in the EX-071 output.
+  prerequisites:
+  - L08.08.3
+  market_lesson: Unexplained P&L is whatever the attribution cannot assign. [K]
+  north_american_example: 'EX-071 (Calculate Daily Trading P&L) on synthetic North American data: price_pnl_USD = 3500 [EX]'
+  terminal_activity: python3 emi.py run 071 | grep '^price_pnl_USD:'
+  expected_result: 'price_pnl_USD: 3500'
+  professional_application: Revalue a portfolio using updated market prices and calculate daily gains and losses.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.08.3
+  after: L08.08.5
+  status: written_command_verified
+- id: L08.08.5
+  title: P&L explain report
+  objective: Explain p&L explain report and show it in the EX-071 output.
+  prerequisites:
+  - L08.08.4
+  market_lesson: A P&L explain report lists each driver. [K]
+  north_american_example: 'EX-071 (Calculate Daily Trading P&L) on synthetic North American data: new_deal_pnl_USD = 7500 [EX]'
+  terminal_activity: python3 emi.py run 071 | grep '^new_deal_pnl_USD:'
+  expected_result: 'new_deal_pnl_USD: 7500'
+  professional_application: Revalue a portfolio using updated market prices and calculate daily gains and losses.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.08.4
+  after: L08.09.1
+  status: written_command_verified

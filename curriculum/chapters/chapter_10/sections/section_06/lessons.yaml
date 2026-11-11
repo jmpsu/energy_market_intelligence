@@ -1,0 +1,74 @@
+section: '10.6'
+title: Python, NumPy, pandas, SciPy, and SQL
+exercise: EX-092
+lessons:
+- id: L10.06.1
+  title: Python data stack
+  objective: Explain python data stack and show it in the EX-092 output.
+  prerequisites:
+  - L10.05.5
+  market_lesson: Python with NumPy, pandas and SciPy covers most analytics. [K]
+  north_american_example: 'EX-092 (Benchmark Simulation Performance) on synthetic North American data: scenarios = 12 [EX]'
+  terminal_activity: python3 emi.py run 092 | grep '^scenarios:'
+  expected_result: 'scenarios: 12'
+  professional_application: Measure runtime, memory consumption, solver performance, and output quality across different model configurations.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.05.5
+  after: L10.06.2
+  status: written_command_verified
+- id: L10.06.2
+  title: Vectorized computation with NumPy
+  objective: Explain vectorized computation with NumPy and show it in the EX-092 output.
+  prerequisites:
+  - L10.06.1
+  market_lesson: Vectorised NumPy replaces slow loops. [K]
+  north_american_example: 'EX-092 (Benchmark Simulation Performance) on synthetic North American data: variables_per_scenario = 864 [EX]'
+  terminal_activity: python3 emi.py run 092 | grep '^variables_per_scenario:'
+  expected_result: 'variables_per_scenario: 864'
+  professional_application: Measure runtime, memory consumption, solver performance, and output quality across different model configurations.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.06.1
+  after: L10.06.3
+  status: written_command_verified
+- id: L10.06.3
+  title: pandas data wrangling
+  objective: Explain pandas data wrangling and show it in the EX-092 output.
+  prerequisites:
+  - L10.06.2
+  market_lesson: pandas joins, reshapes and aggregates. [K]
+  north_american_example: 'EX-092 (Benchmark Simulation Performance) on synthetic North American data: max_relative_objective_difference = 0 [EX]'
+  terminal_activity: python3 emi.py run 092 | grep '^max_relative_objective_difference:'
+  expected_result: 'max_relative_objective_difference: 0'
+  professional_application: Measure runtime, memory consumption, solver performance, and output quality across different model configurations.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.06.2
+  after: L10.06.4
+  status: written_command_verified
+- id: L10.06.4
+  title: SciPy optimization
+  objective: Explain sciPy optimization and show it in the EX-092 output.
+  prerequisites:
+  - L10.06.3
+  market_lesson: SciPy solves linear programs. [K]
+  north_american_example: 'EX-092 (Benchmark Simulation Performance) on synthetic North American data: results_equivalent = True [EX]'
+  terminal_activity: python3 emi.py run 092 | grep '^results_equivalent:'
+  expected_result: 'results_equivalent: True'
+  professional_application: Measure runtime, memory consumption, solver performance, and output quality across different model configurations.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.06.3
+  after: L10.06.5
+  status: written_command_verified
+- id: L10.06.5
+  title: SQL analytics
+  objective: Explain sQL analytics and show it in the EX-092 output.
+  prerequisites:
+  - L10.06.4
+  market_lesson: SQL handles set-based queries where the data lives. [K]
+  north_american_example: 'EX-092 (Benchmark Simulation Performance) on synthetic North American data: max_constraint_violation = 0 [EX]'
+  terminal_activity: python3 emi.py run 092 | grep '^max_constraint_violation:'
+  expected_result: 'max_constraint_violation: 0'
+  professional_application: Measure runtime, memory consumption, solver performance, and output quality across different model configurations.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.06.4
+  after: L10.07.1
+  status: written_command_verified

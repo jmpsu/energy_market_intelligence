@@ -1,0 +1,4 @@
+plant,capacity_MW,heat_rate_MMBtu_per_MWh
+P1,400,7.0
+P2,300,8.0
+P3,200,10.0

@@ -1,0 +1,6 @@
+terminal,region,capacity_Bcf_d,utilization_pct,lng_out_Bcf_d,feed_gas_Bcf_d
+Gulf_A,Gulf,4.5,92,4.14,4.554
+Gulf_B,Gulf,3.0,95,2.85,3.1350000000000002
+Gulf_C,Gulf,5.0,88,4.4,4.840000000000001
+Gulf_D_new,Gulf,2.5,40,1.0,1.1
+East_A,East,0.8,90,0.72,0.792

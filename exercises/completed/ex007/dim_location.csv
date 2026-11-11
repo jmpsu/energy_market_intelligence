@@ -1,0 +1,15 @@
+location_id,location,commodity,unit,role
+1,Henry_Hub,Natural_Gas,MMBtu,benchmark
+2,Waha,Natural_Gas,MMBtu,supply_area
+3,AECO,Natural_Gas,MMBtu,supply_area
+4,Dawn,Natural_Gas,MMBtu,market_area
+5,Algonquin,Natural_Gas,MMBtu,market_area
+6,Mont_Belvieu,NGL,gallon,primary_hub
+7,Conway,NGL,gallon,midcontinent_hub
+8,CAISO,Electricity,MWh,ISO
+9,PJM,Electricity,MWh,RTO
+10,MISO,Electricity,MWh,RTO
+11,SPP,Electricity,MWh,RTO
+12,NYISO,Electricity,MWh,ISO
+13,ISO_NE,Electricity,MWh,ISO
+14,ERCOT,Electricity,MWh,ISO

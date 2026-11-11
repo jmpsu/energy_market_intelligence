@@ -1,0 +1,24 @@
+# ex071 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+mtm_day1_USD: 59500
+
+mtm_day2_USD: 70500
+
+daily_pnl_USD: 11000
+
+price_pnl_USD: 3500
+
+new_deal_pnl_USD: 7500
+
+unexplained_USD: 0
+
+T1_price_pnl_USD: 31000
+
+T2_price_pnl_USD: -28000
+
+T3_price_pnl_USD: -15000
+
+T4_price_pnl_USD: 15500
+
+NOTE: Linear book, so price P&L explains everything; options, discounting and roll-off would add gamma, vega, theta and carry buckets.
+

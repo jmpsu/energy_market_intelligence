@@ -1,0 +1,74 @@
+section: '9.1'
+title: Energy price time series and returns
+exercise: EX-078
+lessons:
+- id: L09.01.1
+  title: Price series properties
+  objective: Explain price series properties and show it in the EX-078 output.
+  prerequisites:
+  - L08.10.5
+  market_lesson: Energy prices show seasonality, spikes and mean reversion. [K]
+  north_american_example: 'EX-078 (Analyze Energy Price Volatility) on synthetic North American data: observations = 399 [EX]'
+  terminal_activity: python3 emi.py run 078 | grep '^observations:'
+  expected_result: 'observations: 399'
+  professional_application: Calculate rolling volatility and identify periods of unusual market behavior.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L08.10.5
+  after: L09.01.2
+  status: written_command_verified
+- id: L09.01.2
+  title: Return calculation
+  objective: Explain return calculation and show it in the EX-078 output.
+  prerequisites:
+  - L09.01.1
+  market_lesson: Returns are usually log price changes. [K]
+  north_american_example: 'EX-078 (Analyze Energy Price Volatility) on synthetic North American data: daily_vol = 0.024941 [EX]'
+  terminal_activity: python3 emi.py run 078 | grep '^daily_vol:'
+  expected_result: 'daily_vol: 0.024941'
+  professional_application: Calculate rolling volatility and identify periods of unusual market behavior.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.01.1
+  after: L09.01.3
+  status: written_command_verified
+- id: L09.01.3
+  title: Seasonality and mean reversion
+  objective: Explain seasonality and mean reversion and show it in the EX-078 output.
+  prerequisites:
+  - L09.01.2
+  market_lesson: Mean reversion pulls prices back toward cost-based levels. [K]
+  north_american_example: 'EX-078 (Analyze Energy Price Volatility) on synthetic North American data: annualised_vol = 0.395929 [EX]'
+  terminal_activity: python3 emi.py run 078 | grep '^annualised_vol:'
+  expected_result: 'annualised_vol: 0.395929'
+  professional_application: Calculate rolling volatility and identify periods of unusual market behavior.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.01.2
+  after: L09.01.4
+  status: written_command_verified
+- id: L09.01.4
+  title: Spikes and jumps
+  objective: Explain spikes and jumps and show it in the EX-078 output.
+  prerequisites:
+  - L09.01.3
+  market_lesson: Spikes are short, large moves from scarcity. [K]
+  north_american_example: 'EX-078 (Analyze Energy Price Volatility) on synthetic North American data: median_rolling_vol = 0.387589 [EX]'
+  terminal_activity: python3 emi.py run 078 | grep '^median_rolling_vol:'
+  expected_result: 'median_rolling_vol: 0.387589'
+  professional_application: Calculate rolling volatility and identify periods of unusual market behavior.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.01.3
+  after: L09.01.5
+  status: written_command_verified
+- id: L09.01.5
+  title: Stationarity testing
+  objective: Explain stationarity testing and show it in the EX-078 output.
+  prerequisites:
+  - L09.01.4
+  market_lesson: Stationarity tests tell you if a series can be modelled directly. [K]
+  north_american_example: 'EX-078 (Analyze Energy Price Volatility) on synthetic North American data: max_rolling_vol = 0.613041 [EX]'
+  terminal_activity: python3 emi.py run 078 | grep '^max_rolling_vol:'
+  expected_result: 'max_rolling_vol: 0.613041'
+  professional_application: Calculate rolling volatility and identify periods of unusual market behavior.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.01.4
+  after: L09.02.1
+  status: written_command_verified

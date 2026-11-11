@@ -1,0 +1,13 @@
+month,market_price_USD_per_MMBtu,injection_capacity_MMBtu,withdrawal_capacity_MMBtu,storage_inventory_MMBtu
+January,5.80,0,20000,80000
+February,5.20,0,20000,60000
+March,4.10,0,20000,40000
+April,3.20,20000,0,40000
+May,2.80,20000,0,60000
+June,2.60,20000,0,80000
+July,2.70,20000,0,100000
+August,2.90,20000,0,120000
+September,3.20,10000,0,130000
+October,3.80,0,10000,120000
+November,4.70,0,20000,100000
+December,5.50,0,20000,80000

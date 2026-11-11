@@ -1,0 +1,1241 @@
+chapters:
+- chapter: 1
+  title: North American Energy Market Architecture
+  day: 1
+  exercises:
+  - EX-001
+  - EX-002
+  - EX-003
+  - EX-004
+  - EX-005
+  - EX-006
+  - EX-007
+  - EX-008
+  - EX-009
+  sections:
+  - section: '1.1'
+    title: North American energy industry structure
+    page_status: written
+    lessons:
+    - L01.01.1
+    - L01.01.2
+    - L01.01.3
+    - L01.01.4
+    - L01.01.5
+  - section: '1.2'
+    title: Energy market participants and commercial relationships
+    page_status: written
+    lessons:
+    - L01.02.1
+    - L01.02.2
+    - L01.02.3
+    - L01.02.4
+    - L01.02.5
+  - section: '1.3'
+    title: Physical versus financial energy markets
+    page_status: written
+    lessons:
+    - L01.03.1
+    - L01.03.2
+    - L01.03.3
+    - L01.03.4
+    - L01.03.5
+  - section: '1.4'
+    title: Electricity and natural gas market differences
+    page_status: written
+    lessons:
+    - L01.04.1
+    - L01.04.2
+    - L01.04.3
+    - L01.04.4
+    - L01.04.5
+  - section: '1.5'
+    title: Eastern, Western, and ERCOT interconnections
+    page_status: written
+    lessons:
+    - L01.05.1
+    - L01.05.2
+    - L01.05.3
+    - L01.05.4
+    - L01.05.5
+  - section: '1.6'
+    title: RTOs, ISOs, utilities, generators, marketers, and traders
+    page_status: written
+    lessons:
+    - L01.06.1
+    - L01.06.2
+    - L01.06.3
+    - L01.06.4
+    - L01.06.5
+  - section: '1.7'
+    title: Bilateral and organized wholesale markets
+    page_status: written
+    lessons:
+    - L01.07.1
+    - L01.07.2
+    - L01.07.3
+    - L01.07.4
+    - L01.07.5
+  - section: '1.8'
+    title: Energy commodities and financial instruments
+    page_status: written
+    lessons:
+    - L01.08.1
+    - L01.08.2
+    - L01.08.3
+    - L01.08.4
+    - L01.08.5
+  - section: '1.9'
+    title: Market-data sources and industry information
+    page_status: written
+    lessons:
+    - L01.09.1
+    - L01.09.2
+    - L01.09.3
+    - L01.09.4
+    - L01.09.5
+  - section: '1.10'
+    title: The energy value chain and integrated market modeling
+    page_status: written
+    lessons:
+    - L01.10.1
+    - L01.10.2
+    - L01.10.3
+    - L01.10.4
+    - L01.10.5
+- chapter: 2
+  title: North American Natural Gas Physical Markets
+  day: 2
+  exercises:
+  - EX-010
+  - EX-011
+  - EX-012
+  - EX-013
+  - EX-014
+  - EX-015
+  - EX-016
+  - EX-017
+  - EX-018
+  sections:
+  - section: '2.1'
+    title: Natural gas production and resource basins
+    page_status: written
+    lessons:
+    - L02.01.1
+    - L02.01.2
+    - L02.01.3
+    - L02.01.4
+    - L02.01.5
+  - section: '2.2'
+    title: Gathering systems and processing plants
+    page_status: written
+    lessons:
+    - L02.02.1
+    - L02.02.2
+    - L02.02.3
+    - L02.02.4
+    - L02.02.5
+  - section: '2.3'
+    title: Dry gas, associated gas, and gas composition
+    page_status: written
+    lessons:
+    - L02.03.1
+    - L02.03.2
+    - L02.03.3
+    - L02.03.4
+    - L02.03.5
+  - section: '2.4'
+    title: Production, supply, and demand fundamentals
+    page_status: written
+    lessons:
+    - L02.04.1
+    - L02.04.2
+    - L02.04.3
+    - L02.04.4
+    - L02.04.5
+  - section: '2.5'
+    title: Interstate and intrastate pipeline infrastructure
+    page_status: written
+    lessons:
+    - L02.05.1
+    - L02.05.2
+    - L02.05.3
+    - L02.05.4
+    - L02.05.5
+  - section: '2.6'
+    title: Pipeline topology, capacity, and constraints
+    page_status: written
+    lessons:
+    - L02.06.1
+    - L02.06.2
+    - L02.06.3
+    - L02.06.4
+    - L02.06.5
+  - section: '2.7'
+    title: Storage, injection, and withdrawal
+    page_status: written
+    lessons:
+    - L02.07.1
+    - L02.07.2
+    - L02.07.3
+    - L02.07.4
+    - L02.07.5
+  - section: '2.8'
+    title: Pipeline operations, nominations, and scheduling
+    page_status: written
+    lessons:
+    - L02.08.1
+    - L02.08.2
+    - L02.08.3
+    - L02.08.4
+    - L02.08.5
+  - section: '2.9'
+    title: Balancing, linepack, OFOs, and operational notices
+    page_status: written
+    lessons:
+    - L02.09.1
+    - L02.09.2
+    - L02.09.3
+    - L02.09.4
+    - L02.09.5
+  - section: '2.10'
+    title: Physical delivery and transportation economics
+    page_status: written
+    lessons:
+    - L02.10.1
+    - L02.10.2
+    - L02.10.3
+    - L02.10.4
+    - L02.10.5
+- chapter: 3
+  title: Natural Gas Pricing, Trading, and Risk
+  day: 3
+  exercises:
+  - EX-019
+  - EX-020
+  - EX-021
+  - EX-022
+  - EX-023
+  - EX-024
+  - EX-025
+  - EX-026
+  - EX-027
+  sections:
+  - section: '3.1'
+    title: Henry Hub and benchmark pricing
+    page_status: written
+    lessons:
+    - L03.01.1
+    - L03.01.2
+    - L03.01.3
+    - L03.01.4
+    - L03.01.5
+  - section: '3.2'
+    title: Regional hubs and location basis
+    page_status: written
+    lessons:
+    - L03.02.1
+    - L03.02.2
+    - L03.02.3
+    - L03.02.4
+    - L03.02.5
+  - section: '3.3'
+    title: Cash markets and monthly index pricing
+    page_status: written
+    lessons:
+    - L03.03.1
+    - L03.03.2
+    - L03.03.3
+    - L03.03.4
+    - L03.03.5
+  - section: '3.4'
+    title: Futures, swaps, options, and forwards
+    page_status: written
+    lessons:
+    - L03.04.1
+    - L03.04.2
+    - L03.04.3
+    - L03.04.4
+    - L03.04.5
+  - section: '3.5'
+    title: Forward curves and calendar spreads
+    page_status: written
+    lessons:
+    - L03.05.1
+    - L03.05.2
+    - L03.05.3
+    - L03.05.4
+    - L03.05.5
+  - section: '3.6'
+    title: Transportation and basis contracts
+    page_status: written
+    lessons:
+    - L03.06.1
+    - L03.06.2
+    - L03.06.3
+    - L03.06.4
+    - L03.06.5
+  - section: '3.7'
+    title: Storage economics and seasonal spreads
+    page_status: written
+    lessons:
+    - L03.07.1
+    - L03.07.2
+    - L03.07.3
+    - L03.07.4
+    - L03.07.5
+  - section: '3.8'
+    title: LNG feed-gas demand and international price relationships
+    page_status: written
+    lessons:
+    - L03.08.1
+    - L03.08.2
+    - L03.08.3
+    - L03.08.4
+    - L03.08.5
+  - section: '3.9'
+    title: Natural gas position management and valuation
+    page_status: written
+    lessons:
+    - L03.09.1
+    - L03.09.2
+    - L03.09.3
+    - L03.09.4
+    - L03.09.5
+  - section: '3.10'
+    title: Basis, volume, operational, and market risk
+    page_status: written
+    lessons:
+    - L03.10.1
+    - L03.10.2
+    - L03.10.3
+    - L03.10.4
+    - L03.10.5
+- chapter: 4
+  title: Pipeline Networks, LNG, and Cross-Border Markets
+  day: 4
+  exercises:
+  - EX-028
+  - EX-029
+  - EX-030
+  - EX-031
+  - EX-032
+  - EX-033
+  - EX-034
+  - EX-035
+  - EX-036
+  sections:
+  - section: '4.1'
+    title: North American pipeline topology
+    page_status: written
+    lessons:
+    - L04.01.1
+    - L04.01.2
+    - L04.01.3
+    - L04.01.4
+    - L04.01.5
+  - section: '4.2'
+    title: Pipeline tariffs and transportation rights
+    page_status: written
+    lessons:
+    - L04.02.1
+    - L04.02.2
+    - L04.02.3
+    - L04.02.4
+    - L04.02.5
+  - section: '4.3'
+    title: Firm and interruptible transportation
+    page_status: written
+    lessons:
+    - L04.03.1
+    - L04.03.2
+    - L04.03.3
+    - L04.03.4
+    - L04.03.5
+  - section: '4.4'
+    title: Available capacity and congestion
+    page_status: written
+    lessons:
+    - L04.04.1
+    - L04.04.2
+    - L04.04.3
+    - L04.04.4
+    - L04.04.5
+  - section: '4.5'
+    title: Capacity release and secondary markets
+    page_status: written
+    lessons:
+    - L04.05.1
+    - L04.05.2
+    - L04.05.3
+    - L04.05.4
+    - L04.05.5
+  - section: '4.6'
+    title: Canadian natural gas infrastructure and AECO
+    page_status: written
+    lessons:
+    - L04.06.1
+    - L04.06.2
+    - L04.06.3
+    - L04.06.4
+    - L04.06.5
+  - section: '4.7'
+    title: Mexican natural gas imports and exports
+    page_status: written
+    lessons:
+    - L04.07.1
+    - L04.07.2
+    - L04.07.3
+    - L04.07.4
+    - L04.07.5
+  - section: '4.8'
+    title: LNG liquefaction, shipping, and regasification
+    page_status: written
+    lessons:
+    - L04.08.1
+    - L04.08.2
+    - L04.08.3
+    - L04.08.4
+    - L04.08.5
+  - section: '4.9'
+    title: Global Henry Hub, TTF, and JKM relationships
+    page_status: written
+    lessons:
+    - L04.09.1
+    - L04.09.2
+    - L04.09.3
+    - L04.09.4
+    - L04.09.5
+  - section: '4.10'
+    title: Infrastructure disruption and scenario analysis
+    page_status: written
+    lessons:
+    - L04.10.1
+    - L04.10.2
+    - L04.10.3
+    - L04.10.4
+    - L04.10.5
+- chapter: 5
+  title: North American NGL Markets
+  day: 5
+  exercises:
+  - EX-037
+  - EX-038
+  - EX-039
+  - EX-040
+  - EX-041
+  - EX-042
+  - EX-043
+  - EX-044
+  sections:
+  - section: '5.1'
+    title: Natural gas liquids and hydrocarbon composition
+    page_status: written
+    lessons:
+    - L05.01.1
+    - L05.01.2
+    - L05.01.3
+    - L05.01.4
+    - L05.01.5
+  - section: '5.2'
+    title: NGL extraction and recovery
+    page_status: written
+    lessons:
+    - L05.02.1
+    - L05.02.2
+    - L05.02.3
+    - L05.02.4
+    - L05.02.5
+  - section: '5.3'
+    title: Y-grade and mixed NGL transportation
+    page_status: written
+    lessons:
+    - L05.03.1
+    - L05.03.2
+    - L05.03.3
+    - L05.03.4
+    - L05.03.5
+  - section: '5.4'
+    title: Ethane recovery and rejection
+    page_status: written
+    lessons:
+    - L05.04.1
+    - L05.04.2
+    - L05.04.3
+    - L05.04.4
+    - L05.04.5
+  - section: '5.5'
+    title: Ethane and petrochemical markets
+    page_status: written
+    lessons:
+    - L05.05.1
+    - L05.05.2
+    - L05.05.3
+    - L05.05.4
+    - L05.05.5
+  - section: '5.6'
+    title: Propane pricing, storage, and seasonality
+    page_status: written
+    lessons:
+    - L05.06.1
+    - L05.06.2
+    - L05.06.3
+    - L05.06.4
+    - L05.06.5
+  - section: '5.7'
+    title: Butane and isobutane markets
+    page_status: written
+    lessons:
+    - L05.07.1
+    - L05.07.2
+    - L05.07.3
+    - L05.07.4
+    - L05.07.5
+  - section: '5.8'
+    title: Natural gasoline and product specifications
+    page_status: written
+    lessons:
+    - L05.08.1
+    - L05.08.2
+    - L05.08.3
+    - L05.08.4
+    - L05.08.5
+  - section: '5.9'
+    title: Fractionation, Mont Belvieu, and Conway
+    page_status: written
+    lessons:
+    - L05.09.1
+    - L05.09.2
+    - L05.09.3
+    - L05.09.4
+    - L05.09.5
+  - section: '5.10'
+    title: NGL transportation, exports, trading, and risk
+    page_status: written
+    lessons:
+    - L05.10.1
+    - L05.10.2
+    - L05.10.3
+    - L05.10.4
+    - L05.10.5
+- chapter: 6
+  title: North American Wholesale Electricity Markets
+  day: 6
+  exercises:
+  - EX-045
+  - EX-046
+  - EX-047
+  - EX-048
+  - EX-049
+  - EX-050
+  - EX-051
+  - EX-052
+  - EX-056
+  - EX-057
+  - EX-058
+  - EX-059
+  sections:
+  - section: '6.1'
+    title: North American electricity market structure
+    page_status: written
+    lessons:
+    - L06.01.1
+    - L06.01.2
+    - L06.01.3
+    - L06.01.4
+    - L06.01.5
+  - section: '6.2'
+    title: RTO and ISO operating models
+    page_status: written
+    lessons:
+    - L06.02.1
+    - L06.02.2
+    - L06.02.3
+    - L06.02.4
+    - L06.02.5
+  - section: '6.3'
+    title: PJM, MISO, SPP, ERCOT, CAISO, NYISO, and ISO-NE
+    page_status: written
+    lessons:
+    - L06.03.1
+    - L06.03.2
+    - L06.03.3
+    - L06.03.4
+    - L06.03.5
+  - section: '6.4'
+    title: Vertically integrated and bilateral markets
+    page_status: written
+    lessons:
+    - L06.04.1
+    - L06.04.2
+    - L06.04.3
+    - L06.04.4
+    - L06.04.5
+  - section: '6.5'
+    title: Day-ahead and real-time market operations
+    page_status: written
+    lessons:
+    - L06.05.1
+    - L06.05.2
+    - L06.05.3
+    - L06.05.4
+    - L06.05.5
+  - section: '6.6'
+    title: Locational marginal pricing
+    page_status: written
+    lessons:
+    - L06.06.1
+    - L06.06.2
+    - L06.06.3
+    - L06.06.4
+    - L06.06.5
+  - section: '6.7'
+    title: Energy, congestion, and marginal losses
+    page_status: written
+    lessons:
+    - L06.07.1
+    - L06.07.2
+    - L06.07.3
+    - L06.07.4
+    - L06.07.5
+  - section: '6.8'
+    title: Transmission constraints and network topology
+    page_status: written
+    lessons:
+    - L06.08.1
+    - L06.08.2
+    - L06.08.3
+    - L06.08.4
+    - L06.08.5
+  - section: '6.9'
+    title: Capacity markets and resource adequacy
+    page_status: written
+    lessons:
+    - L06.09.1
+    - L06.09.2
+    - L06.09.3
+    - L06.09.4
+    - L06.09.5
+  - section: '6.10'
+    title: Ancillary services and wholesale settlements
+    page_status: written
+    lessons:
+    - L06.10.1
+    - L06.10.2
+    - L06.10.3
+    - L06.10.4
+    - L06.10.5
+- chapter: 7
+  title: Generation, Renewables, Storage, and Asset Optimization
+  day: 7
+  exercises:
+  - EX-053
+  - EX-054
+  - EX-055
+  - EX-060
+  - EX-061
+  - EX-062
+  - EX-063
+  - EX-064
+  - EX-065
+  sections:
+  - section: '7.1'
+    title: Generation technologies and operating characteristics
+    page_status: written
+    lessons:
+    - L07.01.1
+    - L07.01.2
+    - L07.01.3
+    - L07.01.4
+    - L07.01.5
+  - section: '7.2'
+    title: Heat rates and variable generation costs
+    page_status: written
+    lessons:
+    - L07.02.1
+    - L07.02.2
+    - L07.02.3
+    - L07.02.4
+    - L07.02.5
+  - section: '7.3'
+    title: Gas-fired generation economics
+    page_status: written
+    lessons:
+    - L07.03.1
+    - L07.03.2
+    - L07.03.3
+    - L07.03.4
+    - L07.03.5
+  - section: '7.4'
+    title: Spark spreads and fuel procurement
+    page_status: written
+    lessons:
+    - L07.04.1
+    - L07.04.2
+    - L07.04.3
+    - L07.04.4
+    - L07.04.5
+  - section: '7.5'
+    title: Economic dispatch and unit commitment
+    page_status: written
+    lessons:
+    - L07.05.1
+    - L07.05.2
+    - L07.05.3
+    - L07.05.4
+    - L07.05.5
+  - section: '7.6'
+    title: Renewable generation and forecasting
+    page_status: written
+    lessons:
+    - L07.06.1
+    - L07.06.2
+    - L07.06.3
+    - L07.06.4
+    - L07.06.5
+  - section: '7.7'
+    title: Wind and solar curtailment
+    page_status: written
+    lessons:
+    - L07.07.1
+    - L07.07.2
+    - L07.07.3
+    - L07.07.4
+    - L07.07.5
+  - section: '7.8'
+    title: Battery storage and state-of-charge constraints
+    page_status: written
+    lessons:
+    - L07.08.1
+    - L07.08.2
+    - L07.08.3
+    - L07.08.4
+    - L07.08.5
+  - section: '7.9'
+    title: Long-duration and seasonal storage
+    page_status: written
+    lessons:
+    - L07.09.1
+    - L07.09.2
+    - L07.09.3
+    - L07.09.4
+    - L07.09.5
+  - section: '7.10'
+    title: Integrated generation, storage, and portfolio optimization
+    page_status: written
+    lessons:
+    - L07.10.1
+    - L07.10.2
+    - L07.10.3
+    - L07.10.4
+    - L07.10.5
+- chapter: 8
+  title: Energy Trading Workflows and Enterprise Systems
+  day: 8
+  exercises:
+  - EX-069
+  - EX-070
+  - EX-071
+  - EX-072
+  - EX-073
+  - EX-074
+  - EX-075
+  - EX-076
+  sections:
+  - section: '8.1'
+    title: Front, middle, and back office
+    page_status: written
+    lessons:
+    - L08.01.1
+    - L08.01.2
+    - L08.01.3
+    - L08.01.4
+    - L08.01.5
+  - section: '8.2'
+    title: Trade capture and transaction management
+    page_status: written
+    lessons:
+    - L08.02.1
+    - L08.02.2
+    - L08.02.3
+    - L08.02.4
+    - L08.02.5
+  - section: '8.3'
+    title: Market data and forward curves
+    page_status: written
+    lessons:
+    - L08.03.1
+    - L08.03.2
+    - L08.03.3
+    - L08.03.4
+    - L08.03.5
+  - section: '8.4'
+    title: Position management and portfolio accounting
+    page_status: written
+    lessons:
+    - L08.04.1
+    - L08.04.2
+    - L08.04.3
+    - L08.04.4
+    - L08.04.5
+  - section: '8.5'
+    title: Confirmations and eConfirms
+    page_status: written
+    lessons:
+    - L08.05.1
+    - L08.05.2
+    - L08.05.3
+    - L08.05.4
+    - L08.05.5
+  - section: '8.6'
+    title: Scheduling, nominations, and physical operations
+    page_status: written
+    lessons:
+    - L08.06.1
+    - L08.06.2
+    - L08.06.3
+    - L08.06.4
+    - L08.06.5
+  - section: '8.7'
+    title: Settlements and reconciliation
+    page_status: written
+    lessons:
+    - L08.07.1
+    - L08.07.2
+    - L08.07.3
+    - L08.07.4
+    - L08.07.5
+  - section: '8.8'
+    title: P&L attribution and explain
+    page_status: written
+    lessons:
+    - L08.08.1
+    - L08.08.2
+    - L08.08.3
+    - L08.08.4
+    - L08.08.5
+  - section: '8.9'
+    title: Credit and counterparty management
+    page_status: written
+    lessons:
+    - L08.09.1
+    - L08.09.2
+    - L08.09.3
+    - L08.09.4
+    - L08.09.5
+  - section: '8.10'
+    title: ETRM architecture, integrations, and data warehouses
+    page_status: written
+    lessons:
+    - L08.10.1
+    - L08.10.2
+    - L08.10.3
+    - L08.10.4
+    - L08.10.5
+- chapter: 9
+  title: Quantitative Analytics, Forecasting, and Portfolio Risk
+  day: 9
+  exercises:
+  - EX-077
+  - EX-078
+  - EX-079
+  - EX-080
+  - EX-081
+  - EX-082
+  - EX-083
+  - EX-084
+  - EX-085
+  - EX-086
+  sections:
+  - section: '9.1'
+    title: Energy price time series and returns
+    page_status: written
+    lessons:
+    - L09.01.1
+    - L09.01.2
+    - L09.01.3
+    - L09.01.4
+    - L09.01.5
+  - section: '9.2'
+    title: Statistical volatility and regime changes
+    page_status: written
+    lessons:
+    - L09.02.1
+    - L09.02.2
+    - L09.02.3
+    - L09.02.4
+    - L09.02.5
+  - section: '9.3'
+    title: Energy price forecasting
+    page_status: written
+    lessons:
+    - L09.03.1
+    - L09.03.2
+    - L09.03.3
+    - L09.03.4
+    - L09.03.5
+  - section: '9.4'
+    title: Supply-demand fundamental models
+    page_status: written
+    lessons:
+    - L09.04.1
+    - L09.04.2
+    - L09.04.3
+    - L09.04.4
+    - L09.04.5
+  - section: '9.5'
+    title: Forward-curve construction
+    page_status: written
+    lessons:
+    - L09.05.1
+    - L09.05.2
+    - L09.05.3
+    - L09.05.4
+    - L09.05.5
+  - section: '9.6'
+    title: VaR and Expected Shortfall
+    page_status: written
+    lessons:
+    - L09.06.1
+    - L09.06.2
+    - L09.06.3
+    - L09.06.4
+    - L09.06.5
+  - section: '9.7'
+    title: Potential Future Exposure and Earnings at Risk
+    page_status: written
+    lessons:
+    - L09.07.1
+    - L09.07.2
+    - L09.07.3
+    - L09.07.4
+    - L09.07.5
+  - section: '9.8'
+    title: Funding, liquidity, and counterparty risk
+    page_status: written
+    lessons:
+    - L09.08.1
+    - L09.08.2
+    - L09.08.3
+    - L09.08.4
+    - L09.08.5
+  - section: '9.9'
+    title: Scenario analysis and stress testing
+    page_status: written
+    lessons:
+    - L09.09.1
+    - L09.09.2
+    - L09.09.3
+    - L09.09.4
+    - L09.09.5
+  - section: '9.10'
+    title: Structured products, options, and weather derivatives
+    page_status: written
+    lessons:
+    - L09.10.1
+    - L09.10.2
+    - L09.10.3
+    - L09.10.4
+    - L09.10.5
+- chapter: 10
+  title: Modeling, Simulation, Optimization, and Data Engineering
+  day: 11
+  exercises:
+  - EX-087
+  - EX-088
+  - EX-089
+  - EX-090
+  - EX-091
+  - EX-092
+  - EX-093
+  - EX-094
+  sections:
+  - section: '10.1'
+    title: Mathematical foundations of energy-market models
+    page_status: written
+    lessons:
+    - L10.01.1
+    - L10.01.2
+    - L10.01.3
+    - L10.01.4
+    - L10.01.5
+  - section: '10.2'
+    title: Network-flow and transmission modeling
+    page_status: written
+    lessons:
+    - L10.02.1
+    - L10.02.2
+    - L10.02.3
+    - L10.02.4
+    - L10.02.5
+  - section: '10.3'
+    title: Power-flow and production-cost simulation
+    page_status: written
+    lessons:
+    - L10.03.1
+    - L10.03.2
+    - L10.03.3
+    - L10.03.4
+    - L10.03.5
+  - section: '10.4'
+    title: Linear, mixed-integer, and stochastic optimization
+    page_status: written
+    lessons:
+    - L10.04.1
+    - L10.04.2
+    - L10.04.3
+    - L10.04.4
+    - L10.04.5
+  - section: '10.5'
+    title: Forecasting versus fundamental simulation
+    page_status: written
+    lessons:
+    - L10.05.1
+    - L10.05.2
+    - L10.05.3
+    - L10.05.4
+    - L10.05.5
+  - section: '10.6'
+    title: Python, NumPy, pandas, SciPy, and SQL
+    page_status: written
+    lessons:
+    - L10.06.1
+    - L10.06.2
+    - L10.06.3
+    - L10.06.4
+    - L10.06.5
+  - section: '10.7'
+    title: Snowflake, Databricks, and analytical data architecture
+    page_status: written
+    lessons:
+    - L10.07.1
+    - L10.07.2
+    - L10.07.3
+    - L10.07.4
+    - L10.07.5
+  - section: '10.8'
+    title: APIs, ETL/ELT, and ETRM integrations
+    page_status: written
+    lessons:
+    - L10.08.1
+    - L10.08.2
+    - L10.08.3
+    - L10.08.4
+    - L10.08.5
+  - section: '10.9'
+    title: Model calibration, validation, and reproducibility
+    page_status: written
+    lessons:
+    - L10.09.1
+    - L10.09.2
+    - L10.09.3
+    - L10.09.4
+    - L10.09.5
+  - section: '10.10'
+    title: Simulation performance, scalability, and model governance
+    page_status: written
+    lessons:
+    - L10.10.1
+    - L10.10.2
+    - L10.10.3
+    - L10.10.4
+    - L10.10.5
+- chapter: 11
+  title: Energy Software Product Strategy and Leadership
+  day: 13
+  exercises:
+  - EX-095
+  - EX-096
+  - EX-097
+  - EX-098
+  - EX-099
+  sections:
+  - section: '11.1'
+    title: Energy software customer segments
+    page_status: written
+    lessons:
+    - L11.01.1
+    - L11.01.2
+    - L11.01.3
+    - L11.01.4
+    - L11.01.5
+  - section: '11.2'
+    title: Trader, scheduler, analyst, and risk-manager workflows
+    page_status: written
+    lessons:
+    - L11.02.1
+    - L11.02.2
+    - L11.02.3
+    - L11.02.4
+    - L11.02.5
+  - section: '11.3'
+    title: Customer discovery and requirements gathering
+    page_status: written
+    lessons:
+    - L11.03.1
+    - L11.03.2
+    - L11.03.3
+    - L11.03.4
+    - L11.03.5
+  - section: '11.4'
+    title: Product vision and strategic positioning
+    page_status: written
+    lessons:
+    - L11.04.1
+    - L11.04.2
+    - L11.04.3
+    - L11.04.4
+    - L11.04.5
+  - section: '11.5'
+    title: Market research and competitive intelligence
+    page_status: written
+    lessons:
+    - L11.05.1
+    - L11.05.2
+    - L11.05.3
+    - L11.05.4
+    - L11.05.5
+  - section: '11.6'
+    title: Roadmap design and prioritization
+    page_status: written
+    lessons:
+    - L11.06.1
+    - L11.06.2
+    - L11.06.3
+    - L11.06.4
+    - L11.06.5
+  - section: '11.7'
+    title: Product backlog and technical requirements
+    page_status: written
+    lessons:
+    - L11.07.1
+    - L11.07.2
+    - L11.07.3
+    - L11.07.4
+    - L11.07.5
+  - section: '11.8'
+    title: Adoption, retention, revenue, and customer value
+    page_status: written
+    lessons:
+    - L11.08.1
+    - L11.08.2
+    - L11.08.3
+    - L11.08.4
+    - L11.08.5
+  - section: '11.9'
+    title: Data quality, lineage, governance, and product reliability
+    page_status: written
+    lessons:
+    - L11.09.1
+    - L11.09.2
+    - L11.09.3
+    - L11.09.4
+    - L11.09.5
+  - section: '11.10'
+    title: Executive communication and cross-functional leadership
+    page_status: written
+    lessons:
+    - L11.10.1
+    - L11.10.2
+    - L11.10.3
+    - L11.10.4
+    - L11.10.5
+- chapter: 12
+  title: Integrated Energy Market Intelligence and Product Leadership Capstone
+  day: 14
+  exercises:
+  - EX-066
+  - EX-067
+  - EX-068
+  - EX-100
+  sections:
+  - section: '12.1'
+    title: Integrated gas and power market fundamentals
+    page_status: written
+    lessons:
+    - L12.01.1
+    - L12.01.2
+    - L12.01.3
+    - L12.01.4
+    - L12.01.5
+  - section: '12.2'
+    title: Cross-commodity portfolio exposure
+    page_status: written
+    lessons:
+    - L12.02.1
+    - L12.02.2
+    - L12.02.3
+    - L12.02.4
+    - L12.02.5
+  - section: '12.3'
+    title: Physical and financial position reconciliation
+    page_status: written
+    lessons:
+    - L12.03.1
+    - L12.03.2
+    - L12.03.3
+    - L12.03.4
+    - L12.03.5
+  - section: '12.4'
+    title: Integrated gas-fired generation optimization
+    page_status: written
+    lessons:
+    - L12.04.1
+    - L12.04.2
+    - L12.04.3
+    - L12.04.4
+    - L12.04.5
+  - section: '12.5'
+    title: Renewable and storage scenario modeling
+    page_status: written
+    lessons:
+    - L12.05.1
+    - L12.05.2
+    - L12.05.3
+    - L12.05.4
+    - L12.05.5
+  - section: '12.6'
+    title: Transmission and pipeline disruption scenarios
+    page_status: written
+    lessons:
+    - L12.06.1
+    - L12.06.2
+    - L12.06.3
+    - L12.06.4
+    - L12.06.5
+  - section: '12.7'
+    title: Portfolio valuation and stress testing
+    page_status: written
+    lessons:
+    - L12.07.1
+    - L12.07.2
+    - L12.07.3
+    - L12.07.4
+    - L12.07.5
+  - section: '12.8'
+    title: Integrated data and simulation architecture
+    page_status: written
+    lessons:
+    - L12.08.1
+    - L12.08.2
+    - L12.08.3
+    - L12.08.4
+    - L12.08.5
+  - section: '12.9'
+    title: Product roadmap and commercial opportunity
+    page_status: written
+    lessons:
+    - L12.09.1
+    - L12.09.2
+    - L12.09.3
+    - L12.09.4
+    - L12.09.5
+  - section: '12.10'
+    title: Executive product strategy presentation
+    page_status: written
+    lessons:
+    - L12.10.1
+    - L12.10.2
+    - L12.10.3
+    - L12.10.4
+    - L12.10.5

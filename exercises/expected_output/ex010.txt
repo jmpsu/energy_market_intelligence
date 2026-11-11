@@ -1,0 +1,11 @@
+ex010 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+Appalachian_netback_USD_per_MMBtu: 0.55
+Permian_netback_USD_per_MMBtu: -0.45
+Haynesville_netback_USD_per_MMBtu: 0.85
+Appalachian_growth_pct: 3.529412
+Permian_growth_pct: 6.521739
+Haynesville_growth_pct: 7.333333
+best_netback: Haynesville
+most_transport_exposed: Permian
+basins_negative_after_shock: 1
+NOTE: The field is named wellhead price yet transport cost is deducted from it; confirm the price point definition before commercial use.

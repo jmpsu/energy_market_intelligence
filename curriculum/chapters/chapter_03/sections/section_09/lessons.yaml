@@ -1,0 +1,74 @@
+section: '3.9'
+title: Natural gas position management and valuation
+exercise: EX-027
+lessons:
+- id: L03.09.1
+  title: Position aggregation by hub and tenor
+  objective: Explain position aggregation by hub and tenor and show it in the EX-027 output.
+  prerequisites:
+  - L03.08.5
+  market_lesson: Positions are summed by hub and delivery month to see net exposure. [K]
+  north_american_example: 'EX-027 (Build a Regional Gas Trading Portfolio) on synthetic North American data: net_position_MMBtu = 40000 [EX]'
+  terminal_activity: python3 emi.py run 027 | grep '^net_position_MMBtu:'
+  expected_result: 'net_position_MMBtu: 40000'
+  professional_application: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.08.5
+  after: L03.09.2
+  status: written_command_verified
+- id: L03.09.2
+  title: Mark-to-market valuation
+  objective: Explain mark-to-market valuation and show it in the EX-027 output.
+  prerequisites:
+  - L03.09.1
+  market_lesson: Mark-to-market values each position at the current curve. [K]
+  north_american_example: 'EX-027 (Build a Regional Gas Trading Portfolio) on synthetic North American data: gross_position_MMBtu = 1100000 [EX]'
+  terminal_activity: python3 emi.py run 027 | grep '^gross_position_MMBtu:'
+  expected_result: 'gross_position_MMBtu: 1100000'
+  professional_application: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.09.1
+  after: L03.09.3
+  status: written_command_verified
+- id: L03.09.3
+  title: Fixed, index and basis exposure decomposition
+  objective: Explain fixed, index and basis exposure decomposition and show it in the EX-027 output.
+  prerequisites:
+  - L03.09.2
+  market_lesson: A regional position splits into a Henry Hub exposure and a basis exposure. [K]
+  north_american_example: 'EX-027 (Build a Regional Gas Trading Portfolio) on synthetic North American data: henry_hub_equivalent_MMBtu = 40000 [EX]'
+  terminal_activity: python3 emi.py run 027 | grep '^henry_hub_equivalent_MMBtu:'
+  expected_result: 'henry_hub_equivalent_MMBtu: 40000'
+  professional_application: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.09.2
+  after: L03.09.4
+  status: written_command_verified
+- id: L03.09.4
+  title: Daily P&L calculation
+  objective: Explain daily P&L calculation and show it in the EX-027 output.
+  prerequisites:
+  - L03.09.3
+  market_lesson: Daily P&L is position times price change plus the effect of new trades. [K]
+  north_american_example: 'EX-027 (Build a Regional Gas Trading Portfolio) on synthetic North American data: basis_exposure_MMBtu = 450000 [EX]'
+  terminal_activity: python3 emi.py run 027 | grep '^basis_exposure_MMBtu:'
+  expected_result: 'basis_exposure_MMBtu: 450000'
+  professional_application: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.09.3
+  after: L03.09.5
+  status: written_command_verified
+- id: L03.09.5
+  title: Position limits
+  objective: Explain position limits and show it in the EX-027 output.
+  prerequisites:
+  - L03.09.4
+  market_lesson: Limits cap position size or risk by trader, book and location. [K]
+  north_american_example: 'EX-027 (Build a Regional Gas Trading Portfolio) on synthetic North American data: mtm_day1_USD = 26500 [EX]'
+  terminal_activity: python3 emi.py run 027 | grep '^mtm_day1_USD:'
+  expected_result: 'mtm_day1_USD: 26500'
+  professional_application: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.09.4
+  after: L03.10.1
+  status: written_command_verified

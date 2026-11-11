@@ -1,0 +1,18 @@
+# EX-099 conceptual integration architecture (SYNTHETIC HYPOTHETICAL DATA - not historical market data)
+
+No capability of any commercial product is asserted. External_simulation_engine is a placeholder for a licensed engine; its interfaces are proposals to verify against vendor documentation.
+
+- Vendor_price_feeds -> Raw_staging: raw price files [proposed]
+- Raw_staging -> Curated_market_data: validated prices [demonstrated_here]
+- Reference_master_data -> Warehouse: locations and units [demonstrated_here]
+- Curated_market_data -> Warehouse: price facts [demonstrated_here]
+- Warehouse -> Market_data_API: query results [demonstrated_here]
+- Market_data_API -> Valuation_and_risk: marks [demonstrated_here]
+- Trade_store -> Valuation_and_risk: positions [demonstrated_here]
+- Market_data_API -> Simulation_orchestrator: model inputs [proposed]
+- Simulation_orchestrator -> Dispatch_and_network_simulation: scenario runs [proposed]
+- Simulation_orchestrator -> External_simulation_engine: scenario runs [proposed]
+- Dispatch_and_network_simulation -> Validation_service: model outputs [demonstrated_here]
+- External_simulation_engine -> Validation_service: model outputs [proposed]
+- Validation_service -> User_workflows_and_reports: validated results [proposed]
+- Valuation_and_risk -> User_workflows_and_reports: risk reports [proposed]

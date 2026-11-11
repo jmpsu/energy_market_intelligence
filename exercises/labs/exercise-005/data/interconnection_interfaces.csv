@@ -1,0 +1,5 @@
+interface,from_interconnection,to_interconnection,transfer_capacity_MW,available_capacity_MW,transfer_cost_per_MWh
+DC_Tie_A,Eastern,Western,1500,1100,2.50
+DC_Tie_B,Eastern,Western,800,600,3.00
+DC_Tie_C,Western,Eastern,1200,900,2.75
+ERCOT_Interface_A,ERCOT,Eastern,500,400,4.00

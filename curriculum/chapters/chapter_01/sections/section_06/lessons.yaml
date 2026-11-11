@@ -1,0 +1,74 @@
+section: '1.6'
+title: RTOs, ISOs, utilities, generators, marketers, and traders
+exercise: EX-045
+lessons:
+- id: L01.06.1
+  title: RTO and ISO functions
+  objective: Explain rTO and ISO functions and show it in the EX-045 output.
+  prerequisites:
+  - L01.05.5
+  market_lesson: An ISO or RTO runs the grid and the wholesale market for a region without owning generation or wires. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: markets = 7 [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^markets:'
+  expected_result: 'markets: 7'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.05.5
+  after: L01.06.2
+  status: written_command_verified
+- id: L01.06.2
+  title: Vertically integrated utilities
+  objective: Explain vertically integrated utilities and show it in the EX-045 output.
+  prerequisites:
+  - L01.06.1
+  market_lesson: Vertically integrated utilities own generation, transmission and distribution and recover costs through regulated rates. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: highest_rt_price_market = ISO_NE [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^highest_rt_price_market:'
+  expected_result: 'highest_rt_price_market: ISO_NE'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.06.1
+  after: L01.06.3
+  status: written_command_verified
+- id: L01.06.3
+  title: Independent power producers
+  objective: Explain independent power producers and show it in the EX-045 output.
+  prerequisites:
+  - L01.06.2
+  market_lesson: Independent power producers own merchant plants and live on market revenue or contracts. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: largest_rt_minus_da_market = ERCOT [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^largest_rt_minus_da_market:'
+  expected_result: 'largest_rt_minus_da_market: ERCOT'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.06.2
+  after: L01.06.4
+  status: written_command_verified
+- id: L01.06.4
+  title: Power marketers and trading desks
+  objective: Explain power marketers and trading desks and show it in the EX-045 output.
+  prerequisites:
+  - L01.06.3
+  market_lesson: Power marketers buy and resell energy and manage portfolios without necessarily owning assets. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: largest_rt_minus_da_USD_per_MWh = 7 [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^largest_rt_minus_da_USD_per_MWh:'
+  expected_result: 'largest_rt_minus_da_USD_per_MWh: 7'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.06.3
+  after: L01.06.5
+  status: written_command_verified
+- id: L01.06.5
+  title: Balancing authorities and reliability roles
+  objective: Explain balancing authorities and reliability roles and show it in the EX-045 output.
+  prerequisites:
+  - L01.06.4
+  market_lesson: Balancing authorities keep supply and demand matched in their area; reliability coordinators watch the wider system. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: highest_renewable_share_market = SPP [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^highest_renewable_share_market:'
+  expected_result: 'highest_renewable_share_market: SPP'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.06.4
+  after: L01.07.1
+  status: written_command_verified

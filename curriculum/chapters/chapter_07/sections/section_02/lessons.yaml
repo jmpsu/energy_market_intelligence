@@ -1,0 +1,74 @@
+section: '7.2'
+title: Heat rates and variable generation costs
+exercise: EX-054
+lessons:
+- id: L07.02.1
+  title: Heat rate definition
+  objective: Explain heat rate definition and show it in the EX-054 output.
+  prerequisites:
+  - L07.01.5
+  market_lesson: Heat rate is fuel input per unit of electricity, in MMBtu per MWh; lower is better. [K]
+  north_american_example: 'EX-054 (Calculate Heat Rates) on synthetic North American data: full_load_heat_rate = 7 [EX]'
+  terminal_activity: python3 emi.py run 054 | grep '^full_load_heat_rate:'
+  expected_result: 'full_load_heat_rate: 7'
+  professional_application: Convert generator fuel consumption into electricity production efficiency.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.01.5
+  after: L07.02.2
+  status: written_command_verified
+- id: L07.02.2
+  title: Incremental vs average heat rate
+  objective: Explain incremental vs average heat rate and show it in the EX-054 output.
+  prerequisites:
+  - L07.02.1
+  market_lesson: Incremental heat rate is the fuel for the next MWh; average includes the no-load fuel. [K]
+  north_american_example: 'EX-054 (Calculate Heat Rates) on synthetic North American data: min_load_heat_rate = 8.5 [EX]'
+  terminal_activity: python3 emi.py run 054 | grep '^min_load_heat_rate:'
+  expected_result: 'min_load_heat_rate: 8.5'
+  professional_application: Convert generator fuel consumption into electricity production efficiency.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.02.1
+  after: L07.02.3
+  status: written_command_verified
+- id: L07.02.3
+  title: Variable O&M
+  objective: Explain variable O&M and show it in the EX-054 output.
+  prerequisites:
+  - L07.02.2
+  market_lesson: Variable O&M is the non-fuel cost that scales with output. [K]
+  north_american_example: 'EX-054 (Calculate Heat Rates) on synthetic North American data: incremental_heat_rate_400_to_500 = 6 [EX]'
+  terminal_activity: python3 emi.py run 054 | grep '^incremental_heat_rate_400_to_500:'
+  expected_result: 'incremental_heat_rate_400_to_500: 6'
+  professional_application: Convert generator fuel consumption into electricity production efficiency.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.02.2
+  after: L07.02.4
+  status: written_command_verified
+- id: L07.02.4
+  title: Marginal cost calculation
+  objective: Explain marginal cost calculation and show it in the EX-054 output.
+  prerequisites:
+  - L07.02.3
+  market_lesson: Marginal cost is incremental heat rate times fuel price plus variable O&M. [K]
+  north_american_example: 'EX-054 (Calculate Heat Rates) on synthetic North American data: full_load_efficiency_pct = 48.742857 [EX]'
+  terminal_activity: python3 emi.py run 054 | grep '^full_load_efficiency_pct:'
+  expected_result: 'full_load_efficiency_pct: 48.742857'
+  professional_application: Convert generator fuel consumption into electricity production efficiency.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.02.3
+  after: L07.02.5
+  status: written_command_verified
+- id: L07.02.5
+  title: Heat rate curve
+  objective: Explain heat rate curve and show it in the EX-054 output.
+  prerequisites:
+  - L07.02.4
+  market_lesson: A heat rate curve shows efficiency improving toward full load. [K]
+  north_american_example: 'EX-054 (Calculate Heat Rates) on synthetic North American data: full_load_Btu_per_kWh = 7000 [EX]'
+  terminal_activity: python3 emi.py run 054 | grep '^full_load_Btu_per_kWh:'
+  expected_result: 'full_load_Btu_per_kWh: 7000'
+  professional_application: Convert generator fuel consumption into electricity production efficiency.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.02.4
+  after: L07.03.1
+  status: written_command_verified

@@ -1,0 +1,74 @@
+section: '9.2'
+title: Statistical volatility and regime changes
+exercise: EX-078
+lessons:
+- id: L09.02.1
+  title: Historical volatility
+  objective: Explain historical volatility and show it in the EX-078 output.
+  prerequisites:
+  - L09.01.5
+  market_lesson: Historical volatility is the standard deviation of returns, annualised. [K]
+  north_american_example: 'EX-078 (Analyze Energy Price Volatility) on synthetic North American data: observations = 399 [EX]'
+  terminal_activity: python3 emi.py run 078 | grep '^observations:'
+  expected_result: 'observations: 399'
+  professional_application: Calculate rolling volatility and identify periods of unusual market behavior.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.01.5
+  after: L09.02.2
+  status: written_command_verified
+- id: L09.02.2
+  title: Rolling and EWMA volatility
+  objective: Explain rolling and EWMA volatility and show it in the EX-078 output.
+  prerequisites:
+  - L09.02.1
+  market_lesson: Rolling windows weight days equally; EWMA weights recent days more. [K]
+  north_american_example: 'EX-078 (Analyze Energy Price Volatility) on synthetic North American data: daily_vol = 0.024941 [EX]'
+  terminal_activity: python3 emi.py run 078 | grep '^daily_vol:'
+  expected_result: 'daily_vol: 0.024941'
+  professional_application: Calculate rolling volatility and identify periods of unusual market behavior.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.02.1
+  after: L09.02.3
+  status: written_command_verified
+- id: L09.02.3
+  title: Volatility clustering
+  objective: Explain volatility clustering and show it in the EX-078 output.
+  prerequisites:
+  - L09.02.2
+  market_lesson: High-volatility days cluster. [K]
+  north_american_example: 'EX-078 (Analyze Energy Price Volatility) on synthetic North American data: annualised_vol = 0.395929 [EX]'
+  terminal_activity: python3 emi.py run 078 | grep '^annualised_vol:'
+  expected_result: 'annualised_vol: 0.395929'
+  professional_application: Calculate rolling volatility and identify periods of unusual market behavior.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.02.2
+  after: L09.02.4
+  status: written_command_verified
+- id: L09.02.4
+  title: Regime identification
+  objective: Explain regime identification and show it in the EX-078 output.
+  prerequisites:
+  - L09.02.3
+  market_lesson: Regimes are periods with distinct levels of volatility. [K]
+  north_american_example: 'EX-078 (Analyze Energy Price Volatility) on synthetic North American data: median_rolling_vol = 0.387589 [EX]'
+  terminal_activity: python3 emi.py run 078 | grep '^median_rolling_vol:'
+  expected_result: 'median_rolling_vol: 0.387589'
+  professional_application: Calculate rolling volatility and identify periods of unusual market behavior.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.02.3
+  after: L09.02.5
+  status: written_command_verified
+- id: L09.02.5
+  title: Regime-aware analysis
+  objective: Explain regime-aware analysis and show it in the EX-078 output.
+  prerequisites:
+  - L09.02.4
+  market_lesson: Analyse and limit risk by regime. [K]
+  north_american_example: 'EX-078 (Analyze Energy Price Volatility) on synthetic North American data: max_rolling_vol = 0.613041 [EX]'
+  terminal_activity: python3 emi.py run 078 | grep '^max_rolling_vol:'
+  expected_result: 'max_rolling_vol: 0.613041'
+  professional_application: Calculate rolling volatility and identify periods of unusual market behavior.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.02.4
+  after: L09.03.1
+  status: written_command_verified

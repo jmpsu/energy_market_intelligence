@@ -1,0 +1,6 @@
+nom_id,shipper,service,nominated_MMBtu,upstream_confirmed_MMBtu,downstream_confirmed_MMBtu
+N1,Alpha,primary_firm,150000,150000,150000
+N2,Beta,primary_firm,120000,120000,110000
+N3,Gamma,secondary_firm,100000,100000,100000
+N4,Delta,interruptible,80000,80000,80000
+N5,Echo,interruptible,60000,50000,60000

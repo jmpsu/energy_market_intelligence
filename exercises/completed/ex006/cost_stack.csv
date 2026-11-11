@@ -1,0 +1,9 @@
+component,USD_per_MWh,scales_with_wholesale_energy
+wholesale_energy,45.0,Yes
+losses,2.7,Yes
+capacity,9.0,No
+ancillary_services,2.0,No
+transmission,14.0,No
+renewable_compliance,5.0,No
+distribution,38.0,No
+retail_margin,6.0,No

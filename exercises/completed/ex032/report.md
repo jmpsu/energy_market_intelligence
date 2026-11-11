@@ -1,0 +1,22 @@
+# ex032 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+lng_capacity_Bcf_d: 15.8
+
+feed_gas_Bcf_d: 14.421
+
+feed_gas_share_of_demand_pct: 13.11
+
+gulf_share_of_feed_gas_pct: 94.508009
+
+feed_gas_at_full_utilization_Bcf_d: 17.38
+
+price_if_all_terminals_full: 3.614065
+
+price_if_Gulf_C_outage: 2.714657
+
+new_train_rampup_adds_Bcf_d: 1.65
+
+NOTE: Feed gas = LNG output x 1.10 (liquefaction fuel and losses, assumed).
+
+NOTE: Price effects inherit EX-026's assumed elasticity.
+

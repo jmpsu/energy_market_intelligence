@@ -1,0 +1,74 @@
+section: '9.9'
+title: Scenario analysis and stress testing
+exercise: EX-084
+lessons:
+- id: L09.09.1
+  title: Scenario design
+  objective: Explain scenario design and show it in the EX-084 output.
+  prerequisites:
+  - L09.08.5
+  market_lesson: A stress scenario is a specific, severe set of price moves. [K]
+  north_american_example: 'EX-084 (Perform Energy Portfolio Stress Testing) on synthetic North American data: Gas_Collapse_change_USD = -533522.647059 [EX]'
+  terminal_activity: python3 emi.py run 084 | grep '^Gas_Collapse_change_USD:'
+  expected_result: 'Gas_Collapse_change_USD: -533522.647059'
+  professional_application: Evaluate portfolio losses under extreme gas prices, electricity scarcity, pipeline outages, and weather events.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.08.5
+  after: L09.09.2
+  status: written_command_verified
+- id: L09.09.2
+  title: Historical stress events
+  objective: Explain historical stress events and show it in the EX-084 output.
+  prerequisites:
+  - L09.09.1
+  market_lesson: Historical stresses replay real events. [K]
+  north_american_example: 'EX-084 (Perform Energy Portfolio Stress Testing) on synthetic North American data: Mild_Winter_change_USD = -496127.941176 [EX]'
+  terminal_activity: python3 emi.py run 084 | grep '^Mild_Winter_change_USD:'
+  expected_result: 'Mild_Winter_change_USD: -496127.941176'
+  professional_application: Evaluate portfolio losses under extreme gas prices, electricity scarcity, pipeline outages, and weather events.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.09.1
+  after: L09.09.3
+  status: written_command_verified
+- id: L09.09.3
+  title: Hypothetical stress
+  objective: Explain hypothetical stress and show it in the EX-084 output.
+  prerequisites:
+  - L09.09.2
+  market_lesson: Hypothetical stresses are designed around the book's weak points. [K]
+  north_american_example: 'EX-084 (Perform Energy Portfolio Stress Testing) on synthetic North American data: Power_Collapse_change_USD = -416113.235294 [EX]'
+  terminal_activity: python3 emi.py run 084 | grep '^Power_Collapse_change_USD:'
+  expected_result: 'Power_Collapse_change_USD: -416113.235294'
+  professional_application: Evaluate portfolio losses under extreme gas prices, electricity scarcity, pipeline outages, and weather events.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.09.2
+  after: L09.09.4
+  status: written_command_verified
+- id: L09.09.4
+  title: Reverse stress testing
+  objective: Explain reverse stress testing and show it in the EX-084 output.
+  prerequisites:
+  - L09.09.3
+  market_lesson: Reverse stress finds the scenario that produces a given loss. [K]
+  north_american_example: 'EX-084 (Perform Energy Portfolio Stress Testing) on synthetic North American data: Renewable_Drought_Low_Price_change_USD = -256144.294118 [EX]'
+  terminal_activity: python3 emi.py run 084 | grep '^Renewable_Drought_Low_Price_change_USD:'
+  expected_result: 'Renewable_Drought_Low_Price_change_USD: -256144.294118'
+  professional_application: Evaluate portfolio losses under extreme gas prices, electricity scarcity, pipeline outages, and weather events.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.09.3
+  after: L09.09.5
+  status: written_command_verified
+- id: L09.09.5
+  title: Stress reporting
+  objective: Explain stress reporting and show it in the EX-084 output.
+  prerequisites:
+  - L09.09.4
+  market_lesson: Stress reports show loss per scenario against limits. [K]
+  north_american_example: 'EX-084 (Perform Energy Portfolio Stress Testing) on synthetic North American data: Base_change_USD = 0 [EX]'
+  terminal_activity: python3 emi.py run 084 | grep '^Base_change_USD:'
+  expected_result: 'Base_change_USD: 0'
+  professional_application: Evaluate portfolio losses under extreme gas prices, electricity scarcity, pipeline outages, and weather events.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.09.4
+  after: L09.10.1
+  status: written_command_verified

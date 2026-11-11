@@ -1,0 +1,2 @@
+trade_id,trade_day,side,contract_month,volume_MMBtu,price_USD_per_MMBtu,day2_USD_per_MMBtu,sign,mtm_USD
+T5,2,BUY,2027-03,150000,3.25,3.3,1,7499.999999999974

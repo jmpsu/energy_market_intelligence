@@ -1,0 +1,3 @@
+case,gen_A_MW,gen_B_MW,flow_A_to_B_MW,lmp_A,lmp_B,congestion_component_B,congestion_rent_USD_per_h,cost_USD_per_h,energy_component,loss_component,load_payment_USD_per_h,generator_revenue_USD_per_h
+constrained,350.0,150.0,250.0,30.0,60.0,30.0,7500.0,19500.0,30.0,0.0,27000.0,19500.0
+unconstrained,500.0,0.0,400.0,30.0,30.0,0.0,0.0,15000.0,30.0,0.0,15000.0,15000.0

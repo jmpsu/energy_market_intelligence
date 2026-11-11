@@ -1,0 +1,74 @@
+section: '9.10'
+title: Structured products, options, and weather derivatives
+exercise: EX-085
+lessons:
+- id: L09.10.1
+  title: Option pricing basics
+  objective: Explain option pricing basics and show it in the EX-085 output.
+  prerequisites:
+  - L09.09.5
+  market_lesson: Option value depends on price, strike, volatility, time and rates. [K]
+  north_american_example: 'EX-085 (Build a Weather Derivatives Valuation Model) on synthetic North American data: hdd_rows_verified = 15 [EX]'
+  terminal_activity: python3 emi.py run 085 | grep '^hdd_rows_verified:'
+  expected_result: 'hdd_rows_verified: 15'
+  professional_application: Calculate hypothetical financial exposures linked to heating or cooling degree days.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.09.5
+  after: L09.10.2
+  status: written_command_verified
+- id: L09.10.2
+  title: Spread options
+  objective: Explain spread options and show it in the EX-085 output.
+  prerequisites:
+  - L09.10.1
+  market_lesson: A spread option pays on the difference of two prices; power plants and transport resemble one. [K]
+  north_american_example: 'EX-085 (Build a Weather Derivatives Valuation Model) on synthetic North American data: cumulative_HDD = 430 [EX]'
+  terminal_activity: python3 emi.py run 085 | grep '^cumulative_HDD:'
+  expected_result: 'cumulative_HDD: 430'
+  professional_application: Calculate hypothetical financial exposures linked to heating or cooling degree days.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.10.1
+  after: L09.10.3
+  status: written_command_verified
+- id: L09.10.3
+  title: Swing and storage optionality
+  objective: Explain swing and storage optionality and show it in the EX-085 output.
+  prerequisites:
+  - L09.10.2
+  market_lesson: Swing and storage contracts embed volume flexibility. [K]
+  north_american_example: 'EX-085 (Build a Weather Derivatives Valuation Model) on synthetic North American data: strike_HDD = 450 [EX]'
+  terminal_activity: python3 emi.py run 085 | grep '^strike_HDD:'
+  expected_result: 'strike_HDD: 450'
+  professional_application: Calculate hypothetical financial exposures linked to heating or cooling degree days.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.10.2
+  after: L09.10.4
+  status: written_command_verified
+- id: L09.10.4
+  title: Weather derivatives
+  objective: Explain weather derivatives and show it in the EX-085 output.
+  prerequisites:
+  - L09.10.3
+  market_lesson: Weather derivatives pay on degree days. [K]
+  north_american_example: 'EX-085 (Build a Weather Derivatives Valuation Model) on synthetic North American data: payout_USD = 200000 [EX]'
+  terminal_activity: python3 emi.py run 085 | grep '^payout_USD:'
+  expected_result: 'payout_USD: 200000'
+  professional_application: Calculate hypothetical financial exposures linked to heating or cooling degree days.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.10.3
+  after: L09.10.5
+  status: written_command_verified
+- id: L09.10.5
+  title: Structured deal decomposition
+  objective: Explain structured deal decomposition and show it in the EX-085 output.
+  prerequisites:
+  - L09.10.4
+  market_lesson: Decompose a structured deal into simple pieces and value each. [K]
+  north_american_example: 'EX-085 (Build a Weather Derivatives Valuation Model) on synthetic North American data: cap_reached_at_HDD = 250 [EX]'
+  terminal_activity: python3 emi.py run 085 | grep '^cap_reached_at_HDD:'
+  expected_result: 'cap_reached_at_HDD: 250'
+  professional_application: Calculate hypothetical financial exposures linked to heating or cooling degree days.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.10.4
+  after: L10.01.1
+  status: written_command_verified

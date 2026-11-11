@@ -1,0 +1,7 @@
+position_id,side,product,hub,volume_gal,trade_price_USD_per_gal
+P1,BUY,Propane,mont_belvieu,2000000,0.700
+P2,SELL,Propane,conway,1500000,0.650
+P3,BUY,Ethane,mont_belvieu,3000000,0.240
+P4,SELL,Natural_Gasoline,mont_belvieu,500000,1.460
+P5,BUY,Normal_Butane,conway,800000,0.830
+P6,BUY,Isobutane,mont_belvieu,400000,1.000

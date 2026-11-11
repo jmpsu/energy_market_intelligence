@@ -1,0 +1,74 @@
+section: '6.1'
+title: North American electricity market structure
+exercise: EX-045
+lessons:
+- id: L06.01.1
+  title: Regulated vs restructured states
+  objective: Explain regulated vs restructured states and show it in the EX-045 output.
+  prerequisites:
+  - L05.10.5
+  market_lesson: Some states kept regulated utilities; others restructured to competitive wholesale and retail markets. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: markets = 7 [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^markets:'
+  expected_result: 'markets: 7'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L05.10.5
+  after: L06.01.2
+  status: written_command_verified
+- id: L06.01.2
+  title: Wholesale vs retail layers
+  objective: Explain wholesale vs retail layers and show it in the EX-045 output.
+  prerequisites:
+  - L06.01.1
+  market_lesson: Wholesale is generators selling to utilities and retailers; retail is sales to end users. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: highest_rt_price_market = ISO_NE [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^highest_rt_price_market:'
+  expected_result: 'highest_rt_price_market: ISO_NE'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.01.1
+  after: L06.01.3
+  status: written_command_verified
+- id: L06.01.3
+  title: Federal and state jurisdiction
+  objective: Explain federal and state jurisdiction and show it in the EX-045 output.
+  prerequisites:
+  - L06.01.2
+  market_lesson: Wholesale sales and transmission are federal; retail rates and distribution are state matters. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: largest_rt_minus_da_market = ERCOT [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^largest_rt_minus_da_market:'
+  expected_result: 'largest_rt_minus_da_market: ERCOT'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.01.2
+  after: L06.01.4
+  status: written_command_verified
+- id: L06.01.4
+  title: Market products overview
+  objective: Explain market products overview and show it in the EX-045 output.
+  prerequisites:
+  - L06.01.3
+  market_lesson: Markets sell energy, capacity, ancillary services and transmission rights. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: largest_rt_minus_da_USD_per_MWh = 7 [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^largest_rt_minus_da_USD_per_MWh:'
+  expected_result: 'largest_rt_minus_da_USD_per_MWh: 7'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.01.3
+  after: L06.01.5
+  status: written_command_verified
+- id: L06.01.5
+  title: Market geography
+  objective: Explain market geography and show it in the EX-045 output.
+  prerequisites:
+  - L06.01.4
+  market_lesson: About two thirds of US load sits inside ISO/RTO markets; the Southeast and much of the West trade bilaterally. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: highest_renewable_share_market = SPP [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^highest_renewable_share_market:'
+  expected_result: 'highest_renewable_share_market: SPP'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.01.4
+  after: L06.02.1
+  status: written_command_verified

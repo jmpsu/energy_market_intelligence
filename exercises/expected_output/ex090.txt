@@ -1,0 +1,13 @@
+ex090 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+base_transport_cost_USD_per_d: 19750000
+disrupted_transport_cost_USD_per_d: 19750000
+base_unmet_Bcf_d: 5
+disrupted_unmet_Bcf_d: 5
+base_binding_edges: P001,P004,P005,P007,P008
+disrupted_binding_edges: P001,P004,P005,P007,P008
+unmet_node: HUB_WEST
+P003_base_flow_Bcf_d: 10
+P003_disrupted_capacity_Bcf_d: 10.5
+NOTE: The model delivers minimum demand only (cost minimisation with no revenue term).
+NOTE: HUB_WEST has 10 Bcf/d of inbound capacity against 15 Bcf/d minimum demand: a structural shortfall independent of the disruption.
+NOTE: Transport model only: no pressure, linepack, compression fuel or storage inventory dynamics.

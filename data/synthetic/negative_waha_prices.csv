@@ -1,0 +1,5 @@
+period,henry_hub_USD_per_MMBtu,waha_USD_per_MMBtu,production_Bcf_d,pipeline_capacity_Bcf_d,regional_demand_Bcf_d
+Period_1,3.25,1.10,23.0,20.5,2.0
+Period_2,3.25,-0.40,25.0,20.0,2.0
+Period_3,3.40,-1.25,26.0,19.5,2.0
+Period_4,3.10,0.25,24.0,21.0,2.0

@@ -1,0 +1,5 @@
+trade_id,state,steps_remaining
+TR001,settled,0
+TR002,confirmed,4
+TR003,confirmed,4
+TR004,captured,5

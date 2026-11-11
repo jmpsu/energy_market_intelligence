@@ -1,0 +1,74 @@
+section: '9.7'
+title: Potential Future Exposure and Earnings at Risk
+exercise: EX-083
+lessons:
+- id: L09.07.1
+  title: Exposure profiles
+  objective: Explain exposure profiles and show it in the EX-083 output.
+  prerequisites:
+  - L09.06.5
+  market_lesson: An exposure profile shows possible future value through time. [K]
+  north_american_example: 'EX-083 (Model Potential Future Exposure) on synthetic North American data: peak_pfe_USD = 1428316.177291 [EX]'
+  terminal_activity: python3 emi.py run 083 | grep '^peak_pfe_USD:'
+  expected_result: 'peak_pfe_USD: 1428316.177291'
+  professional_application: Estimate how counterparty exposure may evolve under simulated future market conditions.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.06.5
+  after: L09.07.2
+  status: written_command_verified
+- id: L09.07.2
+  title: Potential Future Exposure
+  objective: Explain potential Future Exposure and show it in the EX-083 output.
+  prerequisites:
+  - L09.07.1
+  market_lesson: Potential Future Exposure is a high percentile of that value. [K]
+  north_american_example: 'EX-083 (Model Potential Future Exposure) on synthetic North American data: peak_pfe_month = 5 [EX]'
+  terminal_activity: python3 emi.py run 083 | grep '^peak_pfe_month:'
+  expected_result: 'peak_pfe_month: 5'
+  professional_application: Estimate how counterparty exposure may evolve under simulated future market conditions.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.07.1
+  after: L09.07.3
+  status: written_command_verified
+- id: L09.07.3
+  title: Earnings at Risk
+  objective: Explain earnings at Risk and show it in the EX-083 output.
+  prerequisites:
+  - L09.07.2
+  market_lesson: Earnings at Risk applies the idea to accounting earnings. [K]
+  north_american_example: 'EX-083 (Model Potential Future Exposure) on synthetic North American data: peak_expected_exposure_USD = 296168.296199 [EX]'
+  terminal_activity: python3 emi.py run 083 | grep '^peak_expected_exposure_USD:'
+  expected_result: 'peak_expected_exposure_USD: 296168.296199'
+  professional_application: Estimate how counterparty exposure may evolve under simulated future market conditions.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.07.2
+  after: L09.07.4
+  status: written_command_verified
+- id: L09.07.4
+  title: Cash-flow at risk
+  objective: Explain cash-flow at risk and show it in the EX-083 output.
+  prerequisites:
+  - L09.07.3
+  market_lesson: Cash-flow at risk applies it to cash. [K]
+  north_american_example: 'EX-083 (Model Potential Future Exposure) on synthetic North American data: average_expected_exposure_USD = 198617.939286 [EX]'
+  terminal_activity: python3 emi.py run 083 | grep '^average_expected_exposure_USD:'
+  expected_result: 'average_expected_exposure_USD: 198617.939286'
+  professional_application: Estimate how counterparty exposure may evolve under simulated future market conditions.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.07.3
+  after: L09.07.5
+  status: written_command_verified
+- id: L09.07.5
+  title: Exposure simulation
+  objective: Explain exposure simulation and show it in the EX-083 output.
+  prerequisites:
+  - L09.07.4
+  market_lesson: Exposure simulation revalues the portfolio along each path. [K]
+  north_american_example: 'EX-083 (Model Potential Future Exposure) on synthetic North American data: pfe_at_maturity_USD = 0 [EX]'
+  terminal_activity: python3 emi.py run 083 | grep '^pfe_at_maturity_USD:'
+  expected_result: 'pfe_at_maturity_USD: 0'
+  professional_application: Estimate how counterparty exposure may evolve under simulated future market conditions.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.07.4
+  after: L09.08.1
+  status: written_command_verified

@@ -1,0 +1,20 @@
+ex043 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+base_total_cost_USD: 246500
+base_avg_cost_USD_per_bbl: 2.465
+base_arcs_at_capacity: A1,A5
+outage_arc: A1
+outage_total_cost_USD: 320250
+outage_cost_increase_USD: 73750
+outage_cost_increase_USD_per_bbl_lost: 3.277778
+truck_bbl_base: 0
+truck_bbl_outage: 2500
+base_A1_pipeline_bbl: 45000
+base_A2_rail_bbl: 15000
+base_A3_truck_bbl: 0
+base_A4_rail_bbl: 0
+base_A5_pipeline_bbl: 25000
+base_A6_rail_bbl: 5000
+base_A7_rail_bbl: 0
+base_A8_marine_bbl: 10000
+NOTE: Single period, single product, costs linear in volume; no minimum tenders, batching, railcar lease terms, demurrage or vessel lot sizes.
+NOTE: The cost increase per barrel of lost pipeline capacity is the value of that capacity for the period: the number a shipper would compare with a tariff.

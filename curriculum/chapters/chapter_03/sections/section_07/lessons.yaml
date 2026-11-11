@@ -1,0 +1,74 @@
+section: '3.7'
+title: Storage economics and seasonal spreads
+exercise: EX-025
+lessons:
+- id: L03.07.1
+  title: Intrinsic storage value
+  objective: Explain intrinsic storage value and show it in the EX-025 output.
+  prerequisites:
+  - L03.06.5
+  market_lesson: Intrinsic value is the spread you can lock today by buying a cheap month and selling a dear one. [K]
+  north_american_example: 'EX-025 (Calculate Gas Storage Arbitrage) on synthetic North American data: interpretation = inventory = end-of-month; opening = December close [EX]'
+  terminal_activity: python3 emi.py run 025 | grep '^interpretation:'
+  expected_result: 'interpretation: inventory = end-of-month; opening = December close'
+  professional_application: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.06.5
+  after: L03.07.2
+  status: written_command_verified
+- id: L03.07.2
+  title: Extrinsic and optionality value
+  objective: Explain extrinsic and optionality value and show it in the EX-025 output.
+  prerequisites:
+  - L03.07.1
+  market_lesson: Extrinsic value is the extra from re-optimising as spreads move. [K]
+  north_american_example: 'EX-025 (Calculate Gas Storage Arbitrage) on synthetic North American data: all_months_within_limits = True [EX]'
+  terminal_activity: python3 emi.py run 025 | grep '^all_months_within_limits:'
+  expected_result: 'all_months_within_limits: True'
+  professional_application: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.07.1
+  after: L03.07.3
+  status: written_command_verified
+- id: L03.07.3
+  title: Injection and withdrawal cost and fuel
+  objective: Explain injection and withdrawal cost and fuel and show it in the EX-025 output.
+  prerequisites:
+  - L03.07.2
+  market_lesson: Injection and withdrawal fees plus fuel reduce the captured spread. [K]
+  north_american_example: 'EX-025 (Calculate Gas Storage Arbitrage) on synthetic North American data: total_injected_MMBtu = 90000 [EX]'
+  terminal_activity: python3 emi.py run 025 | grep '^total_injected_MMBtu:'
+  expected_result: 'total_injected_MMBtu: 90000'
+  professional_application: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.07.2
+  after: L03.07.4
+  status: written_command_verified
+- id: L03.07.4
+  title: Seasonal spread capture
+  objective: Explain seasonal spread capture and show it in the EX-025 output.
+  prerequisites:
+  - L03.07.3
+  market_lesson: Storage monetises the summer-winter spread. [K]
+  north_american_example: 'EX-025 (Calculate Gas Storage Arbitrage) on synthetic North American data: total_withdrawn_MMBtu = 90000 [EX]'
+  terminal_activity: python3 emi.py run 025 | grep '^total_withdrawn_MMBtu:'
+  expected_result: 'total_withdrawn_MMBtu: 90000'
+  professional_application: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.07.3
+  after: L03.07.5
+  status: written_command_verified
+- id: L03.07.5
+  title: Storage constraint effects on value
+  objective: Explain storage constraint effects on value and show it in the EX-025 output.
+  prerequisites:
+  - L03.07.4
+  market_lesson: Capacity and ratchet limits cap how much of the spread can be captured. [K]
+  north_american_example: 'EX-025 (Calculate Gas Storage Arbitrage) on synthetic North American data: purchase_cost_USD = 257142.857143 [EX]'
+  terminal_activity: python3 emi.py run 025 | grep '^purchase_cost_USD:'
+  expected_result: 'purchase_cost_USD: 257142.857143'
+  professional_application: Compare injection costs, withdrawal costs, seasonal price spreads, and storage economics.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.07.4
+  after: L03.08.1
+  status: written_command_verified

@@ -1,0 +1,74 @@
+section: '10.5'
+title: Forecasting versus fundamental simulation
+exercise: EX-077
+lessons:
+- id: L10.05.1
+  title: Statistical forecasting scope
+  objective: Explain statistical forecasting scope and show it in the EX-077 output.
+  prerequisites:
+  - L10.04.5
+  market_lesson: Statistical forecasting fits patterns in history. [K]
+  north_american_example: 'EX-077 (Build a Natural Gas Price Forecast) on synthetic North American data: train_rows = 300 [EX]'
+  terminal_activity: python3 emi.py run 077 | grep '^train_rows:'
+  expected_result: 'train_rows: 300'
+  professional_application: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.04.5
+  after: L10.05.2
+  status: written_command_verified
+- id: L10.05.2
+  title: Fundamental simulation scope
+  objective: Explain fundamental simulation scope and show it in the EX-077 output.
+  prerequisites:
+  - L10.05.1
+  market_lesson: Fundamental simulation models physical supply and demand. [K]
+  north_american_example: 'EX-077 (Build a Natural Gas Price Forecast) on synthetic North American data: test_rows = 99 [EX]'
+  terminal_activity: python3 emi.py run 077 | grep '^test_rows:'
+  expected_result: 'test_rows: 99'
+  professional_application: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.05.1
+  after: L10.05.3
+  status: written_command_verified
+- id: L10.05.3
+  title: Hybrid approaches
+  objective: Explain hybrid approaches and show it in the EX-077 output.
+  prerequisites:
+  - L10.05.2
+  market_lesson: Hybrids use fundamentals for structure and statistics for residuals. [K]
+  north_american_example: 'EX-077 (Build a Natural Gas Price Forecast) on synthetic North American data: intercept = 0.270758 [EX]'
+  terminal_activity: python3 emi.py run 077 | grep '^intercept:'
+  expected_result: 'intercept: 0.270758'
+  professional_application: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.05.2
+  after: L10.05.4
+  status: written_command_verified
+- id: L10.05.4
+  title: Use-case fit
+  objective: Explain use-case fit and show it in the EX-077 output.
+  prerequisites:
+  - L10.05.3
+  market_lesson: Pick by horizon, data and the decision supported. [K]
+  north_american_example: 'EX-077 (Build a Natural Gas Price Forecast) on synthetic North American data: coef_lag_price = 0.889493 [EX]'
+  terminal_activity: python3 emi.py run 077 | grep '^coef_lag_price:'
+  expected_result: 'coef_lag_price: 0.889493'
+  professional_application: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.05.3
+  after: L10.05.5
+  status: written_command_verified
+- id: L10.05.5
+  title: Method comparison
+  objective: Explain method comparison and show it in the EX-077 output.
+  prerequisites:
+  - L10.05.4
+  market_lesson: Compare methods on the same test window. [K]
+  north_american_example: 'EX-077 (Build a Natural Gas Price Forecast) on synthetic North American data: coef_hdd = 0.004145 [EX]'
+  terminal_activity: python3 emi.py run 077 | grep '^coef_hdd:'
+  expected_result: 'coef_hdd: 0.004145'
+  professional_application: Use historical prices and explanatory variables to develop a baseline forecasting model.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.05.4
+  after: L10.06.1
+  status: written_command_verified

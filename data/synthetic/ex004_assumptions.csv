@@ -1,0 +1,7 @@
+parameter,value,unit
+heat_content,1.037,MMBtu_per_Mcf
+station_service_pct,2.5,percent
+transmission_loss_pct,2.0,percent
+distribution_loss_pct,4.0,percent
+gas_price,3.25,USD_per_MMBtu
+retail_rate,140,USD_per_MWh

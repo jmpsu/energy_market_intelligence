@@ -1,0 +1,74 @@
+section: '1.2'
+title: Energy market participants and commercial relationships
+exercise: EX-002
+lessons:
+- id: L01.02.1
+  title: Producers and processors
+  objective: Explain producers and processors and show it in the EX-002 output.
+  prerequisites:
+  - L01.01.5
+  market_lesson: Producers sell commodity-price exposure; processors turn raw gas into residue gas and NGLs for a fee or a share. [K]
+  north_american_example: 'EX-002 (Identify Market Participants) on synthetic North American data: participant_types = 12 [EX]'
+  terminal_activity: python3 emi.py run 002 | grep '^participant_types:'
+  expected_result: 'participant_types: 12'
+  professional_application: Create a structured dataset of producers, utilities, generators, pipelines, ISOs, RTOs, marketers, traders, and regulators; classify their commercial roles.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.01.5
+  after: L01.02.2
+  status: written_command_verified
+- id: L01.02.2
+  title: Pipelines, storage operators and LDCs
+  objective: Explain pipelines, storage operators and LDCs and show it in the EX-002 output.
+  prerequisites:
+  - L01.02.1
+  market_lesson: Pipelines and storage sell capacity under tariffs; LDCs buy gas and deliver it to homes and businesses at regulated rates. [K]
+  north_american_example: 'EX-002 (Identify Market Participants) on synthetic North American data: full_price_risk_takers = Producer,Independent_Power_Producer,Marketer_Trader,Financial_Counterparty [EX]'
+  terminal_activity: python3 emi.py run 002 | grep '^full_price_risk_takers:'
+  expected_result: 'full_price_risk_takers: Producer,Independent_Power_Producer,Marketer_Trader,Financial_Counterparty'
+  professional_application: Create a structured dataset of producers, utilities, generators, pipelines, ISOs, RTOs, marketers, traders, and regulators; classify their commercial roles.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.02.1
+  after: L01.02.3
+  status: written_command_verified
+- id: L01.02.3
+  title: Generators, utilities and load-serving entities
+  objective: Explain generators, utilities and load-serving entities and show it in the EX-002 output.
+  prerequisites:
+  - L01.02.2
+  market_lesson: Generators sell energy, capacity and ancillary services; load-serving entities buy them to meet customer demand. [K]
+  north_american_example: 'EX-002 (Identify Market Participants) on synthetic North American data: rate_regulated = Interstate_Pipeline,LDC_Gas_Utility,Vertically_Integrated_Utility,ISO_RTO [EX]'
+  terminal_activity: python3 emi.py run 002 | grep '^rate_regulated:'
+  expected_result: 'rate_regulated: Interstate_Pipeline,LDC_Gas_Utility,Vertically_Integrated_Utility,ISO_RTO'
+  professional_application: Create a structured dataset of producers, utilities, generators, pipelines, ISOs, RTOs, marketers, traders, and regulators; classify their commercial roles.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.02.2
+  after: L01.02.4
+  status: written_command_verified
+- id: L01.02.4
+  title: Marketers, traders and financial counterparties
+  objective: Explain marketers, traders and financial counterparties and show it in the EX-002 output.
+  prerequisites:
+  - L01.02.3
+  market_lesson: Marketers and traders connect buyers and sellers and warehouse risk; financial counterparties provide hedges without touching the molecule. [K]
+  north_american_example: 'EX-002 (Identify Market Participants) on synthetic North American data: fee_earners_without_price_risk = Interstate_Pipeline,Storage_Operator,NGL_Fractionator,ISO_RTO [EX]'
+  terminal_activity: python3 emi.py run 002 | grep '^fee_earners_without_price_risk:'
+  expected_result: 'fee_earners_without_price_risk: Interstate_Pipeline,Storage_Operator,NGL_Fractionator,ISO_RTO'
+  professional_application: Create a structured dataset of producers, utilities, generators, pipelines, ISOs, RTOs, marketers, traders, and regulators; classify their commercial roles.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.02.3
+  after: L01.02.5
+  status: written_command_verified
+- id: L01.02.5
+  title: Contract chains between participants
+  objective: Explain contract chains between participants and show it in the EX-002 output.
+  prerequisites:
+  - L01.02.4
+  market_lesson: 'One delivered molecule sits under a chain of contracts: purchase, gathering, processing, transport, storage, sale. [K]'
+  north_american_example: 'EX-002 (Identify Market Participants) on synthetic North American data: etrm_users = Independent_Power_Producer,Vertically_Integrated_Utility,Marketer_Trader [EX]'
+  terminal_activity: python3 emi.py run 002 | grep '^etrm_users:'
+  expected_result: 'etrm_users: Independent_Power_Producer,Vertically_Integrated_Utility,Marketer_Trader'
+  professional_application: Create a structured dataset of producers, utilities, generators, pipelines, ISOs, RTOs, marketers, traders, and regulators; classify their commercial roles.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.02.4
+  after: L01.03.1
+  status: written_command_verified

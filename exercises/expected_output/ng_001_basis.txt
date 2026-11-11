@@ -1,0 +1,4 @@
+ng_001_basis | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+ location  basis_period_1_USD_per_MMBtu  basis_period_2_USD_per_MMBtu  basis_movement_USD_per_MMBtu  position_MMBtu  long_basis_pnl_USD data_classification
+     Waha                         -2.15                         -3.65                          -1.5           10000            -15000.0           synthetic
+Algonquin                          5.50                          7.00                           1.5           10000             15000.0           synthetic

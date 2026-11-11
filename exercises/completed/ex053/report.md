@@ -1,0 +1,30 @@
+# ex053 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+NUC_cost: 9.28
+
+CC1_cost: 24.6
+
+COAL_cost: 25.92
+
+CC2_cost: 27.05
+
+GT_cost: 39.125
+
+merit_order: NUC>CC1>COAL>CC2>GT
+
+clearing_price: 25.92
+
+marginal_unit: COAL
+
+coal_dispatch_MW: 500
+
+merit_order_gas_2_50: NUC>CC1>CC2>COAL>GT
+
+clearing_price_gas_2_50: 21.5
+
+coal_dispatch_MW_gas_2_50: 0
+
+gas_price_where_CC2_displaces_COAL: 3.097297
+
+NOTE: Fuel prices and heat rates synthetic. No start costs, minimum loads or emissions prices.
+

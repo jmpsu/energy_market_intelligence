@@ -1,0 +1,74 @@
+section: '7.4'
+title: Spark spreads and fuel procurement
+exercise: EX-055
+lessons:
+- id: L07.04.1
+  title: Spark spread definition
+  objective: Explain spark spread definition and show it in the EX-055 output.
+  prerequisites:
+  - L07.03.5
+  market_lesson: Spark spread is power price minus heat rate times gas price. [K]
+  north_american_example: 'EX-055 (Calculate Spark Spreads) on synthetic North American data: hour_1_spark_USD_per_MWh = 21 [EX]'
+  terminal_activity: python3 emi.py run 055 | grep '^hour_1_spark_USD_per_MWh:'
+  expected_result: 'hour_1_spark_USD_per_MWh: 21'
+  professional_application: Compare electricity revenue with natural gas fuel costs and variable operating expenses.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.03.5
+  after: L07.04.2
+  status: written_command_verified
+- id: L07.04.2
+  title: Clean spark and emissions costs
+  objective: Explain clean spark and emissions costs and show it in the EX-055 output.
+  prerequisites:
+  - L07.04.1
+  market_lesson: The clean spark spread also subtracts emissions cost. [K]
+  north_american_example: 'EX-055 (Calculate Spark Spreads) on synthetic North American data: hour_2_spark_USD_per_MWh = 29.25 [EX]'
+  terminal_activity: python3 emi.py run 055 | grep '^hour_2_spark_USD_per_MWh:'
+  expected_result: 'hour_2_spark_USD_per_MWh: 29.25'
+  professional_application: Compare electricity revenue with natural gas fuel costs and variable operating expenses.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.04.1
+  after: L07.04.3
+  status: written_command_verified
+- id: L07.04.3
+  title: Implied market heat rate
+  objective: Explain implied market heat rate and show it in the EX-055 output.
+  prerequisites:
+  - L07.04.2
+  market_lesson: Implied heat rate is power price divided by gas price. [K]
+  north_american_example: 'EX-055 (Calculate Spark Spreads) on synthetic North American data: hour_3_spark_USD_per_MWh = 37.5 [EX]'
+  terminal_activity: python3 emi.py run 055 | grep '^hour_3_spark_USD_per_MWh:'
+  expected_result: 'hour_3_spark_USD_per_MWh: 37.5'
+  professional_application: Compare electricity revenue with natural gas fuel costs and variable operating expenses.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.04.2
+  after: L07.04.4
+  status: written_command_verified
+- id: L07.04.4
+  title: Fuel procurement timing
+  objective: Explain fuel procurement timing and show it in the EX-055 output.
+  prerequisites:
+  - L07.04.3
+  market_lesson: Gas must be bought on the gas-day schedule before power needs are certain. [K]
+  north_american_example: 'EX-055 (Calculate Spark Spreads) on synthetic North American data: hour_4_spark_USD_per_MWh = 45.75 [EX]'
+  terminal_activity: python3 emi.py run 055 | grep '^hour_4_spark_USD_per_MWh:'
+  expected_result: 'hour_4_spark_USD_per_MWh: 45.75'
+  professional_application: Compare electricity revenue with natural gas fuel costs and variable operating expenses.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.04.3
+  after: L07.04.5
+  status: written_command_verified
+- id: L07.04.5
+  title: Spark hedging
+  objective: Explain spark hedging and show it in the EX-055 output.
+  prerequisites:
+  - L07.04.4
+  market_lesson: A generator hedges by selling power and buying gas in heat-rate proportion. [K]
+  north_american_example: 'EX-055 (Calculate Spark Spreads) on synthetic North American data: hour_5_spark_USD_per_MWh = 9 [EX]'
+  terminal_activity: python3 emi.py run 055 | grep '^hour_5_spark_USD_per_MWh:'
+  expected_result: 'hour_5_spark_USD_per_MWh: 9'
+  professional_application: Compare electricity revenue with natural gas fuel costs and variable operating expenses.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.04.4
+  after: L07.05.1
+  status: written_command_verified

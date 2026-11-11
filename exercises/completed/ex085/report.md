@@ -1,0 +1,26 @@
+# ex085 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+hdd_rows_verified: 15
+
+cumulative_HDD: 430
+
+strike_HDD: 450
+
+payout_USD: 200000
+
+cap_reached_at_HDD: 250
+
+payout_shift_-5F_USD: 0
+
+payout_shift_+0F_USD: 200000
+
+payout_shift_+3F_USD: 650000
+
+payout_shift_+10F_USD: 1700000
+
+payout_shift_+15F_USD: 2000000
+
+NOTE: The strike is labelled seasonal but only 15 days are supplied; the payout treats the 15 days as the full contract period.
+
+NOTE: Payoff is intrinsic only: no premium, no probability distribution, no station-vs-load basis risk.
+

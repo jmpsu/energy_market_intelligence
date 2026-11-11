@@ -1,0 +1,9 @@
+edge_id,from_node,to_node,capacity_Bcf_d_base,flow_Bcf_d_base,capacity_Bcf_d_outage,flow_Bcf_d_outage,binding,flow_change_Bcf_d
+P001,APPALACHIA,HUB_EAST,20.0,20.0,10.0,10.0,True,-10.0
+P002,APPALACHIA,HUB_GULF,10.0,0.0,10.0,0.0,False,0.0
+P003,PERMIAN,HUB_GULF,15.0,10.0,15.0,10.0,False,0.0
+P004,PERMIAN,HUB_WEST,10.0,10.0,10.0,10.0,True,0.0
+P005,HAYNESVILLE,HUB_GULF,15.0,15.0,15.0,15.0,True,0.0
+P006,HAYNESVILLE,HUB_EAST,5.0,0.0,5.0,5.0,True,5.0
+P007,HUB_GULF,STORAGE_A,5.0,5.0,5.0,5.0,True,0.0
+P008,STORAGE_A,HUB_EAST,5.0,5.0,5.0,5.0,True,0.0

@@ -1,0 +1,6 @@
+sample_id,product,volume_gal,methane,ethane,propane,butanes_plus
+S1,Propane,500000,0.0,2.1,96.4,1.5
+S2,Propane,400000,0.0,6.2,92.0,1.8
+S3,Propane,300000,0.0,1.0,95.6,3.4
+S4,Ethane,800000,0.9,96.1,3.0,0.0
+S5,Ethane,600000,2.2,94.3,3.5,0.0

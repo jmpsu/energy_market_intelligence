@@ -1,0 +1,74 @@
+section: '3.6'
+title: Transportation and basis contracts
+exercise: EX-016
+lessons:
+- id: L03.06.1
+  title: Transport contract as a spread option
+  objective: Explain transport contract as a spread option and show it in the EX-016 output.
+  prerequisites:
+  - L03.05.5
+  market_lesson: Firm transport lets you buy at one point and sell at another, so its value moves like an option on the spread. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: breakeven_load_factor = 0.849057 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^breakeven_load_factor:'
+  expected_result: 'breakeven_load_factor: 0.849057'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.05.5
+  after: L03.06.2
+  status: written_command_verified
+- id: L03.06.2
+  title: Basis swaps
+  objective: Explain basis swaps and show it in the EX-016 output.
+  prerequisites:
+  - L03.06.1
+  market_lesson: A basis swap fixes the difference between a location and Henry Hub. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: firm_unit_cost_at_100pct = 0.47 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^firm_unit_cost_at_100pct:'
+  expected_result: 'firm_unit_cost_at_100pct: 0.47'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.06.1
+  after: L03.06.3
+  status: written_command_verified
+- id: L03.06.3
+  title: Locational spread hedging
+  objective: Explain locational spread hedging and show it in the EX-016 output.
+  prerequisites:
+  - L03.06.2
+  market_lesson: Hedging a regional position needs both a benchmark hedge and a basis hedge. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: firm_unit_cost_at_50pct = 0.92 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^firm_unit_cost_at_50pct:'
+  expected_result: 'firm_unit_cost_at_50pct: 0.92'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.06.2
+  after: L03.06.4
+  status: written_command_verified
+- id: L03.06.4
+  title: Valuing firm transport
+  objective: Explain valuing firm transport and show it in the EX-016 output.
+  prerequisites:
+  - L03.06.3
+  market_lesson: Transport value is the spread less variable cost, compared with the reservation charge. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: spread = 0.8 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^spread:'
+  expected_result: 'spread: 0.8'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.06.3
+  after: L03.06.5
+  status: written_command_verified
+- id: L03.06.5
+  title: Hedge effectiveness
+  objective: Explain hedge effectiveness and show it in the EX-016 output.
+  prerequisites:
+  - L03.06.4
+  market_lesson: A hedge is effective when its P&L offsets the exposure; a Henry Hub hedge alone leaves basis open. [K]
+  north_american_example: 'EX-016 (Calculate Pipeline Transportation Economics) on synthetic North American data: firm_monthly_margin_USD = 414000 [EX]'
+  terminal_activity: python3 emi.py run 016 | grep '^firm_monthly_margin_USD:'
+  expected_result: 'firm_monthly_margin_USD: 414000'
+  professional_application: Compare firm and interruptible transportation costs under different market conditions.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.06.4
+  after: L03.07.1
+  status: written_command_verified

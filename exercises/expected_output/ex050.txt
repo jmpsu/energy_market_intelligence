@@ -1,0 +1,14 @@
+ex050 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+regulation_requirement_MW: 50
+spin_requirement_MW: 150
+energy_margin_USD_per_MWh: 10
+all_energy_USD_per_h: 2000
+energy_plus_regulation_USD_per_h: 2040
+energy_plus_spin_USD_per_h: 1840
+energy_plus_both_USD_per_h: 1880
+best_option: energy_plus_regulation
+offer_regulation: True
+offer_spin: False
+ancillary_share_of_best_margin_pct: 11.764706
+system_ancillary_cost_USD_per_h: 1500
+NOTE: A MW held as reserve gives up the energy margin: offer reserve only when its price exceeds that opportunity cost. Requirement percentages and prices synthetic; no deployment energy or performance payments.

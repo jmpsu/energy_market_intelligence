@@ -1,0 +1,32 @@
+# ex038 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+gas_price: 3.25
+
+ethane_price: 0.235
+
+recover_uplift_USD_per_d: 231351.500652
+
+reject_uplift_USD_per_d: 249511.45509
+
+ethane_swing_gal_per_d: 420367.5
+
+propane_lost_in_rejection_gal_per_d: 21992
+
+ethane_fuel_value_USD_per_gal: 0.216125
+
+ethane_netback_USD_per_gal: 0.155
+
+simple_breakeven_ethane_USD_per_gal: 0.296125
+
+plant_breakeven_ethane_USD_per_gal: 0.2782
+
+rejection_advantage_USD_per_d: 18159.954438
+
+decision: REJECT
+
+gas_price_where_decision_flips: 2.643996
+
+NOTE: Rejection mode also loses propane recovery, so the plant recovers ethane at a price below the simple per-gallon breakeven.
+
+NOTE: Not modeled: residue-gas pipeline Btu limits that cap how much ethane can be rejected, ethane pipeline minimum-volume commitments, and fractionator or pipeline capacity limits that force rejection regardless of price.
+

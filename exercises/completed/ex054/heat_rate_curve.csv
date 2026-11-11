@@ -1,0 +1,5 @@
+output_MW,fuel_input_MMBtu_per_h,average_heat_rate_MMBtu_per_MWh,incremental_heat_rate_MMBtu_per_MWh,efficiency_pct,average_heat_rate_Btu_per_kWh
+200,1700,8.5,,40.141176470588235,8500.0
+300,2300,7.666666666666667,6.0,44.504347826086956,7666.666666666667
+400,2900,7.25,6.0,47.06206896551724,7250.0
+500,3500,7.0,6.0,48.74285714285714,7000.0

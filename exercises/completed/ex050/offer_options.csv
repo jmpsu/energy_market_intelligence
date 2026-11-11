@@ -1,0 +1,5 @@
+option,energy_MW,regulation_MW,spin_MW,margin_USD_per_h
+all_energy,200,0,0,2000.0
+energy_plus_regulation,180,20,0,2040.0
+energy_plus_spin,160,0,40,1840.0
+energy_plus_both,140,20,40,1880.0

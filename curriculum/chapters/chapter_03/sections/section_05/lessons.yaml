@@ -1,0 +1,74 @@
+section: '3.5'
+title: Forward curves and calendar spreads
+exercise: EX-023
+lessons:
+- id: L03.05.1
+  title: Curve construction from quotes
+  objective: Explain curve construction from quotes and show it in the EX-023 output.
+  prerequisites:
+  - L03.04.5
+  market_lesson: A forward curve is built from quoted contract prices by delivery month. [K]
+  north_american_example: 'EX-023 (Build a Natural Gas Forward Curve) on synthetic North American data: calendar_strip_USD_per_MMBtu = 3.25 [EX]'
+  terminal_activity: python3 emi.py run 023 | grep '^calendar_strip_USD_per_MMBtu:'
+  expected_result: 'calendar_strip_USD_per_MMBtu: 3.25'
+  professional_application: Construct a forward price curve from monthly market observations and calculate its shape.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.04.5
+  after: L03.05.2
+  status: written_command_verified
+- id: L03.05.2
+  title: Contango, backwardation, seasonality
+  objective: Explain contango, backwardation, seasonality and show it in the EX-023 output.
+  prerequisites:
+  - L03.05.1
+  market_lesson: Contango means later months cost more; backwardation the reverse; gas adds a winter premium. [K]
+  north_american_example: 'EX-023 (Build a Natural Gas Forward Curve) on synthetic North American data: winter_strip = 3.52 [EX]'
+  terminal_activity: python3 emi.py run 023 | grep '^winter_strip:'
+  expected_result: 'winter_strip: 3.52'
+  professional_application: Construct a forward price curve from monthly market observations and calculate its shape.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.05.1
+  after: L03.05.3
+  status: written_command_verified
+- id: L03.05.3
+  title: Calendar spreads
+  objective: Explain calendar spreads and show it in the EX-023 output.
+  prerequisites:
+  - L03.05.2
+  market_lesson: A calendar spread is the price difference between two delivery months. [K]
+  north_american_example: 'EX-023 (Build a Natural Gas Forward Curve) on synthetic North American data: summer_strip = 3.057143 [EX]'
+  terminal_activity: python3 emi.py run 023 | grep '^summer_strip:'
+  expected_result: 'summer_strip: 3.057143'
+  professional_application: Construct a forward price curve from monthly market observations and calculate its shape.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.05.2
+  after: L03.05.4
+  status: written_command_verified
+- id: L03.05.4
+  title: Strip and seasonal pricing
+  objective: Explain strip and seasonal pricing and show it in the EX-023 output.
+  prerequisites:
+  - L03.05.3
+  market_lesson: A strip is the average over consecutive months, such as a winter or summer strip. [K]
+  north_american_example: 'EX-023 (Build a Natural Gas Forward Curve) on synthetic North American data: winter_minus_summer = 0.462857 [EX]'
+  terminal_activity: python3 emi.py run 023 | grep '^winter_minus_summer:'
+  expected_result: 'winter_minus_summer: 0.462857'
+  professional_application: Construct a forward price curve from monthly market observations and calculate its shape.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.05.3
+  after: L03.05.5
+  status: written_command_verified
+- id: L03.05.5
+  title: Curve shape interpretation
+  objective: Explain curve shape interpretation and show it in the EX-023 output.
+  prerequisites:
+  - L03.05.4
+  market_lesson: Curve shape tells you what the market pays to store, and where it expects tightness. [K]
+  north_american_example: 'EX-023 (Build a Natural Gas Forward Curve) on synthetic North American data: jan_minus_jul_spread = 0.5 [EX]'
+  terminal_activity: python3 emi.py run 023 | grep '^jan_minus_jul_spread:'
+  expected_result: 'jan_minus_jul_spread: 0.5'
+  professional_application: Construct a forward price curve from monthly market observations and calculate its shape.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.05.4
+  after: L03.06.1
+  status: written_command_verified

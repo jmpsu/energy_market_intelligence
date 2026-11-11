@@ -1,0 +1,6 @@
+participant,gas_position_MMBtu_per_d,power_position_MWh_per_d,hedged_fraction,note
+Producer,500000,0,0.6,long gas production
+Pipeline,0,0,0,fee based
+Gas_Generator,-168000,24000,0.0,burns gas at 7.0 heat rate and sells power
+Regulated_Utility,-300000,0,0.0,buys gas and recovers cost later through rates
+Trader,-100000,0,0.0,short gas position

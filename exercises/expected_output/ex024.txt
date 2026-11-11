@@ -1,0 +1,10 @@
+ex024 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+locked_all_in_price: 2.5
+unhedged_cost_range_USD: 1054000
+hh_hedged_cost_range_USD: 279000
+fully_hedged_cost_range_USD: 0
+residual_risk_after_hh_hedge: basis
+futures_margin_call_low_scenario_USD: 310000
+fully_hedged_unit_cost: 2.5
+NOTE: Futures and swap give the same settlement P&L here; they differ in margining, clearing and credit, not in payoff.
+NOTE: A Henry Hub hedge on a regional purchase leaves basis risk; the basis swap removes it.

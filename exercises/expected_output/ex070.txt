@@ -1,0 +1,11 @@
+ex070 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+raw_rows: 10
+rejected_rows: 2
+reject_reasons: missing_price,non_numeric_price
+duplicate_rows_superseded: 2
+curated_rows: 6
+negative_prices_preserved: 1
+provider_priority: Provider_A>Provider_B
+max_provider_disagreement: 0.5
+completeness_pct: 85.714286
+NOTE: Henry Hub 10:00 has no valid observation from any provider: a gap the curated layer must expose, not fill.

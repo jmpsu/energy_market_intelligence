@@ -1,0 +1,74 @@
+section: '3.10'
+title: Basis, volume, operational, and market risk
+exercise: EX-027
+lessons:
+- id: L03.10.1
+  title: Basis risk
+  objective: Explain basis risk and show it in the EX-027 output.
+  prerequisites:
+  - L03.09.5
+  market_lesson: Basis risk is the chance that the local price moves differently from the hedge. [K]
+  north_american_example: 'EX-027 (Build a Regional Gas Trading Portfolio) on synthetic North American data: net_position_MMBtu = 40000 [EX]'
+  terminal_activity: python3 emi.py run 027 | grep '^net_position_MMBtu:'
+  expected_result: 'net_position_MMBtu: 40000'
+  professional_application: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.09.5
+  after: L03.10.2
+  status: written_command_verified
+- id: L03.10.2
+  title: Volume and swing risk
+  objective: Explain volume and swing risk and show it in the EX-027 output.
+  prerequisites:
+  - L03.10.1
+  market_lesson: Volume risk comes from demand or production differing from plan, often in the worst price conditions. [K]
+  north_american_example: 'EX-027 (Build a Regional Gas Trading Portfolio) on synthetic North American data: gross_position_MMBtu = 1100000 [EX]'
+  terminal_activity: python3 emi.py run 027 | grep '^gross_position_MMBtu:'
+  expected_result: 'gross_position_MMBtu: 1100000'
+  professional_application: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.10.1
+  after: L03.10.3
+  status: written_command_verified
+- id: L03.10.3
+  title: Operational risk
+  objective: Explain operational risk and show it in the EX-027 output.
+  prerequisites:
+  - L03.10.2
+  market_lesson: Operational risk covers outages, cuts and human error. [K]
+  north_american_example: 'EX-027 (Build a Regional Gas Trading Portfolio) on synthetic North American data: henry_hub_equivalent_MMBtu = 40000 [EX]'
+  terminal_activity: python3 emi.py run 027 | grep '^henry_hub_equivalent_MMBtu:'
+  expected_result: 'henry_hub_equivalent_MMBtu: 40000'
+  professional_application: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.10.2
+  after: L03.10.4
+  status: written_command_verified
+- id: L03.10.4
+  title: Market price risk and liquidity
+  objective: Explain market price risk and liquidity and show it in the EX-027 output.
+  prerequisites:
+  - L03.10.3
+  market_lesson: Price risk grows when a market is illiquid and positions cannot be closed at the quoted price. [K]
+  north_american_example: 'EX-027 (Build a Regional Gas Trading Portfolio) on synthetic North American data: basis_exposure_MMBtu = 450000 [EX]'
+  terminal_activity: python3 emi.py run 027 | grep '^basis_exposure_MMBtu:'
+  expected_result: 'basis_exposure_MMBtu: 450000'
+  professional_application: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.10.3
+  after: L03.10.5
+  status: written_command_verified
+- id: L03.10.5
+  title: Risk reporting for a gas book
+  objective: Explain risk reporting for a gas book and show it in the EX-027 output.
+  prerequisites:
+  - L03.10.4
+  market_lesson: A risk report shows positions, P&L, limits and the biggest drivers on one page. [K]
+  north_american_example: 'EX-027 (Build a Regional Gas Trading Portfolio) on synthetic North American data: mtm_day1_USD = 26500 [EX]'
+  terminal_activity: python3 emi.py run 027 | grep '^mtm_day1_USD:'
+  expected_result: 'mtm_day1_USD: 26500'
+  professional_application: Combine multiple hub positions and calculate aggregate exposure, basis risk, and P&L.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.10.4
+  after: L04.01.1
+  status: written_command_verified

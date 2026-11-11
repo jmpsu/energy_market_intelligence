@@ -1,0 +1,7 @@
+factor,bucket,sensitivity,sensitivity_unit,factor_move
+henry_hub_delta,price,500000,USD_per_1.00_USD_per_MMBtu,0.10
+waha_basis_delta,basis,200000,USD_per_1.00_USD_per_MMBtu,-0.15
+pjm_power_delta,price,20000,USD_per_1.00_USD_per_MWh,2.00
+gas_option_vega,volatility,15000,USD_per_vol_point,-2.00
+option_theta,time,-1200,USD_per_day,1.00
+volume_variance,volume,0.50,USD_margin_per_MMBtu,-5000

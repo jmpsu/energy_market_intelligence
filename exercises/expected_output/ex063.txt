@@ -1,0 +1,15 @@
+ex063 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+lp_revenue_USD: 17731.111111
+rule_of_thumb_revenue_USD: 13875
+lp_gain_over_rule_USD: 3856.111111
+energy_charged_MWh: 355.555556
+energy_discharged_MWh: 320
+equivalent_cycles: 1.6
+avg_charge_price: 28.234375
+avg_discharge_price: 86.78125
+breakeven_price_ratio: 1.111111
+max_soc_MWh: 200
+final_soc_MWh: 50
+revenue_USD_per_MW_day: 354.622222
+NOTE: Perfect foresight of prices; price-taker; no degradation cost, no ancillary services, losses applied on charge.
+NOTE: A charge-discharge pair is only worth doing when the discharge price exceeds the charge price divided by round-trip efficiency.

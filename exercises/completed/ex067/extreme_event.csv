@@ -1,0 +1,6 @@
+day,demand_GW,available_generation_GW,gas_supply_pct_of_normal,served_GW,load_shed_GW,price_USD_per_MWh,energy_cost_USD,unserved_GWh
+1,55,60,95,55,0,60.0,79200000.0,0
+2,62,58,80,58,4,9000.0,12528000000.0,96
+3,70,48,55,48,22,9000.0,10368000000.0,528
+4,68,50,60,50,18,9000.0,10800000000.0,432
+5,60,58,85,58,2,9000.0,12528000000.0,48

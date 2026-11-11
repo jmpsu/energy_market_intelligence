@@ -1,0 +1,14 @@
+component,layer,status,evidence
+Vendor_price_feeds,source,proposed,none
+Raw_staging,data,demonstrated_here,EX-070
+Curated_market_data,data,demonstrated_here,EX-070
+Reference_master_data,data,demonstrated_here,EX-007
+Warehouse,data,demonstrated_here,EX-087
+Market_data_API,service,demonstrated_here,EX-088
+Trade_store,data,demonstrated_here,EX-069
+Valuation_and_risk,analytics,demonstrated_here,EX-076
+Dispatch_and_network_simulation,simulation,demonstrated_here,EX-089
+Simulation_orchestrator,simulation,proposed,none
+External_simulation_engine,simulation,proposed,none
+Validation_service,analytics,demonstrated_here,EX-094
+User_workflows_and_reports,presentation,proposed,none

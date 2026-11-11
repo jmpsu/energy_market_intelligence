@@ -1,0 +1,5 @@
+parameter,value,unit
+battery_energy_capacity,400,MWh
+battery_round_trip_efficiency,0.85,fraction
+battery_initial_soc,200,MWh
+battery_min_soc,0,MWh

@@ -1,0 +1,74 @@
+section: '4.1'
+title: North American pipeline topology
+exercise: EX-018
+lessons:
+- id: L04.01.1
+  title: 'Network representation: nodes and edges'
+  objective: 'Explain network representation: nodes and edges and show it in the EX-018 output.'
+  prerequisites:
+  - L03.10.5
+  market_lesson: A gas network is nodes (basins, hubs, markets) joined by edges (pipelines) with capacities. [K]
+  north_american_example: 'EX-018 (Build a North American Gas Infrastructure Network) on synthetic North American data: nodes = 11 [EX]'
+  terminal_activity: python3 emi.py run 018 | grep '^nodes:'
+  expected_result: 'nodes: 11'
+  professional_application: Represent production basins, processing plants, pipelines, storage facilities, LNG terminals, and market hubs as a connected network.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L03.10.5
+  after: L04.01.2
+  status: written_command_verified
+- id: L04.01.2
+  title: Supply-push vs demand-pull corridors
+  objective: Explain supply-push vs demand-pull corridors and show it in the EX-018 output.
+  prerequisites:
+  - L04.01.1
+  market_lesson: Supply-push corridors exist because a basin must clear; demand-pull corridors because a market must be fed. [K]
+  north_american_example: 'EX-018 (Build a North American Gas Infrastructure Network) on synthetic North American data: edges = 12 [EX]'
+  terminal_activity: python3 emi.py run 018 | grep '^edges:'
+  expected_result: 'edges: 12'
+  professional_application: Represent production basins, processing plants, pipelines, storage facilities, LNG terminals, and market hubs as a connected network.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.01.1
+  after: L04.01.3
+  status: written_command_verified
+- id: L04.01.3
+  title: Flow direction and reversals
+  objective: Explain flow direction and reversals and show it in the EX-018 output.
+  prerequisites:
+  - L04.01.2
+  market_lesson: Flows can reverse when supply patterns change, as they did when shale shifted production. [K]
+  north_american_example: 'EX-018 (Build a North American Gas Infrastructure Network) on synthetic North American data: most_central_node = HUB_GULF [EX]'
+  terminal_activity: python3 emi.py run 018 | grep '^most_central_node:'
+  expected_result: 'most_central_node: HUB_GULF'
+  professional_application: Represent production basins, processing plants, pipelines, storage facilities, LNG terminals, and market hubs as a connected network.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.01.2
+  after: L04.01.4
+  status: written_command_verified
+- id: L04.01.4
+  title: Hubs as network junctions
+  objective: Explain hubs as network junctions and show it in the EX-018 output.
+  prerequisites:
+  - L04.01.3
+  market_lesson: Hubs sit where many pipelines meet and gas can be rerouted. [K]
+  north_american_example: 'EX-018 (Build a North American Gas Infrastructure Network) on synthetic North American data: max_flow_to_LNG_GULF_Bcf_d = 12 [EX]'
+  terminal_activity: python3 emi.py run 018 | grep '^max_flow_to_LNG_GULF_Bcf_d:'
+  expected_result: 'max_flow_to_LNG_GULF_Bcf_d: 12'
+  professional_application: Represent production basins, processing plants, pipelines, storage facilities, LNG terminals, and market hubs as a connected network.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.01.3
+  after: L04.01.5
+  status: written_command_verified
+- id: L04.01.5
+  title: Mapping a regional network
+  objective: Explain mapping a regional network and show it in the EX-018 output.
+  prerequisites:
+  - L04.01.4
+  market_lesson: A regional map is the first deliverable in any basis analysis. [K]
+  north_american_example: 'EX-018 (Build a North American Gas Infrastructure Network) on synthetic North American data: max_flow_to_MEXICO_EXPORT_Bcf_d = 6 [EX]'
+  terminal_activity: python3 emi.py run 018 | grep '^max_flow_to_MEXICO_EXPORT_Bcf_d:'
+  expected_result: 'max_flow_to_MEXICO_EXPORT_Bcf_d: 6'
+  professional_application: Represent production basins, processing plants, pipelines, storage facilities, LNG terminals, and market hubs as a connected network.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.01.4
+  after: L04.02.1
+  status: written_command_verified

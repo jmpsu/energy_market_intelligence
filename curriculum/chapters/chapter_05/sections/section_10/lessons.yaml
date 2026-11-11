@@ -1,0 +1,68 @@
+section: '5.10'
+title: NGL transportation, exports, trading, and risk
+lessons:
+- id: L05.10.1
+  title: Transport modes
+  prerequisite: L05.09.5
+  status: written
+  objective: Choose a transport mode.
+  market_lesson: Pipeline is cheapest per barrel but capacity-limited; rail, truck and marine fill the gap at higher cost [S4][EX].
+  example: 'Synthetic costs per bbl: pipeline 1.50 to 1.90, rail 3.20 to 6.00, marine 4.00, truck 7.00.'
+  terminal_activity: python3 emi.py run 043
+  expected_result: 'base_arcs_at_capacity: A1,A5 (both pipelines full)'
+  professional_application: Logistics cost is the floor under regional differentials.
+  product_implication: Optimisation needs arc capacities and costs maintained as dated reference data.
+  builds_on: L05.09.5
+  leads_to: L05.10.2
+- id: L05.10.2
+  title: Export terminals
+  prerequisite: L05.10.1
+  status: written
+  objective: Follow export flows.
+  market_lesson: The US exported about 2.4 million b/d of HGL in 2022, 1.40 million b/d of it propane [S5]. Propane hit a record 2.1 million b/d in April 2026 [S8]. Growth could be capped by export capacity [S8].
+  example: 'EIA: Panama Canal costs on shipments to Asia must be absorbed by buyers and sellers [S8].'
+  terminal_activity: python3 emi.py run 041 export_shift=0.10
+  expected_result: 'base_ending_inventory_MMbbl: 11.63'
+  professional_application: Export dock capacity and freight are price drivers for the whole US propane market.
+  product_implication: Waterborne data (docks, freight, destinations) is a product-coverage decision.
+  builds_on: L05.10.1
+  leads_to: L05.10.3
+- id: L05.10.3
+  title: NGL hedging instruments
+  prerequisite: L05.10.2
+  status: written
+  objective: Mark an NGL book.
+  market_lesson: Mark each position at its product and hub price; sum to book MtM; difference day to day is P&L [EX].
+  example: 'Six positions: MtM 26,500 USD on day 1, 118,000 on day 2, P&L 91,500.'
+  terminal_activity: python3 emi.py run 044
+  expected_result: 'weekly_pnl_USD: 91500'
+  professional_application: This is the daily routine of an NGL risk analyst.
+  product_implication: 'Position, price and P&L must tie exactly: reconciliation is an acceptance test.'
+  builds_on: L05.10.2
+  leads_to: L05.10.4
+- id: L05.10.4
+  title: Portfolio exposure
+  prerequisite: L05.10.3
+  status: written
+  objective: Split P&L into flat price and basis.
+  market_lesson: 'For a long-Belvieu, short-Conway propane spread: P&L = net gallons x Conway move + Belvieu gallons x basis move [EX].'
+  example: 'Net long 500,000 gal: 2,500 USD flat price + 50,000 USD basis = 52,500.'
+  terminal_activity: python3 emi.py run 044
+  expected_result: 'propane_flat_price_pnl_USD: 2500; propane_basis_pnl_USD: 50000'
+  professional_application: Attribution tells the desk head whether the trader made money on the view they were paid to take.
+  product_implication: P&L explain by risk factor is a standard ETRM report to replicate.
+  builds_on: L05.10.3
+  leads_to: L05.10.5
+- id: L05.10.5
+  title: Risk controls
+  prerequisite: L05.10.4
+  status: written
+  objective: Name the risks an NGL book carries.
+  market_lesson: Outright price, hub basis, product spreads (for example ethane vs gas, butane vs crude), volume and operational risk, and proxy-hedge basis when hedging with gas or crude [EX][K].
+  example: Net position 100,000 bbl long; gross notional 5.06 million USD; largest P&L product is propane.
+  terminal_activity: python3 emi.py run 044
+  expected_result: 'net_position_bbl: 100000; gross_notional_USD: 5057000'
+  professional_application: Limits are set on each of these dimensions.
+  product_implication: Risk views must slice by product, hub and tenor; this repo has no tenor dimension yet.
+  builds_on: L05.10.4
+  leads_to: L06.01.1

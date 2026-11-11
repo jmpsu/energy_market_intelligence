@@ -1,0 +1,5 @@
+shipper,scheduled_MMBtu,actual_takes_MMBtu,imbalance_MMBtu,imbalance_pct,cashout_USD_shipper_pays,at_index_USD,penalty_USD
+Alpha,3000000,3045000,45000,1.5,146250.0,146250.0,0.0
+Beta,2400000,2280000,-120000,-5.0,-390000.0,-390000.0,0.0
+Gamma,1800000,1998000,198000,11.0,687375.0,643500.0,43875.0
+Delta,2700000,2700000,0,0.0,0.0,0.0,0.0

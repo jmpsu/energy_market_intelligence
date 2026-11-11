@@ -1,0 +1,13 @@
+ex103 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+mont_belvieu_USD_per_tonne: 375.12
+terminal_fee_USD_per_tonne: 31.26
+delivered_cost_USD_per_tonne: 526.38
+arbitrage_USD_per_tonne: 33.62
+arbitrage_USD_per_gal: 0.06453
+cargo_margin_USD: 1479280
+cargo_bbl: 545809.52381
+arb_open: True
+breakeven_mont_belvieu_USD_per_gal: 0.78453
+max_terminal_fee_USD_per_gal: 0.12453
+breakeven_freight_USD_per_tonne: 153.62
+NOTE: 521 gal per tonne is a rounded conversion to verify; freight, terminal fee, delivered price and cargo size are synthetic. The arbitrage per gallon is the most a shipper would pay above the terminal fee for dock space.

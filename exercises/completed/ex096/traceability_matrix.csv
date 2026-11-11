@@ -1,0 +1,9 @@
+req_id,user,workflow,capability,data_required,exercise,acceptance_criterion,exercise_exists,automated_test,tier
+R01,Gas_Trader,morning basis review,basis by hub vs benchmark with alerts,hub prices,EX-019,basis equals hub minus benchmark to 1e-6 on the reference set,True,True,2
+R02,NGL_Marketer,daily arbitrage screen,hub-to-hub netback by product,NGL hub prices and logistics costs,EX-040,net margin equals basis minus logistics cost for every product and date,True,True,1
+R03,Plant_Optimiser,monthly ethane decision,recover or reject with plant-level breakeven,composition recovery fees gas and NGL prices,EX-038,decision flips exactly at the reported breakeven price,True,True,2
+R04,Power_Analyst,congestion study,nodal prices with congestion component,network topology limits offers,EX-056,LMPs match the hand-solved three-bus case,True,True,1
+R05,Risk_Manager,daily risk pack,VaR ES and stress losses against limits,positions and factor history,EX-081,component VaR sums to portfolio VaR,True,True,1
+R06,Scheduler,volume reconciliation,contracted scheduled delivered break report,trades nominations actuals,EX-075,every break above tolerance is listed,True,True,2
+R07,Quant_Analyst,study turnaround,faster runs with proven identical results,model inputs and baseline outputs,EX-092,relative objective difference below 1e-6 and zero constraint violation,True,True,3
+R08,Data_Engineer,market data onboarding,validated curated prices with lineage,raw vendor files,EX-070,rejected and superseded records are retained with reasons,True,True,1

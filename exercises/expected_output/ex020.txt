@@ -1,0 +1,14 @@
+ex020 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+Period_1_basis: -2.15
+Period_2_basis: -3.65
+Period_3_basis: -4.65
+Period_4_basis: -2.85
+Period_1_surplus_Bcf_d: 0.5
+Period_2_surplus_Bcf_d: 3
+Period_3_surplus_Bcf_d: 4.5
+Period_4_surplus_Bcf_d: 1
+corr_surplus_basis: -0.985457
+basis_slope_USD_per_Bcf_d: -0.573171
+negative_price_periods: 2
+max_revenue_gap_USD_per_d: 120900000
+NOTE: Four observations: the correlation is descriptive, not a calibrated price model.

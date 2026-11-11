@@ -1,0 +1,14 @@
+seq,trade_id,event
+1,TR001,captured
+2,TR002,captured
+3,TR001,confirmed
+4,TR003,captured
+5,TR001,scheduled
+6,TR002,scheduled
+7,TR001,delivered
+8,TR003,confirmed
+9,TR001,invoiced
+10,TR002,confirmed
+11,TR001,settled
+12,TR003,invoiced
+13,TR004,captured

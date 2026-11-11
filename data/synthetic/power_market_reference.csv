@@ -1,0 +1,8 @@
+market,operator,market_type,pricing_structure,day_ahead_market,real_time_market,capacity_market
+CAISO,California_ISO,ISO,Nodal,Yes,Yes,No
+PJM,PJM_Interconnection,RTO,Nodal,Yes,Yes,Yes
+MISO,Midcontinent_ISO,RTO,Nodal,Yes,Yes,Yes
+SPP,Southwest_Power_Pool,RTO,Nodal,Yes,Yes,Yes
+NYISO,New_York_ISO,ISO,Nodal,Yes,Yes,Yes
+ISO_NE,ISO_New_England,ISO,Nodal,Yes,Yes,Yes
+ERCOT,Electric_Reliability_Council_of_Texas,ISO,Nodal,Yes,Yes,No

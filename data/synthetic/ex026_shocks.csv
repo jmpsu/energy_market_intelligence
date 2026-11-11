@@ -1,0 +1,7 @@
+shock,tightening_Bcf_d,description
+Production_plus_2,-2.0,supply growth
+LNG_exports_plus_3,3.0,new liquefaction trains
+Cold_winter,4.0,heating demand above normal
+Mild_winter,-4.0,heating demand below normal
+Storage_deficit_refill,1.0,extra injections to refill
+LNG_outage,-2.0,terminal outage backs gas into the market

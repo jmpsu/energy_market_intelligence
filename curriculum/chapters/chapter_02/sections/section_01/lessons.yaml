@@ -1,0 +1,74 @@
+section: '2.1'
+title: Natural gas production and resource basins
+exercise: EX-010
+lessons:
+- id: L02.01.1
+  title: Shale basin geography
+  objective: Explain shale basin geography and show it in the EX-010 output.
+  prerequisites:
+  - L01.10.5
+  market_lesson: Major US gas comes from a few shale basins; each has different costs, liquids content and distance to market. [K]
+  north_american_example: 'EX-010 (Compare Major US Gas-Producing Basins) on synthetic North American data: Appalachian_netback_USD_per_MMBtu = 0.55 [EX]'
+  terminal_activity: python3 emi.py run 010 | grep '^Appalachian_netback_USD_per_MMBtu:'
+  expected_result: 'Appalachian_netback_USD_per_MMBtu: 0.55'
+  professional_application: Analyze production volumes, growth rates, and economic characteristics across the Appalachian, Permian, and Haynesville basins.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L01.10.5
+  after: L02.01.2
+  status: written_command_verified
+- id: L02.01.2
+  title: Production volumes and growth rates
+  objective: Explain production volumes and growth rates and show it in the EX-010 output.
+  prerequisites:
+  - L02.01.1
+  market_lesson: 'Growth rate matters as much as level: fast-growing basins outrun their pipelines. [K]'
+  north_american_example: 'EX-010 (Compare Major US Gas-Producing Basins) on synthetic North American data: Permian_netback_USD_per_MMBtu = -0.45 [EX]'
+  terminal_activity: python3 emi.py run 010 | grep '^Permian_netback_USD_per_MMBtu:'
+  expected_result: 'Permian_netback_USD_per_MMBtu: -0.45'
+  professional_application: Analyze production volumes, growth rates, and economic characteristics across the Appalachian, Permian, and Haynesville basins.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.01.1
+  after: L02.01.3
+  status: written_command_verified
+- id: L02.01.3
+  title: Decline curves and drilling economics
+  objective: Explain decline curves and drilling economics and show it in the EX-010 output.
+  prerequisites:
+  - L02.01.2
+  market_lesson: Shale wells decline steeply, so steady output needs continuous drilling. [K]
+  north_american_example: 'EX-010 (Compare Major US Gas-Producing Basins) on synthetic North American data: Haynesville_netback_USD_per_MMBtu = 0.85 [EX]'
+  terminal_activity: python3 emi.py run 010 | grep '^Haynesville_netback_USD_per_MMBtu:'
+  expected_result: 'Haynesville_netback_USD_per_MMBtu: 0.85'
+  professional_application: Analyze production volumes, growth rates, and economic characteristics across the Appalachian, Permian, and Haynesville basins.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.01.2
+  after: L02.01.4
+  status: written_command_verified
+- id: L02.01.4
+  title: Breakeven and netback by basin
+  objective: Explain breakeven and netback by basin and show it in the EX-010 output.
+  prerequisites:
+  - L02.01.3
+  market_lesson: Netback is the market price minus the cost to get there; breakeven is the price at which a new well earns its return. [K]
+  north_american_example: 'EX-010 (Compare Major US Gas-Producing Basins) on synthetic North American data: Appalachian_growth_pct = 3.529412 [EX]'
+  terminal_activity: python3 emi.py run 010 | grep '^Appalachian_growth_pct:'
+  expected_result: 'Appalachian_growth_pct: 3.529412'
+  professional_application: Analyze production volumes, growth rates, and economic characteristics across the Appalachian, Permian, and Haynesville basins.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.01.3
+  after: L02.01.5
+  status: written_command_verified
+- id: L02.01.5
+  title: Basin takeaway dependence
+  objective: Explain basin takeaway dependence and show it in the EX-010 output.
+  prerequisites:
+  - L02.01.4
+  market_lesson: A basin with too little takeaway capacity sells at a discount until new pipe arrives. [K]
+  north_american_example: 'EX-010 (Compare Major US Gas-Producing Basins) on synthetic North American data: Permian_growth_pct = 6.521739 [EX]'
+  terminal_activity: python3 emi.py run 010 | grep '^Permian_growth_pct:'
+  expected_result: 'Permian_growth_pct: 6.521739'
+  professional_application: Analyze production volumes, growth rates, and economic characteristics across the Appalachian, Permian, and Haynesville basins.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.01.4
+  after: L02.02.1
+  status: written_command_verified

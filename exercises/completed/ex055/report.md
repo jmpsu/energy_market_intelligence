@@ -1,0 +1,26 @@
+# ex055 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+hour_1_spark_USD_per_MWh: 21
+
+hour_2_spark_USD_per_MWh: 29.25
+
+hour_3_spark_USD_per_MWh: 37.5
+
+hour_4_spark_USD_per_MWh: 45.75
+
+hour_5_spark_USD_per_MWh: 9
+
+hour_6_spark_USD_per_MWh: 52
+
+hour_7_spark_USD_per_MWh: 75
+
+hour_8_spark_USD_per_MWh: 0.5
+
+profitable_hours: 8
+
+total_gross_margin_USD: 27000
+
+lowest_margin_hour: 8
+
+NOTE: Hour-by-hour rule ignores start cost, minimum run time, ramping and emissions cost.
+

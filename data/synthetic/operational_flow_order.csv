@@ -1,0 +1,5 @@
+shipper,scheduled_MMBtu,actual_receipts_MMBtu,actual_deliveries_MMBtu,allowable_imbalance_percent
+Alpha,100000,105000,98000,2
+Beta,80000,76000,82000,2
+Gamma,60000,60000,55000,2
+Delta,90000,85000,90000,2

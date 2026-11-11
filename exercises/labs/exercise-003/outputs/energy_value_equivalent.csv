@@ -1,0 +1,3 @@
+measure,volume_bcf,volume_mcf,energy_mmbtu,assumed_price_usd_per_mmbtu,notional_value_usd
+Wellhead production,1.0,1000000.0,1036999.9999999999,3.25,3370249.9999999995
+End-user delivery,0.87,870000.0,902189.9999999999,3.25,2932117.4999999995

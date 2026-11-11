@@ -1,0 +1,74 @@
+section: '12.3'
+title: Physical and financial position reconciliation
+exercise: EX-075
+lessons:
+- id: L12.03.1
+  title: Physical position ledger
+  objective: Explain physical position ledger and show it in the EX-075 output.
+  prerequisites:
+  - L12.02.5
+  market_lesson: The physical ledger records volumes to deliver and receive. [K]
+  north_american_example: 'EX-075 (Reconcile Physical and Financial Positions) on synthetic North American data: T001_mtm_USD = 5000 [EX]'
+  terminal_activity: python3 emi.py run 075 | grep '^T001_mtm_USD:'
+  expected_result: 'T001_mtm_USD: 5000'
+  professional_application: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.02.5
+  after: L12.03.2
+  status: written_command_verified
+- id: L12.03.2
+  title: Financial position ledger
+  objective: Explain financial position ledger and show it in the EX-075 output.
+  prerequisites:
+  - L12.03.1
+  market_lesson: The financial ledger records cash-settled positions. [K]
+  north_american_example: 'EX-075 (Reconcile Physical and Financial Positions) on synthetic North American data: T002_mtm_USD = -120000 [EX]'
+  terminal_activity: python3 emi.py run 075 | grep '^T002_mtm_USD:'
+  expected_result: 'T002_mtm_USD: -120000'
+  professional_application: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.03.1
+  after: L12.03.3
+  status: written_command_verified
+- id: L12.03.3
+  title: Break identification
+  objective: Explain break identification and show it in the EX-075 output.
+  prerequisites:
+  - L12.03.2
+  market_lesson: A break is a mismatch between the two. [K]
+  north_american_example: 'EX-075 (Reconcile Physical and Financial Positions) on synthetic North American data: T003_mtm_USD = -105000 [EX]'
+  terminal_activity: python3 emi.py run 075 | grep '^T003_mtm_USD:'
+  expected_result: 'T003_mtm_USD: -105000'
+  professional_application: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.03.2
+  after: L12.03.4
+  status: written_command_verified
+- id: L12.03.4
+  title: Root-cause analysis
+  objective: Explain root-cause analysis and show it in the EX-075 output.
+  prerequisites:
+  - L12.03.3
+  market_lesson: Root-cause analysis finds why. [K]
+  north_american_example: 'EX-075 (Reconcile Physical and Financial Positions) on synthetic North American data: T004_mtm_USD = -15000 [EX]'
+  terminal_activity: python3 emi.py run 075 | grep '^T004_mtm_USD:'
+  expected_result: 'T004_mtm_USD: -15000'
+  professional_application: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.03.3
+  after: L12.03.5
+  status: written_command_verified
+- id: L12.03.5
+  title: Reconciliation sign-off
+  objective: Explain reconciliation sign-off and show it in the EX-075 output.
+  prerequisites:
+  - L12.03.4
+  market_lesson: Sign-off confirms the books agree. [K]
+  north_american_example: 'EX-075 (Reconcile Physical and Financial Positions) on synthetic North American data: T005_mtm_USD = 4000 [EX]'
+  terminal_activity: python3 emi.py run 075 | grep '^T005_mtm_USD:'
+  expected_result: 'T005_mtm_USD: 4000'
+  professional_application: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.03.4
+  after: L12.04.1
+  status: written_command_verified

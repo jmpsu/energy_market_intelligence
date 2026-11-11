@@ -1,0 +1,9 @@
+kpi,value,target,meets_target
+adoption_wau_pct_of_licensed,46.0,>= 60,False
+week8_retention_of_week1_users_pct,47.82608695652174,>= 70,False
+runtime_p50_min,27.25,<= 30,True
+runtime_p95_min,59.94,<= 60,True
+data_completeness_pct,85.71428571428571,>= 99,False
+model_backcast_mae_USD_per_MWh,1.5498567417954046,<= 3,True
+net_revenue_retention_pct,90.4,>= 100,False
+gross_revenue_retention_pct,83.2,>= 90,False

@@ -1,0 +1,4 @@
+parameter,value,unit
+pipeline_transport_cost,0.045,USD_per_gallon
+terminal_handling_cost,0.012,USD_per_gallon
+transport_volume,1000000,gallons

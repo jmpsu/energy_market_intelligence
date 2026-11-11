@@ -1,0 +1,15 @@
+ex089 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+total_demand_MWh: 105600
+total_production_cost_USD: 3214768.834064
+average_cost_USD_per_MWh: 30.442887
+load_weighted_price_USD_per_MWh: 53.232538
+peak_price: 65
+min_price: 42
+unserved_MWh: 0
+min_reserve_margin_MW: 295.5
+Coal_share_pct: 10.382583
+Natural_Gas_share_pct: 59.089124
+Nuclear_share_pct: 18.181818
+Solar_share_pct: 3.596474
+Wind_share_pct: 8.75
+NOTE: Hour-by-hour merit order with no inter-temporal constraints (no starts, ramps, storage), no network, no reserves: the simplest member of the production-cost model family. Wind and solar profiles are formula-generated.

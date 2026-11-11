@@ -1,0 +1,74 @@
+section: '10.4'
+title: Linear, mixed-integer, and stochastic optimization
+exercise: EX-091
+lessons:
+- id: L10.04.1
+  title: Linear programming
+  objective: Explain linear programming and show it in the EX-091 output.
+  prerequisites:
+  - L10.03.5
+  market_lesson: Linear programming solves linear problems to proven optimality. [K]
+  north_american_example: 'EX-091 (Develop a Capacity Expansion Model) on synthetic North American data: total_cost_USD_per_yr = 550080000 [EX]'
+  terminal_activity: python3 emi.py run 091 | grep '^total_cost_USD_per_yr:'
+  expected_result: 'total_cost_USD_per_yr: 550080000'
+  professional_application: Determine which generation resources should be added to meet future electricity demand at minimum modeled cost.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.03.5
+  after: L10.04.2
+  status: written_command_verified
+- id: L10.04.2
+  title: Mixed-integer programming
+  objective: Explain mixed-integer programming and show it in the EX-091 output.
+  prerequisites:
+  - L10.04.1
+  market_lesson: Mixed-integer programming adds on/off decisions and is much slower. [K]
+  north_american_example: 'EX-091 (Develop a Capacity Expansion Model) on synthetic North American data: average_cost_USD_per_MWh = 48.422535 [EX]'
+  terminal_activity: python3 emi.py run 091 | grep '^average_cost_USD_per_MWh:'
+  expected_result: 'average_cost_USD_per_MWh: 48.422535'
+  professional_application: Determine which generation resources should be added to meet future electricity demand at minimum modeled cost.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.04.1
+  after: L10.04.3
+  status: written_command_verified
+- id: L10.04.3
+  title: Stochastic programming
+  objective: Explain stochastic programming and show it in the EX-091 output.
+  prerequisites:
+  - L10.04.2
+  market_lesson: Stochastic programming optimises over scenarios. [K]
+  north_american_example: 'EX-091 (Develop a Capacity Expansion Model) on synthetic North American data: Baseload_MW = 1000 [EX]'
+  terminal_activity: python3 emi.py run 091 | grep '^Baseload_MW:'
+  expected_result: 'Baseload_MW: 1000'
+  professional_application: Determine which generation resources should be added to meet future electricity demand at minimum modeled cost.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.04.2
+  after: L10.04.4
+  status: written_command_verified
+- id: L10.04.4
+  title: Decomposition methods
+  objective: Explain decomposition methods and show it in the EX-091 output.
+  prerequisites:
+  - L10.04.3
+  market_lesson: Decomposition splits large problems. [K]
+  north_american_example: 'EX-091 (Develop a Capacity Expansion Model) on synthetic North American data: Combined_Cycle_MW = 600 [EX]'
+  terminal_activity: python3 emi.py run 091 | grep '^Combined_Cycle_MW:'
+  expected_result: 'Combined_Cycle_MW: 600'
+  professional_application: Determine which generation resources should be added to meet future electricity demand at minimum modeled cost.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.04.3
+  after: L10.04.5
+  status: written_command_verified
+- id: L10.04.5
+  title: Solver selection
+  objective: Explain solver selection and show it in the EX-091 output.
+  prerequisites:
+  - L10.04.4
+  market_lesson: Solver choice depends on problem type, size and licence. [K]
+  north_american_example: 'EX-091 (Develop a Capacity Expansion Model) on synthetic North American data: Combustion_Turbine_MW = 400 [EX]'
+  terminal_activity: python3 emi.py run 091 | grep '^Combustion_Turbine_MW:'
+  expected_result: 'Combustion_Turbine_MW: 400'
+  professional_application: Determine which generation resources should be added to meet future electricity demand at minimum modeled cost.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.04.4
+  after: L10.05.1
+  status: written_command_verified

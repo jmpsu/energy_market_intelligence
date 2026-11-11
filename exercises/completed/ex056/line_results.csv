@@ -1,0 +1,4 @@
+line,from_bus,to_bus,reactance_pu,limit_MW,flow_MW,shadow_price,binding
+L12,1,2,0.1,1000.0,-0.0,0.0,False
+L13,1,3,0.1,150.0,150.0,-90.0,True
+L23,2,3,0.1,1000.0,150.0,0.0,False

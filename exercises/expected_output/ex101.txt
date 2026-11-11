@@ -1,0 +1,14 @@
+ex101 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+cheapest_month: 2027-06
+dearest_month: 2028-01
+gross_spread_USD_per_gal: 0.12
+months_held: 7
+carry_cost_USD_per_gal: 0.058975
+net_storage_margin_USD_per_gal: 0.061025
+net_storage_margin_USD: 256305
+volume_bbl: 100000
+summer_strip: 0.699167
+winter_strip: 0.7775
+locked_january_cost_USD: 3381000
+breakeven_storage_fee_USD_per_gal_month: 0.013718
+NOTE: Synthetic curve. The storage trade locks the spread only if both legs are hedged on trade date; physical storage also needs cavern space and pipeline access.

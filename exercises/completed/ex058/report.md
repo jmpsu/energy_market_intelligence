@@ -1,0 +1,22 @@
+# ex058 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+obligation_payout_USD: 4100
+
+option_payout_USD: 4500
+
+option_value_over_obligation_USD: 400
+
+auction_cost_USD: 3000
+
+obligation_profit_USD: 1100
+
+breakeven_avg_congestion_USD_per_MWh: 2.5
+
+realized_avg_congestion_USD_per_MWh: 3.416667
+
+counterflow_hours: 2
+
+physical_hedge_net_congestion_USD: 0
+
+NOTE: An obligation pays negative in counterflow hours; an option does not. A 50 MW physical schedule on the same path pays exactly the congestion the obligation returns: net zero.
+

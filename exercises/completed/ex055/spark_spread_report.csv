@@ -1,0 +1,9 @@
+hour,electricity_price_USD_per_MWh,gas_price_USD_per_MMBtu,heat_rate_MMBtu_per_MWh,variable_O_and_M_USD_per_MWh,fuel_cost_USD_per_MWh,variable_cost_USD_per_MWh,spark_spread_USD_per_MWh,dispatch,implied_market_heat_rate,gross_margin_USD
+1,45,3.0,7.0,3.0,21.0,24.0,21.0,True,15.0,2100.0
+2,55,3.25,7.0,3.0,22.75,25.75,29.25,True,16.923076923076923,2925.0
+3,65,3.5,7.0,3.0,24.5,27.5,37.5,True,18.571428571428573,3750.0
+4,75,3.75,7.0,3.0,26.25,29.25,45.75,True,20.0,4575.0
+5,40,4.0,7.0,3.0,28.0,31.0,9.0,True,10.0,900.0
+6,90,5.0,7.0,3.0,35.0,38.0,52.0,True,18.0,5200.0
+7,120,6.0,7.0,3.0,42.0,45.0,75.0,True,20.0,7500.0
+8,35,4.5,7.0,3.0,31.5,34.5,0.5,True,7.777777777777778,50.0

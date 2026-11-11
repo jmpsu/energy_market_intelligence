@@ -1,0 +1,8 @@
+parameter,value,unit
+battery_energy_capacity,200,MWh
+battery_max_charge_power,50,MW
+battery_max_discharge_power,50,MW
+round_trip_efficiency,0.90,fraction
+initial_state_of_charge,50,MWh
+minimum_state_of_charge,10,MWh
+maximum_state_of_charge,200,MWh

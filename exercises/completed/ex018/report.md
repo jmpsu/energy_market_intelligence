@@ -1,0 +1,28 @@
+# ex018 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+nodes: 11
+
+edges: 12
+
+most_central_node: HUB_GULF
+
+max_flow_to_LNG_GULF_Bcf_d: 12
+
+max_flow_to_MEXICO_EXPORT_Bcf_d: 6
+
+max_flow_to_LDC_NORTHEAST_Bcf_d: 28
+
+max_flow_to_POWER_GULF_Bcf_d: 9
+
+bottleneck_to_LNG_GULF: HUB_GULF>LNG_GULF
+
+bottleneck_to_MEXICO_EXPORT: HUB_WEST>MEXICO_EXPORT
+
+bottleneck_to_LDC_NORTHEAST: HUB_EAST>LDC_NORTHEAST
+
+bottleneck_to_POWER_GULF: HUB_GULF>POWER_GULF
+
+NOTE: Max flow to each sink is computed alone (not simultaneous). The minimum cut names the links whose expansion would raise deliverability.
+
+NOTE: Synthetic network extending EX-090.
+

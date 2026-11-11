@@ -1,0 +1,8 @@
+request,status,body
+/v1/locations,200,"{""locations"": [""AECO"", ""Algonquin_Citygate"", ""Conway"", ""Dawn"", ""ERCOT_North"", ""Henry_Hub"", ""Indiana_Hub"", ""Mass_Hub"", ""Mont_Belvieu"", ""PJM_West"", ""SP15"", ""Waha""]}"
+/v1/prices/Waha,200,"{""location"": ""Waha"", ""data_classification"": ""synthetic"", ""observations"": [{""timestamp"": ""2026-01-05T08:00:00"", ""price"": 1.1, ""unit"": ""MMBtu"", ""currency"": ""USD"", ""provider"": ""Provider_A""}, {""timestamp"": ""2026-01-05T10:00:00"", ""price"": -0.4, ""unit"": ""MMBtu"", ""currency"": ""USD"", ""provider"": ""Provider_A""}]}"
+/v1/prices/Henry_Hub/2026-01-05T08:00:00,200,"{""location"": ""Henry_Hub"", ""data_classification"": ""synthetic"", ""observations"": [{""timestamp"": ""2026-01-05T08:00:00"", ""price"": 3.25, ""unit"": ""MMBtu"", ""currency"": ""USD"", ""provider"": ""Provider_A""}]}"
+/v1/prices/Henry_Hub/2026-01-05T10:00:00,404,"{""error"": ""no validated price"", ""location"": ""Henry_Hub""}"
+/v1/prices/Nowhere,404,"{""error"": ""unknown location"", ""location"": ""Nowhere""}"
+/v1/prices/Mont_Belvieu,404,"{""error"": ""no validated price"", ""location"": ""Mont_Belvieu""}"
+/v2/anything,400,"{""error"": ""bad request"", ""path"": ""/v2/anything""}"

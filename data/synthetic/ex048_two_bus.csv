@@ -1,0 +1,8 @@
+parameter,value,unit
+gen_A_cost,30,USD_per_MWh
+gen_A_capacity,600,MW
+gen_B_cost,60,USD_per_MWh
+gen_B_capacity,500,MW
+load_A,100,MW
+load_B,400,MW
+line_limit_A_to_B,250,MW

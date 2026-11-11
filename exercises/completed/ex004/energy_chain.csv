@@ -1,0 +1,6 @@
+stage,MWh,pct_of_fuel_energy
+fuel_energy_MWh_thermal,303927.3153575615,100.0
+gross_generation,148142.85714285713,48.74285714285714
+net_generation,144439.2857142857,47.52428571428572
+delivered_to_distribution,141550.5,46.573800000000006
+delivered_to_customers,135888.47999999998,44.710848

@@ -1,0 +1,73 @@
+section: '1.1'
+title: North American energy industry structure
+exercise: EX-001
+lessons:
+- id: L01.01.1
+  title: Upstream, midstream, downstream segments
+  objective: Explain upstream, midstream, downstream segments and show it in the EX-001 output.
+  prerequisites: []
+  market_lesson: Upstream finds and produces, midstream gathers, processes, moves and stores, downstream delivers to end users. [K]
+  north_american_example: 'EX-001 (Map the North American Energy System) on synthetic North American data: nodes = 18 [EX]'
+  terminal_activity: python3 emi.py run 001 | grep '^nodes:'
+  expected_result: 'nodes: 18'
+  professional_application: Build a geographic and logical map connecting natural gas production, pipelines, storage, power generation, transmission, and end-use demand.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: null
+  after: L01.01.2
+  status: written_command_verified
+- id: L01.01.2
+  title: Molecules vs electrons as commodities
+  objective: Explain molecules vs electrons as commodities and show it in the EX-001 output.
+  prerequisites:
+  - L01.01.1
+  market_lesson: Gas and NGLs can be stored and shipped as molecules; electricity must be produced the instant it is used. [K]
+  north_american_example: 'EX-001 (Map the North American Energy System) on synthetic North American data: links = 19 [EX]'
+  terminal_activity: python3 emi.py run 001 | grep '^links:'
+  expected_result: 'links: 19'
+  professional_application: Build a geographic and logical map connecting natural gas production, pipelines, storage, power generation, transmission, and end-use demand.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.01.1
+  after: L01.01.3
+  status: written_command_verified
+- id: L01.01.3
+  title: Regulated vs competitive segments
+  objective: Explain regulated vs competitive segments and show it in the EX-001 output.
+  prerequisites:
+  - L01.01.2
+  market_lesson: Pipelines, wires and utility distribution earn regulated rates; production, generation and trading mostly earn market prices. [K]
+  north_american_example: 'EX-001 (Map the North American Energy System) on synthetic North American data: gas_to_power_customer_path = Gas_Basin > Gathering > Processing_Plant > Interstate_Pipeline > Gas_Power_Plant > Transmission_Grid > Electric_Utility > Power_Customers [EX]'
+  terminal_activity: python3 emi.py run 001 | grep '^gas_to_power_customer_path:'
+  expected_result: 'gas_to_power_customer_path: Gas_Basin > Gathering > Processing_Plant > Interstate_Pipeline > Gas_Power_Plant > Transmission_Grid > Electric_Utility > Power_Customers'
+  professional_application: Build a geographic and logical map connecting natural gas production, pipelines, storage, power generation, transmission, and end-use demand.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.01.2
+  after: L01.01.4
+  status: written_command_verified
+- id: L01.01.4
+  title: Federal, state and provincial jurisdiction
+  objective: Explain federal, state and provincial jurisdiction and show it in the EX-001 output.
+  prerequisites:
+  - L01.01.3
+  market_lesson: FERC regulates interstate transmission and wholesale sales; states and provinces regulate retail, siting and intrastate systems. [K]
+  north_american_example: 'EX-001 (Map the North American Energy System) on synthetic North American data: path_handoffs = 7 [EX]'
+  terminal_activity: python3 emi.py run 001 | grep '^path_handoffs:'
+  expected_result: 'path_handoffs: 7'
+  professional_application: Build a geographic and logical map connecting natural gas production, pipelines, storage, power generation, transmission, and end-use demand.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.01.3
+  after: L01.01.5
+  status: written_command_verified
+- id: L01.01.5
+  title: Reading an industry structure map
+  objective: Explain reading an industry structure map and show it in the EX-001 output.
+  prerequisites:
+  - L01.01.4
+  market_lesson: A structure map shows who hands the commodity to whom; each handoff is a contract, a meter and a data feed. [K]
+  north_american_example: 'EX-001 (Map the North American Energy System) on synthetic North American data: most_connected_node = Interstate_Pipeline [EX]'
+  terminal_activity: python3 emi.py run 001 | grep '^most_connected_node:'
+  expected_result: 'most_connected_node: Interstate_Pipeline'
+  professional_application: Build a geographic and logical map connecting natural gas production, pipelines, storage, power generation, transmission, and end-use demand.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.01.4
+  after: L01.02.1
+  status: written_command_verified

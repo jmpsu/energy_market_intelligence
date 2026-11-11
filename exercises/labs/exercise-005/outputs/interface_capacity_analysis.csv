@@ -1,0 +1,5 @@
+interface,from_interconnection,to_interconnection,transfer_capacity_MW,available_capacity_MW,transfer_cost_per_MWh,nameplate_capacity_GW,available_capacity_GW,capacity_utilization_pct,destination_peak_demand_GW,available_capacity_pct_destination_peak
+DC_Tie_A,Eastern,Western,1500,1100,2.5,1.5,1.1,73.33333333333333,165,0.6666666666666667
+DC_Tie_B,Eastern,Western,800,600,3.0,0.8,0.6,75.0,165,0.36363636363636365
+DC_Tie_C,Western,Eastern,1200,900,2.75,1.2,0.9,75.0,620,0.14516129032258066
+ERCOT_Interface_A,ERCOT,Eastern,500,400,4.0,0.5,0.4,80.0,620,0.06451612903225806

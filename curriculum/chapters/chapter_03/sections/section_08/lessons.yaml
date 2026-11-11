@@ -1,0 +1,74 @@
+section: '3.8'
+title: LNG feed-gas demand and international price relationships
+exercise: EX-033
+lessons:
+- id: L03.08.1
+  title: Feed-gas demand drivers
+  objective: Explain feed-gas demand drivers and show it in the EX-033 output.
+  prerequisites:
+  - L03.07.5
+  market_lesson: LNG feed gas demand depends on terminal capacity, utilisation and global spreads. [K]
+  north_american_example: 'EX-033 (Calculate LNG Export Netbacks) on synthetic North American data: fob_cost_USD_per_MMBtu = 6.2375 [EX]'
+  terminal_activity: python3 emi.py run 033 | grep '^fob_cost_USD_per_MMBtu:'
+  expected_result: 'fob_cost_USD_per_MMBtu: 6.2375'
+  professional_application: Compare Henry Hub costs with international LNG selling prices after liquefaction, shipping, and regasification costs.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.07.5
+  after: L03.08.2
+  status: written_command_verified
+- id: L03.08.2
+  title: Liquefaction tolling economics
+  objective: Explain liquefaction tolling economics and show it in the EX-033 output.
+  prerequisites:
+  - L03.08.1
+  market_lesson: A tolling customer pays a fixed liquefaction fee whether or not it lifts cargoes. [K]
+  north_american_example: 'EX-033 (Calculate LNG Export Netbacks) on synthetic North American data: Europe_margin_USD_per_MMBtu = 3.4625 [EX]'
+  terminal_activity: python3 emi.py run 033 | grep '^Europe_margin_USD_per_MMBtu:'
+  expected_result: 'Europe_margin_USD_per_MMBtu: 3.4625'
+  professional_application: Compare Henry Hub costs with international LNG selling prices after liquefaction, shipping, and regasification costs.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.08.1
+  after: L03.08.3
+  status: written_command_verified
+- id: L03.08.3
+  title: Netback pricing
+  objective: Explain netback pricing and show it in the EX-033 output.
+  prerequisites:
+  - L03.08.2
+  market_lesson: Netback is the destination price less regasification, shipping and liquefaction costs. [K]
+  north_american_example: 'EX-033 (Calculate LNG Export Netbacks) on synthetic North American data: Asia_margin_USD_per_MMBtu = 3.9625 [EX]'
+  terminal_activity: python3 emi.py run 033 | grep '^Asia_margin_USD_per_MMBtu:'
+  expected_result: 'Asia_margin_USD_per_MMBtu: 3.9625'
+  professional_application: Compare Henry Hub costs with international LNG selling prices after liquefaction, shipping, and regasification costs.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.08.2
+  after: L03.08.4
+  status: written_command_verified
+- id: L03.08.4
+  title: Henry Hub-linked export contracts
+  objective: Explain henry Hub-linked export contracts and show it in the EX-033 output.
+  prerequisites:
+  - L03.08.3
+  market_lesson: Many US contracts price LNG as a Henry Hub multiple plus a fixed fee. [K]
+  north_american_example: 'EX-033 (Calculate LNG Export Netbacks) on synthetic North American data: Europe_cargo_margin_USD = 11772500 [EX]'
+  terminal_activity: python3 emi.py run 033 | grep '^Europe_cargo_margin_USD:'
+  expected_result: 'Europe_cargo_margin_USD: 11772500'
+  professional_application: Compare Henry Hub costs with international LNG selling prices after liquefaction, shipping, and regasification costs.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.08.3
+  after: L03.08.5
+  status: written_command_verified
+- id: L03.08.5
+  title: Global price pass-through to Henry Hub
+  objective: Explain global price pass-through to Henry Hub and show it in the EX-033 output.
+  prerequisites:
+  - L03.08.4
+  market_lesson: High global prices pull US gas into export and tighten the domestic balance up to terminal capacity. [K]
+  north_american_example: 'EX-033 (Calculate LNG Export Netbacks) on synthetic North American data: Asia_cargo_margin_USD = 13472500 [EX]'
+  terminal_activity: python3 emi.py run 033 | grep '^Asia_cargo_margin_USD:'
+  expected_result: 'Asia_cargo_margin_USD: 13472500'
+  professional_application: Compare Henry Hub costs with international LNG selling prices after liquefaction, shipping, and regasification costs.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.08.4
+  after: L03.09.1
+  status: written_command_verified

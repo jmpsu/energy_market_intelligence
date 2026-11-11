@@ -1,0 +1,9 @@
+segment,types,price_risk_takers,regulated
+midstream,4,0,1
+trading,2,2,0
+upstream,1,1,0
+oversight,1,0,0
+market_operator,1,0,1
+generation_delivery,1,0,1
+generation,1,1,0
+downstream,1,0,1

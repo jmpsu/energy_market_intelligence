@@ -1,0 +1,6 @@
+nom_id,shipper,service,nominated_MMBtu,upstream_confirmed_MMBtu,downstream_confirmed_MMBtu,confirmed_MMBtu,confirmation_cut,priority,scheduled_MMBtu,capacity_cut,total_cut_pct
+N1,Alpha,primary_firm,150000,150000,150000,150000,0,1,150000.0,0.0,0.0
+N2,Beta,primary_firm,120000,120000,110000,110000,10000,1,110000.0,0.0,8.333333333333337
+N3,Gamma,secondary_firm,100000,100000,100000,100000,0,2,100000.0,0.0,0.0
+N4,Delta,interruptible,80000,80000,80000,80000,0,3,36923.07692307692,43076.92307692308,53.846153846153854
+N5,Echo,interruptible,60000,50000,60000,50000,10000,3,23076.923076923078,26923.076923076922,61.53846153846154

@@ -1,0 +1,74 @@
+section: '11.9'
+title: Data quality, lineage, governance, and product reliability
+exercise: EX-099
+lessons:
+- id: L11.09.1
+  title: Data quality dimensions
+  objective: Explain data quality dimensions and show it in the EX-099 output.
+  prerequisites:
+  - L11.08.5
+  market_lesson: 'Data quality has dimensions: accuracy, completeness, timeliness, consistency. [K]'
+  north_american_example: 'EX-099 (Design an Energy Exemplar Product Integration) on synthetic North American data: components = 13 [EX]'
+  terminal_activity: python3 emi.py run 099 | grep '^components:'
+  expected_result: 'components: 13'
+  professional_application: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.08.5
+  after: L11.09.2
+  status: written_command_verified
+- id: L11.09.2
+  title: Lineage
+  objective: Explain lineage and show it in the EX-099 output.
+  prerequisites:
+  - L11.09.1
+  market_lesson: Lineage traces each number to its source. [K]
+  north_american_example: 'EX-099 (Design an Energy Exemplar Product Integration) on synthetic North American data: interfaces = 14 [EX]'
+  terminal_activity: python3 emi.py run 099 | grep '^interfaces:'
+  expected_result: 'interfaces: 14'
+  professional_application: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.09.1
+  after: L11.09.3
+  status: written_command_verified
+- id: L11.09.3
+  title: Governance model
+  objective: Explain governance model and show it in the EX-099 output.
+  prerequisites:
+  - L11.09.2
+  market_lesson: Governance assigns owners and rules. [K]
+  north_american_example: 'EX-099 (Design an Energy Exemplar Product Integration) on synthetic North American data: demonstrated_components = 9 [EX]'
+  terminal_activity: python3 emi.py run 099 | grep '^demonstrated_components:'
+  expected_result: 'demonstrated_components: 9'
+  professional_application: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.09.2
+  after: L11.09.4
+  status: written_command_verified
+- id: L11.09.4
+  title: SLAs and reliability
+  objective: Explain sLAs and reliability and show it in the EX-099 output.
+  prerequisites:
+  - L11.09.3
+  market_lesson: SLAs promise availability and timeliness. [K]
+  north_american_example: 'EX-099 (Design an Energy Exemplar Product Integration) on synthetic North American data: proposed_components = 4 [EX]'
+  terminal_activity: python3 emi.py run 099 | grep '^proposed_components:'
+  expected_result: 'proposed_components: 4'
+  professional_application: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.09.3
+  after: L11.09.5
+  status: written_command_verified
+- id: L11.09.5
+  title: Incident management
+  objective: Explain incident management and show it in the EX-099 output.
+  prerequisites:
+  - L11.09.4
+  market_lesson: Incident management detects, fixes and explains failures. [K]
+  north_american_example: 'EX-099 (Design an Energy Exemplar Product Integration) on synthetic North American data: demonstrated_interfaces = 7 [EX]'
+  terminal_activity: python3 emi.py run 099 | grep '^demonstrated_interfaces:'
+  expected_result: 'demonstrated_interfaces: 7'
+  professional_application: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.09.4
+  after: L11.10.1
+  status: written_command_verified

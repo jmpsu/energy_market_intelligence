@@ -1,0 +1,16 @@
+ex060 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+Baseline_price_USD_per_MWh: 48
+Baseline_available_capacity_MW: 6700
+Baseline_reserve_margin_pct: 21.818182
+Baseline_unmet_MW: 0
+Baseline_marginal_unit: COAL_01
+Baseline_production_cost_USD_per_h: 150900
+Outage_price_USD_per_MWh: 65
+Outage_available_capacity_MW: 5500
+Outage_reserve_margin_pct: 0
+Outage_unmet_MW: 0
+Outage_marginal_unit: GAS_03
+Outage_production_cost_USD_per_h: 175100
+price_change_USD_per_MWh: 17
+load_payment_change_USD_per_h: 93500
+NOTE: Single-node, single-hour, no reserves requirement, no transmission, wind and solar at full available capacity.

@@ -1,0 +1,4 @@
+parameter,value,unit
+normal_capacity,400000,MMBtu_per_day
+restricted_capacity,320000,MMBtu_per_day
+imbalance_penalty,5.00,USD_per_MMBtu

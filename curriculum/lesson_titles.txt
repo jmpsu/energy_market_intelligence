@@ -1,0 +1,120 @@
+1.1|Upstream, midstream, downstream segments|Molecules vs electrons as commodities|Regulated vs competitive segments|Federal, state and provincial jurisdiction|Reading an industry structure map
+1.2|Producers and processors|Pipelines, storage operators and LDCs|Generators, utilities and load-serving entities|Marketers, traders and financial counterparties|Contract chains between participants
+1.3|Physical delivery obligations|Financially settled instruments|Hedging vs speculation vs asset-backed trading|Convergence of physical and financial prices|Choosing a physical or financial instrument
+1.4|Storability and real-time balance|Transport physics: pipelines vs wires|Gas day vs power hour granularity|Price formation and volatility differences|Gas-power interdependence
+1.5|Synchronous interconnection concept|Eastern Interconnection scale and mix|Western Interconnection and WECC|ERCOT isolation and DC ties|Transfer capability vs commercial access
+1.6|RTO and ISO functions|Vertically integrated utilities|Independent power producers|Power marketers and trading desks|Balancing authorities and reliability roles
+1.7|Bilateral contracting mechanics|Centrally cleared organized markets|OTC vs exchange execution|Clearing, margin and credit support|Price discovery across market forms
+1.8|Commodity units and conversions|Futures and forwards|Swaps and basis instruments|Options and structured products|Environmental and capacity products
+1.9|Price reporting agencies and indices|ISO/RTO public data|EIA and regulatory datasets|Pipeline electronic bulletin boards|Data licensing and provenance
+1.10|Wellhead-to-burner-tip value chain|Fuel-to-power conversion link|Value capture at each stage|Integrated gas-power modeling rationale|Building a reference model of the chain
+2.1|Shale basin geography|Production volumes and growth rates|Decline curves and drilling economics|Breakeven and netback by basin|Basin takeaway dependence
+2.2|Gathering system function|Compression and treating|Processing plant inlet and outlet|Plant fuel and shrinkage|Processing contract types (POP, fee, keep-whole)
+2.3|Methane and heavier hydrocarbons|Heat content and Btu measurement|Associated gas and oil-price linkage|Pipeline quality specifications|Wet vs dry gas economics
+2.4|Supply stack components|Demand sectors: res/com, industrial, power, exports|Weather and degree days|Weekly storage balance|Building a supply-demand balance
+2.5|Interstate pipeline regulation|Intrastate systems and Texas|Major long-haul corridors|Receipt and delivery points|Interconnects and market centers
+2.6|Nameplate vs operational capacity|Contracted vs available capacity|Throughput and utilization|Bottlenecks and constraint points|Constraint impact on price
+2.7|Storage facility types|Working gas vs base gas|Injection and withdrawal ratchets|Seasonal storage cycle|Deliverability vs inventory
+2.8|The gas day and nomination cycles|Nomination, confirmation, scheduling|Cuts and priority of service|Allocation and measurement|Scheduler daily workflow
+2.9|Imbalances and tolerances|Linepack as short-term buffer|Operational flow orders|Critical notices and force majeure|Imbalance cash-out and penalties
+2.10|Delivered cost build-up|Fuel retention and commodity charges|Reservation vs usage charges|Realized price at the delivery point|Transport value vs basis spread
+3.1|Henry Hub as benchmark|NYMEX NG contract specification|Settlement and expiry mechanics|Prompt month and price reporting|Benchmark limits as a regional proxy
+3.2|Basis definition and sign convention|Supply-area vs market-area basis|Negative prices at constrained hubs|Basis volatility and seasonality|Basis position P&L
+3.3|Day-ahead cash trading|Bidweek and monthly index|Gas Daily vs Inside FERC style indices|Index vs fixed price deals|Index exposure in a book
+3.4|Futures margining|Fixed-for-floating swaps|Options: calls, puts, collars|Physical forwards and delivery terms|Instrument selection for a hedge
+3.5|Curve construction from quotes|Contango, backwardation, seasonality|Calendar spreads|Strip and seasonal pricing|Curve shape interpretation
+3.6|Transport contract as a spread option|Basis swaps|Locational spread hedging|Valuing firm transport|Hedge effectiveness
+3.7|Intrinsic storage value|Extrinsic and optionality value|Injection and withdrawal cost and fuel|Seasonal spread capture|Storage constraint effects on value
+3.8|Feed-gas demand drivers|Liquefaction tolling economics|Netback pricing|Henry Hub-linked export contracts|Global price pass-through to Henry Hub
+3.9|Position aggregation by hub and tenor|Mark-to-market valuation|Fixed, index and basis exposure decomposition|Daily P&L calculation|Position limits
+3.10|Basis risk|Volume and swing risk|Operational risk|Market price risk and liquidity|Risk reporting for a gas book
+4.1|Network representation: nodes and edges|Supply-push vs demand-pull corridors|Flow direction and reversals|Hubs as network junctions|Mapping a regional network
+4.2|Tariff structure|Rate design and reservation charges|Receipt and delivery rights|Path and segmentation rights|Reading a tariff rate sheet
+4.3|Firm service priority|Interruptible service economics|Secondary firm and out-of-path|Curtailment order|Firm vs interruptible cost comparison
+4.4|Operationally available capacity|Scheduling cuts as congestion signal|Maintenance and outages|Congestion and basis blowouts|Capacity posting analysis
+4.5|Capacity release mechanics|Asset management agreements|Biddable vs prearranged releases|Valuing released capacity|Secondary market strategy
+4.6|WCSB and Montney supply|NGTL and Canadian mainline systems|AECO pricing and basis|Export points to the US|Canada-US flow economics
+4.7|US pipeline exports to Mexico|Mexican demand and infrastructure|Waha-Mexico linkage|Cross-border balance reconciliation|Regulatory and operational risks
+4.8|Liquefaction process and capacity|Shipping costs and routes|Regasification|Cargo economics and contracts|Terminal utilization and feed gas
+4.9|Global benchmark definitions|Arbitrage and netback spreads|Shipping and tolling wedges|Price transmission and decoupling|Spread scenario analysis
+4.10|Outage scenario design|Rerouting and alternative paths|Storage response|Price and basis impacts|Winter disruption stress case
+5.1|NGL component properties|Gallons per Mcf (GPM)|Btu content and value|Purity vs mixed products|Composition analysis
+5.2|Cryogenic vs lean-oil recovery|Recovery efficiency by component|Shrink and plant fuel|Processing margin (frac spread)|Recovery optimization
+5.3|Y-grade definition|Y-grade pipelines|Transport and fractionation fees|Quality and batching|Logistics constraints
+5.4|Ethane economics|Rejection decision rule|Btu limits on rejection|Pipeline and frac capacity effects|Price signals for rejection
+5.5|Ethane as cracker feedstock|Ethylene margin|Feedstock switching|Export demand|Margin sensitivity
+5.6|Propane demand sectors|Inventory cycle|Export pull|Price ratio to crude|Seasonal spread
+5.7|Blending demand and RVP season|Isomerization|Alkylation feed|Storage and logistics|Butane spreads
+5.8|Natural gasoline uses|Diluent demand|Product specifications|Pricing vs crude|Quality differentials
+5.9|Fractionation process|Mont Belvieu hub|Conway hub|Regional basis|Arbitrage economics
+5.10|Transport modes|Export terminals|NGL hedging instruments|Portfolio exposure|Risk controls
+6.1|Regulated vs restructured states|Wholesale vs retail layers|Federal and state jurisdiction|Market products overview|Market geography
+6.2|ISO core functions|Market operations timeline|Reliability coordination|Transmission planning role|Stakeholder governance
+6.3|PJM and MISO features|SPP and ERCOT features|CAISO and Western EIM|NYISO and ISO-NE features|Cross-market comparison
+6.4|Southeast and Western bilateral markets|Utility integrated resource planning|Bilateral trading hubs|Transmission service and OASIS|Emerging day-ahead market initiatives
+6.5|Day-ahead market clearing|Real-time dispatch|Two-settlement system|Virtual bidding|DA-RT spread analysis
+6.6|Marginal pricing principle|Nodal price formation|Hubs, zones and nodes|Price caps and scarcity pricing|LMP calculation
+6.7|Energy component|Congestion component|Marginal loss component|Shadow prices of constraints|Decomposing an LMP
+6.8|Thermal and stability limits|Contingency (N-1) constraints|PTDF and shift factors|Congestion patterns|Constraint impact analysis
+6.9|Capacity market design|Accreditation and ELCC|Demand curves and auction clearing|Resource adequacy obligations|Capacity revenue calculation
+6.10|Regulation service|Operating reserves|Co-optimization of energy and reserves|Settlement statements|Charge code reconciliation
+7.1|Thermal technologies|Nuclear and hydro|Wind and solar|Operating constraints: ramp, min run, start cost|Technology comparison
+7.2|Heat rate definition|Incremental vs average heat rate|Variable O&M|Marginal cost calculation|Heat rate curve
+7.3|Combined-cycle vs peaker economics|Start-up and cycling costs|Capacity factor drivers|Fuel supply arrangements|Unit margin analysis
+7.4|Spark spread definition|Clean spark and emissions costs|Implied market heat rate|Fuel procurement timing|Spark hedging
+7.5|Merit-order dispatch|Unit commitment problem|Minimum up and down times|Security-constrained dispatch|Dispatch cost calculation
+7.6|Wind and solar forecast methods|Forecast error metrics|Financial exposure from forecast error|Net load|Forecast evaluation
+7.7|Curtailment causes|Negative pricing|Economic vs reliability curtailment|PPA settlement effects|Curtailment valuation
+7.8|Battery parameters|State-of-charge dynamics|Round-trip efficiency|Arbitrage optimization|Ancillary service stacking
+7.9|Long-duration storage technologies|Seasonal balancing|Dunkelflaute exposure|Duration valuation|Storage adequacy contribution
+7.10|Portfolio dispatch|Co-optimization of assets|Hedge overlay|Constraint interactions|Portfolio margin optimization
+8.1|Front-office functions|Middle-office functions|Back-office functions|Segregation of duties|Information flow between offices
+8.2|Trade attributes|Deal types and templates|Trade validation|Amendments and audit trail|Trade capture implementation
+8.3|Market data sourcing|Curve building and marking|End-of-day process|Curve validation|Data quality controls
+8.4|Position aggregation|Book and portfolio hierarchy|Hedge designation|Accrual vs mark-to-market accounting|Position reporting
+8.5|Confirmation process|Electronic confirmation matching|Discrepancy resolution|Regulatory reporting|Confirmation workflow
+8.6|Power scheduling and e-Tags|Gas nominations|Actualization|Scheduling systems|Schedule reconciliation
+8.7|Invoice generation|Price and volume checks|Netting|Dispute handling|Settlement reconciliation
+8.8|New-deal P&L|Price (delta) P&L|Time and carry effects|Unexplained P&L|P&L explain report
+8.9|Credit exposure calculation|Limits and collateral|Master agreements (ISDA, NAESB, EEI)|Margining|Credit monitoring
+8.10|ETRM functional modules|Integration patterns|Data warehouse design|Endur as an enterprise ETRM example|Build vs buy and deployment
+9.1|Price series properties|Return calculation|Seasonality and mean reversion|Spikes and jumps|Stationarity testing
+9.2|Historical volatility|Rolling and EWMA volatility|Volatility clustering|Regime identification|Regime-aware analysis
+9.3|Forecast horizons|Time-series models|Regression with fundamentals|Forecast evaluation|Model selection
+9.4|Supply curve construction|Demand modeling|Equilibrium price|Supply-curve shape and volatility|Fundamental model calibration
+9.5|Quote sources|Interpolation and seasonality shaping|Arbitrage-free checks|Shaping to hourly or daily|Curve validation
+9.6|VaR concepts|Parametric VaR|Historical simulation|Monte Carlo VaR|Expected Shortfall
+9.7|Exposure profiles|Potential Future Exposure|Earnings at Risk|Cash-flow at risk|Exposure simulation
+9.8|Margin and funding needs|Liquidity risk|Counterparty default risk|Credit valuation adjustment basics|Liquidity stress
+9.9|Scenario design|Historical stress events|Hypothetical stress|Reverse stress testing|Stress reporting
+9.10|Option pricing basics|Spread options|Swing and storage optionality|Weather derivatives|Structured deal decomposition
+10.1|Optimization problem structure|Objective functions|Constraints and bounds|Duality and shadow prices|Formulating a market model
+10.2|Graph models|Transport (pipeline) model|DC power-flow approximation|PTDF matrices|Network model construction
+10.3|AC vs DC power flow|Production-cost model structure|Chronological simulation|Reserve and outage modeling|Running a production-cost simulation
+10.4|Linear programming|Mixed-integer programming|Stochastic programming|Decomposition methods|Solver selection
+10.5|Statistical forecasting scope|Fundamental simulation scope|Hybrid approaches|Use-case fit|Method comparison
+10.6|Python data stack|Vectorized computation with NumPy|pandas data wrangling|SciPy optimization|SQL analytics
+10.7|Cloud data warehouse concepts|Lakehouse concepts|Dimensional modeling for energy data|Time-series storage patterns|Architecture design
+10.8|API design|ETL vs ELT|ETRM integration points|Data contracts|Pipeline orchestration
+10.9|Calibration methods|Backcasting|Validation metrics|Reproducibility and versioning|Validation framework
+10.10|Profiling runtime|Sparse formulation and presolve|Parallel and decomposed execution|Result-equivalence validation|Model governance and change control
+11.1|Segment taxonomy|Utility and IPP needs|Trading shop needs|Developer, investor and consultant needs|Segment sizing
+11.2|Trader workflow|Scheduler workflow|Analyst workflow|Risk-manager workflow|Workflow mapping to product surface
+11.3|Interview technique|Jobs-to-be-done framing|Evidence synthesis|Requirement writing|Validation with customers
+11.4|Vision statement|Positioning and differentiation|Value proposition|Strategic bets|Vision narrative
+11.5|Market sizing|Competitor analysis|Win-loss analysis|Pricing research|Intelligence synthesis
+11.6|Prioritization frameworks|Roadmap formats|Dependencies and sequencing|Capacity planning|Stakeholder alignment
+11.7|Epics and user stories|Acceptance criteria|Non-functional requirements|Technical debt management|Backlog grooming
+11.8|Adoption metrics|Retention and churn|Revenue metrics|Customer value measurement|KPI dashboard
+11.9|Data quality dimensions|Lineage|Governance model|SLAs and reliability|Incident management
+11.10|Executive narrative|Decision memo|Cross-functional alignment|Managing trade-offs|Board-level presentation
+12.1|Gas-power coupling|Fuel-driven price formation|Weather as joint driver|Integrated balance|Fundamentals briefing
+12.2|Exposure mapping across commodities|Cross-commodity correlations|Net position|Hedge ratio|Exposure report
+12.3|Physical position ledger|Financial position ledger|Break identification|Root-cause analysis|Reconciliation sign-off
+12.4|Fuel constraints on dispatch|Dispatch decision under gas limits|Gas-supply optimization|Margin calculation|Sensitivity to gas and power prices
+12.5|Renewable scenario generation|Storage dispatch under scenarios|Shortfall analysis|Value of storage|Scenario comparison
+12.6|Transmission outage scenario|Pipeline outage scenario|Combined disruption|Impact quantification|Mitigation options
+12.7|Portfolio valuation|Scenario revaluation|Stress loss measurement|Risk limits check|Risk memo
+12.8|Data architecture for integrated analytics|Simulation orchestration|Integration interfaces|Governance and lineage|Architecture document
+12.9|Opportunity sizing|Roadmap construction|KPI definition|Business case|Roadmap review
+12.10|Presentation storyline|Evidence selection|Recommendation and asks|Q&A preparation|Final presentation delivery

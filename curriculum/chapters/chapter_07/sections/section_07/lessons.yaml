@@ -1,0 +1,74 @@
+section: '7.7'
+title: Wind and solar curtailment
+exercise: EX-062
+lessons:
+- id: L07.07.1
+  title: Curtailment causes
+  objective: Explain curtailment causes and show it in the EX-062 output.
+  prerequisites:
+  - L07.06.5
+  market_lesson: Curtailment happens when output cannot be delivered or is not wanted. [K]
+  north_american_example: 'EX-062 (Model Renewable Generation Forecast Errors) on synthetic North American data: mae_MW = 8.416667 [EX]'
+  terminal_activity: python3 emi.py run 062 | grep '^mae_MW:'
+  expected_result: 'mae_MW: 8.416667'
+  professional_application: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.06.5
+  after: L07.07.2
+  status: written_command_verified
+- id: L07.07.2
+  title: Negative pricing
+  objective: Explain negative pricing and show it in the EX-062 output.
+  prerequisites:
+  - L07.07.1
+  market_lesson: Prices go negative when generators pay to keep running. [K]
+  north_american_example: 'EX-062 (Model Renewable Generation Forecast Errors) on synthetic North American data: bias_MW = -2 [EX]'
+  terminal_activity: python3 emi.py run 062 | grep '^bias_MW:'
+  expected_result: 'bias_MW: -2'
+  professional_application: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.07.1
+  after: L07.07.3
+  status: written_command_verified
+- id: L07.07.3
+  title: Economic vs reliability curtailment
+  objective: Explain economic vs reliability curtailment and show it in the EX-062 output.
+  prerequisites:
+  - L07.07.2
+  market_lesson: Economic curtailment follows price; reliability curtailment is an operator order. [K]
+  north_american_example: 'EX-062 (Model Renewable Generation Forecast Errors) on synthetic North American data: mape_pct = 35.290738 [EX]'
+  terminal_activity: python3 emi.py run 062 | grep '^mape_pct:'
+  expected_result: 'mape_pct: 35.290738'
+  professional_application: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.07.2
+  after: L07.07.4
+  status: written_command_verified
+- id: L07.07.4
+  title: PPA settlement effects
+  objective: Explain pPA settlement effects and show it in the EX-062 output.
+  prerequisites:
+  - L07.07.3
+  market_lesson: Contract terms decide who bears curtailed energy. [K]
+  north_american_example: 'EX-062 (Model Renewable Generation Forecast Errors) on synthetic North American data: rmse_MW = 10.161201 [EX]'
+  terminal_activity: python3 emi.py run 062 | grep '^rmse_MW:'
+  expected_result: 'rmse_MW: 10.161201'
+  professional_application: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.07.3
+  after: L07.07.5
+  status: written_command_verified
+- id: L07.07.5
+  title: Curtailment valuation
+  objective: Explain curtailment valuation and show it in the EX-062 output.
+  prerequisites:
+  - L07.07.4
+  market_lesson: Curtailment value is lost energy times the price plus lost credits. [K]
+  north_american_example: 'EX-062 (Model Renewable Generation Forecast Errors) on synthetic North American data: da_revenue_USD = 73150 [EX]'
+  terminal_activity: python3 emi.py run 062 | grep '^da_revenue_USD:'
+  expected_result: 'da_revenue_USD: 73150'
+  professional_application: Compare forecast and actual wind or solar production; calculate the resulting financial exposure.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.07.4
+  after: L07.08.1
+  status: written_command_verified

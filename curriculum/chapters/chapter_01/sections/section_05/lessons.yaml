@@ -1,0 +1,74 @@
+section: '1.5'
+title: Eastern, Western, and ERCOT interconnections
+exercise: EX-045
+lessons:
+- id: L01.05.1
+  title: Synchronous interconnection concept
+  objective: Explain synchronous interconnection concept and show it in the EX-045 output.
+  prerequisites:
+  - L01.04.5
+  market_lesson: An interconnection is a set of grids running in synchronism at one frequency; trouble anywhere is felt everywhere inside it. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: markets = 7 [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^markets:'
+  expected_result: 'markets: 7'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.04.5
+  after: L01.05.2
+  status: written_command_verified
+- id: L01.05.2
+  title: Eastern Interconnection scale and mix
+  objective: Explain eastern Interconnection scale and mix and show it in the EX-045 output.
+  prerequisites:
+  - L01.05.1
+  market_lesson: The Eastern Interconnection is the largest in load and capacity and contains several ISOs plus bilateral regions. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: highest_rt_price_market = ISO_NE [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^highest_rt_price_market:'
+  expected_result: 'highest_rt_price_market: ISO_NE'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.05.1
+  after: L01.05.3
+  status: written_command_verified
+- id: L01.05.3
+  title: Western Interconnection and WECC
+  objective: Explain western Interconnection and WECC and show it in the EX-045 output.
+  prerequisites:
+  - L01.05.2
+  market_lesson: The Western Interconnection is long-distance, hydro and solar rich, and coordinated under WECC. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: largest_rt_minus_da_market = ERCOT [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^largest_rt_minus_da_market:'
+  expected_result: 'largest_rt_minus_da_market: ERCOT'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.05.2
+  after: L01.05.4
+  status: written_command_verified
+- id: L01.05.4
+  title: ERCOT isolation and DC ties
+  objective: Explain eRCOT isolation and DC ties and show it in the EX-045 output.
+  prerequisites:
+  - L01.05.3
+  market_lesson: ERCOT is its own interconnection with only small DC ties, so it can import little during scarcity. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: largest_rt_minus_da_USD_per_MWh = 7 [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^largest_rt_minus_da_USD_per_MWh:'
+  expected_result: 'largest_rt_minus_da_USD_per_MWh: 7'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.05.3
+  after: L01.05.5
+  status: written_command_verified
+- id: L01.05.5
+  title: Transfer capability vs commercial access
+  objective: Explain transfer capability vs commercial access and show it in the EX-045 output.
+  prerequisites:
+  - L01.05.4
+  market_lesson: Physical transfer limits cap flows; commercial access also needs transmission service or market membership. [K]
+  north_american_example: 'EX-045 (Map North American Electricity Markets) on synthetic North American data: highest_renewable_share_market = SPP [EX]'
+  terminal_activity: python3 emi.py run 045 | grep '^highest_renewable_share_market:'
+  expected_result: 'highest_renewable_share_market: SPP'
+  professional_application: Identify CAISO, PJM, MISO, SPP, NYISO, ISO-NE, and ERCOT; classify their market structures.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.05.4
+  after: L01.06.1
+  status: written_command_verified

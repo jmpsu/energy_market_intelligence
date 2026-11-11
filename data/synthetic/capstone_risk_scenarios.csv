@@ -1,0 +1,7 @@
+scenario,gas_price_change_percent,power_price_change_percent,gas_supply_reduction_percent,pipeline_capacity_reduction_percent,renewable_generation_change_percent
+Base,0,0,0,0,0
+Gas_Spike,100,20,0,0,0
+Power_Scarcity,20,150,0,0,-30
+Pipeline_Disruption,30,40,15,40,0
+Renewable_Shortfall,10,60,0,0,-50
+Combined_Extreme,100,200,25,40,-50

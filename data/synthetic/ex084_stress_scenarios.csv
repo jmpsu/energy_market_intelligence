@@ -1,0 +1,8 @@
+scenario,gas_price_change_percent,power_price_change_percent,gas_supply_reduction_percent,pipeline_capacity_reduction_percent,renewable_generation_change_percent
+Base,0,0,0,0,0
+Gas_Spike_Flat_Power,150,0,0,0,0
+Power_Collapse,0,-50,0,0,0
+Mild_Winter,-30,-30,0,0,0
+Gas_Collapse,-60,-10,0,0,0
+Fuel_Cutoff_Scarcity,400,900,50,60,-40
+Renewable_Drought_Low_Price,0,-20,0,0,-70

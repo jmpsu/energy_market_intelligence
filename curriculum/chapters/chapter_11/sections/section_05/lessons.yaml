@@ -1,0 +1,74 @@
+section: '11.5'
+title: Market research and competitive intelligence
+exercise: EX-099
+lessons:
+- id: L11.05.1
+  title: Market sizing
+  objective: Explain market sizing and show it in the EX-099 output.
+  prerequisites:
+  - L11.04.5
+  market_lesson: Market sizing estimates total and reachable revenue. [K]
+  north_american_example: 'EX-099 (Design an Energy Exemplar Product Integration) on synthetic North American data: components = 13 [EX]'
+  terminal_activity: python3 emi.py run 099 | grep '^components:'
+  expected_result: 'components: 13'
+  professional_application: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.04.5
+  after: L11.05.2
+  status: written_command_verified
+- id: L11.05.2
+  title: Competitor analysis
+  objective: Explain competitor analysis and show it in the EX-099 output.
+  prerequisites:
+  - L11.05.1
+  market_lesson: Competitor analysis uses only documented capabilities. [K]
+  north_american_example: 'EX-099 (Design an Energy Exemplar Product Integration) on synthetic North American data: interfaces = 14 [EX]'
+  terminal_activity: python3 emi.py run 099 | grep '^interfaces:'
+  expected_result: 'interfaces: 14'
+  professional_application: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.05.1
+  after: L11.05.3
+  status: written_command_verified
+- id: L11.05.3
+  title: Win-loss analysis
+  objective: Explain win-loss analysis and show it in the EX-099 output.
+  prerequisites:
+  - L11.05.2
+  market_lesson: Win-loss analysis asks why deals were won or lost. [K]
+  north_american_example: 'EX-099 (Design an Energy Exemplar Product Integration) on synthetic North American data: demonstrated_components = 9 [EX]'
+  terminal_activity: python3 emi.py run 099 | grep '^demonstrated_components:'
+  expected_result: 'demonstrated_components: 9'
+  professional_application: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.05.2
+  after: L11.05.4
+  status: written_command_verified
+- id: L11.05.4
+  title: Pricing research
+  objective: Explain pricing research and show it in the EX-099 output.
+  prerequisites:
+  - L11.05.3
+  market_lesson: Pricing research tests willingness to pay. [K]
+  north_american_example: 'EX-099 (Design an Energy Exemplar Product Integration) on synthetic North American data: proposed_components = 4 [EX]'
+  terminal_activity: python3 emi.py run 099 | grep '^proposed_components:'
+  expected_result: 'proposed_components: 4'
+  professional_application: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.05.3
+  after: L11.05.5
+  status: written_command_verified
+- id: L11.05.5
+  title: Intelligence synthesis
+  objective: Explain intelligence synthesis and show it in the EX-099 output.
+  prerequisites:
+  - L11.05.4
+  market_lesson: Synthesis turns intelligence into roadmap input. [K]
+  north_american_example: 'EX-099 (Design an Energy Exemplar Product Integration) on synthetic North American data: demonstrated_interfaces = 7 [EX]'
+  terminal_activity: python3 emi.py run 099 | grep '^demonstrated_interfaces:'
+  expected_result: 'demonstrated_interfaces: 7'
+  professional_application: Develop a conceptual architecture connecting market data, simulation engines, analytical services, user workflows, and reporting. Distinguish verified product capabilities from proposed capabilities.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.05.4
+  after: L11.06.1
+  status: written_command_verified

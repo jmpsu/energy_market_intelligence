@@ -1,0 +1,74 @@
+section: '10.3'
+title: Power-flow and production-cost simulation
+exercise: EX-089
+lessons:
+- id: L10.03.1
+  title: AC vs DC power flow
+  objective: Explain aC vs DC power flow and show it in the EX-089 output.
+  prerequisites:
+  - L10.02.5
+  market_lesson: AC power flow is exact and nonlinear; DC is approximate and fast. [K]
+  north_american_example: 'EX-089 (Create a Power Market Simulation) on synthetic North American data: total_demand_MWh = 105600 [EX]'
+  terminal_activity: python3 emi.py run 089 | grep '^total_demand_MWh:'
+  expected_result: 'total_demand_MWh: 105600'
+  professional_application: Build a simplified production-cost model that dispatches generators against hourly demand and operating constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.02.5
+  after: L10.03.2
+  status: written_command_verified
+- id: L10.03.2
+  title: Production-cost model structure
+  objective: Explain production-cost model structure and show it in the EX-089 output.
+  prerequisites:
+  - L10.03.1
+  market_lesson: A production-cost model dispatches units to meet load at least cost. [K]
+  north_american_example: 'EX-089 (Create a Power Market Simulation) on synthetic North American data: total_production_cost_USD = 3214768.834064 [EX]'
+  terminal_activity: python3 emi.py run 089 | grep '^total_production_cost_USD:'
+  expected_result: 'total_production_cost_USD: 3214768.834064'
+  professional_application: Build a simplified production-cost model that dispatches generators against hourly demand and operating constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.03.1
+  after: L10.03.3
+  status: written_command_verified
+- id: L10.03.3
+  title: Chronological simulation
+  objective: Explain chronological simulation and show it in the EX-089 output.
+  prerequisites:
+  - L10.03.2
+  market_lesson: Chronological simulation keeps hours in order so storage and ramps work. [K]
+  north_american_example: 'EX-089 (Create a Power Market Simulation) on synthetic North American data: average_cost_USD_per_MWh = 30.442887 [EX]'
+  terminal_activity: python3 emi.py run 089 | grep '^average_cost_USD_per_MWh:'
+  expected_result: 'average_cost_USD_per_MWh: 30.442887'
+  professional_application: Build a simplified production-cost model that dispatches generators against hourly demand and operating constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.03.2
+  after: L10.03.4
+  status: written_command_verified
+- id: L10.03.4
+  title: Reserve and outage modeling
+  objective: Explain reserve and outage modeling and show it in the EX-089 output.
+  prerequisites:
+  - L10.03.3
+  market_lesson: Reserves and outages reduce usable capacity. [K]
+  north_american_example: 'EX-089 (Create a Power Market Simulation) on synthetic North American data: load_weighted_price_USD_per_MWh = 53.232538 [EX]'
+  terminal_activity: python3 emi.py run 089 | grep '^load_weighted_price_USD_per_MWh:'
+  expected_result: 'load_weighted_price_USD_per_MWh: 53.232538'
+  professional_application: Build a simplified production-cost model that dispatches generators against hourly demand and operating constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.03.3
+  after: L10.03.5
+  status: written_command_verified
+- id: L10.03.5
+  title: Running a production-cost simulation
+  objective: Explain running a production-cost simulation and show it in the EX-089 output.
+  prerequisites:
+  - L10.03.4
+  market_lesson: A run is defined by inputs, horizon and resolution. [K]
+  north_american_example: 'EX-089 (Create a Power Market Simulation) on synthetic North American data: peak_price = 65 [EX]'
+  terminal_activity: python3 emi.py run 089 | grep '^peak_price:'
+  expected_result: 'peak_price: 65'
+  professional_application: Build a simplified production-cost model that dispatches generators against hourly demand and operating constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.03.4
+  after: L10.04.1
+  status: written_command_verified

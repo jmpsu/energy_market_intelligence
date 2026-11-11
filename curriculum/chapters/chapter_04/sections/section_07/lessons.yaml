@@ -1,0 +1,74 @@
+section: '4.7'
+title: Mexican natural gas imports and exports
+exercise: EX-035
+lessons:
+- id: L04.07.1
+  title: US pipeline exports to Mexico
+  objective: Explain uS pipeline exports to Mexico and show it in the EX-035 output.
+  prerequisites:
+  - L04.06.5
+  market_lesson: US pipeline exports to Mexico are a major, steady demand source. [K]
+  north_american_example: 'EX-035 (Model US-Canada-Mexico Gas Flows) on synthetic North American data: United_States_residual_Bcf_d = 8 [EX]'
+  terminal_activity: python3 emi.py run 035 | grep '^United_States_residual_Bcf_d:'
+  expected_result: 'United_States_residual_Bcf_d: 8'
+  professional_application: Build a cross-border supply and demand balance incorporating imports, exports, and pipeline constraints.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.06.5
+  after: L04.07.2
+  status: written_command_verified
+- id: L04.07.2
+  title: Mexican demand and infrastructure
+  objective: Explain mexican demand and infrastructure and show it in the EX-035 output.
+  prerequisites:
+  - L04.07.1
+  market_lesson: Mexican demand is driven by gas-fired power and industry and depends on in-country pipelines. [K]
+  north_american_example: 'EX-035 (Model US-Canada-Mexico Gas Flows) on synthetic North American data: Canada_residual_Bcf_d = 1.2 [EX]'
+  terminal_activity: python3 emi.py run 035 | grep '^Canada_residual_Bcf_d:'
+  expected_result: 'Canada_residual_Bcf_d: 1.2'
+  professional_application: Build a cross-border supply and demand balance incorporating imports, exports, and pipeline constraints.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.07.1
+  after: L04.07.3
+  status: written_command_verified
+- id: L04.07.3
+  title: Waha-Mexico linkage
+  objective: Explain waha-Mexico linkage and show it in the EX-035 output.
+  prerequisites:
+  - L04.07.2
+  market_lesson: Much of the export gas comes from the Permian, so Mexican takeaway affects Waha prices. [K]
+  north_american_example: 'EX-035 (Model US-Canada-Mexico Gas Flows) on synthetic North American data: Mexico_residual_Bcf_d = 0.5 [EX]'
+  terminal_activity: python3 emi.py run 035 | grep '^Mexico_residual_Bcf_d:'
+  expected_result: 'Mexico_residual_Bcf_d: 0.5'
+  professional_application: Build a cross-border supply and demand balance incorporating imports, exports, and pipeline constraints.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.07.2
+  after: L04.07.4
+  status: written_command_verified
+- id: L04.07.4
+  title: Cross-border balance reconciliation
+  objective: Explain cross-border balance reconciliation and show it in the EX-035 output.
+  prerequisites:
+  - L04.07.3
+  market_lesson: Border flow data from each side must be reconciled before use. [K]
+  north_american_example: 'EX-035 (Model US-Canada-Mexico Gas Flows) on synthetic North American data: United_States_import_break_Bcf_d = 4.5 [EX]'
+  terminal_activity: python3 emi.py run 035 | grep '^United_States_import_break_Bcf_d:'
+  expected_result: 'United_States_import_break_Bcf_d: 4.5'
+  professional_application: Build a cross-border supply and demand balance incorporating imports, exports, and pipeline constraints.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.07.3
+  after: L04.07.5
+  status: written_command_verified
+- id: L04.07.5
+  title: Regulatory and operational risks
+  objective: Explain regulatory and operational risks and show it in the EX-035 output.
+  prerequisites:
+  - L04.07.4
+  market_lesson: Cross-border flows carry regulatory, payment and infrastructure-delay risks. [K]
+  north_american_example: 'EX-035 (Model US-Canada-Mexico Gas Flows) on synthetic North American data: Canada_import_break_Bcf_d = -3 [EX]'
+  terminal_activity: python3 emi.py run 035 | grep '^Canada_import_break_Bcf_d:'
+  expected_result: 'Canada_import_break_Bcf_d: -3'
+  professional_application: Build a cross-border supply and demand balance incorporating imports, exports, and pipeline constraints.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.07.4
+  after: L04.08.1
+  status: written_command_verified

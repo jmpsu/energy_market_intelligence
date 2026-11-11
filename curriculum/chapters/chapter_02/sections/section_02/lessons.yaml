@@ -1,0 +1,74 @@
+section: '2.2'
+title: Gathering systems and processing plants
+exercise: EX-013
+lessons:
+- id: L02.02.1
+  title: Gathering system function
+  objective: Explain gathering system function and show it in the EX-013 output.
+  prerequisites:
+  - L02.01.5
+  market_lesson: Gathering lines collect gas from many wells at low pressure and deliver it to processing. [K]
+  north_american_example: 'EX-013 (Model Raw Gas Processing) on synthetic North American data: mode = recover [EX]'
+  terminal_activity: python3 emi.py run 013 | grep '^mode:'
+  expected_result: 'mode: recover'
+  professional_application: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.01.5
+  after: L02.02.2
+  status: written_command_verified
+- id: L02.02.2
+  title: Compression and treating
+  objective: Explain compression and treating and show it in the EX-013 output.
+  prerequisites:
+  - L02.02.1
+  market_lesson: Compression raises pressure for transport; treating removes CO2, H2S and water. [K]
+  north_american_example: 'EX-013 (Model Raw Gas Processing) on synthetic North American data: inlet_Mcf_per_d = 200000 [EX]'
+  terminal_activity: python3 emi.py run 013 | grep '^inlet_Mcf_per_d:'
+  expected_result: 'inlet_Mcf_per_d: 200000'
+  professional_application: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.02.1
+  after: L02.02.3
+  status: written_command_verified
+- id: L02.02.3
+  title: Processing plant inlet and outlet
+  objective: Explain processing plant inlet and outlet and show it in the EX-013 output.
+  prerequisites:
+  - L02.02.2
+  market_lesson: A plant takes wet inlet gas and outputs pipeline-quality residue gas plus an NGL stream. [K]
+  north_american_example: 'EX-013 (Model Raw Gas Processing) on synthetic North American data: inlet_MMBtu_per_d = 250000 [EX]'
+  terminal_activity: python3 emi.py run 013 | grep '^inlet_MMBtu_per_d:'
+  expected_result: 'inlet_MMBtu_per_d: 250000'
+  professional_application: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.02.2
+  after: L02.02.4
+  status: written_command_verified
+- id: L02.02.4
+  title: Plant fuel and shrinkage
+  objective: Explain plant fuel and shrinkage and show it in the EX-013 output.
+  prerequisites:
+  - L02.02.3
+  market_lesson: Removing NGLs and burning plant fuel shrinks the gas volume and energy that reaches the tailgate. [K]
+  north_american_example: 'EX-013 (Model Raw Gas Processing) on synthetic North American data: ngl_bbl_per_d = 23319.228571 [EX]'
+  terminal_activity: python3 emi.py run 013 | grep '^ngl_bbl_per_d:'
+  expected_result: 'ngl_bbl_per_d: 23319.228571'
+  professional_application: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.02.3
+  after: L02.02.5
+  status: written_command_verified
+- id: L02.02.5
+  title: Processing contract types (POP, fee, keep-whole)
+  objective: Explain processing contract types (POP, fee, keep-whole) and show it in the EX-013 output.
+  prerequisites:
+  - L02.02.4
+  market_lesson: Fee contracts pay per unit, POP shares proceeds, keep-whole returns the producer's Btus and leaves the processor exposed to the frac spread. [K]
+  north_american_example: 'EX-013 (Model Raw Gas Processing) on synthetic North American data: shrink_MMBtu_per_d = 80967.50303 [EX]'
+  terminal_activity: python3 emi.py run 013 | grep '^shrink_MMBtu_per_d:'
+  expected_result: 'shrink_MMBtu_per_d: 80967.50303'
+  professional_application: Calculate the separation of methane and natural gas liquids from raw natural gas.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.02.4
+  after: L02.03.1
+  status: written_command_verified

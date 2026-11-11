@@ -1,0 +1,74 @@
+section: '4.5'
+title: Capacity release and secondary markets
+exercise: EX-014
+lessons:
+- id: L04.05.1
+  title: Capacity release mechanics
+  objective: Explain capacity release mechanics and show it in the EX-014 output.
+  prerequisites:
+  - L04.04.5
+  market_lesson: A firm shipper can release unused capacity to another shipper for a period. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Permian_to_Gulf_utilization_pct = 99.459459 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Permian_to_Gulf_utilization_pct:'
+  expected_result: 'Permian_to_Gulf_utilization_pct: 99.459459'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.04.5
+  after: L04.05.2
+  status: written_command_verified
+- id: L04.05.2
+  title: Asset management agreements
+  objective: Explain asset management agreements and show it in the EX-014 output.
+  prerequisites:
+  - L04.05.1
+  market_lesson: In an asset management agreement a marketer runs a holder's capacity and shares the value. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Appalachia_to_NE_utilization_pct = 78.666667 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Appalachia_to_NE_utilization_pct:'
+  expected_result: 'Appalachia_to_NE_utilization_pct: 78.666667'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.05.1
+  after: L04.05.3
+  status: written_command_verified
+- id: L04.05.3
+  title: Biddable vs prearranged releases
+  objective: Explain biddable vs prearranged releases and show it in the EX-014 output.
+  prerequisites:
+  - L04.05.2
+  market_lesson: Releases are either posted for bidding or prearranged with a named replacement shipper. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Midcon_to_Chicago_utilization_pct = 64 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Midcon_to_Chicago_utilization_pct:'
+  expected_result: 'Midcon_to_Chicago_utilization_pct: 64'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.05.2
+  after: L04.05.4
+  status: written_command_verified
+- id: L04.05.4
+  title: Valuing released capacity
+  objective: Explain valuing released capacity and show it in the EX-014 output.
+  prerequisites:
+  - L04.05.3
+  market_lesson: Released capacity is worth about the expected spread it can capture. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Rockies_to_West_utilization_pct = 100.555556 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Rockies_to_West_utilization_pct:'
+  expected_result: 'Rockies_to_West_utilization_pct: 100.555556'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.05.3
+  after: L04.05.5
+  status: written_command_verified
+- id: L04.05.5
+  title: Secondary market strategy
+  objective: Explain secondary market strategy and show it in the EX-014 output.
+  prerequisites:
+  - L04.05.4
+  market_lesson: Secondary capacity lets you get transport without a long-term contract. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: constrained_segments = Permian_to_Gulf [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^constrained_segments:'
+  expected_result: 'constrained_segments: Permian_to_Gulf'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.05.4
+  after: L04.06.1
+  status: written_command_verified

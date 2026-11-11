@@ -1,0 +1,13 @@
+location,commodity,region,country,price_unit
+Henry_Hub,natural_gas,Louisiana,US,USD_per_MMBtu
+Waha,natural_gas,Texas,US,USD_per_MMBtu
+AECO,natural_gas,Alberta,CA,CAD_per_GJ
+Dawn,natural_gas,Ontario,CA,USD_per_MMBtu
+Algonquin_Citygate,natural_gas,Massachusetts,US,USD_per_MMBtu
+Mont_Belvieu,ngl,Texas,US,USD_per_gallon
+Conway,ngl,Kansas,US,USD_per_gallon
+PJM_West,power,Pennsylvania,US,USD_per_MWh
+ERCOT_North,power,Texas,US,USD_per_MWh
+SP15,power,California,US,USD_per_MWh
+Indiana_Hub,power,Indiana,US,USD_per_MWh
+Mass_Hub,power,Massachusetts,US,USD_per_MWh

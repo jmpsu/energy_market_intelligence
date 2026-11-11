@@ -1,0 +1,74 @@
+section: '6.7'
+title: Energy, congestion, and marginal losses
+exercise: EX-048
+lessons:
+- id: L06.07.1
+  title: Energy component
+  objective: Explain energy component and show it in the EX-048 output.
+  prerequisites:
+  - L06.06.5
+  market_lesson: The energy component is the system-wide marginal cost at the reference bus. [K]
+  north_american_example: 'EX-048 (Calculate Locational Marginal Prices) on synthetic North American data: constrained_gen_A_MW = 350 [EX]'
+  terminal_activity: python3 emi.py run 048 | grep '^constrained_gen_A_MW:'
+  expected_result: 'constrained_gen_A_MW: 350'
+  professional_application: Break down electricity prices into energy, congestion, and marginal loss components.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.06.5
+  after: L06.07.2
+  status: written_command_verified
+- id: L06.07.2
+  title: Congestion component
+  objective: Explain congestion component and show it in the EX-048 output.
+  prerequisites:
+  - L06.07.1
+  market_lesson: The congestion component is the cost of binding transmission limits at that node. [K]
+  north_american_example: 'EX-048 (Calculate Locational Marginal Prices) on synthetic North American data: constrained_gen_B_MW = 150 [EX]'
+  terminal_activity: python3 emi.py run 048 | grep '^constrained_gen_B_MW:'
+  expected_result: 'constrained_gen_B_MW: 150'
+  professional_application: Break down electricity prices into energy, congestion, and marginal loss components.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.07.1
+  after: L06.07.3
+  status: written_command_verified
+- id: L06.07.3
+  title: Marginal loss component
+  objective: Explain marginal loss component and show it in the EX-048 output.
+  prerequisites:
+  - L06.07.2
+  market_lesson: The loss component reflects marginal transmission losses. [K]
+  north_american_example: 'EX-048 (Calculate Locational Marginal Prices) on synthetic North American data: constrained_flow_A_to_B_MW = 250 [EX]'
+  terminal_activity: python3 emi.py run 048 | grep '^constrained_flow_A_to_B_MW:'
+  expected_result: 'constrained_flow_A_to_B_MW: 250'
+  professional_application: Break down electricity prices into energy, congestion, and marginal loss components.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.07.2
+  after: L06.07.4
+  status: written_command_verified
+- id: L06.07.4
+  title: Shadow prices of constraints
+  objective: Explain shadow prices of constraints and show it in the EX-048 output.
+  prerequisites:
+  - L06.07.3
+  market_lesson: 'Each binding constraint has a shadow price: the saving from one more MW of limit. [K]'
+  north_american_example: 'EX-048 (Calculate Locational Marginal Prices) on synthetic North American data: constrained_lmp_A = 30 [EX]'
+  terminal_activity: python3 emi.py run 048 | grep '^constrained_lmp_A:'
+  expected_result: 'constrained_lmp_A: 30'
+  professional_application: Break down electricity prices into energy, congestion, and marginal loss components.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.07.3
+  after: L06.07.5
+  status: written_command_verified
+- id: L06.07.5
+  title: Decomposing an LMP
+  objective: Explain decomposing an LMP and show it in the EX-048 output.
+  prerequisites:
+  - L06.07.4
+  market_lesson: LMP equals energy plus congestion plus losses. [K]
+  north_american_example: 'EX-048 (Calculate Locational Marginal Prices) on synthetic North American data: constrained_lmp_B = 60 [EX]'
+  terminal_activity: python3 emi.py run 048 | grep '^constrained_lmp_B:'
+  expected_result: 'constrained_lmp_B: 60'
+  professional_application: Break down electricity prices into energy, congestion, and marginal loss components.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.07.4
+  after: L06.08.1
+  status: written_command_verified

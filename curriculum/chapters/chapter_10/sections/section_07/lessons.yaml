@@ -1,0 +1,74 @@
+section: '10.7'
+title: Snowflake, Databricks, and analytical data architecture
+exercise: EX-087
+lessons:
+- id: L10.07.1
+  title: Cloud data warehouse concepts
+  objective: Explain cloud data warehouse concepts and show it in the EX-087 output.
+  prerequisites:
+  - L10.06.5
+  market_lesson: A cloud warehouse separates storage from compute. [K]
+  north_american_example: 'EX-087 (Build an Energy Market Data Warehouse) on synthetic North American data: dim_location_rows = 12 [EX]'
+  terminal_activity: python3 emi.py run 087 | grep '^dim_location_rows:'
+  expected_result: 'dim_location_rows: 12'
+  professional_application: Design a relational database for prices, generation, transmission, demand, storage, and market participants.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.06.5
+  after: L10.07.2
+  status: written_command_verified
+- id: L10.07.2
+  title: Lakehouse concepts
+  objective: Explain lakehouse concepts and show it in the EX-087 output.
+  prerequisites:
+  - L10.07.1
+  market_lesson: A lakehouse stores raw files with table features. [K]
+  north_american_example: 'EX-087 (Build an Energy Market Data Warehouse) on synthetic North American data: dim_time_rows = 3 [EX]'
+  terminal_activity: python3 emi.py run 087 | grep '^dim_time_rows:'
+  expected_result: 'dim_time_rows: 3'
+  professional_application: Design a relational database for prices, generation, transmission, demand, storage, and market participants.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.07.1
+  after: L10.07.3
+  status: written_command_verified
+- id: L10.07.3
+  title: Dimensional modeling for energy data
+  objective: Explain dimensional modeling for energy data and show it in the EX-087 output.
+  prerequisites:
+  - L10.07.2
+  market_lesson: Dimensional models split facts from dimensions. [K]
+  north_american_example: 'EX-087 (Build an Energy Market Data Warehouse) on synthetic North American data: dim_provider_rows = 2 [EX]'
+  terminal_activity: python3 emi.py run 087 | grep '^dim_provider_rows:'
+  expected_result: 'dim_provider_rows: 2'
+  professional_application: Design a relational database for prices, generation, transmission, demand, storage, and market participants.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.07.2
+  after: L10.07.4
+  status: written_command_verified
+- id: L10.07.4
+  title: Time-series storage patterns
+  objective: Explain time-series storage patterns and show it in the EX-087 output.
+  prerequisites:
+  - L10.07.3
+  market_lesson: Time series are partitioned by date and location. [K]
+  north_american_example: 'EX-087 (Build an Energy Market Data Warehouse) on synthetic North American data: fact_price_rows = 6 [EX]'
+  terminal_activity: python3 emi.py run 087 | grep '^fact_price_rows:'
+  expected_result: 'fact_price_rows: 6'
+  professional_application: Design a relational database for prices, generation, transmission, demand, storage, and market participants.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.07.3
+  after: L10.07.5
+  status: written_command_verified
+- id: L10.07.5
+  title: Architecture design
+  objective: Explain architecture design and show it in the EX-087 output.
+  prerequisites:
+  - L10.07.4
+  market_lesson: Design follows the queries users run. [K]
+  north_american_example: 'EX-087 (Build an Energy Market Data Warehouse) on synthetic North American data: orphan_facts = 0 [EX]'
+  terminal_activity: python3 emi.py run 087 | grep '^orphan_facts:'
+  expected_result: 'orphan_facts: 0'
+  professional_application: Design a relational database for prices, generation, transmission, demand, storage, and market participants.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.07.4
+  after: L10.08.1
+  status: written_command_verified

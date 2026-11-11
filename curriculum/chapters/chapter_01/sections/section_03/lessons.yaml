@@ -1,0 +1,74 @@
+section: '1.3'
+title: Physical versus financial energy markets
+exercise: EX-024
+lessons:
+- id: L01.03.1
+  title: Physical delivery obligations
+  objective: Explain physical delivery obligations and show it in the EX-024 output.
+  prerequisites:
+  - L01.02.5
+  market_lesson: A physical contract obliges delivery of a quantity at a point and time; failure triggers cover costs or penalties. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: locked_all_in_price = 2.5 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^locked_all_in_price:'
+  expected_result: 'locked_all_in_price: 2.5'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.02.5
+  after: L01.03.2
+  status: written_command_verified
+- id: L01.03.2
+  title: Financially settled instruments
+  objective: Explain financially settled instruments and show it in the EX-024 output.
+  prerequisites:
+  - L01.03.1
+  market_lesson: A financial contract settles in cash against a reference price; no molecule or electron moves. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: unhedged_cost_range_USD = 1054000 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^unhedged_cost_range_USD:'
+  expected_result: 'unhedged_cost_range_USD: 1054000'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.03.1
+  after: L01.03.3
+  status: written_command_verified
+- id: L01.03.3
+  title: Hedging vs speculation vs asset-backed trading
+  objective: Explain hedging vs speculation vs asset-backed trading and show it in the EX-024 output.
+  prerequisites:
+  - L01.03.2
+  market_lesson: Hedgers reduce an existing exposure, speculators take one on, asset-backed traders optimise physical assets around the market. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: hh_hedged_cost_range_USD = 279000 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^hh_hedged_cost_range_USD:'
+  expected_result: 'hh_hedged_cost_range_USD: 279000'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.03.2
+  after: L01.03.4
+  status: written_command_verified
+- id: L01.03.4
+  title: Convergence of physical and financial prices
+  objective: Explain convergence of physical and financial prices and show it in the EX-024 output.
+  prerequisites:
+  - L01.03.3
+  market_lesson: At delivery the financial contract and the physical price at the same point must meet, or arbitrage closes the gap. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: fully_hedged_cost_range_USD = 0 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^fully_hedged_cost_range_USD:'
+  expected_result: 'fully_hedged_cost_range_USD: 0'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.03.3
+  after: L01.03.5
+  status: written_command_verified
+- id: L01.03.5
+  title: Choosing a physical or financial instrument
+  objective: Explain choosing a physical or financial instrument and show it in the EX-024 output.
+  prerequisites:
+  - L01.03.4
+  market_lesson: Use physical when you need the commodity at a point; use financial when you only need the price outcome. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: residual_risk_after_hh_hedge = basis [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^residual_risk_after_hh_hedge:'
+  expected_result: 'residual_risk_after_hh_hedge: basis'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: A market-intelligence product needs one reference model of participants, locations and units before any analytics.
+  before: L01.03.4
+  after: L01.04.1
+  status: written_command_verified

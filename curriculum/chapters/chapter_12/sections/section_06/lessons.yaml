@@ -1,0 +1,74 @@
+section: '12.6'
+title: Transmission and pipeline disruption scenarios
+exercise: EX-060
+lessons:
+- id: L12.06.1
+  title: Transmission outage scenario
+  objective: Explain transmission outage scenario and show it in the EX-060 output.
+  prerequisites:
+  - L12.05.5
+  market_lesson: A transmission outage changes flows and prices. [K]
+  north_american_example: 'EX-060 (Simulate Generator Outages) on synthetic North American data: Baseline_price_USD_per_MWh = 48 [EX]'
+  terminal_activity: python3 emi.py run 060 | grep '^Baseline_price_USD_per_MWh:'
+  expected_result: 'Baseline_price_USD_per_MWh: 48'
+  professional_application: Remove generation capacity from a simplified power market and recalculate dispatch and market prices.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.05.5
+  after: L12.06.2
+  status: written_command_verified
+- id: L12.06.2
+  title: Pipeline outage scenario
+  objective: Explain pipeline outage scenario and show it in the EX-060 output.
+  prerequisites:
+  - L12.06.1
+  market_lesson: A pipeline outage cuts fuel to plants. [K]
+  north_american_example: 'EX-060 (Simulate Generator Outages) on synthetic North American data: Baseline_available_capacity_MW = 6700 [EX]'
+  terminal_activity: python3 emi.py run 060 | grep '^Baseline_available_capacity_MW:'
+  expected_result: 'Baseline_available_capacity_MW: 6700'
+  professional_application: Remove generation capacity from a simplified power market and recalculate dispatch and market prices.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.06.1
+  after: L12.06.3
+  status: written_command_verified
+- id: L12.06.3
+  title: Combined disruption
+  objective: Explain combined disruption and show it in the EX-060 output.
+  prerequisites:
+  - L12.06.2
+  market_lesson: Combined disruptions compound. [K]
+  north_american_example: 'EX-060 (Simulate Generator Outages) on synthetic North American data: Baseline_reserve_margin_pct = 21.818182 [EX]'
+  terminal_activity: python3 emi.py run 060 | grep '^Baseline_reserve_margin_pct:'
+  expected_result: 'Baseline_reserve_margin_pct: 21.818182'
+  professional_application: Remove generation capacity from a simplified power market and recalculate dispatch and market prices.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.06.2
+  after: L12.06.4
+  status: written_command_verified
+- id: L12.06.4
+  title: Impact quantification
+  objective: Explain impact quantification and show it in the EX-060 output.
+  prerequisites:
+  - L12.06.3
+  market_lesson: Quantify impact in MWh, MMBtu and dollars. [K]
+  north_american_example: 'EX-060 (Simulate Generator Outages) on synthetic North American data: Baseline_unmet_MW = 0 [EX]'
+  terminal_activity: python3 emi.py run 060 | grep '^Baseline_unmet_MW:'
+  expected_result: 'Baseline_unmet_MW: 0'
+  professional_application: Remove generation capacity from a simplified power market and recalculate dispatch and market prices.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.06.3
+  after: L12.06.5
+  status: written_command_verified
+- id: L12.06.5
+  title: Mitigation options
+  objective: Explain mitigation options and show it in the EX-060 output.
+  prerequisites:
+  - L12.06.4
+  market_lesson: Mitigations include alternative supply, storage and hedges. [K]
+  north_american_example: 'EX-060 (Simulate Generator Outages) on synthetic North American data: Baseline_marginal_unit = COAL_01 [EX]'
+  terminal_activity: python3 emi.py run 060 | grep '^Baseline_marginal_unit:'
+  expected_result: 'Baseline_marginal_unit: COAL_01'
+  professional_application: Remove generation capacity from a simplified power market and recalculate dispatch and market prices.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.06.4
+  after: L12.07.1
+  status: written_command_verified

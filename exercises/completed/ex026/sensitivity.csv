@@ -1,0 +1,5 @@
+driver,unit,coefficient_USD_per_unit,shock_units,price_change_USD_per_MMBtu,price_after,abs_rank
+production,Bcf_per_d,-0.3,1.5,-0.44999999999999996,2.8,2
+lng_feedgas,Bcf_per_d,0.25,2.0,0.5,3.75,1
+winter_hdd,pct_vs_normal,0.02,10.0,0.2,3.45,4
+storage_surplus,Bcf,-0.0015,150.0,-0.225,3.025,3

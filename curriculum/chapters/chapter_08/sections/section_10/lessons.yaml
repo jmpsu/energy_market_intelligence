@@ -1,0 +1,74 @@
+section: '8.10'
+title: ETRM architecture, integrations, and data warehouses
+exercise: EX-076
+lessons:
+- id: L08.10.1
+  title: ETRM functional modules
+  objective: Explain eTRM functional modules and show it in the EX-076 output.
+  prerequisites:
+  - L08.09.5
+  market_lesson: An ETRM has trade capture, scheduling, risk, settlement and accounting modules. [K]
+  north_american_example: 'EX-076 (Design an ETRM Data Integration) on synthetic North American data: trades_in_store = 4 [EX]'
+  terminal_activity: python3 emi.py run 076 | grep '^trades_in_store:'
+  expected_result: 'trades_in_store: 4'
+  professional_application: Build a simplified integration connecting trading records, market data, risk calculations, scheduling, and settlement systems.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.09.5
+  after: L08.10.2
+  status: written_command_verified
+- id: L08.10.2
+  title: Integration patterns
+  objective: Explain integration patterns and show it in the EX-076 output.
+  prerequisites:
+  - L08.10.1
+  market_lesson: It integrates with market data, schedulers, the ledger and analytics by files, APIs or messages. [K]
+  north_american_example: 'EX-076 (Design an ETRM Data Integration) on synthetic North American data: locations_in_market_data = 5 [EX]'
+  terminal_activity: python3 emi.py run 076 | grep '^locations_in_market_data:'
+  expected_result: 'locations_in_market_data: 5'
+  professional_application: Build a simplified integration connecting trading records, market data, risk calculations, scheduling, and settlement systems.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.10.1
+  after: L08.10.3
+  status: written_command_verified
+- id: L08.10.3
+  title: Data warehouse design
+  objective: Explain data warehouse design and show it in the EX-076 output.
+  prerequisites:
+  - L08.10.2
+  market_lesson: A warehouse stores trades, prices and positions for reporting. [K]
+  north_american_example: 'EX-076 (Design an ETRM Data Integration) on synthetic North American data: trades_priced = 2 [EX]'
+  terminal_activity: python3 emi.py run 076 | grep '^trades_priced:'
+  expected_result: 'trades_priced: 2'
+  professional_application: Build a simplified integration connecting trading records, market data, risk calculations, scheduling, and settlement systems.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.10.2
+  after: L08.10.4
+  status: written_command_verified
+- id: L08.10.4
+  title: Endur as an enterprise ETRM example
+  objective: Explain endur as an enterprise ETRM example and show it in the EX-076 output.
+  prerequisites:
+  - L08.10.3
+  market_lesson: Endur is one widely used enterprise ETRM; verify capabilities from vendor documentation before citing. [K]
+  north_american_example: 'EX-076 (Design an ETRM Data Integration) on synthetic North American data: price_coverage_pct = 50 [EX]'
+  terminal_activity: python3 emi.py run 076 | grep '^price_coverage_pct:'
+  expected_result: 'price_coverage_pct: 50'
+  professional_application: Build a simplified integration connecting trading records, market data, risk calculations, scheduling, and settlement systems.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.10.3
+  after: L08.10.5
+  status: written_command_verified
+- id: L08.10.5
+  title: Build vs buy and deployment
+  objective: Explain build vs buy and deployment and show it in the EX-076 output.
+  prerequisites:
+  - L08.10.4
+  market_lesson: Build-versus-buy weighs fit, cost, time and upkeep. [K]
+  north_american_example: 'EX-076 (Design an ETRM Data Integration) on synthetic North American data: integration_breaks = TR002:Algonquin,TR004:Mont_Belvieu [EX]'
+  terminal_activity: python3 emi.py run 076 | grep '^integration_breaks:'
+  expected_result: 'integration_breaks: TR002:Algonquin,TR004:Mont_Belvieu'
+  professional_application: Build a simplified integration connecting trading records, market data, risk calculations, scheduling, and settlement systems.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.10.4
+  after: L09.01.1
+  status: written_command_verified

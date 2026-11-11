@@ -1,0 +1,10 @@
+ex012 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+Firm_to_West_netback: 2.224
+Firm_to_Gulf_Coast_netback: 2.087
+Sell_at_Waha_netback: 0.7
+blended_netback_USD_per_MMBtu: 1.9894
+local_only_netback: 0.7
+value_of_firm_transport_USD_per_d: 128940
+unallocated_MMBtu_d: 0
+NOTE: Fuel retention is paid in kind: the shipper delivers less gas than it receives.
+NOTE: Synthetic rates; reservation charges treated as per-unit at full use.

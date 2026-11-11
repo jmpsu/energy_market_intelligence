@@ -1,0 +1,12 @@
+ex064 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+daily_gap_in_lull_MWh: 3120
+lull_energy_gap_MWh: 15600
+storage_discharged_MWh: 5000
+unserved_MWh: 10600
+unserved_days: 4
+scarcity_cost_USD: 53000000
+storage_needed_MWh: 15600
+storage_duration_needed_hours: 62.4
+storage_duration_installed_hours: 20
+first_unserved_day: 5
+NOTE: Daily energy balance, not hourly: it shows the energy shortfall, not the peak-MW shortfall. A 20-hour store covers under two of five lull days.

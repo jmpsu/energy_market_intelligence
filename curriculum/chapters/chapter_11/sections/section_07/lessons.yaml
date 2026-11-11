@@ -1,0 +1,74 @@
+section: '11.7'
+title: Product backlog and technical requirements
+exercise: EX-096
+lessons:
+- id: L11.07.1
+  title: Epics and user stories
+  objective: Explain epics and user stories and show it in the EX-096 output.
+  prerequisites:
+  - L11.06.5
+  market_lesson: Epics are large goals; user stories are small deliverable slices. [K]
+  north_american_example: 'EX-096 (Design a Market Intelligence Product) on synthetic North American data: requirements = 8 [EX]'
+  terminal_activity: python3 emi.py run 096 | grep '^requirements:'
+  expected_result: 'requirements: 8'
+  professional_application: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.06.5
+  after: L11.07.2
+  status: written_command_verified
+- id: L11.07.2
+  title: Acceptance criteria
+  objective: Explain acceptance criteria and show it in the EX-096 output.
+  prerequisites:
+  - L11.07.1
+  market_lesson: Acceptance criteria define done. [K]
+  north_american_example: 'EX-096 (Design a Market Intelligence Product) on synthetic North American data: distinct_users = 8 [EX]'
+  terminal_activity: python3 emi.py run 096 | grep '^distinct_users:'
+  expected_result: 'distinct_users: 8'
+  professional_application: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.07.1
+  after: L11.07.3
+  status: written_command_verified
+- id: L11.07.3
+  title: Non-functional requirements
+  objective: Explain non-functional requirements and show it in the EX-096 output.
+  prerequisites:
+  - L11.07.2
+  market_lesson: Non-functional requirements cover performance, security and reliability. [K]
+  north_american_example: 'EX-096 (Design a Market Intelligence Product) on synthetic North American data: requirements_with_working_exercise = 8 [EX]'
+  terminal_activity: python3 emi.py run 096 | grep '^requirements_with_working_exercise:'
+  expected_result: 'requirements_with_working_exercise: 8'
+  professional_application: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.07.2
+  after: L11.07.4
+  status: written_command_verified
+- id: L11.07.4
+  title: Technical debt management
+  objective: Explain technical debt management and show it in the EX-096 output.
+  prerequisites:
+  - L11.07.3
+  market_lesson: Technical debt is rework owed; plan it. [K]
+  north_american_example: 'EX-096 (Design a Market Intelligence Product) on synthetic North American data: requirements_with_automated_test = 8 [EX]'
+  terminal_activity: python3 emi.py run 096 | grep '^requirements_with_automated_test:'
+  expected_result: 'requirements_with_automated_test: 8'
+  professional_application: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.07.3
+  after: L11.07.5
+  status: written_command_verified
+- id: L11.07.5
+  title: Backlog grooming
+  objective: Explain backlog grooming and show it in the EX-096 output.
+  prerequisites:
+  - L11.07.4
+  market_lesson: Grooming keeps the backlog ordered and ready. [K]
+  north_american_example: 'EX-096 (Design a Market Intelligence Product) on synthetic North American data: untested_requirements = none [EX]'
+  terminal_activity: python3 emi.py run 096 | grep '^untested_requirements:'
+  expected_result: 'untested_requirements: none'
+  professional_application: Create a product specification for an integrated gas and power analytics platform, including users, workflows, data requirements, and acceptance criteria.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.07.4
+  after: L11.08.1
+  status: written_command_verified

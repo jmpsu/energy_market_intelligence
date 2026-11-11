@@ -1,0 +1,68 @@
+section: '5.3'
+title: Y-grade and mixed NGL transportation
+lessons:
+- id: L05.03.1
+  title: Y-grade definition
+  prerequisite: L05.02.5
+  status: written
+  objective: Define Y-grade.
+  market_lesson: Y-grade is the mixed NGL stream from a gas plant, either fractionated locally or piped long distance to a hub [S9].
+  example: 'EX-039 Y-grade: 40% ethane, 28% propane, 11% nC4, 7% iC4, 14% C5+ by volume.'
+  terminal_activity: cat data/synthetic/ex039_ygrade.csv
+  expected_result: Five fractions summing to 1.00.
+  professional_application: Most barrels leave the plant as Y-grade; purity products appear only after the fractionator.
+  product_implication: Volume records need a composition attached or they cannot be valued.
+  builds_on: L05.02.5
+  leads_to: L05.03.2
+- id: L05.03.2
+  title: Y-grade pipelines
+  prerequisite: L05.03.1
+  status: written
+  objective: List how NGLs move.
+  market_lesson: HGLs move as mixtures or as purity products by pipeline, rail, truck, ship and barge [S4].
+  example: EX-043 moves 100,000 bbl over pipeline, rail, truck and marine arcs.
+  terminal_activity: python3 emi.py run 043
+  expected_result: 'base_total_cost_USD: 246500; base_avg_cost_USD_per_bbl: 2.465'
+  professional_application: Logistics schedulers pick the mode; marketers price the differential it creates.
+  product_implication: Mode, capacity and cost per arc are the minimum logistics data model.
+  builds_on: L05.03.1
+  leads_to: L05.03.3
+- id: L05.03.3
+  title: Transport and fractionation fees
+  prerequisite: L05.03.2
+  status: written
+  objective: Add transport and fractionation (T&F) fees to get a plant netback.
+  market_lesson: Netback at the plant = hub price - T&F fee. The fee is paid per gallon whether or not the product is worth it [EX].
+  example: Ethane 0.235 at the hub less 0.08 T&F = 0.155 USD/gal netback, below its 0.2161 fuel value.
+  terminal_activity: python3 emi.py run 038
+  expected_result: 'ethane_netback_USD_per_gal: 0.155'
+  professional_application: Producers are paid on netbacks, not hub prices; every statement shows the deduction.
+  product_implication: Fee schedules by contract are required inputs to any netback or margin screen.
+  builds_on: L05.03.2
+  leads_to: L05.03.4
+- id: L05.03.4
+  title: Quality and batching
+  prerequisite: L05.03.3
+  status: written
+  objective: Explain why mixed streams need quality tracking.
+  market_lesson: A Y-grade barrel's value depends on its composition. The same price per gallon on two streams with different ethane content is a different deal [EX].
+  example: 'EX-039: ethane is 40% of the volume but 14.1% of the value.'
+  terminal_activity: python3 emi.py run 039
+  expected_result: 'ethane_volume_share_pct: 40; ethane_value_share_pct: 14.073963'
+  professional_application: Quality disputes at custody transfer are settled on the component analysis.
+  product_implication: Store measured composition per ticket; compute value from it.
+  builds_on: L05.03.3
+  leads_to: L05.03.5
+- id: L05.03.5
+  title: Logistics constraints
+  prerequisite: L05.03.4
+  status: written
+  objective: Quantify a logistics constraint.
+  market_lesson: When the cheapest arc is cut, barrels move to costlier modes or are stranded. The extra cost per barrel of lost capacity is what that capacity is worth [EX].
+  example: Halving the Conway to Mont Belvieu pipeline raises cost by 73,750 USD (3.28 USD per barrel of lost capacity) and puts 2,500 bbl on trucks. A full outage strands 5,000 bbl at Conway.
+  terminal_activity: python3 emi.py run 043 outage_arc=A1 outage_frac=1
+  expected_result: 'outage_feasible: False; stranded_at_Conway_bbl: 5000'
+  professional_application: Constraint value is the argument for (or against) signing a pipeline commitment.
+  product_implication: Constraint what-if is a high-value simulation workflow; show cost and stranded volume together.
+  builds_on: L05.03.4
+  leads_to: L05.04.1

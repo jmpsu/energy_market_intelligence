@@ -1,0 +1,5 @@
+period,henry_hub_USD_per_MMBtu,waha_USD_per_MMBtu,production_Bcf_d,pipeline_capacity_Bcf_d,regional_demand_Bcf_d,waha_basis_USD_per_MMBtu,surplus_Bcf_d,revenue_gap_vs_HH_USD_per_d,waha_revenue_USD_per_d
+Period_1,3.25,1.1,23.0,20.5,2.0,-2.15,0.5,49449999.99999999,25300000.0
+Period_2,3.25,-0.4,25.0,20.0,2.0,-3.65,3.0,91250000.0,-10000000.0
+Period_3,3.4,-1.25,26.0,19.5,2.0,-4.65,4.5,120900000.0,-32500000.0
+Period_4,3.1,0.25,24.0,21.0,2.0,-2.85,1.0,68400000.0,6000000.0

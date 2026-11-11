@@ -1,0 +1,74 @@
+section: '12.2'
+title: Cross-commodity portfolio exposure
+exercise: EX-068
+lessons:
+- id: L12.02.1
+  title: Exposure mapping across commodities
+  objective: Explain exposure mapping across commodities and show it in the EX-068 output.
+  prerequisites:
+  - L12.01.5
+  market_lesson: Map each asset's exposure to gas, power and NGL prices. [K]
+  north_american_example: 'EX-068 (Build a Multi-Commodity Asset Optimization Model) on synthetic North American data: gas_unit_margin_USD = 343055.555556 [EX]'
+  terminal_activity: python3 emi.py run 068 | grep '^gas_unit_margin_USD:'
+  expected_result: 'gas_unit_margin_USD: 343055.555556'
+  professional_application: Optimize a portfolio containing gas supply, gas-fired generation, renewable assets, storage, and electricity market positions.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.01.5
+  after: L12.02.2
+  status: written_command_verified
+- id: L12.02.2
+  title: Cross-commodity correlations
+  objective: Explain cross-commodity correlations and show it in the EX-068 output.
+  prerequisites:
+  - L12.02.1
+  market_lesson: Correlations determine how exposures offset. [K]
+  north_american_example: 'EX-068 (Build a Multi-Commodity Asset Optimization Model) on synthetic North American data: gas_unit_margin_unconstrained_USD = 429400 [EX]'
+  terminal_activity: python3 emi.py run 068 | grep '^gas_unit_margin_unconstrained_USD:'
+  expected_result: 'gas_unit_margin_unconstrained_USD: 429400'
+  professional_application: Optimize a portfolio containing gas supply, gas-fired generation, renewable assets, storage, and electricity market positions.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.02.1
+  after: L12.02.3
+  status: written_command_verified
+- id: L12.02.3
+  title: Net position
+  objective: Explain net position and show it in the EX-068 output.
+  prerequisites:
+  - L12.02.2
+  market_lesson: Net position sums exposures in common units. [K]
+  north_american_example: 'EX-068 (Build a Multi-Commodity Asset Optimization Model) on synthetic North American data: cost_of_gas_limit_USD = 86344.444444 [EX]'
+  terminal_activity: python3 emi.py run 068 | grep '^cost_of_gas_limit_USD:'
+  expected_result: 'cost_of_gas_limit_USD: 86344.444444'
+  professional_application: Optimize a portfolio containing gas supply, gas-fired generation, renewable assets, storage, and electricity market positions.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.02.2
+  after: L12.02.4
+  status: written_command_verified
+- id: L12.02.4
+  title: Hedge ratio
+  objective: Explain hedge ratio and show it in the EX-068 output.
+  prerequisites:
+  - L12.02.3
+  market_lesson: Hedge ratio is hedge size per unit of exposure. [K]
+  north_american_example: 'EX-068 (Build a Multi-Commodity Asset Optimization Model) on synthetic North American data: gas_burn_MMBtu = 40000 [EX]'
+  terminal_activity: python3 emi.py run 068 | grep '^gas_burn_MMBtu:'
+  expected_result: 'gas_burn_MMBtu: 40000'
+  professional_application: Optimize a portfolio containing gas supply, gas-fired generation, renewable assets, storage, and electricity market positions.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.02.3
+  after: L12.02.5
+  status: written_command_verified
+- id: L12.02.5
+  title: Exposure report
+  objective: Explain exposure report and show it in the EX-068 output.
+  prerequisites:
+  - L12.02.4
+  market_lesson: An exposure report shows net position by commodity and period. [K]
+  north_american_example: 'EX-068 (Build a Multi-Commodity Asset Optimization Model) on synthetic North American data: gas_unit_MWh = 5555.555556 [EX]'
+  terminal_activity: python3 emi.py run 068 | grep '^gas_unit_MWh:'
+  expected_result: 'gas_unit_MWh: 5555.555556'
+  professional_application: Optimize a portfolio containing gas supply, gas-fired generation, renewable assets, storage, and electricity market positions.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.02.4
+  after: L12.03.1
+  status: written_command_verified

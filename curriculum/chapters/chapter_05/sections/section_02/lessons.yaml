@@ -1,0 +1,68 @@
+section: '5.2'
+title: NGL extraction and recovery
+lessons:
+- id: L05.02.1
+  title: Cryogenic vs lean-oil recovery
+  prerequisite: L05.01.5
+  status: written
+  objective: Explain how a gas plant extracts NGLs.
+  market_lesson: Raw wet gas is cooled and pressurised so the heavier hydrocarbons condense and separate from the gas stream [S3]. Liquids extracted at gas plants are called natural gas plant liquids [S3].
+  example: 'Synthetic plant: 200,000 Mcf/d inlet, 979,408 gal/d of liquids in recovery mode.'
+  terminal_activity: python3 emi.py run 037
+  expected_result: 'ngl_gal_per_d: 979407.6'
+  professional_application: Plant operators choose operating mode daily or monthly; commercial teams tell them which mode pays.
+  product_implication: Plant-level operating mode is a time series the product must store, not a static attribute.
+  builds_on: L05.01.5
+  leads_to: L05.02.2
+- id: L05.02.2
+  title: Recovery efficiency by component
+  prerequisite: L05.02.1
+  status: written
+  objective: Apply component recovery factors.
+  market_lesson: A plant recovers a different fraction of each component. Heavier components are recovered almost completely; ethane recovery is the one that swings [S10].
+  example: 'Synthetic factors: ethane 85% in recovery mode, 10% in rejection; propane 98% vs 90%.'
+  terminal_activity: python3 emi.py run 037 mode=reject
+  expected_result: 'ngl_bbl_per_d: 12786.86; Ethane_bbl_per_d: 1334.5'
+  professional_application: Recovery factors are how analysts turn a gas forecast into a product-by-product supply forecast.
+  product_implication: 'Recovery factors by plant and mode are calibration data: version them and show their source.'
+  builds_on: L05.02.1
+  leads_to: L05.02.3
+- id: L05.02.3
+  title: Shrink and plant fuel
+  prerequisite: L05.02.2
+  status: written
+  objective: Compute shrink and its cost.
+  market_lesson: Shrink cost = shrink MMBtu x gas price. It is the largest variable cost of making liquids [EX].
+  example: 'Recovery mode: 80,968 MMBtu/d x 3.25 = 263,144 USD/d.'
+  terminal_activity: python3 emi.py run 037
+  expected_result: 'shrink_cost_USD_per_d: 263144.38'
+  professional_application: 'Shrink links the NGL book to the gas book: long liquids, short gas.'
+  product_implication: Cross-commodity exposure (NGL vs gas) must be reportable in one view.
+  builds_on: L05.02.2
+  leads_to: L05.02.4
+- id: L05.02.4
+  title: Processing margin (frac spread)
+  prerequisite: L05.02.3
+  status: written
+  objective: Compute the frac spread (processing margin).
+  market_lesson: 'Frac spread = NGL value per MMBtu of shrink minus gas price. It is the uplift from selling molecules as liquids instead of as gas. Gross: before transport, fractionation and plant fuel [EX].'
+  example: 'Base: 7.075 - 3.25 = 3.825 USD/MMBtu. Gas at 5.00 cuts it to 2.075.'
+  terminal_activity: python3 emi.py run 037 gas_price=5
+  expected_result: 'frac_spread_USD_per_MMBtu: 2.075042'
+  professional_application: The frac spread is the single most watched processing-margin indicator.
+  product_implication: A frac-spread calculator with user-set composition is a table-stakes analytics feature.
+  builds_on: L05.02.3
+  leads_to: L05.02.5
+- id: L05.02.5
+  title: Recovery optimization
+  prerequisite: L05.02.4
+  status: written
+  objective: State how contract type decides who bears frac-spread risk.
+  market_lesson: 'Fee-based: processor earns a fee, producer keeps commodity exposure. Percent-of-proceeds: both share NGL and gas price. Keep-whole: processor keeps liquids, returns the Btu as gas, and holds the full frac-spread exposure [K].'
+  example: Under keep-whole the 3.825 USD/MMBtu spread belongs to the processor; a gas spike can turn it negative.
+  terminal_activity: python3 emi.py run 037 gas_price=7.5
+  expected_result: 'frac_spread_USD_per_MMBtu: -0.424958 (negative: liquids worth less than their gas value)'
+  professional_application: Knowing a counterparty's contract mix tells you how they will react to prices.
+  product_implication: Contract type must be a field on processing agreements; it changes the exposure calculation.
+  builds_on: L05.02.4
+  leads_to: L05.03.1

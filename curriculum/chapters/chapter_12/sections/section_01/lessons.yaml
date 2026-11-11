@@ -1,0 +1,74 @@
+section: '12.1'
+title: Integrated gas and power market fundamentals
+exercise: EX-066
+lessons:
+- id: L12.01.1
+  title: Gas-power coupling
+  objective: Explain gas-power coupling and show it in the EX-066 output.
+  prerequisites:
+  - L11.10.5
+  market_lesson: Gas plants link the gas and power markets. [K]
+  north_american_example: 'EX-066 (Model Gas-Electric Coordination) on synthetic North American data: fuel_needed_MMBtu_per_h = 7200 [EX]'
+  terminal_activity: python3 emi.py run 066 | grep '^fuel_needed_MMBtu_per_h:'
+  expected_result: 'fuel_needed_MMBtu_per_h: 7200'
+  professional_application: Simulate how gas pipeline constraints affect the availability and dispatch of gas-fired power generators.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L11.10.5
+  after: L12.01.2
+  status: written_command_verified
+- id: L12.01.2
+  title: Fuel-driven price formation
+  objective: Explain fuel-driven price formation and show it in the EX-066 output.
+  prerequisites:
+  - L12.01.1
+  market_lesson: When gas is marginal, power price follows gas price times heat rate. [K]
+  north_american_example: 'EX-066 (Model Gas-Electric Coordination) on synthetic North American data: fuel_available_MMBtu_per_h = 5000 [EX]'
+  terminal_activity: python3 emi.py run 066 | grep '^fuel_available_MMBtu_per_h:'
+  expected_result: 'fuel_available_MMBtu_per_h: 5000'
+  professional_application: Simulate how gas pipeline constraints affect the availability and dispatch of gas-fired power generators.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.01.1
+  after: L12.01.3
+  status: written_command_verified
+- id: L12.01.3
+  title: Weather as joint driver
+  objective: Explain weather as joint driver and show it in the EX-066 output.
+  prerequisites:
+  - L12.01.2
+  market_lesson: Cold or heat raises gas and power demand together. [K]
+  north_american_example: 'EX-066 (Model Gas-Electric Coordination) on synthetic North American data: fuel_shortfall_pct = 30.555556 [EX]'
+  terminal_activity: python3 emi.py run 066 | grep '^fuel_shortfall_pct:'
+  expected_result: 'fuel_shortfall_pct: 30.555556'
+  professional_application: Simulate how gas pipeline constraints affect the availability and dispatch of gas-fired power generators.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.01.2
+  after: L12.01.4
+  status: written_command_verified
+- id: L12.01.4
+  title: Integrated balance
+  objective: Explain integrated balance and show it in the EX-066 output.
+  prerequisites:
+  - L12.01.3
+  market_lesson: An integrated balance tracks both commodities. [K]
+  north_american_example: 'EX-066 (Model Gas-Electric Coordination) on synthetic North American data: output_MW = 675 [EX]'
+  terminal_activity: python3 emi.py run 066 | grep '^output_MW:'
+  expected_result: 'output_MW: 675'
+  professional_application: Simulate how gas pipeline constraints affect the availability and dispatch of gas-fired power generators.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.01.3
+  after: L12.01.5
+  status: written_command_verified
+- id: L12.01.5
+  title: Fundamentals briefing
+  objective: Explain fundamentals briefing and show it in the EX-066 output.
+  prerequisites:
+  - L12.01.4
+  market_lesson: A fundamentals briefing states drivers, balance and risks. [K]
+  north_american_example: 'EX-066 (Model Gas-Electric Coordination) on synthetic North American data: lost_MW = 225 [EX]'
+  terminal_activity: python3 emi.py run 066 | grep '^lost_MW:'
+  expected_result: 'lost_MW: 225'
+  professional_application: Simulate how gas pipeline constraints affect the availability and dispatch of gas-fired power generators.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.01.4
+  after: L12.02.1
+  status: written_command_verified

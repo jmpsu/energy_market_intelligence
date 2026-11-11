@@ -1,0 +1,5 @@
+trade_id,trade_date,commodity,counterparty,location,side,volume,unit,price,start_date,end_date,contract_type,signed_volume,notional_USD
+TR001,2026-01-05,Natural_Gas,Producer_A,Henry_Hub,BUY,100000,MMBtu,3.2,2026-02-01,2026-02-28,physical_fixed,100000,320000.0
+TR002,2026-01-05,Natural_Gas,Utility_A,Algonquin,SELL,60000,MMBtu,8.5,2026-02-01,2026-02-28,physical_fixed,-60000,510000.0
+TR003,2026-01-05,Electricity,IPP_F,PJM_West,BUY,16000,MWh,45.0,2026-02-01,2026-02-28,financial_swap,16000,720000.0
+TR004,2026-01-05,Propane,Marketer_I,Mont_Belvieu,BUY,2000000,gal,0.7,2026-02-01,2026-02-28,physical_fixed,2000000,1400000.0

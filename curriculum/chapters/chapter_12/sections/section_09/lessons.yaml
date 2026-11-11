@@ -1,0 +1,74 @@
+section: '12.9'
+title: Product roadmap and commercial opportunity
+exercise: EX-098
+lessons:
+- id: L12.09.1
+  title: Opportunity sizing
+  objective: Explain opportunity sizing and show it in the EX-098 output.
+  prerequisites:
+  - L12.08.5
+  market_lesson: Opportunity sizing estimates value before building. [K]
+  north_american_example: 'EX-098 (Build Product Performance Metrics) on synthetic North American data: adoption_wau_pct_of_licensed = 46 [EX]'
+  terminal_activity: python3 emi.py run 098 | grep '^adoption_wau_pct_of_licensed:'
+  expected_result: 'adoption_wau_pct_of_licensed: 46'
+  professional_application: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.08.5
+  after: L12.09.2
+  status: written_command_verified
+- id: L12.09.2
+  title: Roadmap construction
+  objective: Explain roadmap construction and show it in the EX-098 output.
+  prerequisites:
+  - L12.09.1
+  market_lesson: A roadmap sequences the work. [K]
+  north_american_example: 'EX-098 (Build Product Performance Metrics) on synthetic North American data: week8_retention_of_week1_users_pct = 47.826087 [EX]'
+  terminal_activity: python3 emi.py run 098 | grep '^week8_retention_of_week1_users_pct:'
+  expected_result: 'week8_retention_of_week1_users_pct: 47.826087'
+  professional_application: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.09.1
+  after: L12.09.3
+  status: written_command_verified
+- id: L12.09.3
+  title: KPI definition
+  objective: Explain kPI definition and show it in the EX-098 output.
+  prerequisites:
+  - L12.09.2
+  market_lesson: KPIs define success. [K]
+  north_american_example: 'EX-098 (Build Product Performance Metrics) on synthetic North American data: data_completeness_pct = 85.714286 [EX]'
+  terminal_activity: python3 emi.py run 098 | grep '^data_completeness_pct:'
+  expected_result: 'data_completeness_pct: 85.714286'
+  professional_application: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.09.2
+  after: L12.09.4
+  status: written_command_verified
+- id: L12.09.4
+  title: Business case
+  objective: Explain business case and show it in the EX-098 output.
+  prerequisites:
+  - L12.09.3
+  market_lesson: A business case compares benefit to cost. [K]
+  north_american_example: 'EX-098 (Build Product Performance Metrics) on synthetic North American data: model_backcast_mae_USD_per_MWh = 1.549857 [EX]'
+  terminal_activity: python3 emi.py run 098 | grep '^model_backcast_mae_USD_per_MWh:'
+  expected_result: 'model_backcast_mae_USD_per_MWh: 1.549857'
+  professional_application: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.09.3
+  after: L12.09.5
+  status: written_command_verified
+- id: L12.09.5
+  title: Roadmap review
+  objective: Explain roadmap review and show it in the EX-098 output.
+  prerequisites:
+  - L12.09.4
+  market_lesson: Review tests the roadmap against evidence. [K]
+  north_american_example: 'EX-098 (Build Product Performance Metrics) on synthetic North American data: net_revenue_retention_pct = 90.4 [EX]'
+  terminal_activity: python3 emi.py run 098 | grep '^net_revenue_retention_pct:'
+  expected_result: 'net_revenue_retention_pct: 90.4'
+  professional_application: Define KPIs for model accuracy, execution runtime, data quality, user adoption, customer retention, and commercial value.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.09.4
+  after: L12.10.1
+  status: written_command_verified

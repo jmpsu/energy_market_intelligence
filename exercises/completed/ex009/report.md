@@ -1,0 +1,20 @@
+# ex009 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+days: 60
+
+corr_gas_power: 0.566886
+
+corr_hdd_gas: 0.791867
+
+corr_hdd_storage_change: -0.99849
+
+mean_implied_heat_rate: 12.333135
+
+flagged_days: 24,31,41,49
+
+max_gas_z_day: 41
+
+storage_draw_total_Bcf: 1155
+
+NOTE: Synthetic series with an injected gas spike on day 41; the dashboard should flag it.
+

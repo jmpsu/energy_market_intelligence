@@ -1,0 +1,74 @@
+section: '8.7'
+title: Settlements and reconciliation
+exercise: EX-052
+lessons:
+- id: L08.07.1
+  title: Invoice generation
+  objective: Explain invoice generation and show it in the EX-052 output.
+  prerequisites:
+  - L08.06.5
+  market_lesson: Invoices are generated from actual volumes and contract prices. [K]
+  north_american_example: 'EX-052 (Model Electricity Market Settlements) on synthetic North American data: day_ahead_energy_USD = 21000 [EX]'
+  terminal_activity: python3 emi.py run 052 | grep '^day_ahead_energy_USD:'
+  expected_result: 'day_ahead_energy_USD: 21000'
+  professional_application: Calculate the financial difference between scheduled quantities, actual generation, and market settlement prices.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.06.5
+  after: L08.07.2
+  status: written_command_verified
+- id: L08.07.2
+  title: Price and volume checks
+  objective: Explain price and volume checks and show it in the EX-052 output.
+  prerequisites:
+  - L08.07.1
+  market_lesson: Price and volume are checked against the counterparty's statement. [K]
+  north_american_example: 'EX-052 (Model Electricity Market Settlements) on synthetic North American data: real_time_deviation_USD = 1800 [EX]'
+  terminal_activity: python3 emi.py run 052 | grep '^real_time_deviation_USD:'
+  expected_result: 'real_time_deviation_USD: 1800'
+  professional_application: Calculate the financial difference between scheduled quantities, actual generation, and market settlement prices.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.07.1
+  after: L08.07.3
+  status: written_command_verified
+- id: L08.07.3
+  title: Netting
+  objective: Explain netting and show it in the EX-052 output.
+  prerequisites:
+  - L08.07.2
+  market_lesson: Netting offsets amounts owed both ways. [K]
+  north_american_example: 'EX-052 (Model Electricity Market Settlements) on synthetic North American data: ancillary_services_USD = 795 [EX]'
+  terminal_activity: python3 emi.py run 052 | grep '^ancillary_services_USD:'
+  expected_result: 'ancillary_services_USD: 795'
+  professional_application: Calculate the financial difference between scheduled quantities, actual generation, and market settlement prices.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.07.2
+  after: L08.07.4
+  status: written_command_verified
+- id: L08.07.4
+  title: Dispute handling
+  objective: Explain dispute handling and show it in the EX-052 output.
+  prerequisites:
+  - L08.07.3
+  market_lesson: Disputes are logged, investigated and resolved under contract terms. [K]
+  north_american_example: 'EX-052 (Model Electricity Market Settlements) on synthetic North American data: shadow_total_USD = 23595 [EX]'
+  terminal_activity: python3 emi.py run 052 | grep '^shadow_total_USD:'
+  expected_result: 'shadow_total_USD: 23595'
+  professional_application: Calculate the financial difference between scheduled quantities, actual generation, and market settlement prices.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.07.3
+  after: L08.07.5
+  status: written_command_verified
+- id: L08.07.5
+  title: Settlement reconciliation
+  objective: Explain settlement reconciliation and show it in the EX-052 output.
+  prerequisites:
+  - L08.07.4
+  market_lesson: Settlement reconciliation ties invoices to cash. [K]
+  north_american_example: 'EX-052 (Model Electricity Market Settlements) on synthetic North American data: average_cost_USD_per_MWh = 44.518868 [EX]'
+  terminal_activity: python3 emi.py run 052 | grep '^average_cost_USD_per_MWh:'
+  expected_result: 'average_cost_USD_per_MWh: 44.518868'
+  professional_application: Calculate the financial difference between scheduled quantities, actual generation, and market settlement prices.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.07.4
+  after: L08.08.1
+  status: written_command_verified

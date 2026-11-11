@@ -1,0 +1,74 @@
+section: '8.6'
+title: Scheduling, nominations, and physical operations
+exercise: EX-074
+lessons:
+- id: L08.06.1
+  title: Power scheduling and e-Tags
+  objective: Explain power scheduling and e-Tags and show it in the EX-074 output.
+  prerequisites:
+  - L08.05.5
+  market_lesson: Power schedules are communicated with e-Tags naming the path from source to sink. [K]
+  north_american_example: 'EX-074 (Build a Physical Gas Scheduling Workflow) on synthetic North American data: receipt_needed_MMBtu = 56122.44898 [EX]'
+  terminal_activity: python3 emi.py run 074 | grep '^receipt_needed_MMBtu:'
+  expected_result: 'receipt_needed_MMBtu: 56122.44898'
+  professional_application: Connect trade quantities to transportation capacity, nominations, confirmations, and delivery schedules.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.05.5
+  after: L08.06.2
+  status: written_command_verified
+- id: L08.06.2
+  title: Gas nominations
+  objective: Explain gas nominations and show it in the EX-074 output.
+  prerequisites:
+  - L08.06.1
+  market_lesson: Gas schedules are nominated to pipelines. [K]
+  north_american_example: 'EX-074 (Build a Physical Gas Scheduling Workflow) on synthetic North American data: receipt_nominated_MMBtu = 50000 [EX]'
+  terminal_activity: python3 emi.py run 074 | grep '^receipt_nominated_MMBtu:'
+  expected_result: 'receipt_nominated_MMBtu: 50000'
+  professional_application: Connect trade quantities to transportation capacity, nominations, confirmations, and delivery schedules.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.06.1
+  after: L08.06.3
+  status: written_command_verified
+- id: L08.06.3
+  title: Actualization
+  objective: Explain actualization and show it in the EX-074 output.
+  prerequisites:
+  - L08.06.2
+  market_lesson: Actualisation replaces scheduled volumes with measured ones. [K]
+  north_american_example: 'EX-074 (Build a Physical Gas Scheduling Workflow) on synthetic North American data: fuel_retained_MMBtu = 1000 [EX]'
+  terminal_activity: python3 emi.py run 074 | grep '^fuel_retained_MMBtu:'
+  expected_result: 'fuel_retained_MMBtu: 1000'
+  professional_application: Connect trade quantities to transportation capacity, nominations, confirmations, and delivery schedules.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.06.2
+  after: L08.06.4
+  status: written_command_verified
+- id: L08.06.4
+  title: Scheduling systems
+  objective: Explain scheduling systems and show it in the EX-074 output.
+  prerequisites:
+  - L08.06.3
+  market_lesson: Scheduling systems send nominations and receive confirmations. [K]
+  north_american_example: 'EX-074 (Build a Physical Gas Scheduling Workflow) on synthetic North American data: delivered_MMBtu = 49000 [EX]'
+  terminal_activity: python3 emi.py run 074 | grep '^delivered_MMBtu:'
+  expected_result: 'delivered_MMBtu: 49000'
+  professional_application: Connect trade quantities to transportation capacity, nominations, confirmations, and delivery schedules.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.06.3
+  after: L08.06.5
+  status: written_command_verified
+- id: L08.06.5
+  title: Schedule reconciliation
+  objective: Explain schedule reconciliation and show it in the EX-074 output.
+  prerequisites:
+  - L08.06.4
+  market_lesson: Scheduled, confirmed and actual volumes are reconciled daily. [K]
+  north_american_example: 'EX-074 (Build a Physical Gas Scheduling Workflow) on synthetic North American data: delivery_shortfall_MMBtu = 6000 [EX]'
+  terminal_activity: python3 emi.py run 074 | grep '^delivery_shortfall_MMBtu:'
+  expected_result: 'delivery_shortfall_MMBtu: 6000'
+  professional_application: Connect trade quantities to transportation capacity, nominations, confirmations, and delivery schedules.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.06.4
+  after: L08.07.1
+  status: written_command_verified

@@ -1,0 +1,4 @@
+bus,load_MW,gen_capacity_MW,gen_cost_USD_per_MWh,gen_MW,lmp,energy_component,congestion_component,unconstrained_gen_MW,unconstrained_lmp
+1,0,400,20,150.0,20.0,80.0,-60.0,300.0,20.0
+2,0,400,50,150.0,50.0,80.0,-30.0,0.0,20.0
+3,300,0,0,0.0,80.0,80.0,0.0,0.0,20.0

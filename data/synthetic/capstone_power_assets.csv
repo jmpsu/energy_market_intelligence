@@ -1,0 +1,5 @@
+asset_id,technology,capacity_MW,heat_rate_MMBtu_per_MWh,variable_cost_USD_per_MWh
+P001,Natural_Gas_Generator,500,7.2,3.00
+P002,Solar,150,0,0
+P003,Wind,100,0,0
+P004,Battery,100,0,5.00

@@ -1,0 +1,24 @@
+# ex034 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+months: 36
+
+mean_ttf_minus_hh: 4.970833
+
+corr_hh_ttf_changes: -0.191259
+
+corr_ttf_jkm_changes: 0.913289
+
+months_full_cost_arb_open: 15
+
+months_variable_arb_open: 26
+
+months_asia_preferred: 15
+
+max_ttf: 18.52
+
+min_full_cost_margin: -3.854
+
+NOTE: Synthetic series with an injected European price spike and a later slump: NOT historical prices.
+
+NOTE: Cargoes keep lifting while the variable margin is positive even if the full-cost margin is negative, because the toll is sunk.
+

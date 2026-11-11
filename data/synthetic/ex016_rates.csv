@@ -1,0 +1,8 @@
+parameter,value,unit
+firm_reservation,0.45,USD_per_MMBtu_per_day_of_MDQ
+firm_commodity,0.02,USD_per_MMBtu
+fuel_pct,1.5,percent
+it_rate,0.55,USD_per_MMBtu
+mdq,50000,MMBtu_per_day
+days,30,days
+downstream_price,3.60,USD_per_MMBtu

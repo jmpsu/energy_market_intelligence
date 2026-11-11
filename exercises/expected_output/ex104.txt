@@ -1,0 +1,16 @@
+ex104 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+samples: 5
+on_spec_samples: 2
+off_spec_samples: S2,S3,S5
+off_spec_volume_gal: 1300000
+off_spec_pct_of_volume: 50
+discount_exposure_USD: 65000
+tests_run: 15
+tests_failed: 4
+compositions_sum_to_100: True
+S1_failed: none
+S2_failed: ethane
+S3_failed: butanes_plus
+S4_failed: none
+S5_failed: methane,ethane
+NOTE: Specification limits here are invented for the exercise; actual limits come from the pipeline, fractionator or industry specification named in the contract.

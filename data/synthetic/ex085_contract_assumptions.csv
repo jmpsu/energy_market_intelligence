@@ -1,0 +1,5 @@
+parameter,value,unit
+seasonal_HDD_strike,450,degree_days
+payout_per_HDD,10000,USD_per_degree_day
+maximum_payout,2000000,USD
+contract_direction,Put,below_strike

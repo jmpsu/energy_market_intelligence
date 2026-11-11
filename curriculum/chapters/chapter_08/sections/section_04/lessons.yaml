@@ -1,0 +1,74 @@
+section: '8.4'
+title: Position management and portfolio accounting
+exercise: EX-075
+lessons:
+- id: L08.04.1
+  title: Position aggregation
+  objective: Explain position aggregation and show it in the EX-075 output.
+  prerequisites:
+  - L08.03.5
+  market_lesson: Positions aggregate by commodity, location and delivery period. [K]
+  north_american_example: 'EX-075 (Reconcile Physical and Financial Positions) on synthetic North American data: T001_mtm_USD = 5000 [EX]'
+  terminal_activity: python3 emi.py run 075 | grep '^T001_mtm_USD:'
+  expected_result: 'T001_mtm_USD: 5000'
+  professional_application: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.03.5
+  after: L08.04.2
+  status: written_command_verified
+- id: L08.04.2
+  title: Book and portfolio hierarchy
+  objective: Explain book and portfolio hierarchy and show it in the EX-075 output.
+  prerequisites:
+  - L08.04.1
+  market_lesson: Books roll up into portfolios and desks. [K]
+  north_american_example: 'EX-075 (Reconcile Physical and Financial Positions) on synthetic North American data: T002_mtm_USD = -120000 [EX]'
+  terminal_activity: python3 emi.py run 075 | grep '^T002_mtm_USD:'
+  expected_result: 'T002_mtm_USD: -120000'
+  professional_application: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.04.1
+  after: L08.04.3
+  status: written_command_verified
+- id: L08.04.3
+  title: Hedge designation
+  objective: Explain hedge designation and show it in the EX-075 output.
+  prerequisites:
+  - L08.04.2
+  market_lesson: Hedge designation links a hedge to the exposure it offsets. [K]
+  north_american_example: 'EX-075 (Reconcile Physical and Financial Positions) on synthetic North American data: T003_mtm_USD = -105000 [EX]'
+  terminal_activity: python3 emi.py run 075 | grep '^T003_mtm_USD:'
+  expected_result: 'T003_mtm_USD: -105000'
+  professional_application: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.04.2
+  after: L08.04.4
+  status: written_command_verified
+- id: L08.04.4
+  title: Accrual vs mark-to-market accounting
+  objective: Explain accrual vs mark-to-market accounting and show it in the EX-075 output.
+  prerequisites:
+  - L08.04.3
+  market_lesson: Accrual accounting recognises value at delivery; mark-to-market recognises it daily. [K]
+  north_american_example: 'EX-075 (Reconcile Physical and Financial Positions) on synthetic North American data: T004_mtm_USD = -15000 [EX]'
+  terminal_activity: python3 emi.py run 075 | grep '^T004_mtm_USD:'
+  expected_result: 'T004_mtm_USD: -15000'
+  professional_application: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.04.3
+  after: L08.04.5
+  status: written_command_verified
+- id: L08.04.5
+  title: Position reporting
+  objective: Explain position reporting and show it in the EX-075 output.
+  prerequisites:
+  - L08.04.4
+  market_lesson: Position reports are the daily common truth for traders and risk. [K]
+  north_american_example: 'EX-075 (Reconcile Physical and Financial Positions) on synthetic North American data: T005_mtm_USD = 4000 [EX]'
+  terminal_activity: python3 emi.py run 075 | grep '^T005_mtm_USD:'
+  expected_result: 'T005_mtm_USD: 4000'
+  professional_application: Compare contracted volumes, scheduled quantities, delivered quantities, and financial settlements.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.04.4
+  after: L08.05.1
+  status: written_command_verified

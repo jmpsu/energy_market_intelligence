@@ -1,0 +1,4 @@
+line,from_bus,to_bus,reactance_pu,limit_MW
+L12,1,2,0.1,1000
+L13,1,3,0.1,150
+L23,2,3,0.1,1000

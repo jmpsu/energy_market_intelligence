@@ -1,0 +1,74 @@
+section: '8.2'
+title: Trade capture and transaction management
+exercise: EX-069
+lessons:
+- id: L08.02.1
+  title: Trade attributes
+  objective: Explain trade attributes and show it in the EX-069 output.
+  prerequisites:
+  - L08.01.5
+  market_lesson: A trade record holds counterparty, commodity, location, volume, price, term and book. [K]
+  north_american_example: 'EX-069 (Build a Trade Capture System) on synthetic North American data: submitted = 9 [EX]'
+  terminal_activity: python3 emi.py run 069 | grep '^submitted:'
+  expected_result: 'submitted: 9'
+  professional_application: Create a structured trade record containing commodity, counterparty, location, volume, price, delivery period, and contract type.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.01.5
+  after: L08.02.2
+  status: written_command_verified
+- id: L08.02.2
+  title: Deal types and templates
+  objective: Explain deal types and templates and show it in the EX-069 output.
+  prerequisites:
+  - L08.02.1
+  market_lesson: Templates standardise common deal types. [K]
+  north_american_example: 'EX-069 (Build a Trade Capture System) on synthetic North American data: accepted = 4 [EX]'
+  terminal_activity: python3 emi.py run 069 | grep '^accepted:'
+  expected_result: 'accepted: 4'
+  professional_application: Create a structured trade record containing commodity, counterparty, location, volume, price, delivery period, and contract type.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.02.1
+  after: L08.02.3
+  status: written_command_verified
+- id: L08.02.3
+  title: Trade validation
+  objective: Explain trade validation and show it in the EX-069 output.
+  prerequisites:
+  - L08.02.2
+  market_lesson: Validation rejects trades with missing or impossible values at entry. [K]
+  north_american_example: 'EX-069 (Build a Trade Capture System) on synthetic North American data: rejected = 5 [EX]'
+  terminal_activity: python3 emi.py run 069 | grep '^rejected:'
+  expected_result: 'rejected: 5'
+  professional_application: Create a structured trade record containing commodity, counterparty, location, volume, price, delivery period, and contract type.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.02.2
+  after: L08.02.4
+  status: written_command_verified
+- id: L08.02.4
+  title: Amendments and audit trail
+  objective: Explain amendments and audit trail and show it in the EX-069 output.
+  prerequisites:
+  - L08.02.3
+  market_lesson: Amendments create new versions; the audit trail keeps the old ones. [K]
+  north_american_example: 'EX-069 (Build a Trade Capture System) on synthetic North American data: reject_reasons = TR005:missing_counterparty,TR006:non_positive_volume,TR007:end_before_start,TR008:unknown_commodity,TR009:unit_mismatch [EX]'
+  terminal_activity: python3 emi.py run 069 | grep '^reject_reasons:'
+  expected_result: 'reject_reasons: TR005:missing_counterparty,TR006:non_positive_volume,TR007:end_before_start,TR008:unknown_commodity,TR009:unit_mismatch'
+  professional_application: Create a structured trade record containing commodity, counterparty, location, volume, price, delivery period, and contract type.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.02.3
+  after: L08.02.5
+  status: written_command_verified
+- id: L08.02.5
+  title: Trade capture implementation
+  objective: Explain trade capture implementation and show it in the EX-069 output.
+  prerequisites:
+  - L08.02.4
+  market_lesson: Trade capture is the first module every other ETRM function depends on. [K]
+  north_american_example: 'EX-069 (Build a Trade Capture System) on synthetic North American data: accepted_notional_USD = 2950000 [EX]'
+  terminal_activity: python3 emi.py run 069 | grep '^accepted_notional_USD:'
+  expected_result: 'accepted_notional_USD: 2950000'
+  professional_application: Create a structured trade record containing commodity, counterparty, location, volume, price, delivery period, and contract type.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.02.4
+  after: L08.03.1
+  status: written_command_verified

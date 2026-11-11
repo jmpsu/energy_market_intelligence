@@ -1,0 +1,6 @@
+trade_id,trade_date,commodity,counterparty,location,side,volume,unit,price,start_date,end_date,contract_type,reason
+TR005,2026-01-05,Natural_Gas,,Waha,BUY,80000,MMBtu,1.1,2026-02-01,2026-02-28,physical_index,missing_counterparty
+TR006,2026-01-05,Natural_Gas,Trader_J,Henry_Hub,SELL,-40000,MMBtu,3.15,2026-02-01,2026-02-28,financial_swap,non_positive_volume
+TR007,2026-01-05,Electricity,IPP_F,ERCOT_North,SELL,8000,MWh,52.0,2026-03-01,2026-02-01,financial_swap,end_before_start
+TR008,2026-01-05,Crude_Oil,Trader_J,Cushing,BUY,1000,bbl,70.0,2026-02-01,2026-02-28,financial_swap,unknown_commodity
+TR009,2026-01-05,Ethane,Marketer_I,Mont_Belvieu,BUY,3000000,MMBtu,0.24,2026-02-01,2026-02-28,physical_fixed,unit_mismatch

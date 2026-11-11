@@ -1,0 +1,74 @@
+section: '4.9'
+title: Global Henry Hub, TTF, and JKM relationships
+exercise: EX-034
+lessons:
+- id: L04.09.1
+  title: Global benchmark definitions
+  objective: Explain global benchmark definitions and show it in the EX-034 output.
+  prerequisites:
+  - L04.08.5
+  market_lesson: TTF is the European gas benchmark; JKM is the Northeast Asian LNG benchmark. [K]
+  north_american_example: 'EX-034 (Compare Henry Hub, TTF, and JKM) on synthetic North American data: months = 36 [EX]'
+  terminal_activity: python3 emi.py run 034 | grep '^months:'
+  expected_result: 'months: 36'
+  professional_application: Analyze the relationship between North American, European, and Asian gas benchmarks.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.08.5
+  after: L04.09.2
+  status: written_command_verified
+- id: L04.09.2
+  title: Arbitrage and netback spreads
+  objective: Explain arbitrage and netback spreads and show it in the EX-034 output.
+  prerequisites:
+  - L04.09.1
+  market_lesson: The export arbitrage is open when the netback to the US Gulf exceeds Henry Hub-based cost. [K]
+  north_american_example: 'EX-034 (Compare Henry Hub, TTF, and JKM) on synthetic North American data: mean_ttf_minus_hh = 4.970833 [EX]'
+  terminal_activity: python3 emi.py run 034 | grep '^mean_ttf_minus_hh:'
+  expected_result: 'mean_ttf_minus_hh: 4.970833'
+  professional_application: Analyze the relationship between North American, European, and Asian gas benchmarks.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.09.1
+  after: L04.09.3
+  status: written_command_verified
+- id: L04.09.3
+  title: Shipping and tolling wedges
+  objective: Explain shipping and tolling wedges and show it in the EX-034 output.
+  prerequisites:
+  - L04.09.2
+  market_lesson: Shipping and tolling are the wedges between destination price and US price. [K]
+  north_american_example: 'EX-034 (Compare Henry Hub, TTF, and JKM) on synthetic North American data: corr_hh_ttf_changes = -0.191259 [EX]'
+  terminal_activity: python3 emi.py run 034 | grep '^corr_hh_ttf_changes:'
+  expected_result: 'corr_hh_ttf_changes: -0.191259'
+  professional_application: Analyze the relationship between North American, European, and Asian gas benchmarks.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.09.2
+  after: L04.09.4
+  status: written_command_verified
+- id: L04.09.4
+  title: Price transmission and decoupling
+  objective: Explain price transmission and decoupling and show it in the EX-034 output.
+  prerequisites:
+  - L04.09.3
+  market_lesson: Regional prices connect when cargoes can move and decouple when capacity is full. [K]
+  north_american_example: 'EX-034 (Compare Henry Hub, TTF, and JKM) on synthetic North American data: corr_ttf_jkm_changes = 0.913289 [EX]'
+  terminal_activity: python3 emi.py run 034 | grep '^corr_ttf_jkm_changes:'
+  expected_result: 'corr_ttf_jkm_changes: 0.913289'
+  professional_application: Analyze the relationship between North American, European, and Asian gas benchmarks.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.09.3
+  after: L04.09.5
+  status: written_command_verified
+- id: L04.09.5
+  title: Spread scenario analysis
+  objective: Explain spread scenario analysis and show it in the EX-034 output.
+  prerequisites:
+  - L04.09.4
+  market_lesson: Spread scenarios show which destination pulls cargoes and when lifting stops. [K]
+  north_american_example: 'EX-034 (Compare Henry Hub, TTF, and JKM) on synthetic North American data: months_full_cost_arb_open = 15 [EX]'
+  terminal_activity: python3 emi.py run 034 | grep '^months_full_cost_arb_open:'
+  expected_result: 'months_full_cost_arb_open: 15'
+  professional_application: Analyze the relationship between North American, European, and Asian gas benchmarks.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.09.4
+  after: L04.10.1
+  status: written_command_verified

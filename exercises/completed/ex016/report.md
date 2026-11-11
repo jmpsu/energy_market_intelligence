@@ -1,0 +1,24 @@
+# ex016 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+breakeven_load_factor: 0.849057
+
+firm_unit_cost_at_100pct: 0.47
+
+firm_unit_cost_at_50pct: 0.92
+
+spread: 0.8
+
+firm_monthly_margin_USD: 414000
+
+it_monthly_margin_USD: 205800
+
+firm_fixed_cost_USD: 675000
+
+spread_where_firm_breaks_even: 0.524
+
+preferred: firm
+
+NOTE: Interruptible is cut first: on the days the spread is widest it may not flow at all (it_available_pct).
+
+NOTE: Reservation charge is owed whether or not gas flows.
+

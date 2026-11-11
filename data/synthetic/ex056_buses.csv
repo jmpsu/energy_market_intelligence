@@ -1,0 +1,4 @@
+bus,load_MW,gen_capacity_MW,gen_cost_USD_per_MWh
+1,0,400,20
+2,0,400,50
+3,300,0,0

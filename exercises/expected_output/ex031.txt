@@ -1,0 +1,11 @@
+ex031 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+start_inventory_pct: 90
+end_inventory_pct: 14.5
+total_withdrawn_MMBtu: 7550000
+first_ratchet_day: 14
+end_deliverability_MMBtu_d: 100000
+total_unserved_MMBtu: 4450000
+days_with_shortfall: 40
+inventory_left_but_undeliverable_at_demand_rate: True
+NOTE: Deliverability falls as inventory falls: late-winter gas in the ground cannot all be delivered on the peak day.
+NOTE: Step ratchets are a simplification of pressure-driven deliverability curves.

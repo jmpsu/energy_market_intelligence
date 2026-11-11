@@ -1,0 +1,9 @@
+feature,customer_value,commercial_impact,feasibility,risk,effort_weeks
+Basis_monitor,7,5,9,2,4
+NGL_netback_screen,8,6,8,2,5
+Ethane_rejection_optimizer,8,7,6,4,8
+Unified_risk_dashboard,9,8,6,3,8
+Nomination_reconciliation,6,4,7,2,6
+Dispatch_simulation,8,7,4,4,12
+Performance_engine,7,8,3,5,10
+Data_quality_console,5,6,8,1,5

@@ -1,0 +1,4 @@
+crr,MW,expected_congestion_USD_per_MWh,realized_congestion_USD_per_MWh,auction_cost_USD
+CRR1,25,2.0,3.1,30000
+CRR2,40,1.5,0.4,40000
+CRR3,10,4.0,-1.0,20000

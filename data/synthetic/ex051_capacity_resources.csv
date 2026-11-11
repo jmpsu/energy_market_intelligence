@@ -1,0 +1,5 @@
+resource,technology,installed_MW,accreditation_factor
+R1,gas_combined_cycle,500,0.95
+R2,solar,200,0.30
+R3,storage_4h,100,0.60
+R4,wind,300,0.18

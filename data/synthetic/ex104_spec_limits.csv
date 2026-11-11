@@ -1,0 +1,7 @@
+product,component,limit_type,limit_liquid_vol_pct
+Propane,propane,min,90.0
+Propane,ethane,max,5.0
+Propane,butanes_plus,max,2.5
+Ethane,ethane,min,95.0
+Ethane,methane,max,1.5
+Ethane,propane,max,3.5

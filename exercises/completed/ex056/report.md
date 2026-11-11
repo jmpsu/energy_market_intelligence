@@ -1,0 +1,42 @@
+# ex056 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+lmp_bus_1: 20
+
+lmp_bus_2: 50
+
+lmp_bus_3: 80
+
+gen_bus_1_MW: 150
+
+gen_bus_2_MW: 150
+
+flow_L12_MW: -0
+
+flow_L13_MW: 150
+
+flow_L23_MW: 150
+
+binding_lines: L13
+
+L13_shadow_price_USD_per_MW: -90
+
+dispatch_cost_USD_per_h: 10500
+
+unconstrained_cost_USD_per_h: 6000
+
+congestion_cost_USD_per_h: 4500
+
+load_payment_USD_per_h: 24000
+
+generator_revenue_USD_per_h: 10500
+
+congestion_rent_USD_per_h: 13500
+
+ftr_payout_USD_per_h: 7500
+
+ftr_revenue_adequate: True
+
+NOTE: The load bus price (80) exceeds the cost of every generator (20 and 50): serving 1 more MW at bus 3 needs +2 MW at bus 2 and -1 MW at bus 1 to hold the line at its limit.
+
+NOTE: Lossless DC approximation, no contingencies (N-1), no reserves; reference bus = bus 3.
+

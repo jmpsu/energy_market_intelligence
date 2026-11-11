@@ -1,0 +1,6 @@
+parameter,value,unit
+henry_hub,3.25,USD_per_MMBtu
+liquefaction_fuel_factor,1.15,multiple_of_henry_hub
+liquefaction_toll,2.50,USD_per_MMBtu
+regas_cost,0.40,USD_per_MMBtu
+cargo_size,3400000,MMBtu

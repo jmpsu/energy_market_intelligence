@@ -1,0 +1,9 @@
+from_node,to_node,asset_type,capacity_Bcf_d
+Permian_Basin,Processing_Plant,gathering,8
+Processing_Plant,Pipeline_A,pipeline,5
+Processing_Plant,Pipeline_B,pipeline,4
+Pipeline_A,Market_Hub,pipeline,5
+Pipeline_B,Market_Hub,pipeline,3
+Market_Hub,LNG_Terminal,pipeline,6
+Market_Hub,Storage,pipeline,2
+Storage,LNG_Terminal,pipeline,1

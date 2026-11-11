@@ -1,0 +1,74 @@
+section: '6.9'
+title: Capacity markets and resource adequacy
+exercise: EX-051
+lessons:
+- id: L06.09.1
+  title: Capacity market design
+  objective: Explain capacity market design and show it in the EX-051 output.
+  prerequisites:
+  - L06.08.5
+  market_lesson: Capacity markets pay resources to be available in future peak periods. [K]
+  north_american_example: 'EX-051 (Calculate Capacity Market Economics) on synthetic North American data: installed_MW = 1100 [EX]'
+  terminal_activity: python3 emi.py run 051 | grep '^installed_MW:'
+  expected_result: 'installed_MW: 1100'
+  professional_application: Analyze capacity obligations, accreditation, resource adequacy, and capacity revenues.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.08.5
+  after: L06.09.2
+  status: written_command_verified
+- id: L06.09.2
+  title: Accreditation and ELCC
+  objective: Explain accreditation and ELCC and show it in the EX-051 output.
+  prerequisites:
+  - L06.09.1
+  market_lesson: Accreditation discounts nameplate to expected availability at peak; ELCC does this for variable resources. [K]
+  north_american_example: 'EX-051 (Calculate Capacity Market Economics) on synthetic North American data: accredited_MW = 649 [EX]'
+  terminal_activity: python3 emi.py run 051 | grep '^accredited_MW:'
+  expected_result: 'accredited_MW: 649'
+  professional_application: Analyze capacity obligations, accreditation, resource adequacy, and capacity revenues.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.09.1
+  after: L06.09.3
+  status: written_command_verified
+- id: L06.09.3
+  title: Demand curves and auction clearing
+  objective: Explain demand curves and auction clearing and show it in the EX-051 output.
+  prerequisites:
+  - L06.09.2
+  market_lesson: A sloped demand curve sets the price where offers meet it. [K]
+  north_american_example: 'EX-051 (Calculate Capacity Market Economics) on synthetic North American data: fleet_accreditation_pct = 59 [EX]'
+  terminal_activity: python3 emi.py run 051 | grep '^fleet_accreditation_pct:'
+  expected_result: 'fleet_accreditation_pct: 59'
+  professional_application: Analyze capacity obligations, accreditation, resource adequacy, and capacity revenues.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.09.2
+  after: L06.09.4
+  status: written_command_verified
+- id: L06.09.4
+  title: Resource adequacy obligations
+  objective: Explain resource adequacy obligations and show it in the EX-051 output.
+  prerequisites:
+  - L06.09.3
+  market_lesson: Load-serving entities must hold capacity equal to peak load plus a reserve margin. [K]
+  north_american_example: 'EX-051 (Calculate Capacity Market Economics) on synthetic North American data: annual_capacity_revenue_USD = 35532750 [EX]'
+  terminal_activity: python3 emi.py run 051 | grep '^annual_capacity_revenue_USD:'
+  expected_result: 'annual_capacity_revenue_USD: 35532750'
+  professional_application: Analyze capacity obligations, accreditation, resource adequacy, and capacity revenues.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.09.3
+  after: L06.09.5
+  status: written_command_verified
+- id: L06.09.5
+  title: Capacity revenue calculation
+  objective: Explain capacity revenue calculation and show it in the EX-051 output.
+  prerequisites:
+  - L06.09.4
+  market_lesson: Capacity revenue is accredited MW times the clearing price times the period. [K]
+  north_american_example: 'EX-051 (Calculate Capacity Market Economics) on synthetic North American data: obligation_MW = 690 [EX]'
+  terminal_activity: python3 emi.py run 051 | grep '^obligation_MW:'
+  expected_result: 'obligation_MW: 690'
+  professional_application: Analyze capacity obligations, accreditation, resource adequacy, and capacity revenues.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.09.4
+  after: L06.10.1
+  status: written_command_verified

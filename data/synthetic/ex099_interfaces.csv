@@ -1,0 +1,15 @@
+source,target,payload
+Vendor_price_feeds,Raw_staging,raw price files
+Raw_staging,Curated_market_data,validated prices
+Reference_master_data,Warehouse,locations and units
+Curated_market_data,Warehouse,price facts
+Warehouse,Market_data_API,query results
+Market_data_API,Valuation_and_risk,marks
+Trade_store,Valuation_and_risk,positions
+Market_data_API,Simulation_orchestrator,model inputs
+Simulation_orchestrator,Dispatch_and_network_simulation,scenario runs
+Simulation_orchestrator,External_simulation_engine,scenario runs
+Dispatch_and_network_simulation,Validation_service,model outputs
+External_simulation_engine,Validation_service,model outputs
+Validation_service,User_workflows_and_reports,validated results
+Valuation_and_risk,User_workflows_and_reports,risk reports

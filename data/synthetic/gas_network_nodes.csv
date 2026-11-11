@@ -1,0 +1,8 @@
+node_id,node_type,maximum_supply_Bcf_d,minimum_demand_Bcf_d,maximum_demand_Bcf_d
+APPALACHIA,Production,30,0,0
+PERMIAN,Production,25,0,0
+HAYNESVILLE,Production,20,0,0
+HUB_EAST,Market,0,25,35
+HUB_GULF,Market,0,20,30
+HUB_WEST,Market,0,15,25
+STORAGE_A,Storage,0,0,0

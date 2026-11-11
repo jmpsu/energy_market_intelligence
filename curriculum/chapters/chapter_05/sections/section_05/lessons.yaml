@@ -1,0 +1,68 @@
+section: '5.5'
+title: Ethane and petrochemical markets
+lessons:
+- id: L05.05.1
+  title: Ethane as cracker feedstock
+  prerequisite: L05.04.5
+  status: written
+  objective: State what ethane is used for.
+  market_lesson: Ethane is a key petrochemical feedstock, recovered at gas plants and cracked to ethylene [S7][S1].
+  example: 'EX-042 cracker: 3,300 million lb/yr ethylene needs about 92,900 bbl/d of ethane at the assumed yield.'
+  terminal_activity: python3 emi.py run 042
+  expected_result: 'ethane_feed_bbl_per_d_at_capacity: 92922.47'
+  professional_application: Cracker operating rates and outages move ethane demand by tens of thousands of barrels a day.
+  product_implication: Demand-side data (cracker capacity, outages) is as important as supply data.
+  builds_on: L05.04.5
+  leads_to: L05.05.2
+- id: L05.05.2
+  title: Ethylene margin
+  prerequisite: L05.05.1
+  status: written
+  objective: Convert ethane price per gallon to feed cost per pound of ethylene.
+  market_lesson: cents/lb feed = price/gal x 100 / lb/gal. cents/lb ethylene = that / yield [EX]. Yield and density here are synthetic single-number assumptions.
+  example: 0.235 USD/gal / 2.97 lb/gal = 7.91 c/lb; / 0.78 yield = 10.14 c/lb of ethylene.
+  terminal_activity: python3 emi.py run 042
+  expected_result: 'Ethane_feed_cost_c_per_lb_ethylene: 10.144177'
+  professional_application: Petrochemical buyers think in cents per pound; NGL sellers in cents per gallon. You translate.
+  product_implication: Unit conversion must be built in and auditable.
+  builds_on: L05.05.1
+  leads_to: L05.05.3
+- id: L05.05.3
+  title: Feedstock switching
+  prerequisite: L05.05.2
+  status: written
+  objective: Compute the cracker cash margin.
+  market_lesson: Margin = ethylene price - feed cost + co-product credit - conversion cost [EX].
+  example: 22.0 - 10.14 + 1.0 - 4.0 = 8.86 c/lb; about 292 million USD/yr at capacity.
+  terminal_activity: python3 emi.py run 042
+  expected_result: 'Ethane_margin_c_per_lb_ethylene: 8.855823'
+  professional_application: Margin sets how much a cracker can pay for ethane before cutting rates or switching feed.
+  product_implication: Margin models are the demand-side analogue of the frac spread.
+  builds_on: L05.05.2
+  leads_to: L05.05.4
+- id: L05.05.4
+  title: Export demand
+  prerequisite: L05.05.3
+  status: written
+  objective: Compare feedstocks.
+  market_lesson: Flexible crackers choose the feed with the best margin. Heavier feeds yield less ethylene but more co-products [K].
+  example: 'Synthetic case: ethane 8.86 vs propane -3.62 c/lb, a 12.48 c/lb ethane advantage.'
+  terminal_activity: python3 emi.py run 042 ethylene_price=30
+  expected_result: 'Propane_margin_c_per_lb_ethylene: 4.377116; preferred_feed: Ethane'
+  professional_application: Feed switching links ethane and propane prices.
+  product_implication: Scenario tools should let users vary yields and credits, not hard-code them.
+  builds_on: L05.05.3
+  leads_to: L05.05.5
+- id: L05.05.5
+  title: Margin sensitivity
+  prerequisite: L05.05.4
+  status: written
+  objective: Find the ethane price ceiling a cracker tolerates.
+  market_lesson: Breakeven feed price is where margin is zero. Between the plant's rejection breakeven (floor) and the cracker's breakeven (ceiling) lies the range ethane can trade in [EX]. Exports add a second demand outlet [S7].
+  example: Cracker breakeven 0.440 USD/gal vs plant recovery breakeven 0.278 USD/gal.
+  terminal_activity: python3 emi.py run 042 ethane_price=0.35
+  expected_result: 'Ethane_margin_c_per_lb_ethylene: 3.891652'
+  professional_application: This floor-and-ceiling frame is how ethane price forecasts are argued.
+  product_implication: A price-band view combining supply and demand breakevens is a differentiating analytic.
+  builds_on: L05.05.4
+  leads_to: L05.06.1

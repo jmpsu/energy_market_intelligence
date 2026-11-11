@@ -1,0 +1,28 @@
+# ex092 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+scenarios: 12
+
+variables_per_scenario: 864
+
+max_relative_objective_difference: 0
+
+results_equivalent: True
+
+max_constraint_violation: 0
+
+constraints_satisfied: True
+
+speedup_x: 5.033146
+
+memory_ratio: 58.071648
+
+baseline_wall_s: 3.478053
+
+optimised_wall_s: 0.69103
+
+NOTE: Timings vary by machine and run; only the equivalence and feasibility results are deterministic.
+
+NOTE: The 5-8 hour to 30 minute target in the brief is a hypothetical scenario; this toy problem demonstrates the measurement method, not that ratio.
+
+NOTE: Not tested here: parallel scenario execution, decomposition, warm starts, reduced temporal/spatial resolution, incremental recalculation.
+

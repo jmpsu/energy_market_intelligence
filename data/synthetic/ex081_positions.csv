@@ -1,0 +1,4 @@
+factor,position,unit
+henry_hub_USD_per_MMBtu,500000,MMBtu
+waha_USD_per_MMBtu,-200000,MMBtu
+pjm_west_USD_per_MWh,20000,MWh

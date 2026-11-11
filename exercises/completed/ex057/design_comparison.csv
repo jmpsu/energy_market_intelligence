@@ -1,0 +1,4 @@
+bus,nodal_lmp,nodal_gen_MW,market_schedule_MW,nodal_revenue_USD_per_h,zonal_energy_revenue_USD_per_h,redispatch_MW,zonal_redispatch_payment_USD_per_h,zonal_total_revenue_USD_per_h
+1,20.0,150.0,300.0,3000.0,6000.0,-150.0,0.0,6000.0
+2,50.0,150.0,0.0,7500.0,0.0,150.0,7500.0,7500.0
+3,80.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

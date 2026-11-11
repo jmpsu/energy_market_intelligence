@@ -1,0 +1,68 @@
+section: '5.6'
+title: Propane pricing, storage, and seasonality
+lessons:
+- id: L05.06.1
+  title: Propane demand sectors
+  prerequisite: L05.05.5
+  status: written
+  objective: List propane's demand sectors.
+  market_lesson: Propane has consumer (mainly fuel) and non-consumer (feedstock) markets [S2]. US supply exceeds domestic use; exports take the balance [S5].
+  example: 'Synthetic balance: exports are 67% of production.'
+  terminal_activity: python3 emi.py run 041
+  expected_result: 'export_share_of_production_pct: 67.241379'
+  professional_application: Know which demand is weather-driven (heating, crop drying) and which is price-driven (petchem, export).
+  product_implication: Demand must be segmented by sector in the data model.
+  builds_on: L05.05.5
+  leads_to: L05.06.2
+- id: L05.06.2
+  title: Inventory cycle
+  prerequisite: L05.06.1
+  status: written
+  objective: Build the seasonal inventory cycle.
+  market_lesson: 'Heating demand drives a seasonal cycle [S5]: inventory builds in the warm months and draws in winter (the month shape here is synthetic). Ending inventory = opening + (production - demand - exports) x days [EX].'
+  example: 'Synthetic: build 52.88 MMbbl to a 97.88 MMbbl peak in September, draw 49.75 MMbbl.'
+  terminal_activity: python3 emi.py run 041
+  expected_result: 'peak_inventory_MMbbl: 97.88; peak_month: Sep'
+  professional_application: The weekly inventory report is the propane market's main scheduled data event.
+  product_implication: Balance models must be reproducible from published series with clear units (MMb/d vs MMbbl).
+  builds_on: L05.06.1
+  leads_to: L05.06.3
+- id: L05.06.3
+  title: Export pull
+  prerequisite: L05.06.2
+  status: written
+  objective: Measure tightness in days of supply.
+  market_lesson: Days of supply = inventory / daily disappearance. The same inventory is tighter when exports are higher [EX].
+  example: 'Base minimum 15.5 days. Add 0.10 MMb/d of exports all year: ending inventory 11.63 MMbbl, 3.8 days.'
+  terminal_activity: python3 emi.py run 041 export_shift=0.10
+  expected_result: 'base_ending_inventory_MMbbl: 11.63; min_days_of_supply_base: 3.751613'
+  professional_application: Days of supply is the number retailers and regulators ask about before winter.
+  product_implication: Show inventory and days-of-supply side by side; one without the other misleads.
+  builds_on: L05.06.2
+  leads_to: L05.06.4
+- id: L05.06.4
+  title: Price ratio to crude
+  prerequisite: L05.06.3
+  status: written
+  objective: Quantify export pull.
+  market_lesson: US propane exports averaged 2.0 million b/d in the first half of 2026, a record, with 2.1 million b/d in April [S8]. Exports respond to US-versus-overseas price spreads and dock capacity [S8].
+  example: EIA reports US exports to China fell 28% in 2025 after tariffs while shipments to India and South Asia rose [S8].
+  terminal_activity: python3 emi.py run 041 export_shift=-0.10
+  expected_result: 'base_ending_inventory_MMbbl: 84.63 (base 48.13): lower exports loosen the balance.'
+  professional_application: Export economics now set the marginal price of US propane.
+  product_implication: Dock capacity, freight and overseas prices belong in the propane model.
+  builds_on: L05.06.3
+  leads_to: L05.06.5
+- id: L05.06.5
+  title: Seasonal spread
+  prerequisite: L05.06.4
+  status: written
+  objective: Stress the balance with a cold winter.
+  market_lesson: A 20% rise in December to February demand is enough to breach an operating minimum [EX]. Regional shortages can occur before the national number looks tight [K].
+  example: 'Cold case: extra draw 25.23 MMbbl, inventory 22.9 MMbbl versus a 30 MMbbl floor, breached in February and March.'
+  terminal_activity: python3 emi.py run 041
+  expected_result: 'cold_winter_min_inventory_MMbbl: 22.9; cold_winter_months_below_minimum: Feb,Mar'
+  professional_application: Winter-readiness analysis is done every autumn by marketers and retailers.
+  product_implication: Scenario runs on the balance are a core user workflow; make the assumptions editable.
+  builds_on: L05.06.4
+  leads_to: L05.07.1

@@ -1,0 +1,74 @@
+section: '4.4'
+title: Available capacity and congestion
+exercise: EX-014
+lessons:
+- id: L04.04.1
+  title: Operationally available capacity
+  objective: Explain operationally available capacity and show it in the EX-014 output.
+  prerequisites:
+  - L04.03.5
+  market_lesson: Operationally available capacity is what a pipeline posts as unscheduled at a point. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Permian_to_Gulf_utilization_pct = 99.459459 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Permian_to_Gulf_utilization_pct:'
+  expected_result: 'Permian_to_Gulf_utilization_pct: 99.459459'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.03.5
+  after: L04.04.2
+  status: written_command_verified
+- id: L04.04.2
+  title: Scheduling cuts as congestion signal
+  objective: Explain scheduling cuts as congestion signal and show it in the EX-014 output.
+  prerequisites:
+  - L04.04.1
+  market_lesson: Repeated scheduling cuts at a point signal a constraint. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Appalachia_to_NE_utilization_pct = 78.666667 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Appalachia_to_NE_utilization_pct:'
+  expected_result: 'Appalachia_to_NE_utilization_pct: 78.666667'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.04.1
+  after: L04.04.3
+  status: written_command_verified
+- id: L04.04.3
+  title: Maintenance and outages
+  objective: Explain maintenance and outages and show it in the EX-014 output.
+  prerequisites:
+  - L04.04.2
+  market_lesson: Planned maintenance is posted in advance and lowers capacity for a known period. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Midcon_to_Chicago_utilization_pct = 64 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Midcon_to_Chicago_utilization_pct:'
+  expected_result: 'Midcon_to_Chicago_utilization_pct: 64'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.04.2
+  after: L04.04.4
+  status: written_command_verified
+- id: L04.04.4
+  title: Congestion and basis blowouts
+  objective: Explain congestion and basis blowouts and show it in the EX-014 output.
+  prerequisites:
+  - L04.04.3
+  market_lesson: When a constraint tightens, basis on either side widens fast. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: Rockies_to_West_utilization_pct = 100.555556 [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^Rockies_to_West_utilization_pct:'
+  expected_result: 'Rockies_to_West_utilization_pct: 100.555556'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.04.3
+  after: L04.04.5
+  status: written_command_verified
+- id: L04.04.5
+  title: Capacity posting analysis
+  objective: Explain capacity posting analysis and show it in the EX-014 output.
+  prerequisites:
+  - L04.04.4
+  market_lesson: Capacity postings let you see congestion before prices fully react. [K]
+  north_american_example: 'EX-014 (Analyze Pipeline Capacity) on synthetic North American data: constrained_segments = Permian_to_Gulf [EX]'
+  terminal_activity: python3 emi.py run 014 | grep '^constrained_segments:'
+  expected_result: 'constrained_segments: Permian_to_Gulf'
+  professional_application: Compare nameplate capacity, operational capacity, contracted capacity, available capacity, and actual throughput.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.04.4
+  after: L04.05.1
+  status: written_command_verified

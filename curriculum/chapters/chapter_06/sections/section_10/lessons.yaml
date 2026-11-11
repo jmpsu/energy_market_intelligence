@@ -1,0 +1,74 @@
+section: '6.10'
+title: Ancillary services and wholesale settlements
+exercise: EX-050
+lessons:
+- id: L06.10.1
+  title: Regulation service
+  objective: Explain regulation service and show it in the EX-050 output.
+  prerequisites:
+  - L06.09.5
+  market_lesson: Regulation follows second-to-second imbalances. [K]
+  north_american_example: 'EX-050 (Analyze Ancillary Services) on synthetic North American data: regulation_requirement_MW = 50 [EX]'
+  terminal_activity: python3 emi.py run 050 | grep '^regulation_requirement_MW:'
+  expected_result: 'regulation_requirement_MW: 50'
+  professional_application: Model reserve requirements, regulation, contingency reserves, and their contribution to generator revenue.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.09.5
+  after: L06.10.2
+  status: written_command_verified
+- id: L06.10.2
+  title: Operating reserves
+  objective: Explain operating reserves and show it in the EX-050 output.
+  prerequisites:
+  - L06.10.1
+  market_lesson: Operating reserves stand ready to replace a lost unit within minutes. [K]
+  north_american_example: 'EX-050 (Analyze Ancillary Services) on synthetic North American data: spin_requirement_MW = 150 [EX]'
+  terminal_activity: python3 emi.py run 050 | grep '^spin_requirement_MW:'
+  expected_result: 'spin_requirement_MW: 150'
+  professional_application: Model reserve requirements, regulation, contingency reserves, and their contribution to generator revenue.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.10.1
+  after: L06.10.3
+  status: written_command_verified
+- id: L06.10.3
+  title: Co-optimization of energy and reserves
+  objective: Explain co-optimization of energy and reserves and show it in the EX-050 output.
+  prerequisites:
+  - L06.10.2
+  market_lesson: Energy and reserves are cleared together so each unit provides its most valuable mix. [K]
+  north_american_example: 'EX-050 (Analyze Ancillary Services) on synthetic North American data: energy_margin_USD_per_MWh = 10 [EX]'
+  terminal_activity: python3 emi.py run 050 | grep '^energy_margin_USD_per_MWh:'
+  expected_result: 'energy_margin_USD_per_MWh: 10'
+  professional_application: Model reserve requirements, regulation, contingency reserves, and their contribution to generator revenue.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.10.2
+  after: L06.10.4
+  status: written_command_verified
+- id: L06.10.4
+  title: Settlement statements
+  objective: Explain settlement statements and show it in the EX-050 output.
+  prerequisites:
+  - L06.10.3
+  market_lesson: A settlement statement lists every charge and credit by interval. [K]
+  north_american_example: 'EX-050 (Analyze Ancillary Services) on synthetic North American data: all_energy_USD_per_h = 2000 [EX]'
+  terminal_activity: python3 emi.py run 050 | grep '^all_energy_USD_per_h:'
+  expected_result: 'all_energy_USD_per_h: 2000'
+  professional_application: Model reserve requirements, regulation, contingency reserves, and their contribution to generator revenue.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.10.3
+  after: L06.10.5
+  status: written_command_verified
+- id: L06.10.5
+  title: Charge code reconciliation
+  objective: Explain charge code reconciliation and show it in the EX-050 output.
+  prerequisites:
+  - L06.10.4
+  market_lesson: Reconciling charge codes against your own shadow calculation finds billing errors. [K]
+  north_american_example: 'EX-050 (Analyze Ancillary Services) on synthetic North American data: energy_plus_regulation_USD_per_h = 2040 [EX]'
+  terminal_activity: python3 emi.py run 050 | grep '^energy_plus_regulation_USD_per_h:'
+  expected_result: 'energy_plus_regulation_USD_per_h: 2040'
+  professional_application: Model reserve requirements, regulation, contingency reserves, and their contribution to generator revenue.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.10.4
+  after: L07.01.1
+  status: written_command_verified

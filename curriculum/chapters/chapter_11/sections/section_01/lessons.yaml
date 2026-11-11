@@ -1,0 +1,74 @@
+section: '11.1'
+title: Energy software customer segments
+exercise: EX-095
+lessons:
+- id: L11.01.1
+  title: Segment taxonomy
+  objective: Explain segment taxonomy and show it in the EX-095 output.
+  prerequisites:
+  - L10.10.5
+  market_lesson: 'Customers segment by what they do: utilities, IPPs, traders, developers, investors, consultants. [K]'
+  north_american_example: 'EX-095 (Conduct Energy Market Customer Discovery) on synthetic North American data: rank_1 = Automated_basis_monitoring score=25000.0 [EX]'
+  terminal_activity: python3 emi.py run 095 | grep '^rank_1:'
+  expected_result: 'rank_1: Automated_basis_monitoring score=25000.0'
+  professional_application: Translate trader, analyst, scheduler, and portfolio manager workflows into documented product requirements.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L10.10.5
+  after: L11.01.2
+  status: written_command_verified
+- id: L11.01.2
+  title: Utility and IPP needs
+  objective: Explain utility and IPP needs and show it in the EX-095 output.
+  prerequisites:
+  - L11.01.1
+  market_lesson: Utilities and IPPs need planning and dispatch tools. [K]
+  north_american_example: 'EX-095 (Conduct Energy Market Customer Discovery) on synthetic North American data: rank_2 = Unified_risk_dashboard score=24375.0 [EX]'
+  terminal_activity: python3 emi.py run 095 | grep '^rank_2:'
+  expected_result: 'rank_2: Unified_risk_dashboard score=24375.0'
+  professional_application: Translate trader, analyst, scheduler, and portfolio manager workflows into documented product requirements.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.01.1
+  after: L11.01.3
+  status: written_command_verified
+- id: L11.01.3
+  title: Trading shop needs
+  objective: Explain trading shop needs and show it in the EX-095 output.
+  prerequisites:
+  - L11.01.2
+  market_lesson: Trading shops need speed, data and risk. [K]
+  north_american_example: 'EX-095 (Conduct Energy Market Customer Discovery) on synthetic North American data: rank_3 = Automated_nomination_reconciliation score=12000.0 [EX]'
+  terminal_activity: python3 emi.py run 095 | grep '^rank_3:'
+  expected_result: 'rank_3: Automated_nomination_reconciliation score=12000.0'
+  professional_application: Translate trader, analyst, scheduler, and portfolio manager workflows into documented product requirements.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.01.2
+  after: L11.01.4
+  status: written_command_verified
+- id: L11.01.4
+  title: Developer, investor and consultant needs
+  objective: Explain developer, investor and consultant needs and show it in the EX-095 output.
+  prerequisites:
+  - L11.01.3
+  market_lesson: Developers, investors and consultants need valuation and scenarios. [K]
+  north_american_example: 'EX-095 (Conduct Energy Market Customer Discovery) on synthetic North American data: rank_4 = Integrated_dispatch_simulation score=6666.7 [EX]'
+  terminal_activity: python3 emi.py run 095 | grep '^rank_4:'
+  expected_result: 'rank_4: Integrated_dispatch_simulation score=6666.7'
+  professional_application: Translate trader, analyst, scheduler, and portfolio manager workflows into documented product requirements.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.01.3
+  after: L11.01.5
+  status: written_command_verified
+- id: L11.01.5
+  title: Segment sizing
+  objective: Explain segment sizing and show it in the EX-095 output.
+  prerequisites:
+  - L11.01.4
+  market_lesson: Size a segment by number of firms times willingness to pay. [K]
+  north_american_example: 'EX-095 (Conduct Energy Market Customer Discovery) on synthetic North American data: rank_5 = Simulation_performance_optimization score=5000.0 [EX]'
+  terminal_activity: python3 emi.py run 095 | grep '^rank_5:'
+  expected_result: 'rank_5: Simulation_performance_optimization score=5000.0'
+  professional_application: Translate trader, analyst, scheduler, and portfolio manager workflows into documented product requirements.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.01.4
+  after: L11.02.1
+  status: written_command_verified

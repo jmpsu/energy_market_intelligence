@@ -1,0 +1,74 @@
+section: '9.5'
+title: Forward-curve construction
+exercise: EX-023
+lessons:
+- id: L09.05.1
+  title: Quote sources
+  objective: Explain quote sources and show it in the EX-023 output.
+  prerequisites:
+  - L09.04.5
+  market_lesson: Curve inputs are exchange settlements and broker quotes. [K]
+  north_american_example: 'EX-023 (Build a Natural Gas Forward Curve) on synthetic North American data: calendar_strip_USD_per_MMBtu = 3.25 [EX]'
+  terminal_activity: python3 emi.py run 023 | grep '^calendar_strip_USD_per_MMBtu:'
+  expected_result: 'calendar_strip_USD_per_MMBtu: 3.25'
+  professional_application: Construct a forward price curve from monthly market observations and calculate its shape.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.04.5
+  after: L09.05.2
+  status: written_command_verified
+- id: L09.05.2
+  title: Interpolation and seasonality shaping
+  objective: Explain interpolation and seasonality shaping and show it in the EX-023 output.
+  prerequisites:
+  - L09.05.1
+  market_lesson: Missing months are interpolated and shaped by seasonality. [K]
+  north_american_example: 'EX-023 (Build a Natural Gas Forward Curve) on synthetic North American data: winter_strip = 3.52 [EX]'
+  terminal_activity: python3 emi.py run 023 | grep '^winter_strip:'
+  expected_result: 'winter_strip: 3.52'
+  professional_application: Construct a forward price curve from monthly market observations and calculate its shape.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.05.1
+  after: L09.05.3
+  status: written_command_verified
+- id: L09.05.3
+  title: Arbitrage-free checks
+  objective: Explain arbitrage-free checks and show it in the EX-023 output.
+  prerequisites:
+  - L09.05.2
+  market_lesson: Monthly prices must average to the quoted strip. [K]
+  north_american_example: 'EX-023 (Build a Natural Gas Forward Curve) on synthetic North American data: summer_strip = 3.057143 [EX]'
+  terminal_activity: python3 emi.py run 023 | grep '^summer_strip:'
+  expected_result: 'summer_strip: 3.057143'
+  professional_application: Construct a forward price curve from monthly market observations and calculate its shape.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.05.2
+  after: L09.05.4
+  status: written_command_verified
+- id: L09.05.4
+  title: Shaping to hourly or daily
+  objective: Explain shaping to hourly or daily and show it in the EX-023 output.
+  prerequisites:
+  - L09.05.3
+  market_lesson: Monthly values are shaped to daily or hourly profiles. [K]
+  north_american_example: 'EX-023 (Build a Natural Gas Forward Curve) on synthetic North American data: winter_minus_summer = 0.462857 [EX]'
+  terminal_activity: python3 emi.py run 023 | grep '^winter_minus_summer:'
+  expected_result: 'winter_minus_summer: 0.462857'
+  professional_application: Construct a forward price curve from monthly market observations and calculate its shape.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.05.3
+  after: L09.05.5
+  status: written_command_verified
+- id: L09.05.5
+  title: Curve validation
+  objective: Explain curve validation and show it in the EX-023 output.
+  prerequisites:
+  - L09.05.4
+  market_lesson: Validate curves before using them to value anything. [K]
+  north_american_example: 'EX-023 (Build a Natural Gas Forward Curve) on synthetic North American data: jan_minus_jul_spread = 0.5 [EX]'
+  terminal_activity: python3 emi.py run 023 | grep '^jan_minus_jul_spread:'
+  expected_result: 'jan_minus_jul_spread: 0.5'
+  professional_application: Construct a forward price curve from monthly market observations and calculate its shape.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.05.4
+  after: L09.06.1
+  status: written_command_verified

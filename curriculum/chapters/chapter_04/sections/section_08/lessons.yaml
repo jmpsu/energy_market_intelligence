@@ -1,0 +1,74 @@
+section: '4.8'
+title: LNG liquefaction, shipping, and regasification
+exercise: EX-032
+lessons:
+- id: L04.08.1
+  title: Liquefaction process and capacity
+  objective: Explain liquefaction process and capacity and show it in the EX-032 output.
+  prerequisites:
+  - L04.07.5
+  market_lesson: Liquefaction chills gas to a liquid for shipping; capacity is counted per train. [K]
+  north_american_example: 'EX-032 (Analyze LNG Feedgas Demand) on synthetic North American data: lng_capacity_Bcf_d = 15.8 [EX]'
+  terminal_activity: python3 emi.py run 032 | grep '^lng_capacity_Bcf_d:'
+  expected_result: 'lng_capacity_Bcf_d: 15.8'
+  professional_application: Model how LNG terminal utilization affects domestic natural gas demand and regional pricing.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.07.5
+  after: L04.08.2
+  status: written_command_verified
+- id: L04.08.2
+  title: Shipping costs and routes
+  objective: Explain shipping costs and routes and show it in the EX-032 output.
+  prerequisites:
+  - L04.08.1
+  market_lesson: Shipping cost depends on distance, charter rates and boil-off. [K]
+  north_american_example: 'EX-032 (Analyze LNG Feedgas Demand) on synthetic North American data: feed_gas_Bcf_d = 14.421 [EX]'
+  terminal_activity: python3 emi.py run 032 | grep '^feed_gas_Bcf_d:'
+  expected_result: 'feed_gas_Bcf_d: 14.421'
+  professional_application: Model how LNG terminal utilization affects domestic natural gas demand and regional pricing.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.08.1
+  after: L04.08.3
+  status: written_command_verified
+- id: L04.08.3
+  title: Regasification
+  objective: Explain regasification and show it in the EX-032 output.
+  prerequisites:
+  - L04.08.2
+  market_lesson: Regasification terminals return LNG to gas at the destination. [K]
+  north_american_example: 'EX-032 (Analyze LNG Feedgas Demand) on synthetic North American data: feed_gas_share_of_demand_pct = 13.11 [EX]'
+  terminal_activity: python3 emi.py run 032 | grep '^feed_gas_share_of_demand_pct:'
+  expected_result: 'feed_gas_share_of_demand_pct: 13.11'
+  professional_application: Model how LNG terminal utilization affects domestic natural gas demand and regional pricing.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.08.2
+  after: L04.08.4
+  status: written_command_verified
+- id: L04.08.4
+  title: Cargo economics and contracts
+  objective: Explain cargo economics and contracts and show it in the EX-032 output.
+  prerequisites:
+  - L04.08.3
+  market_lesson: A cargo's margin is the sale price less feed gas, liquefaction, shipping and regas. [K]
+  north_american_example: 'EX-032 (Analyze LNG Feedgas Demand) on synthetic North American data: gulf_share_of_feed_gas_pct = 94.508009 [EX]'
+  terminal_activity: python3 emi.py run 032 | grep '^gulf_share_of_feed_gas_pct:'
+  expected_result: 'gulf_share_of_feed_gas_pct: 94.508009'
+  professional_application: Model how LNG terminal utilization affects domestic natural gas demand and regional pricing.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.08.3
+  after: L04.08.5
+  status: written_command_verified
+- id: L04.08.5
+  title: Terminal utilization and feed gas
+  objective: Explain terminal utilization and feed gas and show it in the EX-032 output.
+  prerequisites:
+  - L04.08.4
+  market_lesson: Feed gas demand is terminal capacity times utilisation plus plant fuel. [K]
+  north_american_example: 'EX-032 (Analyze LNG Feedgas Demand) on synthetic North American data: feed_gas_at_full_utilization_Bcf_d = 17.38 [EX]'
+  terminal_activity: python3 emi.py run 032 | grep '^feed_gas_at_full_utilization_Bcf_d:'
+  expected_result: 'feed_gas_at_full_utilization_Bcf_d: 17.38'
+  professional_application: Model how LNG terminal utilization affects domestic natural gas demand and regional pricing.
+  product_implication: Network and scenario features sell when users can change one constraint and see flows and basis respond.
+  before: L04.08.4
+  after: L04.09.1
+  status: written_command_verified

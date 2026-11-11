@@ -1,0 +1,5 @@
+position_id,commodity,location,volume,unit,price_USD_per_unit
+G001,Natural_Gas,Henry_Hub,100000,MMBtu,3.25
+G002,Natural_Gas,Waha,80000,MMBtu,-0.40
+G003,Natural_Gas,Algonquin,60000,MMBtu,10.25
+G004,Natural_Gas,AECO,50000,MMBtu,2.15

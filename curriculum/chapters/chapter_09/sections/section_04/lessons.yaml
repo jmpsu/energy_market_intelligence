@@ -1,0 +1,74 @@
+section: '9.4'
+title: Supply-demand fundamental models
+exercise: EX-049
+lessons:
+- id: L09.04.1
+  title: Supply curve construction
+  objective: Explain supply curve construction and show it in the EX-049 output.
+  prerequisites:
+  - L09.03.5
+  market_lesson: A supply curve orders capacity by marginal cost. [K]
+  north_american_example: 'EX-049 (Model Electricity Market Clearing) on synthetic North American data: clearing_price_USD_per_MWh = 42 [EX]'
+  terminal_activity: python3 emi.py run 049 | grep '^clearing_price_USD_per_MWh:'
+  expected_result: 'clearing_price_USD_per_MWh: 42'
+  professional_application: Construct a simplified supply stack and determine the market-clearing price.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.03.5
+  after: L09.04.2
+  status: written_command_verified
+- id: L09.04.2
+  title: Demand modeling
+  objective: Explain demand modeling and show it in the EX-049 output.
+  prerequisites:
+  - L09.04.1
+  market_lesson: Demand is modelled from weather, calendar and economics. [K]
+  north_american_example: 'EX-049 (Model Electricity Market Clearing) on synthetic North American data: marginal_unit = GAS_02 [EX]'
+  terminal_activity: python3 emi.py run 049 | grep '^marginal_unit:'
+  expected_result: 'marginal_unit: GAS_02'
+  professional_application: Construct a simplified supply stack and determine the market-clearing price.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.04.1
+  after: L09.04.3
+  status: written_command_verified
+- id: L09.04.3
+  title: Equilibrium price
+  objective: Explain equilibrium price and show it in the EX-049 output.
+  prerequisites:
+  - L09.04.2
+  market_lesson: Price is where demand crosses supply. [K]
+  north_american_example: 'EX-049 (Model Electricity Market Clearing) on synthetic North American data: marginal_unit_dispatch_MW = 700 [EX]'
+  terminal_activity: python3 emi.py run 049 | grep '^marginal_unit_dispatch_MW:'
+  expected_result: 'marginal_unit_dispatch_MW: 700'
+  professional_application: Construct a simplified supply stack and determine the market-clearing price.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.04.2
+  after: L09.04.4
+  status: written_command_verified
+- id: L09.04.4
+  title: Supply-curve shape and volatility
+  objective: Explain supply-curve shape and volatility and show it in the EX-049 output.
+  prerequisites:
+  - L09.04.3
+  market_lesson: Where the supply curve is steep, small demand changes move price a lot. [K]
+  north_american_example: 'EX-049 (Model Electricity Market Clearing) on synthetic North American data: load_payment_USD_per_h = 176400 [EX]'
+  terminal_activity: python3 emi.py run 049 | grep '^load_payment_USD_per_h:'
+  expected_result: 'load_payment_USD_per_h: 176400'
+  professional_application: Construct a simplified supply stack and determine the market-clearing price.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.04.3
+  after: L09.04.5
+  status: written_command_verified
+- id: L09.04.5
+  title: Fundamental model calibration
+  objective: Explain fundamental model calibration and show it in the EX-049 output.
+  prerequisites:
+  - L09.04.4
+  market_lesson: Calibrate a fundamental model to observed prices. [K]
+  north_american_example: 'EX-049 (Model Electricity Market Clearing) on synthetic North American data: production_cost_USD_per_h = 91500 [EX]'
+  terminal_activity: python3 emi.py run 049 | grep '^production_cost_USD_per_h:'
+  expected_result: 'production_cost_USD_per_h: 91500'
+  professional_application: Construct a simplified supply stack and determine the market-clearing price.
+  product_implication: Risk features need transparent methods and reproducible numbers; a black-box VaR is not accepted by a middle office.
+  before: L09.04.4
+  after: L09.05.1
+  status: written_command_verified

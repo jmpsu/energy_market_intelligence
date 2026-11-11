@@ -1,0 +1,14 @@
+component,layer,status,evidence,in_graph,reaches_users
+Vendor_price_feeds,source,proposed,none,True,True
+Raw_staging,data,demonstrated_here,EX-070,True,True
+Curated_market_data,data,demonstrated_here,EX-070,True,True
+Reference_master_data,data,demonstrated_here,EX-007,True,True
+Warehouse,data,demonstrated_here,EX-087,True,True
+Market_data_API,service,demonstrated_here,EX-088,True,True
+Trade_store,data,demonstrated_here,EX-069,True,True
+Valuation_and_risk,analytics,demonstrated_here,EX-076,True,True
+Dispatch_and_network_simulation,simulation,demonstrated_here,EX-089,True,True
+Simulation_orchestrator,simulation,proposed,none,True,True
+External_simulation_engine,simulation,proposed,none,True,True
+Validation_service,analytics,demonstrated_here,EX-094,True,True
+User_workflows_and_reports,presentation,proposed,none,True,True

@@ -1,0 +1,68 @@
+section: '5.4'
+title: Ethane recovery and rejection
+lessons:
+- id: L05.04.1
+  title: Ethane economics
+  prerequisite: L05.03.5
+  status: written
+  objective: State what ethane rejection is.
+  market_lesson: Unlike the heavier liquids, significant ethane can be left in pipeline gas and sold as gas; this is ethane rejection [S6]. It happens when ethane's price falls to or below its fuel value, or when infrastructure is lacking [S10][S7].
+  example: 'EIA: the ethane share of plant liquids production fell from 42% in 2010 to 34% in 2015 [S6].'
+  terminal_activity: python3 emi.py run 038
+  expected_result: 'decision: REJECT'
+  professional_application: 'Ethane is the swing barrel of NGL supply: recovery rises and falls with price.'
+  product_implication: Supply models need rejection as an explicit, price-driven switch.
+  builds_on: L05.03.5
+  leads_to: L05.04.2
+- id: L05.04.2
+  title: Rejection decision rule
+  prerequisite: L05.04.1
+  status: written
+  objective: Apply the per-gallon rejection rule.
+  market_lesson: Recover when hub price - T&F fee > gas price x 0.0665 MMBtu/gal. Simple breakeven ethane price = fuel value + fee [EX].
+  example: 'Gas 3.25, fee 0.08: breakeven 0.2961 USD/gal. Market 0.235. Reject.'
+  terminal_activity: python3 emi.py run 038
+  expected_result: 'simple_breakeven_ethane_USD_per_gal: 0.296125'
+  professional_application: This rule of thumb is quoted daily on NGL desks.
+  product_implication: Expose breakeven as a live derived metric per plant, with the fee assumption visible.
+  builds_on: L05.04.1
+  leads_to: L05.04.3
+- id: L05.04.3
+  title: Btu limits on rejection
+  prerequisite: L05.04.2
+  status: written
+  objective: Extend the rule to the whole plant.
+  market_lesson: Rejection mode also loses some propane recovery, so the plant-level breakeven is lower than the simple one [EX]. Residue-gas Btu limits can cap how much ethane a plant may reject [K].
+  example: 'Rejection gains 25,695 USD/d on ethane and loses 7,535 USD/d of propane uplift: net 18,160 USD/d. Plant breakeven 0.2782 vs simple 0.2961.'
+  terminal_activity: python3 emi.py run 038
+  expected_result: 'plant_breakeven_ethane_USD_per_gal: 0.2782; rejection_advantage_USD_per_d: 18159.95'
+  professional_application: Plant optimisation is a whole-barrel decision, not an ethane-only one.
+  product_implication: Models must carry mode-dependent recovery for every component.
+  builds_on: L05.04.2
+  leads_to: L05.04.4
+- id: L05.04.4
+  title: Pipeline and frac capacity effects
+  prerequisite: L05.04.3
+  status: written
+  objective: Recognise when infrastructure, not price, forces the outcome.
+  market_lesson: Where ethane pipelines or local markets are missing, recovery is limited regardless of price [S6]. New pipelines, crackers and export docks pull ethane out of rejection [S7].
+  example: EIA cites the Marcellus and Utica as regions where missing ethane outlets limited recovery [S6].
+  terminal_activity: python3 emi.py run 038 ethane_price=0.30
+  expected_result: 'decision: RECOVER (price alone flips it; capacity is not modeled)'
+  professional_application: Basin-level ethane supply forecasts depend on takeaway capacity additions.
+  product_implication: Capacity constraints need to be modeled alongside price logic or the forecast is wrong in constrained basins.
+  builds_on: L05.04.3
+  leads_to: L05.04.5
+- id: L05.04.5
+  title: Price signals for rejection
+  prerequisite: L05.04.4
+  status: written
+  objective: Find the gas price that flips the decision.
+  market_lesson: Higher gas price raises ethane's fuel value and pushes plants toward rejection; lower gas price favours recovery [EX]. Rising pipeline-gas heat content is an observable sign of rejection [S6].
+  example: At ethane 0.235 the plant flips to recovery when gas falls below 2.644 USD/MMBtu.
+  terminal_activity: python3 emi.py run 038 gas_price=2
+  expected_result: 'decision: RECOVER; rejection_advantage_USD_per_d: -19298.43'
+  professional_application: Ethane-to-gas ratio is the first chart an ethane trader looks at.
+  product_implication: Alerting on the ethane-gas relationship per basin is a natural monitoring feature.
+  builds_on: L05.04.4
+  leads_to: L05.05.1

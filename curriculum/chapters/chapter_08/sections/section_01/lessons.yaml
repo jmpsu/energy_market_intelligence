@@ -1,0 +1,74 @@
+section: '8.1'
+title: Front, middle, and back office
+exercise: EX-072
+lessons:
+- id: L08.01.1
+  title: Front-office functions
+  objective: Explain front-office functions and show it in the EX-072 output.
+  prerequisites:
+  - L07.10.5
+  market_lesson: The front office trades, originates and optimises assets. [K]
+  north_american_example: 'EX-072 (Build a Trade Lifecycle) on synthetic North American data: events = 13 [EX]'
+  terminal_activity: python3 emi.py run 072 | grep '^events:'
+  expected_result: 'events: 13'
+  professional_application: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L07.10.5
+  after: L08.01.2
+  status: written_command_verified
+- id: L08.01.2
+  title: Middle-office functions
+  objective: Explain middle-office functions and show it in the EX-072 output.
+  prerequisites:
+  - L08.01.1
+  market_lesson: The middle office measures risk, validates curves and reports P&L independently. [K]
+  north_american_example: 'EX-072 (Build a Trade Lifecycle) on synthetic North American data: accepted_events = 11 [EX]'
+  terminal_activity: python3 emi.py run 072 | grep '^accepted_events:'
+  expected_result: 'accepted_events: 11'
+  professional_application: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.01.1
+  after: L08.01.3
+  status: written_command_verified
+- id: L08.01.3
+  title: Back-office functions
+  objective: Explain back-office functions and show it in the EX-072 output.
+  prerequisites:
+  - L08.01.2
+  market_lesson: The back office confirms, schedules, invoices and settles. [K]
+  north_american_example: 'EX-072 (Build a Trade Lifecycle) on synthetic North American data: rejected_events = 2 [EX]'
+  terminal_activity: python3 emi.py run 072 | grep '^rejected_events:'
+  expected_result: 'rejected_events: 2'
+  professional_application: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.01.2
+  after: L08.01.4
+  status: written_command_verified
+- id: L08.01.4
+  title: Segregation of duties
+  objective: Explain segregation of duties and show it in the EX-072 output.
+  prerequisites:
+  - L08.01.3
+  market_lesson: Those who trade must not be the ones who value or settle the trades. [K]
+  north_american_example: 'EX-072 (Build a Trade Lifecycle) on synthetic North American data: rejected_detail = TR002:scheduled(expected confirmed),TR003:invoiced(expected scheduled) [EX]'
+  terminal_activity: python3 emi.py run 072 | grep '^rejected_detail:'
+  expected_result: 'rejected_detail: TR002:scheduled(expected confirmed),TR003:invoiced(expected scheduled)'
+  professional_application: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.01.3
+  after: L08.01.5
+  status: written_command_verified
+- id: L08.01.5
+  title: Information flow between offices
+  objective: Explain information flow between offices and show it in the EX-072 output.
+  prerequisites:
+  - L08.01.4
+  market_lesson: A trade's data passes front to middle to back; every re-keying is an error risk. [K]
+  north_american_example: 'EX-072 (Build a Trade Lifecycle) on synthetic North American data: settled_trades = 1 [EX]'
+  terminal_activity: python3 emi.py run 072 | grep '^settled_trades:'
+  expected_result: 'settled_trades: 1'
+  professional_application: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.01.4
+  after: L08.02.1
+  status: written_command_verified

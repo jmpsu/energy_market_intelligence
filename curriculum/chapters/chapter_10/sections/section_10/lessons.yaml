@@ -1,0 +1,74 @@
+section: '10.10'
+title: Simulation performance, scalability, and model governance
+exercise: EX-093
+lessons:
+- id: L10.10.1
+  title: Profiling runtime
+  objective: Explain profiling runtime and show it in the EX-093 output.
+  prerequisites:
+  - L10.09.5
+  market_lesson: Profiling finds where runtime goes before optimising. [K]
+  north_american_example: 'EX-093 (Optimize Model Execution) on synthetic North American data: scenarios = 12 [EX]'
+  terminal_activity: python3 emi.py run 093 | grep '^scenarios:'
+  expected_result: 'scenarios: 12'
+  professional_application: Test scenario batching, caching, parallel processing, model decomposition, and solver configuration against an identical baseline.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.09.5
+  after: L10.10.2
+  status: written_command_verified
+- id: L10.10.2
+  title: Sparse formulation and presolve
+  objective: Explain sparse formulation and presolve and show it in the EX-093 output.
+  prerequisites:
+  - L10.10.1
+  market_lesson: Sparse matrices and presolve shrink large models. [K]
+  north_american_example: 'EX-093 (Optimize Model Execution) on synthetic North American data: parallel_results_equivalent = True [EX]'
+  terminal_activity: python3 emi.py run 093 | grep '^parallel_results_equivalent:'
+  expected_result: 'parallel_results_equivalent: True'
+  professional_application: Test scenario batching, caching, parallel processing, model decomposition, and solver configuration against an identical baseline.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.10.1
+  after: L10.10.3
+  status: written_command_verified
+- id: L10.10.3
+  title: Parallel and decomposed execution
+  objective: Explain parallel and decomposed execution and show it in the EX-093 output.
+  prerequisites:
+  - L10.10.2
+  market_lesson: Parallel and decomposed runs use more cores. [K]
+  north_american_example: 'EX-093 (Optimize Model Execution) on synthetic North American data: reduced_resolution_equivalent = False [EX]'
+  terminal_activity: python3 emi.py run 093 | grep '^reduced_resolution_equivalent:'
+  expected_result: 'reduced_resolution_equivalent: False'
+  professional_application: Test scenario batching, caching, parallel processing, model decomposition, and solver configuration against an identical baseline.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.10.2
+  after: L10.10.4
+  status: written_command_verified
+- id: L10.10.4
+  title: Result-equivalence validation
+  objective: Explain result-equivalence validation and show it in the EX-093 output.
+  prerequisites:
+  - L10.10.3
+  market_lesson: A faster model must give equivalent results; prove it. [K]
+  north_american_example: 'EX-093 (Optimize Model Execution) on synthetic North American data: reduced_resolution_objective_error_pct = 0.041483 [EX]'
+  terminal_activity: python3 emi.py run 093 | grep '^reduced_resolution_objective_error_pct:'
+  expected_result: 'reduced_resolution_objective_error_pct: 0.041483'
+  professional_application: Test scenario batching, caching, parallel processing, model decomposition, and solver configuration against an identical baseline.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.10.3
+  after: L10.10.5
+  status: written_command_verified
+- id: L10.10.5
+  title: Model governance and change control
+  objective: Explain model governance and change control and show it in the EX-093 output.
+  prerequisites:
+  - L10.10.4
+  market_lesson: Governance controls who changes models and how. [K]
+  north_american_example: 'EX-093 (Optimize Model Execution) on synthetic North American data: reduced_resolution_variables = 432 [EX]'
+  terminal_activity: python3 emi.py run 093 | grep '^reduced_resolution_variables:'
+  expected_result: 'reduced_resolution_variables: 432'
+  professional_application: Test scenario batching, caching, parallel processing, model decomposition, and solver configuration against an identical baseline.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.10.4
+  after: L11.01.1
+  status: written_command_verified

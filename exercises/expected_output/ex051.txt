@@ -1,0 +1,11 @@
+ex051 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+installed_MW: 1100
+accredited_MW: 649
+fleet_accreditation_pct: 59
+annual_capacity_revenue_USD: 35532750
+obligation_MW: 690
+position_MW: -41
+cost_to_cover_short_USD: 2244750
+gas_share_of_accredited_pct: 73.189522
+solar_MW_to_replace_100_MW_gas_accredited: 316.666667
+NOTE: Accreditation factors are synthetic; real values are set per market and change as penetration changes. 1,100 MW installed counts as 649 MW.

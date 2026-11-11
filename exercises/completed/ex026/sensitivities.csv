@@ -1,0 +1,7 @@
+shock,tightening_Bcf_d,description,price_USD_per_MMBtu,change_USD,change_pct
+Production_plus_2,-2.0,supply growth,3.020004863055802,-0.22999513694419793,-7.07677344443686
+LNG_exports_plus_3,3.0,new liquefaction trains,3.619315096304898,0.3693150963048981,11.363541424766096
+Cold_winter,4.0,heating demand above normal,3.749143173280514,0.49914317328051405,15.358251485554279
+Mild_winter,-4.0,heating demand below normal,2.8024384399972675,-0.4475615600027325,-13.771124923160999
+Storage_deficit_refill,1.0,extra injections to refill,3.3698031777201005,0.11980317772010052,3.6862516221569392
+LNG_outage,-2.0,terminal outage backs gas into the market,3.020004863055802,-0.22999513694419793,-7.07677344443686

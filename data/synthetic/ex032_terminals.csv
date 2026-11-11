@@ -1,0 +1,6 @@
+terminal,region,capacity_Bcf_d,utilization_pct
+Gulf_A,Gulf,4.5,92
+Gulf_B,Gulf,3.0,95
+Gulf_C,Gulf,5.0,88
+Gulf_D_new,Gulf,2.5,40
+East_A,East,0.8,90

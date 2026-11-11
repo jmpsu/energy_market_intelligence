@@ -1,0 +1,74 @@
+section: '10.8'
+title: APIs, ETL/ELT, and ETRM integrations
+exercise: EX-088
+lessons:
+- id: L10.08.1
+  title: API design
+  objective: Explain aPI design and show it in the EX-088 output.
+  prerequisites:
+  - L10.07.5
+  market_lesson: An API exposes data through documented endpoints. [K]
+  north_american_example: 'EX-088 (Develop a Market Data API) on synthetic North American data: requests = 7 [EX]'
+  terminal_activity: python3 emi.py run 088 | grep '^requests:'
+  expected_result: 'requests: 7'
+  professional_application: Build an interface that exposes validated market prices and analytical outputs to downstream applications.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.07.5
+  after: L10.08.2
+  status: written_command_verified
+- id: L10.08.2
+  title: ETL vs ELT
+  objective: Explain eTL vs ELT and show it in the EX-088 output.
+  prerequisites:
+  - L10.08.1
+  market_lesson: ETL transforms before loading; ELT after. [K]
+  north_american_example: 'EX-088 (Develop a Market Data API) on synthetic North American data: status_200 = 3 [EX]'
+  terminal_activity: python3 emi.py run 088 | grep '^status_200:'
+  expected_result: 'status_200: 3'
+  professional_application: Build an interface that exposes validated market prices and analytical outputs to downstream applications.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.08.1
+  after: L10.08.3
+  status: written_command_verified
+- id: L10.08.3
+  title: ETRM integration points
+  objective: Explain eTRM integration points and show it in the EX-088 output.
+  prerequisites:
+  - L10.08.2
+  market_lesson: ETRM integration points are trades, prices, positions and settlements. [K]
+  north_american_example: 'EX-088 (Develop a Market Data API) on synthetic North American data: status_404 = 3 [EX]'
+  terminal_activity: python3 emi.py run 088 | grep '^status_404:'
+  expected_result: 'status_404: 3'
+  professional_application: Build an interface that exposes validated market prices and analytical outputs to downstream applications.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.08.2
+  after: L10.08.4
+  status: written_command_verified
+- id: L10.08.4
+  title: Data contracts
+  objective: Explain data contracts and show it in the EX-088 output.
+  prerequisites:
+  - L10.08.3
+  market_lesson: A data contract states schema, timing and quality. [K]
+  north_american_example: 'EX-088 (Develop a Market Data API) on synthetic North American data: status_400 = 1 [EX]'
+  terminal_activity: python3 emi.py run 088 | grep '^status_400:'
+  expected_result: 'status_400: 1'
+  professional_application: Build an interface that exposes validated market prices and analytical outputs to downstream applications.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.08.3
+  after: L10.08.5
+  status: written_command_verified
+- id: L10.08.5
+  title: Pipeline orchestration
+  objective: Explain pipeline orchestration and show it in the EX-088 output.
+  prerequisites:
+  - L10.08.4
+  market_lesson: Orchestration runs pipelines in order and reports failures. [K]
+  north_american_example: 'EX-088 (Develop a Market Data API) on synthetic North American data: waha_observations = 2 [EX]'
+  terminal_activity: python3 emi.py run 088 | grep '^waha_observations:'
+  expected_result: 'waha_observations: 2'
+  professional_application: Build an interface that exposes validated market prices and analytical outputs to downstream applications.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.08.4
+  after: L10.09.1
+  status: written_command_verified

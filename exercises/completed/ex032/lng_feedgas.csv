@@ -1,0 +1,4 @@
+terminal,capacity_Bcf_d,utilization,feedgas_multiplier,lng_output_Bcf_d,feedgas_Bcf_d,spare_capacity_Bcf_d
+Terminal_A,2.4,0.9,1.1,2.16,2.3760000000000003,0.23999999999999977
+Terminal_B,4.5,0.95,1.1,4.2749999999999995,4.7025,0.22500000000000053
+Terminal_C,2.1,0.6,1.1,1.26,1.3860000000000001,0.8400000000000001

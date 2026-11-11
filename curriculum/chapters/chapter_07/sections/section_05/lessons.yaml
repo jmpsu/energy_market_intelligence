@@ -1,0 +1,74 @@
+section: '7.5'
+title: Economic dispatch and unit commitment
+exercise: EX-049
+lessons:
+- id: L07.05.1
+  title: Merit-order dispatch
+  objective: Explain merit-order dispatch and show it in the EX-049 output.
+  prerequisites:
+  - L07.04.5
+  market_lesson: Merit order stacks units from cheapest to dearest; demand sets the marginal unit. [K]
+  north_american_example: 'EX-049 (Model Electricity Market Clearing) on synthetic North American data: clearing_price_USD_per_MWh = 42 [EX]'
+  terminal_activity: python3 emi.py run 049 | grep '^clearing_price_USD_per_MWh:'
+  expected_result: 'clearing_price_USD_per_MWh: 42'
+  professional_application: Construct a simplified supply stack and determine the market-clearing price.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.04.5
+  after: L07.05.2
+  status: written_command_verified
+- id: L07.05.2
+  title: Unit commitment problem
+  objective: Explain unit commitment problem and show it in the EX-049 output.
+  prerequisites:
+  - L07.05.1
+  market_lesson: Unit commitment decides which units to start, given start costs and limits. [K]
+  north_american_example: 'EX-049 (Model Electricity Market Clearing) on synthetic North American data: marginal_unit = GAS_02 [EX]'
+  terminal_activity: python3 emi.py run 049 | grep '^marginal_unit:'
+  expected_result: 'marginal_unit: GAS_02'
+  professional_application: Construct a simplified supply stack and determine the market-clearing price.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.05.1
+  after: L07.05.3
+  status: written_command_verified
+- id: L07.05.3
+  title: Minimum up and down times
+  objective: Explain minimum up and down times and show it in the EX-049 output.
+  prerequisites:
+  - L07.05.2
+  market_lesson: Minimum up and down times stop units switching on and off freely. [K]
+  north_american_example: 'EX-049 (Model Electricity Market Clearing) on synthetic North American data: marginal_unit_dispatch_MW = 700 [EX]'
+  terminal_activity: python3 emi.py run 049 | grep '^marginal_unit_dispatch_MW:'
+  expected_result: 'marginal_unit_dispatch_MW: 700'
+  professional_application: Construct a simplified supply stack and determine the market-clearing price.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.05.2
+  after: L07.05.4
+  status: written_command_verified
+- id: L07.05.4
+  title: Security-constrained dispatch
+  objective: Explain security-constrained dispatch and show it in the EX-049 output.
+  prerequisites:
+  - L07.05.3
+  market_lesson: Security-constrained dispatch honours transmission limits. [K]
+  north_american_example: 'EX-049 (Model Electricity Market Clearing) on synthetic North American data: load_payment_USD_per_h = 176400 [EX]'
+  terminal_activity: python3 emi.py run 049 | grep '^load_payment_USD_per_h:'
+  expected_result: 'load_payment_USD_per_h: 176400'
+  professional_application: Construct a simplified supply stack and determine the market-clearing price.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.05.3
+  after: L07.05.5
+  status: written_command_verified
+- id: L07.05.5
+  title: Dispatch cost calculation
+  objective: Explain dispatch cost calculation and show it in the EX-049 output.
+  prerequisites:
+  - L07.05.4
+  market_lesson: Dispatch cost is the sum of each unit's output times its marginal cost. [K]
+  north_american_example: 'EX-049 (Model Electricity Market Clearing) on synthetic North American data: production_cost_USD_per_h = 91500 [EX]'
+  terminal_activity: python3 emi.py run 049 | grep '^production_cost_USD_per_h:'
+  expected_result: 'production_cost_USD_per_h: 91500'
+  professional_application: Construct a simplified supply stack and determine the market-clearing price.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.05.4
+  after: L07.06.1
+  status: written_command_verified

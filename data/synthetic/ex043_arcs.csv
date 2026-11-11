@@ -1,0 +1,9 @@
+arc_id,origin,destination,mode,capacity_bbl,cost_USD_per_bbl
+A1,Conway,Mont_Belvieu,pipeline,45000,1.90
+A2,Conway,Mont_Belvieu,rail,30000,4.50
+A3,Conway,Mont_Belvieu,truck,10000,7.00
+A4,Conway,East_Coast_Export,rail,15000,5.50
+A5,Marcellus,East_Coast_Export,pipeline,25000,1.50
+A6,Marcellus,East_Coast_Export,rail,20000,3.20
+A7,Marcellus,Mont_Belvieu,rail,20000,6.00
+A8,Marcellus,Mont_Belvieu,marine,30000,4.00

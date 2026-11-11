@@ -1,0 +1,8 @@
+market,peak_demand_GW,average_day_ahead_price_USD_per_MWh,average_real_time_price_USD_per_MWh,generation_GW,renewable_share_percent
+CAISO,48,42,45,48,38
+PJM,155,39,41,155,14
+MISO,120,34,36,120,25
+SPP,55,31,35,55,39
+NYISO,30,43,46,30,20
+ISO_NE,28,48,52,28,15
+ERCOT,85,37,44,85,32

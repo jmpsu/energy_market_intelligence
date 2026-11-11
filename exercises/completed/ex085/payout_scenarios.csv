@@ -1,0 +1,6 @@
+temperature_shift_F,cumulative_HDD,payout_USD,capped
+-5,505.0,0.0,False
+0,430.0,200000.0,False
+3,385.0,650000.0,False
+10,280.0,1700000.0,False
+15,205.0,2000000.0,True

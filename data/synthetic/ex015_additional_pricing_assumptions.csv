@@ -1,0 +1,5 @@
+parameter,value,unit
+upstream_price,3.25,USD_per_MMBtu
+unconstrained_downstream_price,4.75,USD_per_MMBtu
+constrained_downstream_price,3.50,USD_per_MMBtu
+transport_cost,0.30,USD_per_MMBtu

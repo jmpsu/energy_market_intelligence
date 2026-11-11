@@ -1,0 +1,4 @@
+variant,wall_s,max_relative_objective_difference,variables_per_scenario,speedup_vs_cached_sequential,results_equivalent
+cached_sequential,0.07709161299999323,0.0,864,1.0,True
+thread_parallel,0.061145638000084546,0.0,864,1.260786795615521,True
+two_hour_resolution,0.04753019400004632,0.00041483288929552786,432,1.621950312256628,False

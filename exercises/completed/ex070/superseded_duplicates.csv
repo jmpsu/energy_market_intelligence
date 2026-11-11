@@ -1,0 +1,3 @@
+raw_id,timestamp,provider,commodity,location,price,unit,currency
+2,2026-01-05 08:00,Provider_B,Natural_Gas,Henry_Hub,3.26,MMBtu,USD
+6,2026-01-05 09:00,Provider_B,Electricity,PJM_West,46.00,MWh,USD

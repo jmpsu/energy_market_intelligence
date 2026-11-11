@@ -1,0 +1,74 @@
+section: '3.4'
+title: Futures, swaps, options, and forwards
+exercise: EX-024
+lessons:
+- id: L03.04.1
+  title: Futures margining
+  objective: Explain futures margining and show it in the EX-024 output.
+  prerequisites:
+  - L03.03.5
+  market_lesson: Futures are marked daily; losses must be covered with variation margin in cash. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: locked_all_in_price = 2.5 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^locked_all_in_price:'
+  expected_result: 'locked_all_in_price: 2.5'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.03.5
+  after: L03.04.2
+  status: written_command_verified
+- id: L03.04.2
+  title: Fixed-for-floating swaps
+  objective: Explain fixed-for-floating swaps and show it in the EX-024 output.
+  prerequisites:
+  - L03.04.1
+  market_lesson: A fixed-for-floating swap pays the difference between a fixed price and the index. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: unhedged_cost_range_USD = 1054000 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^unhedged_cost_range_USD:'
+  expected_result: 'unhedged_cost_range_USD: 1054000'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.04.1
+  after: L03.04.3
+  status: written_command_verified
+- id: L03.04.3
+  title: 'Options: calls, puts, collars'
+  objective: 'Explain options: calls, puts, collars and show it in the EX-024 output.'
+  prerequisites:
+  - L03.04.2
+  market_lesson: A call caps a buyer's price, a put floors a seller's, a collar does both at lower cost. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: hh_hedged_cost_range_USD = 279000 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^hh_hedged_cost_range_USD:'
+  expected_result: 'hh_hedged_cost_range_USD: 279000'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.04.2
+  after: L03.04.4
+  status: written_command_verified
+- id: L03.04.4
+  title: Physical forwards and delivery terms
+  objective: Explain physical forwards and delivery terms and show it in the EX-024 output.
+  prerequisites:
+  - L03.04.3
+  market_lesson: A physical forward specifies point, volume, term and delivery obligations. [K]
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: fully_hedged_cost_range_USD = 0 [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^fully_hedged_cost_range_USD:'
+  expected_result: 'fully_hedged_cost_range_USD: 0'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.04.3
+  after: L03.04.5
+  status: written_command_verified
+- id: L03.04.5
+  title: Instrument selection for a hedge
+  objective: Explain instrument selection for a hedge and show it in the EX-024 output.
+  prerequisites:
+  - L03.04.4
+  market_lesson: 'Choose the instrument by what must be fixed: price, basis, volume or delivery. [K]'
+  north_american_example: 'EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: residual_risk_after_hh_hedge = basis [EX]'
+  terminal_activity: python3 emi.py run 024 | grep '^residual_risk_after_hh_hedge:'
+  expected_result: 'residual_risk_after_hh_hedge: basis'
+  professional_application: Model the cash flows and exposures associated with physical gas purchases, futures, swaps, and basis swaps.
+  product_implication: Basis, curves and position views are the core screens of a gas trading product; every number must trace to a price source.
+  before: L03.04.4
+  after: L03.05.1
+  status: written_command_verified

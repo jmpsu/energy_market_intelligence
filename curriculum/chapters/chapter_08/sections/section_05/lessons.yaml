@@ -1,0 +1,74 @@
+section: '8.5'
+title: Confirmations and eConfirms
+exercise: EX-072
+lessons:
+- id: L08.05.1
+  title: Confirmation process
+  objective: Explain confirmation process and show it in the EX-072 output.
+  prerequisites:
+  - L08.04.5
+  market_lesson: Both parties confirm the trade's terms after execution. [K]
+  north_american_example: 'EX-072 (Build a Trade Lifecycle) on synthetic North American data: events = 13 [EX]'
+  terminal_activity: python3 emi.py run 072 | grep '^events:'
+  expected_result: 'events: 13'
+  professional_application: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.04.5
+  after: L08.05.2
+  status: written_command_verified
+- id: L08.05.2
+  title: Electronic confirmation matching
+  objective: Explain electronic confirmation matching and show it in the EX-072 output.
+  prerequisites:
+  - L08.05.1
+  market_lesson: Electronic matching compares the two records automatically. [K]
+  north_american_example: 'EX-072 (Build a Trade Lifecycle) on synthetic North American data: accepted_events = 11 [EX]'
+  terminal_activity: python3 emi.py run 072 | grep '^accepted_events:'
+  expected_result: 'accepted_events: 11'
+  professional_application: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.05.1
+  after: L08.05.3
+  status: written_command_verified
+- id: L08.05.3
+  title: Discrepancy resolution
+  objective: Explain discrepancy resolution and show it in the EX-072 output.
+  prerequisites:
+  - L08.05.2
+  market_lesson: Mismatches are investigated and corrected before delivery. [K]
+  north_american_example: 'EX-072 (Build a Trade Lifecycle) on synthetic North American data: rejected_events = 2 [EX]'
+  terminal_activity: python3 emi.py run 072 | grep '^rejected_events:'
+  expected_result: 'rejected_events: 2'
+  professional_application: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.05.2
+  after: L08.05.4
+  status: written_command_verified
+- id: L08.05.4
+  title: Regulatory reporting
+  objective: Explain regulatory reporting and show it in the EX-072 output.
+  prerequisites:
+  - L08.05.3
+  market_lesson: Many trades must be reported to regulators. [K]
+  north_american_example: 'EX-072 (Build a Trade Lifecycle) on synthetic North American data: rejected_detail = TR002:scheduled(expected confirmed),TR003:invoiced(expected scheduled) [EX]'
+  terminal_activity: python3 emi.py run 072 | grep '^rejected_detail:'
+  expected_result: 'rejected_detail: TR002:scheduled(expected confirmed),TR003:invoiced(expected scheduled)'
+  professional_application: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.05.3
+  after: L08.05.5
+  status: written_command_verified
+- id: L08.05.5
+  title: Confirmation workflow
+  objective: Explain confirmation workflow and show it in the EX-072 output.
+  prerequisites:
+  - L08.05.4
+  market_lesson: Unconfirmed trades are tracked until resolved. [K]
+  north_american_example: 'EX-072 (Build a Trade Lifecycle) on synthetic North American data: settled_trades = 1 [EX]'
+  terminal_activity: python3 emi.py run 072 | grep '^settled_trades:'
+  expected_result: 'settled_trades: 1'
+  professional_application: Model trade capture, confirmation, scheduling, delivery, settlement, and accounting.
+  product_implication: 'ETRM integration is where products succeed or fail: trade, price and position interfaces need explicit data contracts.'
+  before: L08.05.4
+  after: L08.06.1
+  status: written_command_verified

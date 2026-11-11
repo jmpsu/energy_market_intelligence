@@ -1,0 +1,7 @@
+structure,physical_price_paid,hedge_gain,all_in_USD_per_MMBtu,total_cost_USD,residual_exposure
+physical_fixed_price,3.3,0.0,3.3,990000.0,none
+physical_index_unhedged,3.6,0.0,3.6,1080000.0,Henry Hub price
+physical_index_plus_long_futures,3.6,0.30000000000000027,3.3,990000.0,none (margin calls)
+physical_index_plus_swap_pay_fixed,3.6,0.30000000000000027,3.3,990000.0,none (credit)
+waha_index_plus_HH_swap_only,3.0,0.30000000000000027,2.6999999999999997,809999.9999999999,Waha basis
+waha_index_plus_HH_swap_plus_basis_swap,3.0,0.10000000000000031,2.8999999999999995,869999.9999999999,none

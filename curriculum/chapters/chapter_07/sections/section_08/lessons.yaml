@@ -1,0 +1,74 @@
+section: '7.8'
+title: Battery storage and state-of-charge constraints
+exercise: EX-063
+lessons:
+- id: L07.08.1
+  title: Battery parameters
+  objective: Explain battery parameters and show it in the EX-063 output.
+  prerequisites:
+  - L07.07.5
+  market_lesson: A battery is defined by power (MW), energy (MWh), efficiency and state-of-charge limits. [K]
+  north_american_example: 'EX-063 (Simulate Battery Energy Storage Arbitrage) on synthetic North American data: lp_revenue_USD = 17731.111111 [EX]'
+  terminal_activity: python3 emi.py run 063 | grep '^lp_revenue_USD:'
+  expected_result: 'lp_revenue_USD: 17731.111111'
+  professional_application: Optimize battery charging and discharging across hourly electricity prices, accounting for efficiency and capacity limits.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.07.5
+  after: L07.08.2
+  status: written_command_verified
+- id: L07.08.2
+  title: State-of-charge dynamics
+  objective: Explain state-of-charge dynamics and show it in the EX-063 output.
+  prerequisites:
+  - L07.08.1
+  market_lesson: State of charge rises with charging and falls with discharging. [K]
+  north_american_example: 'EX-063 (Simulate Battery Energy Storage Arbitrage) on synthetic North American data: rule_of_thumb_revenue_USD = 13875 [EX]'
+  terminal_activity: python3 emi.py run 063 | grep '^rule_of_thumb_revenue_USD:'
+  expected_result: 'rule_of_thumb_revenue_USD: 13875'
+  professional_application: Optimize battery charging and discharging across hourly electricity prices, accounting for efficiency and capacity limits.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.08.1
+  after: L07.08.3
+  status: written_command_verified
+- id: L07.08.3
+  title: Round-trip efficiency
+  objective: Explain round-trip efficiency and show it in the EX-063 output.
+  prerequisites:
+  - L07.08.2
+  market_lesson: Round-trip efficiency is the share of charged energy returned. [K]
+  north_american_example: 'EX-063 (Simulate Battery Energy Storage Arbitrage) on synthetic North American data: lp_gain_over_rule_USD = 3856.111111 [EX]'
+  terminal_activity: python3 emi.py run 063 | grep '^lp_gain_over_rule_USD:'
+  expected_result: 'lp_gain_over_rule_USD: 3856.111111'
+  professional_application: Optimize battery charging and discharging across hourly electricity prices, accounting for efficiency and capacity limits.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.08.2
+  after: L07.08.4
+  status: written_command_verified
+- id: L07.08.4
+  title: Arbitrage optimization
+  objective: Explain arbitrage optimization and show it in the EX-063 output.
+  prerequisites:
+  - L07.08.3
+  market_lesson: Arbitrage charges in cheap hours and discharges in dear ones. [K]
+  north_american_example: 'EX-063 (Simulate Battery Energy Storage Arbitrage) on synthetic North American data: energy_charged_MWh = 355.555556 [EX]'
+  terminal_activity: python3 emi.py run 063 | grep '^energy_charged_MWh:'
+  expected_result: 'energy_charged_MWh: 355.555556'
+  professional_application: Optimize battery charging and discharging across hourly electricity prices, accounting for efficiency and capacity limits.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.08.3
+  after: L07.08.5
+  status: written_command_verified
+- id: L07.08.5
+  title: Ancillary service stacking
+  objective: Explain ancillary service stacking and show it in the EX-063 output.
+  prerequisites:
+  - L07.08.4
+  market_lesson: Batteries stack energy arbitrage with ancillary service revenue. [K]
+  north_american_example: 'EX-063 (Simulate Battery Energy Storage Arbitrage) on synthetic North American data: energy_discharged_MWh = 320 [EX]'
+  terminal_activity: python3 emi.py run 063 | grep '^energy_discharged_MWh:'
+  expected_result: 'energy_discharged_MWh: 320'
+  professional_application: Optimize battery charging and discharging across hourly electricity prices, accounting for efficiency and capacity limits.
+  product_implication: Asset models must respect operating constraints or customers will not trust dispatch and margin outputs.
+  before: L07.08.4
+  after: L07.09.1
+  status: written_command_verified

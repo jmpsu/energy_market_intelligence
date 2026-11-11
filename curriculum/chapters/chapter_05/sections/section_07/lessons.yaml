@@ -1,0 +1,68 @@
+section: '5.7'
+title: Butane and isobutane markets
+lessons:
+- id: L05.07.1
+  title: Blending demand and RVP season
+  prerequisite: L05.06.5
+  status: written
+  objective: State what butanes are used for.
+  market_lesson: Normal butane and isobutane are mostly gasoline blendstocks and petrochemical or refinery feedstocks [S2].
+  example: EX-044 holds 800,000 gal of normal butane at Conway and 400,000 gal of isobutane at Mont Belvieu.
+  terminal_activity: python3 emi.py run 044
+  expected_result: 'P5_pnl_USD: 12000; P6_pnl_USD: 12000'
+  professional_application: Butane desks sit between the NGL and gasoline markets.
+  product_implication: Cross-links to refined-product prices are needed for butane analytics.
+  builds_on: L05.06.5
+  leads_to: L05.07.2
+- id: L05.07.2
+  title: Isomerization
+  prerequisite: L05.07.1
+  status: written
+  objective: Explain butane's seasonality.
+  market_lesson: More butane is blended into gasoline in colder months, when vapour-pressure rules allow it [S5]. So butane demand, like propane, is winter-weighted, for a different reason.
+  example: EIA lists gasoline blending alongside heating as a driver of the seasonal HGL demand cycle [S5].
+  terminal_activity: grep -i butane data/synthetic/ngl_regional_prices.csv
+  expected_result: 'Four rows: Normal_Butane and Isobutane on two dates.'
+  professional_application: Blending-season start and end dates are trading events.
+  product_implication: Calendar features (blending seasons) belong in forecasting models.
+  builds_on: L05.07.1
+  leads_to: L05.07.3
+- id: L05.07.3
+  title: Alkylation feed
+  prerequisite: L05.07.2
+  status: written
+  objective: Distinguish isobutane.
+  market_lesson: Isobutane comes from gas plants and refineries or is made from normal butane by isomerisation; it feeds alkylation, which makes high-octane gasoline components [S2].
+  example: 'Synthetic prices: isobutane 1.020 vs normal butane 0.890 USD/gal at Mont Belvieu, a 0.13 premium.'
+  terminal_activity: python3 emi.py run 040
+  expected_result: 'Isobutane net margin: 0.013 then 0.028 USD/gal.'
+  professional_application: The iso-normal spread signals whether isomerisation units run.
+  product_implication: Spread series between related products should be first-class objects.
+  builds_on: L05.07.2
+  leads_to: L05.07.4
+- id: L05.07.4
+  title: Storage and logistics
+  prerequisite: L05.07.3
+  status: written
+  objective: Relate butane to crude.
+  market_lesson: Because of its gasoline use, butane prices tend to follow oil prices [S11]. Traders quote heavier NGLs as a percentage of crude [S12].
+  example: OPIS reported Mont Belvieu normal butane at about 60.7% of WTI in early 2023 [S12].
+  terminal_activity: python3 emi.py run 039
+  expected_result: Normal_Butane contributes 4.11 USD of the 28.05 USD barrel.
+  professional_application: Ratio-to-crude is the standard way to judge whether a heavy NGL is cheap or rich.
+  product_implication: Ratio analytics need a crude price series in the same store.
+  builds_on: L05.07.3
+  leads_to: L05.07.5
+- id: L05.07.5
+  title: Butane spreads
+  prerequisite: L05.07.4
+  status: written
+  objective: Mark a butane position.
+  market_lesson: MtM = signed gallons x (mark - trade price) [EX].
+  example: 'P5: long 800,000 gal normal butane at Conway at 0.830; mark 0.825 then 0.840: -4,000 then +8,000 USD.'
+  terminal_activity: python3 emi.py run 044
+  expected_result: 'P5_pnl_USD: 12000'
+  professional_application: Daily marking by product and hub is the base of every NGL risk report.
+  product_implication: 'Hub is part of the instrument key: Conway butane and Belvieu butane are different risks.'
+  builds_on: L05.07.4
+  leads_to: L05.08.1

@@ -1,0 +1,4 @@
+crr,MW,expected_congestion_USD_per_MWh,realized_congestion_USD_per_MWh,auction_cost_USD,expected_revenue_USD,realized_revenue_USD,expected_profit_USD,realized_profit_USD,forecast_error_USD,implied_auction_price_USD_per_MWh
+CRR1,25,2.0,3.1,30000,36000.0,55800.0,6000.0,25800.0,19800.0,1.6666666666666667
+CRR2,40,1.5,0.4,40000,43200.0,11520.0,3200.0,-28480.0,-31680.0,1.3888888888888888
+CRR3,10,4.0,-1.0,20000,28800.0,-7200.0,8800.0,-27200.0,-36000.0,2.7777777777777777

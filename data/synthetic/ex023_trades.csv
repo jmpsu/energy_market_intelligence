@@ -1,0 +1,6 @@
+trade_id,trade_day,side,contract_month,volume_MMBtu,price_USD_per_MMBtu
+T1,1,BUY,2027-01,310000,3.40
+T2,1,SELL,2027-02,280000,3.55
+T3,1,BUY,2027-07,300000,3.00
+T4,1,SELL,2027-12,310000,3.70
+T5,2,BUY,2027-03,150000,3.25

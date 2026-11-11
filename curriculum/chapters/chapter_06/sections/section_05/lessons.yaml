@@ -1,0 +1,74 @@
+section: '6.5'
+title: Day-ahead and real-time market operations
+exercise: EX-047
+lessons:
+- id: L06.05.1
+  title: Day-ahead market clearing
+  objective: Explain day-ahead market clearing and show it in the EX-047 output.
+  prerequisites:
+  - L06.04.5
+  market_lesson: The day-ahead market clears hourly schedules and prices for tomorrow. [K]
+  north_american_example: 'EX-047 (Analyze Day-Ahead and Real-Time Markets) on synthetic North American data: mean_da_price = 62.125 [EX]'
+  terminal_activity: python3 emi.py run 047 | grep '^mean_da_price:'
+  expected_result: 'mean_da_price: 62.125'
+  professional_application: Compare scheduled electricity prices with actual real-time market prices.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.04.5
+  after: L06.05.2
+  status: written_command_verified
+- id: L06.05.2
+  title: Real-time dispatch
+  objective: Explain real-time dispatch and show it in the EX-047 output.
+  prerequisites:
+  - L06.05.1
+  market_lesson: The real-time market redispatches every few minutes to follow actual conditions. [K]
+  north_american_example: 'EX-047 (Analyze Day-Ahead and Real-Time Markets) on synthetic North American data: mean_rt_price = 68.833333 [EX]'
+  terminal_activity: python3 emi.py run 047 | grep '^mean_rt_price:'
+  expected_result: 'mean_rt_price: 68.833333'
+  professional_application: Compare scheduled electricity prices with actual real-time market prices.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.05.1
+  after: L06.05.3
+  status: written_command_verified
+- id: L06.05.3
+  title: Two-settlement system
+  objective: Explain two-settlement system and show it in the EX-047 output.
+  prerequisites:
+  - L06.05.2
+  market_lesson: Day-ahead quantities settle at day-ahead prices; deviations settle at real-time prices. [K]
+  north_american_example: 'EX-047 (Analyze Day-Ahead and Real-Time Markets) on synthetic North American data: mean_dart_spread = -6.708333 [EX]'
+  terminal_activity: python3 emi.py run 047 | grep '^mean_dart_spread:'
+  expected_result: 'mean_dart_spread: -6.708333'
+  professional_application: Compare scheduled electricity prices with actual real-time market prices.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.05.2
+  after: L06.05.4
+  status: written_command_verified
+- id: L06.05.4
+  title: Virtual bidding
+  objective: Explain virtual bidding and show it in the EX-047 output.
+  prerequisites:
+  - L06.05.3
+  market_lesson: Virtual bids take financial positions between the two markets and help prices converge. [K]
+  north_american_example: 'EX-047 (Analyze Day-Ahead and Real-Time Markets) on synthetic North American data: hours_rt_above_da = 11 [EX]'
+  terminal_activity: python3 emi.py run 047 | grep '^hours_rt_above_da:'
+  expected_result: 'hours_rt_above_da: 11'
+  professional_application: Compare scheduled electricity prices with actual real-time market prices.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.05.3
+  after: L06.05.5
+  status: written_command_verified
+- id: L06.05.5
+  title: DA-RT spread analysis
+  objective: Explain dA-RT spread analysis and show it in the EX-047 output.
+  prerequisites:
+  - L06.05.4
+  market_lesson: The DA-RT spread shows forecast error and risk premium. [K]
+  north_american_example: 'EX-047 (Analyze Day-Ahead and Real-Time Markets) on synthetic North American data: rt_price_std = 54.065714 [EX]'
+  terminal_activity: python3 emi.py run 047 | grep '^rt_price_std:'
+  expected_result: 'rt_price_std: 54.065714'
+  professional_application: Compare scheduled electricity prices with actual real-time market prices.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.05.4
+  after: L06.06.1
+  status: written_command_verified

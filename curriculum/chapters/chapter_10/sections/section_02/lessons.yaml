@@ -1,0 +1,74 @@
+section: '10.2'
+title: Network-flow and transmission modeling
+exercise: EX-090
+lessons:
+- id: L10.02.1
+  title: Graph models
+  objective: Explain graph models and show it in the EX-090 output.
+  prerequisites:
+  - L10.01.5
+  market_lesson: Networks are graphs of nodes and edges. [K]
+  north_american_example: 'EX-090 (Build a Gas Network Simulation) on synthetic North American data: base_transport_cost_USD_per_d = 19750000 [EX]'
+  terminal_activity: python3 emi.py run 090 | grep '^base_transport_cost_USD_per_d:'
+  expected_result: 'base_transport_cost_USD_per_d: 19750000'
+  professional_application: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.01.5
+  after: L10.02.2
+  status: written_command_verified
+- id: L10.02.2
+  title: Transport (pipeline) model
+  objective: Explain transport (pipeline) model and show it in the EX-090 output.
+  prerequisites:
+  - L10.02.1
+  market_lesson: A transport model limits flow on each edge by capacity. [K]
+  north_american_example: 'EX-090 (Build a Gas Network Simulation) on synthetic North American data: disrupted_transport_cost_USD_per_d = 19750000 [EX]'
+  terminal_activity: python3 emi.py run 090 | grep '^disrupted_transport_cost_USD_per_d:'
+  expected_result: 'disrupted_transport_cost_USD_per_d: 19750000'
+  professional_application: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.02.1
+  after: L10.02.3
+  status: written_command_verified
+- id: L10.02.3
+  title: DC power-flow approximation
+  objective: Explain dC power-flow approximation and show it in the EX-090 output.
+  prerequisites:
+  - L10.02.2
+  market_lesson: DC power flow linearises AC physics. [K]
+  north_american_example: 'EX-090 (Build a Gas Network Simulation) on synthetic North American data: base_unmet_Bcf_d = 5 [EX]'
+  terminal_activity: python3 emi.py run 090 | grep '^base_unmet_Bcf_d:'
+  expected_result: 'base_unmet_Bcf_d: 5'
+  professional_application: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.02.2
+  after: L10.02.4
+  status: written_command_verified
+- id: L10.02.4
+  title: PTDF matrices
+  objective: Explain pTDF matrices and show it in the EX-090 output.
+  prerequisites:
+  - L10.02.3
+  market_lesson: PTDFs give the flow on each line per MW injected. [K]
+  north_american_example: 'EX-090 (Build a Gas Network Simulation) on synthetic North American data: disrupted_unmet_Bcf_d = 5 [EX]'
+  terminal_activity: python3 emi.py run 090 | grep '^disrupted_unmet_Bcf_d:'
+  expected_result: 'disrupted_unmet_Bcf_d: 5'
+  professional_application: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.02.3
+  after: L10.02.5
+  status: written_command_verified
+- id: L10.02.5
+  title: Network model construction
+  objective: Explain network model construction and show it in the EX-090 output.
+  prerequisites:
+  - L10.02.4
+  market_lesson: Network construction is mostly data cleaning. [K]
+  north_american_example: 'EX-090 (Build a Gas Network Simulation) on synthetic North American data: base_binding_edges = P001,P004,P005,P007,P008 [EX]'
+  terminal_activity: python3 emi.py run 090 | grep '^base_binding_edges:'
+  expected_result: 'base_binding_edges: P001,P004,P005,P007,P008'
+  professional_application: Model interconnected supply sources, pipelines, storage facilities, demand centers, and transportation constraints.
+  product_implication: 'Simulation speed and result equivalence are product features: faster runs only count if the answers are proven unchanged.'
+  before: L10.02.4
+  after: L10.03.1
+  status: written_command_verified

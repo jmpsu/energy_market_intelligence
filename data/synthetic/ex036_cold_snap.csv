@@ -1,0 +1,8 @@
+day,temperature_F,normal_demand_Bcf_d,production_Bcf_d,pipeline_import_cap_Bcf_d
+1,35,18,12,8
+2,22,18,12,8
+3,8,18,12,8
+4,2,18,12,7
+5,5,18,12,7
+6,18,18,12,8
+7,33,18,12,8

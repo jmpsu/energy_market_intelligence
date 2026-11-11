@@ -1,0 +1,4 @@
+technology,fixed_cost_USD_per_MW_yr,variable_cost_USD_per_MWh
+Baseload,300000,8
+Combined_Cycle,120000,30
+Combustion_Turbine,60000,60

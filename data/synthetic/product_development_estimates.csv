@@ -1,0 +1,6 @@
+capability,estimated_development_weeks,engineering_effort_person_weeks,estimated_customer_value_USD,technical_risk_1_to_5
+Automated_basis_monitoring,4,8,250000,2
+Integrated_dispatch_simulation,12,24,400000,4
+Unified_risk_dashboard,8,16,650000,3
+Automated_nomination_reconciliation,6,12,180000,2
+Simulation_performance_optimization,10,20,500000,5

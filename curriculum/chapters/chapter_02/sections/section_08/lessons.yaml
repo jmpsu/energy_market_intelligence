@@ -1,0 +1,74 @@
+section: '2.8'
+title: Pipeline operations, nominations, and scheduling
+exercise: EX-028
+lessons:
+- id: L02.08.1
+  title: The gas day and nomination cycles
+  objective: Explain the gas day and nomination cycles and show it in the EX-028 output.
+  prerequisites:
+  - L02.07.5
+  market_lesson: The gas day is a 24-hour delivery period with several nomination cycles. [K]
+  north_american_example: 'EX-028 (Simulate Daily Gas Nominations) on synthetic North American data: nominated_MMBtu = 510000 [EX]'
+  terminal_activity: python3 emi.py run 028 | grep '^nominated_MMBtu:'
+  expected_result: 'nominated_MMBtu: 510000'
+  professional_application: Build a simplified nomination schedule showing requested quantities, pipeline confirmations, and scheduled volumes.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.07.5
+  after: L02.08.2
+  status: written_command_verified
+- id: L02.08.2
+  title: Nomination, confirmation, scheduling
+  objective: Explain nomination, confirmation, scheduling and show it in the EX-028 output.
+  prerequisites:
+  - L02.08.1
+  market_lesson: A nomination requests a flow; both ends must confirm it; the pipeline then schedules it. [K]
+  north_american_example: 'EX-028 (Simulate Daily Gas Nominations) on synthetic North American data: confirmed_MMBtu = 490000 [EX]'
+  terminal_activity: python3 emi.py run 028 | grep '^confirmed_MMBtu:'
+  expected_result: 'confirmed_MMBtu: 490000'
+  professional_application: Build a simplified nomination schedule showing requested quantities, pipeline confirmations, and scheduled volumes.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.08.1
+  after: L02.08.3
+  status: written_command_verified
+- id: L02.08.3
+  title: Cuts and priority of service
+  objective: Explain cuts and priority of service and show it in the EX-028 output.
+  prerequisites:
+  - L02.08.2
+  market_lesson: When requests exceed capacity, the pipeline cuts lowest-priority service first. [K]
+  north_american_example: 'EX-028 (Simulate Daily Gas Nominations) on synthetic North American data: scheduled_MMBtu = 420000 [EX]'
+  terminal_activity: python3 emi.py run 028 | grep '^scheduled_MMBtu:'
+  expected_result: 'scheduled_MMBtu: 420000'
+  professional_application: Build a simplified nomination schedule showing requested quantities, pipeline confirmations, and scheduled volumes.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.08.2
+  after: L02.08.4
+  status: written_command_verified
+- id: L02.08.4
+  title: Allocation and measurement
+  objective: Explain allocation and measurement and show it in the EX-028 output.
+  prerequisites:
+  - L02.08.3
+  market_lesson: Measured flows are allocated to shippers after the day and rarely match schedules exactly. [K]
+  north_american_example: 'EX-028 (Simulate Daily Gas Nominations) on synthetic North American data: confirmation_cuts_MMBtu = 20000 [EX]'
+  terminal_activity: python3 emi.py run 028 | grep '^confirmation_cuts_MMBtu:'
+  expected_result: 'confirmation_cuts_MMBtu: 20000'
+  professional_application: Build a simplified nomination schedule showing requested quantities, pipeline confirmations, and scheduled volumes.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.08.3
+  after: L02.08.5
+  status: written_command_verified
+- id: L02.08.5
+  title: Scheduler daily workflow
+  objective: Explain scheduler daily workflow and show it in the EX-028 output.
+  prerequisites:
+  - L02.08.4
+  market_lesson: A scheduler nominates, checks confirmations, fixes cuts and reconciles actuals every day. [K]
+  north_american_example: 'EX-028 (Simulate Daily Gas Nominations) on synthetic North American data: capacity_cuts_MMBtu = 70000 [EX]'
+  terminal_activity: python3 emi.py run 028 | grep '^capacity_cuts_MMBtu:'
+  expected_result: 'capacity_cuts_MMBtu: 70000'
+  professional_application: Build a simplified nomination schedule showing requested quantities, pipeline confirmations, and scheduled volumes.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.08.4
+  after: L02.09.1
+  status: written_command_verified

@@ -1,0 +1,13 @@
+location_key,location,commodity,region,country
+1,AECO,natural_gas,Alberta,CA
+2,Algonquin_Citygate,natural_gas,Massachusetts,US
+3,Conway,ngl,Kansas,US
+4,Dawn,natural_gas,Ontario,CA
+5,ERCOT_North,power,Texas,US
+6,Henry_Hub,natural_gas,Louisiana,US
+7,Indiana_Hub,power,Indiana,US
+8,Mass_Hub,power,Massachusetts,US
+9,Mont_Belvieu,ngl,Texas,US
+10,PJM_West,power,Pennsylvania,US
+11,SP15,power,California,US
+12,Waha,natural_gas,Texas,US

@@ -1,0 +1,3 @@
+feed,price_USD_per_gal,lb_per_gal,ethylene_yield_lb_per_lb,coproduct_credit_c_per_lb_ethylene,conversion_cost_c_per_lb_ethylene,feed_cost_c_per_lb_feed,feed_cost_c_per_lb_ethylene,cash_cost_c_per_lb_ethylene,margin_c_per_lb_ethylene,breakeven_feed_price_USD_per_gal,annual_margin_USD_million,feed_gal_per_lb_ethylene
+Ethane,0.235,2.97,0.78,1.0,4.0,7.912457912457912,10.144176810843476,13.144176810843476,8.855823189156524,0.44015400000000005,292.2421652421653,0.431667098333765
+Propane,0.72,4.22,0.42,20.0,5.0,17.061611374407583,40.62288422477996,25.62288422477996,-3.622884224779959,0.6557879999999998,-119.55517941773864,0.5642067253441662

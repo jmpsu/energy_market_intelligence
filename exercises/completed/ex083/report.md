@@ -1,0 +1,22 @@
+# ex083 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+peak_pfe_USD: 1428316.177291
+
+peak_pfe_month: 5
+
+peak_expected_exposure_USD: 296168.296199
+
+average_expected_exposure_USD: 198617.939286
+
+pfe_at_maturity_USD: 0
+
+pfe_month_1_USD: 896001.152829
+
+current_exposure_USD: 0
+
+notional_USD: 3900000
+
+peak_pfe_pct_of_notional: 36.623492
+
+NOTE: Exposure starts at zero (struck at market), rises as prices diffuse, then falls as volume settles: the hump shape. One forward price for all months, lognormal, no collateral or netting.
+

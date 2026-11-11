@@ -1,0 +1,74 @@
+section: '6.4'
+title: Vertically integrated and bilateral markets
+exercise: EX-046
+lessons:
+- id: L06.04.1
+  title: Southeast and Western bilateral markets
+  objective: Explain southeast and Western bilateral markets and show it in the EX-046 output.
+  prerequisites:
+  - L06.03.5
+  market_lesson: Outside ISOs, utilities self-schedule and trade bilaterally. [K]
+  north_american_example: 'EX-046 (Compare ISO/RTO and Bilateral Markets) on synthetic North American data: iso_spot_seller = 42 [EX]'
+  terminal_activity: python3 emi.py run 046 | grep '^iso_spot_seller:'
+  expected_result: 'iso_spot_seller: 42'
+  professional_application: Model differences between centrally organized wholesale markets and bilateral electricity transactions.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.03.5
+  after: L06.04.2
+  status: written_command_verified
+- id: L06.04.2
+  title: Utility integrated resource planning
+  objective: Explain utility integrated resource planning and show it in the EX-046 output.
+  prerequisites:
+  - L06.04.1
+  market_lesson: Integrated resource plans decide what those utilities build or contract. [K]
+  north_american_example: 'EX-046 (Compare ISO/RTO and Bilateral Markets) on synthetic North American data: bilateral_physical_with_wheeling_seller = 45 [EX]'
+  terminal_activity: python3 emi.py run 046 | grep '^bilateral_physical_with_wheeling_seller:'
+  expected_result: 'bilateral_physical_with_wheeling_seller: 45'
+  professional_application: Model differences between centrally organized wholesale markets and bilateral electricity transactions.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.04.1
+  after: L06.04.3
+  status: written_command_verified
+- id: L06.04.3
+  title: Bilateral trading hubs
+  objective: Explain bilateral trading hubs and show it in the EX-046 output.
+  prerequisites:
+  - L06.04.2
+  market_lesson: Bilateral power trades at named hubs. [K]
+  north_american_example: 'EX-046 (Compare ISO/RTO and Bilateral Markets) on synthetic North American data: iso_plus_cfd_at_gen_node_seller = 45 [EX]'
+  terminal_activity: python3 emi.py run 046 | grep '^iso_plus_cfd_at_gen_node_seller:'
+  expected_result: 'iso_plus_cfd_at_gen_node_seller: 45'
+  professional_application: Model differences between centrally organized wholesale markets and bilateral electricity transactions.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.04.2
+  after: L06.04.4
+  status: written_command_verified
+- id: L06.04.4
+  title: Transmission service and OASIS
+  objective: Explain transmission service and OASIS and show it in the EX-046 output.
+  prerequisites:
+  - L06.04.3
+  market_lesson: Transmission service is reserved through each provider's OASIS site. [K]
+  north_american_example: 'EX-046 (Compare ISO/RTO and Bilateral Markets) on synthetic North American data: iso_plus_cfd_at_load_node_seller = 39 [EX]'
+  terminal_activity: python3 emi.py run 046 | grep '^iso_plus_cfd_at_load_node_seller:'
+  expected_result: 'iso_plus_cfd_at_load_node_seller: 39'
+  professional_application: Model differences between centrally organized wholesale markets and bilateral electricity transactions.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.04.3
+  after: L06.04.5
+  status: written_command_verified
+- id: L06.04.5
+  title: Emerging day-ahead market initiatives
+  objective: Explain emerging day-ahead market initiatives and show it in the EX-046 output.
+  prerequisites:
+  - L06.04.4
+  market_lesson: Western day-ahead market initiatives are extending organized trading into bilateral regions. [K]
+  north_american_example: 'EX-046 (Compare ISO/RTO and Bilateral Markets) on synthetic North American data: iso_spot_buyer = 48 [EX]'
+  terminal_activity: python3 emi.py run 046 | grep '^iso_spot_buyer:'
+  expected_result: 'iso_spot_buyer: 48'
+  professional_application: Model differences between centrally organized wholesale markets and bilateral electricity transactions.
+  product_implication: Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
+  before: L06.04.4
+  after: L06.05.1
+  status: written_command_verified

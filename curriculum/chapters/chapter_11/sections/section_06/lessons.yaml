@@ -1,0 +1,74 @@
+section: '11.6'
+title: Roadmap design and prioritization
+exercise: EX-097
+lessons:
+- id: L11.06.1
+  title: Prioritization frameworks
+  objective: Explain prioritization frameworks and show it in the EX-097 output.
+  prerequisites:
+  - L11.05.5
+  market_lesson: Prioritisation frameworks score value against effort. [K]
+  north_american_example: 'EX-097 (Prioritize a Product Roadmap) on synthetic North American data: rank_1 = Basis_monitor [EX]'
+  terminal_activity: python3 emi.py run 097 | grep '^rank_1:'
+  expected_result: 'rank_1: Basis_monitor'
+  professional_application: Rank competing feature requests using customer value, commercial impact, technical feasibility, risk, and development effort.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.05.5
+  after: L11.06.2
+  status: written_command_verified
+- id: L11.06.2
+  title: Roadmap formats
+  objective: Explain roadmap formats and show it in the EX-097 output.
+  prerequisites:
+  - L11.06.1
+  market_lesson: Roadmaps show themes over time. [K]
+  north_american_example: 'EX-097 (Prioritize a Product Roadmap) on synthetic North American data: rank_2 = NGL_netback_screen [EX]'
+  terminal_activity: python3 emi.py run 097 | grep '^rank_2:'
+  expected_result: 'rank_2: NGL_netback_screen'
+  professional_application: Rank competing feature requests using customer value, commercial impact, technical feasibility, risk, and development effort.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.06.1
+  after: L11.06.3
+  status: written_command_verified
+- id: L11.06.3
+  title: Dependencies and sequencing
+  objective: Explain dependencies and sequencing and show it in the EX-097 output.
+  prerequisites:
+  - L11.06.2
+  market_lesson: Dependencies set order. [K]
+  north_american_example: 'EX-097 (Prioritize a Product Roadmap) on synthetic North American data: rank_3 = Data_quality_console [EX]'
+  terminal_activity: python3 emi.py run 097 | grep '^rank_3:'
+  expected_result: 'rank_3: Data_quality_console'
+  professional_application: Rank competing feature requests using customer value, commercial impact, technical feasibility, risk, and development effort.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.06.2
+  after: L11.06.4
+  status: written_command_verified
+- id: L11.06.4
+  title: Capacity planning
+  objective: Explain capacity planning and show it in the EX-097 output.
+  prerequisites:
+  - L11.06.3
+  market_lesson: Capacity limits what fits. [K]
+  north_american_example: 'EX-097 (Prioritize a Product Roadmap) on synthetic North American data: rank_4 = Unified_risk_dashboard [EX]'
+  terminal_activity: python3 emi.py run 097 | grep '^rank_4:'
+  expected_result: 'rank_4: Unified_risk_dashboard'
+  professional_application: Rank competing feature requests using customer value, commercial impact, technical feasibility, risk, and development effort.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.06.3
+  after: L11.06.5
+  status: written_command_verified
+- id: L11.06.5
+  title: Stakeholder alignment
+  objective: Explain stakeholder alignment and show it in the EX-097 output.
+  prerequisites:
+  - L11.06.4
+  market_lesson: Alignment is agreement from the teams that deliver and sell. [K]
+  north_american_example: 'EX-097 (Prioritize a Product Roadmap) on synthetic North American data: rank_5 = Nomination_reconciliation [EX]'
+  terminal_activity: python3 emi.py run 097 | grep '^rank_5:'
+  expected_result: 'rank_5: Nomination_reconciliation'
+  professional_application: Rank competing feature requests using customer value, commercial impact, technical feasibility, risk, and development effort.
+  product_implication: Every roadmap item should cite customer evidence and a measurable KPI.
+  before: L11.06.4
+  after: L11.07.1
+  status: written_command_verified

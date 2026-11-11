@@ -1,0 +1,11 @@
+ex088 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+requests: 7
+status_200: 3
+status_404: 3
+status_400: 1
+waha_observations: 2
+waha_negative_price_served: True
+henry_hub_0800_price: 3.25
+henry_hub_1000_status: 404
+locations_listed: 12
+NOTE: Handler logic only, called in-process: no HTTP server, authentication, pagination or rate limiting. A missing price returns 404, never a filled or stale value.

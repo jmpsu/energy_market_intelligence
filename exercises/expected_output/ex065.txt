@@ -1,0 +1,12 @@
+ex065 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+direct_solar_revenue_USD: 55910
+solar_plus_storage_revenue_USD: 69590
+storage_uplift_USD: 13680
+energy_charged_MWh: 266.666667
+energy_discharged_MWh: 240
+equivalent_cycles: 1.2
+energy_sold_MWh: 1073.333333
+direct_energy_sold_MWh: 1100
+final_soc_MWh: 50
+NOTE: Efficiency loss applied on charge; terminal SOC >= initial SOC; perfect price foresight; demand_MW column is not used (merchant sale assumption).
+NOTE: Storage sells fewer MWh than direct solar yet earns more: value depends on when energy is sold.

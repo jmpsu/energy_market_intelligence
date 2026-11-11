@@ -1,0 +1,6 @@
+parameter,value,unit
+maximum_inventory,150000,MMBtu
+injection_cost,0.08,USD_per_MMBtu
+withdrawal_cost,0.06,USD_per_MMBtu
+injection_fuel_loss,0.02,fraction
+withdrawal_fuel_loss,0.01,fraction

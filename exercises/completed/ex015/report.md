@@ -1,0 +1,16 @@
+# ex015 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+
+constrained_hours: 3,4,5,6,7
+
+total_unscheduled_MMBtu: 75000
+
+gross_spread_USD_per_MMBtu: 1.5
+
+net_transport_margin_USD_per_MMBtu: 1.2
+
+lost_transport_value_USD: 90000
+
+constrained_spread_USD_per_MMBtu: 0.25
+
+NOTE: Supplied constrained downstream price (3.50) is BELOW the unconstrained price (4.75); a downstream bottleneck normally raises the downstream price. Field semantics need clarification; lost value uses the unconstrained spread.
+

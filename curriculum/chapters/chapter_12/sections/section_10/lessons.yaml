@@ -1,0 +1,74 @@
+section: '12.10'
+title: Executive product strategy presentation
+exercise: EX-100
+lessons:
+- id: L12.10.1
+  title: Presentation storyline
+  objective: Explain presentation storyline and show it in the EX-100 output.
+  prerequisites:
+  - L12.09.5
+  market_lesson: The storyline goes problem, evidence, recommendation. [K]
+  north_american_example: 'EX-100 (Complete an Integrated Energy Portfolio Capstone) on synthetic North American data: Base_portfolio_value_USD = 1617201.470588 [EX]'
+  terminal_activity: python3 emi.py run 100 | grep '^Base_portfolio_value_USD:'
+  expected_result: 'Base_portfolio_value_USD: 1617201.470588'
+  professional_application: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.09.5
+  after: L12.10.2
+  status: written_command_verified
+- id: L12.10.2
+  title: Evidence selection
+  objective: Explain evidence selection and show it in the EX-100 output.
+  prerequisites:
+  - L12.10.1
+  market_lesson: Choose the few results that carry the argument. [K]
+  north_american_example: 'EX-100 (Complete an Integrated Energy Portfolio Capstone) on synthetic North American data: Gas_Spike_portfolio_value_USD = 2579646.764706 [EX]'
+  terminal_activity: python3 emi.py run 100 | grep '^Gas_Spike_portfolio_value_USD:'
+  expected_result: 'Gas_Spike_portfolio_value_USD: 2579646.764706'
+  professional_application: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.10.1
+  after: L12.10.3
+  status: written_command_verified
+- id: L12.10.3
+  title: Recommendation and asks
+  objective: Explain recommendation and asks and show it in the EX-100 output.
+  prerequisites:
+  - L12.10.2
+  market_lesson: State the recommendation and the asks. [K]
+  north_american_example: 'EX-100 (Complete an Integrated Energy Portfolio Capstone) on synthetic North American data: Power_Scarcity_portfolio_value_USD = 3037356.176471 [EX]'
+  terminal_activity: python3 emi.py run 100 | grep '^Power_Scarcity_portfolio_value_USD:'
+  expected_result: 'Power_Scarcity_portfolio_value_USD: 3037356.176471'
+  professional_application: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.10.2
+  after: L12.10.4
+  status: written_command_verified
+- id: L12.10.4
+  title: Q&A preparation
+  objective: Explain q&A preparation and show it in the EX-100 output.
+  prerequisites:
+  - L12.10.3
+  market_lesson: Prepare for likely questions. [K]
+  north_american_example: 'EX-100 (Complete an Integrated Energy Portfolio Capstone) on synthetic North American data: Pipeline_Disruption_portfolio_value_USD = 1947938.058824 [EX]'
+  terminal_activity: python3 emi.py run 100 | grep '^Pipeline_Disruption_portfolio_value_USD:'
+  expected_result: 'Pipeline_Disruption_portfolio_value_USD: 1947938.058824'
+  professional_application: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.10.3
+  after: L12.10.5
+  status: written_command_verified
+- id: L12.10.5
+  title: Final presentation delivery
+  objective: Explain final presentation delivery and show it in the EX-100 output.
+  prerequisites:
+  - L12.10.4
+  market_lesson: Deliver to time and close on the decision. [K]
+  north_american_example: 'EX-100 (Complete an Integrated Energy Portfolio Capstone) on synthetic North American data: Renewable_Shortfall_portfolio_value_USD = 2128587.352941 [EX]'
+  terminal_activity: python3 emi.py run 100 | grep '^Renewable_Shortfall_portfolio_value_USD:'
+  expected_result: 'Renewable_Shortfall_portfolio_value_USD: 2128587.352941'
+  professional_application: Build and analyze a hypothetical North American energy portfolio spanning natural gas, NGLs, electricity, generation assets, storage, trading positions, and market risk. Execute the analysis through the terminal, validate the results, identify commercial opportunities and risks, and present a product strategy explaining how an integrated simulation and analytics platform could support the decisions.
+  product_implication: Integrated gas-power-NGL scenarios are the differentiator for a cross-commodity product; they depend on all earlier chapters.
+  before: L12.10.4
+  after: null
+  status: written_command_verified

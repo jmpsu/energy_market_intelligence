@@ -1,0 +1,74 @@
+section: '2.10'
+title: Physical delivery and transportation economics
+exercise: EX-012
+lessons:
+- id: L02.10.1
+  title: Delivered cost build-up
+  objective: Explain delivered cost build-up and show it in the EX-012 output.
+  prerequisites:
+  - L02.09.5
+  market_lesson: Delivered cost is purchase price plus transport charges plus fuel. [K]
+  north_american_example: 'EX-012 (Calculate Wellhead-to-Market Economics) on synthetic North American data: Firm_to_West_netback = 2.224 [EX]'
+  terminal_activity: python3 emi.py run 012 | grep '^Firm_to_West_netback:'
+  expected_result: 'Firm_to_West_netback: 2.224'
+  professional_application: Model the effects of gathering, processing, transportation, fuel retention, and other costs on realized gas prices.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.09.5
+  after: L02.10.2
+  status: written_command_verified
+- id: L02.10.2
+  title: Fuel retention and commodity charges
+  objective: Explain fuel retention and commodity charges and show it in the EX-012 output.
+  prerequisites:
+  - L02.10.1
+  market_lesson: Fuel retention is gas kept by the pipeline to run compressors; commodity charges are per unit shipped. [K]
+  north_american_example: 'EX-012 (Calculate Wellhead-to-Market Economics) on synthetic North American data: Firm_to_Gulf_Coast_netback = 2.087 [EX]'
+  terminal_activity: python3 emi.py run 012 | grep '^Firm_to_Gulf_Coast_netback:'
+  expected_result: 'Firm_to_Gulf_Coast_netback: 2.087'
+  professional_application: Model the effects of gathering, processing, transportation, fuel retention, and other costs on realized gas prices.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.10.1
+  after: L02.10.3
+  status: written_command_verified
+- id: L02.10.3
+  title: Reservation vs usage charges
+  objective: Explain reservation vs usage charges and show it in the EX-012 output.
+  prerequisites:
+  - L02.10.2
+  market_lesson: Reservation charges are paid for capacity whether used or not; usage charges only when gas flows. [K]
+  north_american_example: 'EX-012 (Calculate Wellhead-to-Market Economics) on synthetic North American data: Sell_at_Waha_netback = 0.7 [EX]'
+  terminal_activity: python3 emi.py run 012 | grep '^Sell_at_Waha_netback:'
+  expected_result: 'Sell_at_Waha_netback: 0.7'
+  professional_application: Model the effects of gathering, processing, transportation, fuel retention, and other costs on realized gas prices.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.10.2
+  after: L02.10.4
+  status: written_command_verified
+- id: L02.10.4
+  title: Realized price at the delivery point
+  objective: Explain realized price at the delivery point and show it in the EX-012 output.
+  prerequisites:
+  - L02.10.3
+  market_lesson: Realised price at the delivery point is the market price there less everything paid to arrive. [K]
+  north_american_example: 'EX-012 (Calculate Wellhead-to-Market Economics) on synthetic North American data: blended_netback_USD_per_MMBtu = 1.9894 [EX]'
+  terminal_activity: python3 emi.py run 012 | grep '^blended_netback_USD_per_MMBtu:'
+  expected_result: 'blended_netback_USD_per_MMBtu: 1.9894'
+  professional_application: Model the effects of gathering, processing, transportation, fuel retention, and other costs on realized gas prices.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.10.3
+  after: L02.10.5
+  status: written_command_verified
+- id: L02.10.5
+  title: Transport value vs basis spread
+  objective: Explain transport value vs basis spread and show it in the EX-012 output.
+  prerequisites:
+  - L02.10.4
+  market_lesson: Transport is worth holding when the basis spread exceeds its variable cost. [K]
+  north_american_example: 'EX-012 (Calculate Wellhead-to-Market Economics) on synthetic North American data: local_only_netback = 0.7 [EX]'
+  terminal_activity: python3 emi.py run 012 | grep '^local_only_netback:'
+  expected_result: 'local_only_netback: 0.7'
+  professional_application: Model the effects of gathering, processing, transportation, fuel retention, and other costs on realized gas prices.
+  product_implication: Physical gas data (capacity, storage, nominations) is the raw input customers expect a product to load and reconcile.
+  before: L02.10.4
+  after: L03.01.1
+  status: written_command_verified

@@ -1,0 +1,6 @@
+generator,fuel,fuel_price_USD_per_MMBtu,heat_rate_MMBtu_per_MWh,vom_USD_per_MWh,available_capacity_MW,marginal_cost_USD_per_MWh,dispatch_MW,rank
+NUC,uranium,0.7,10.4,2.0,900,9.28,900,1
+CC1,gas,3.25,6.8,2.5,600,24.599999999999998,600,2
+COAL,coal,2.1,10.2,4.5,500,25.919999999999998,500,3
+CC2,gas,3.25,7.4,3.0,500,27.05,0,4
+GT,gas,3.25,10.5,5.0,300,39.125,0,5

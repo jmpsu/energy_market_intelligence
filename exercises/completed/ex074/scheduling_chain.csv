@@ -1,0 +1,10 @@
+step,MMBtu
+supply_purchased,60000.0
+receipt_needed_for_sales,56122.448979591834
+transport_MDQ,50000.0
+receipt_nominated,50000.0
+fuel_retained,1000.0
+delivered,49000.0
+sales_obligation,55000.0
+delivery_shortfall,6000.0
+excess_supply_at_receipt,10000.0

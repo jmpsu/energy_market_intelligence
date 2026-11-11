@@ -1,0 +1,14 @@
+seq,trade_id,event,expected,accepted
+1,TR001,captured,captured,True
+2,TR002,captured,captured,True
+3,TR001,confirmed,confirmed,True
+4,TR003,captured,captured,True
+5,TR001,scheduled,scheduled,True
+6,TR002,scheduled,confirmed,False
+7,TR001,delivered,delivered,True
+8,TR003,confirmed,confirmed,True
+9,TR001,invoiced,invoiced,True
+10,TR002,confirmed,confirmed,True
+11,TR001,settled,settled,True
+12,TR003,invoiced,scheduled,False
+13,TR004,captured,captured,True

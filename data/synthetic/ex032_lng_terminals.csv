@@ -1,0 +1,4 @@
+terminal,capacity_Bcf_d,utilization,feedgas_multiplier
+Terminal_A,2.4,0.90,1.10
+Terminal_B,4.5,0.95,1.10
+Terminal_C,2.1,0.60,1.10

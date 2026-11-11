@@ -1,0 +1,11 @@
+ex091 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+total_cost_USD_per_yr: 550080000
+average_cost_USD_per_MWh: 48.422535
+Baseload_MW: 1000
+Combined_Cycle_MW: 600
+Combustion_Turbine_MW: 400
+screening_choice_by_block: Baseload>Combined_Cycle>Combustion_Turbine
+total_capacity_MW: 2000
+crossover_hours_CT_vs_CC: 2000
+crossover_hours_CC_vs_Baseload: 8181.818182
+NOTE: Greenfield, single year, no reserve margin, no existing fleet, no renewables or storage, no lumpiness: the textbook screening-curve problem that capacity-expansion tools generalise.

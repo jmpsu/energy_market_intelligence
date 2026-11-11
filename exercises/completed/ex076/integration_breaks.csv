@@ -1,0 +1,3 @@
+trade_id,commodity,location,break_type
+TR002,Natural_Gas,Algonquin,no_curated_price_for_location
+TR004,Propane,Mont_Belvieu,no_curated_price_for_location

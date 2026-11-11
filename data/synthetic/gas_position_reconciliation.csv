@@ -1,0 +1,6 @@
+trade_id,counterparty,location,contracted_MMBtu,scheduled_MMBtu,delivered_MMBtu,contract_price_USD_per_MMBtu,settlement_price_USD_per_MMBtu
+T001,Producer_A,Henry_Hub,100000,100000,98000,3.20,3.25
+T002,Producer_B,Waha,80000,75000,70000,1.10,-0.40
+T003,Utility_A,Algonquin,60000,60000,62000,8.50,10.25
+T004,Utility_B,Dawn,50000,50000,48000,2.80,3.10
+T005,Trader_A,Henry_Hub,40000,40000,40000,3.15,3.25

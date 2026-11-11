@@ -1,0 +1,5 @@
+parameter,value,unit
+inlet_Mcf_per_d,200000,Mcf_per_day
+gas_price,3.25,USD_per_MMBtu
+transport_frac_fee,0.08,USD_per_gallon
+price_date,2026-01-05,date

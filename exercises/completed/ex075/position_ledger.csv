@@ -1,0 +1,6 @@
+trade_id,counterparty,location,contracted_MMBtu,scheduled_MMBtu,delivered_MMBtu,contract_price_USD_per_MMBtu,settlement_price_USD_per_MMBtu,side,contract_vs_scheduled_MMBtu,scheduled_vs_delivered_MMBtu,delivery_imbalance_pct,mtm_USD,delivered_value_USD,signed_physical_MMBtu,exception
+T001,Producer_A,Henry_Hub,100000,100000,98000,3.2,3.25,BUY,0,2000,2.0,4999.999999999982,318500.0,98000,True
+T002,Producer_B,Waha,80000,75000,70000,1.1,-0.4,BUY,5000,5000,6.666666666666667,-120000.0,-28000.0,70000,True
+T003,Utility_A,Algonquin,60000,60000,62000,8.5,10.25,SELL,0,-2000,-3.3333333333333335,-105000.0,635500.0,-62000,True
+T004,Utility_B,Dawn,50000,50000,48000,2.8,3.1,SELL,0,2000,4.0,-15000.000000000013,148800.0,-48000,True
+T005,Trader_A,Henry_Hub,40000,40000,40000,3.15,3.25,BUY,0,0,0.0,4000.0000000000036,130000.0,40000,False

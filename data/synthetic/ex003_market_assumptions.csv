@@ -1,0 +1,3 @@
+assumption,value,unit,description
+heat_content_mmbtu_per_mcf,1.037,MMBtu/Mcf,Synthetic average natural gas heat-content assumption
+flat_commodity_price_usd_per_mmbtu,3.25,USD/MMBtu,Synthetic constant commodity price for illustrative value calculations

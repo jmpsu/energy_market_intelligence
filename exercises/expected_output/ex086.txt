@@ -1,0 +1,14 @@
+ex086 | SYNTHETIC HYPOTHETICAL DATA - not historical market data
+basis_pnl_USD: -30000
+price_pnl_USD: 90000
+time_pnl_USD: -1200
+volatility_pnl_USD: -30000
+volume_pnl_USD: -2500
+explained_pnl_USD: 26300
+actual_pnl_USD: 27500
+unexplained_USD: 1200
+unexplained_pct_of_actual: 4.363636
+within_threshold: True
+largest_factor: henry_hub_delta
+gross_factor_pnl_USD: 153700
+NOTE: First-order (delta, vega, theta) explain: the residual holds gamma, cross effects, new deals and data errors. A small net P&L can hide large offsetting factor P&Ls (gross 151,700).

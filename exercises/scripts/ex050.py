@@ -1,0 +1,9 @@
+"""EX-050 Ancillary services: reserve requirements from load, and a generator's choice between energy and reserves by opportunity cost."""
+from common import *
+def run(load_MW=5000, energy_price=40.0, unit_cost=30.0, capacity_MW=200, reg_price=12.0, spin_price=6.0, reg_capability_MW=20, spin_capability_MW=40, reg_pct=1.0, spin_pct=3.0):
+    margin = energy_price - unit_cost; opts = {"all_energy": (capacity_MW, 0, 0), "energy_plus_regulation": (capacity_MW - reg_capability_MW, reg_capability_MW, 0), "energy_plus_spin": (capacity_MW - spin_capability_MW, 0, spin_capability_MW), "energy_plus_both": (capacity_MW - reg_capability_MW - spin_capability_MW, reg_capability_MW, spin_capability_MW)}
+    t = pd.DataFrame([{"option": k, "energy_MW": e, "regulation_MW": g, "spin_MW": s, "margin_USD_per_h": e * margin + g * reg_price + s * spin_price} for k, (e, g, s) in opts.items()]); best = t.loc[t.margin_USD_per_h.idxmax()]
+    r = {"regulation_requirement_MW": load_MW * reg_pct / 100, "spin_requirement_MW": load_MW * spin_pct / 100, "energy_margin_USD_per_MWh": margin} | {f"{x.option}_USD_per_h": x.margin_USD_per_h for x in t.itertuples()} | {"best_option": best.option, "offer_regulation": bool(reg_price > margin), "offer_spin": bool(spin_price > margin),
+         "ancillary_share_of_best_margin_pct": float((best.regulation_MW * reg_price + best.spin_MW * spin_price) / best.margin_USD_per_h * 100), "system_ancillary_cost_USD_per_h": load_MW * reg_pct / 100 * reg_price + load_MW * spin_pct / 100 * spin_price}
+    return finish("ex050", r, {"offer_options": t}, ["A MW held as reserve gives up the energy margin: offer reserve only when its price exceeds that opportunity cost. Requirement percentages and prices synthetic; no deployment energy or performance payments."])
+if __name__ == "__main__": run()
