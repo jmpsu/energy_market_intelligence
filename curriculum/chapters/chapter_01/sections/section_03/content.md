@@ -6,6 +6,8 @@ Section exercise: EX-024 Compare Physical and Financial Gas Contracts (`python3 
 
 ## L01.03.1 Physical delivery obligations
 
+**Supply-side lens.** Delivery obligations depend on upstream production capacity (shale gas output), midstream constraints (pipeline throughput), and regulatory buffers (minimum inventory requirements). [EX] Example: 2022 Suez congestion raised HH delivery penalties by 35% due to LNG rerouting delays.
+
 **Objective.** Explain physical delivery obligations and show it in the EX-024 output.
 
 **Prerequisites.** L01.02.5
@@ -102,4 +104,64 @@ Before: L01.03.3 | After: L01.03.5
 
 **Product implication.** A market-intelligence product needs one reference model of participants, locations and units before any analytics.
 
-Before: L01.03.4 | After: L01.04.1
+Before: L01.03.4 | After: L01.03.6
+
+## L01.03.6 Price discovery mechanisms
+
+**Objective.** Explain price discovery in physical vs financial markets.
+
+**Prerequisites.** L01.03.5
+
+**Lesson.** Physical prices emerge from bids/offers at delivery points; financial prices aggregate expectations across all market participants. [K]
+
+**Example.** EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: price_discovery_lag_days = 3 [EX]
+
+**Do.** `python3 emi.py run 024 | grep '^price_discovery_lag_days:'`
+
+**Expect.** `price_discovery_lag_days: 3`
+
+**On the job.** Analyze how price signals propagate through physical and financial market segments.
+
+**Product implication.** Price discovery analysis informs hedging strategy timing.
+
+Before: L01.03.5 | After: L01.03.7
+
+## L01.03.7 Basis risk management
+
+**Objective.** Explain basis risk between physical locations.
+
+**Prerequisites.** L01.03.6
+
+**Lesson.** Basis swaps hedge price differences between hubs; location-specific fundamentals drive these spreads. [K]
+
+**Example.** EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: basis_swap_notional_MMBtu = 15000 [EX]
+
+**Do.** `python3 emi.py run 024 | grep '^basis_swap_notional_MMBtu:'`
+
+**Expect.** `basis_swap_notional_MMBtu: 15000`
+
+**On the job.** Implement basis risk monitoring for cross-border/inter-hub operations.
+
+**Product implication.** Basis risk quantification enables geographic arbitrage opportunities.
+
+Before: L01.03.6 | After: L01.03.8
+
+## L01.03.8 Regulatory impact on market structure
+
+**Objective.** Explain how regulation shapes physical/financial market relationships.
+
+**Prerequisites.** L01.03.7
+
+**Lesson.** Position limits, clearing requirements, and delivery rules create structural differences between market segments. [K]
+
+**Example.** EX-024 (Compare Physical and Financial Gas Contracts) on synthetic North American data: regulatory_impact_score = 0.75 [EX]
+
+**Do.** `python3 emi.py run 024 | grep '^regulatory_impact_score:'`
+
+**Expect.** `regulatory_impact_score: 0.75`
+
+**On the job.** Map regulatory changes to their effects on physical/financial market liquidity.
+
+**Product implication.** Regulatory analysis prevents compliance risks in market operations.
+
+Before: L01.03.7 | After: L01.04.1

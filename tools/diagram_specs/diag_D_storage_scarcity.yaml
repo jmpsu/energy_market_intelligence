@@ -1,0 +1,13 @@
+id: D
+title: Storage Scarcity
+axes: {x: 'Quantity (Bcf/d)', y: 'Price ($/MMBtu)'}
+curves:
+  - {id: S0, type: supply, style: dashed, label: 'S₀'}
+  - {id: S1, type: supply, style: solid, label: 'S₁', shift: left}
+  - {id: D, type: demand, style: solid, label: 'D'}
+arrows: [{from: S0, to: S1, label: 'Supply ↓'}]
+equilibrium:
+  - {curves: [S0, D], style: hollow, label: 'P₀, Q₀'}
+  - {curves: [S1, D], style: filled, label: 'P₁, Q₁'}
+labels: [{text: 'Illustrative relationship', position: bottom-right}]
+constraints: {no_numeric_ticks: true, no_legends: true, no_clutter: true}

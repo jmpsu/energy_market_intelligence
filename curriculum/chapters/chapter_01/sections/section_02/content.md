@@ -102,4 +102,64 @@ Before: L01.02.3 | After: L01.02.5
 
 **Product implication.** A market-intelligence product needs one reference model of participants, locations and units before any analytics.
 
-Before: L01.02.4 | After: L01.03.1
+Before: L01.02.4 | After: L01.02.6
+
+## L01.02.6 Regulatory frameworks and compliance
+
+**Objective.** Explain regulatory frameworks governing market participants.
+
+**Prerequisites.** L01.02.5
+
+**Lesson.** FERC, state regulators, and international bodies enforce rules on market conduct, pricing, and operational standards. [K]
+
+**Example.** EX-002 (Identify Market Participants) on synthetic North American data: compliance_entities = FERC,State_Regulators [EX]
+
+**Do.** `python3 emi.py run 002 | grep '^compliance_entities:'`
+
+**Expect.** `compliance_entities: FERC,State_Regulators`
+
+**On the job.** Map regulatory requirements to each participant type in your system.
+
+**Product implication.** Compliance data is essential for risk management and audit readiness.
+
+Before: L01.02.5 | After: L01.02.7
+
+## L01.02.7 Data management and integration
+
+**Objective.** Explain data management needs for participant tracking.
+
+**Prerequisites.** L01.02.6
+
+**Lesson.** Participant data must be integrated with transaction, contract, and operational datasets. [K]
+
+**Example.** EX-002 (Identify Market Participants) on synthetic North American data: data_integrations = 4 [EX]
+
+**Do.** `python3 emi.py run 002 | grep '^data_integrations:'`
+
+**Expect.** `data_integrations: 4`
+
+**On the job.** Design data pipelines connecting participant databases to analytics systems.
+
+**Product implication.** Integrated data enables comprehensive market analysis.
+
+Before: L01.02.6 | After: L01.02.8
+
+## L01.02.8 Risk mitigation strategies
+
+**Objective.** Explain risk mitigation strategies for market participants.
+
+**Prerequisites.** L01.02.7
+
+**Lesson.** Hedging, diversification, and contractual safeguards reduce exposure to price, credit, and operational risks. [K]
+
+**Example.** EX-002 (Identify Market Participants) on synthetic North American data: risk_mitigation_tools = Futures_Options,Swaps,Netting_Agreements [EX]
+
+**Do.** `python3 emi.py run 002 | grep '^risk_mitigation_tools:'`
+
+**Expect.** `risk_mitigation_tools: Futures_Options,Swaps,Netting_Agreements`
+
+**On the job.** Document risk management practices for each participant type.
+
+**Product implication.** Risk profiles inform product design and pricing models.
+
+Before: L01.02.7 | After: L01.03.1

@@ -1,0 +1,9 @@
+id: T
+title: Adoption Curve
+axes: {x: 'Time', y: 'Adoption Rate'}
+curves:
+  - {id: A, type: adoption, style: solid, label: 'Adoption Curve'}
+arrows: []
+equilibrium: []
+labels: [{text: 'Illustrative relationship', position: bottom-right}]
+constraints: {no_numeric_ticks: true, no_legends: true, no_clutter: true}

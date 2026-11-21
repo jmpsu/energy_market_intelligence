@@ -1,0 +1,9 @@
+id: F
+title: Forward Curve
+axes: {x: 'Time', y: 'Price ($/MMBtu)'}
+curves:
+  - {id: F, type: forward, style: solid, label: 'Forward Curve'}
+arrows: []
+equilibrium: []
+labels: [{text: 'Illustrative relationship', position: bottom-right}]
+constraints: {no_numeric_ticks: true, no_legends: true, no_clutter: true}

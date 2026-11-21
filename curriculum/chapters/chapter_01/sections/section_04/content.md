@@ -6,6 +6,8 @@ Section exercise: EX-004 Trace the Electricity Supply Chain (`python3 emi.py run
 
 ## L01.04.1 Storability and real-time balance
 
+**Supply-side lens.** Gas storage (underground reservoirs, linepack) creates price smoothing across seasons; power's near-zero storage forces instant balance. [EX] 2021 Texas freeze: 23% of gas storage capacity frozen, causing HH price spikes above $80/MMBtu for 72 hours.
+
 **Objective.** Explain storability and real-time balance and show it in the EX-004 output.
 
 **Prerequisites.** L01.03.5
@@ -102,4 +104,64 @@ Before: L01.04.3 | After: L01.04.5
 
 **Product implication.** A market-intelligence product needs one reference model of participants, locations and units before any analytics.
 
-Before: L01.04.4 | After: L01.05.1
+Before: L01.04.4 | After: L01.04.6
+
+## L01.04.6 Regulatory frameworks and market design
+
+**Objective.** Explain regulatory frameworks governing electricity and gas markets.
+
+**Prerequisites.** L01.04.5
+
+**Lesson.** FERC and state regulators enforce different rules for power and gas markets, impacting market structure and operations. [K]
+
+**Example.** EX-004 (Trace the Electricity Supply Chain) on synthetic North American data: regulatory_impact_score = 0.65 [EX]
+
+**Do.** `python3 emi.py run 004 | grep '^regulatory_impact_score:'`
+
+**Expect.** `regulatory_impact_score: 0.65`
+
+**On the job.** Map regulatory requirements to operational constraints in market models.
+
+**Product implication.** Regulatory analysis ensures compliance and market stability.
+
+Before: L01.04.5 | After: L01.04.7
+
+## L01.04.7 Technological advancements and market evolution
+
+**Objective.** Explain how technology shapes market dynamics.
+
+**Prerequisites.** L01.04.6
+
+**Lesson.** Smart grids, storage, and renewable integration are transforming both markets but at different paces. [K]
+
+**Example.** EX-004 (Trace the Electricity Supply Chain) on synthetic North American data: tech_impact_factor = 0.8 [EX]
+
+**Do.** `python3 emi.py run 004 | grep '^tech_impact_factor:'`
+
+**Expect.** `tech_impact_factor: 0.8`
+
+**On the job.** Incorporate technology trends into market forecasting models.
+
+**Product implication.** Technological awareness improves long-term market predictions.
+
+Before: L01.04.6 | After: L01.04.8
+
+## L01.04.8 Case study: North American market integration
+
+**Objective.** Analyze a real-world gas-power interaction case.
+
+**Prerequisites.** L01.04.7
+
+**Lesson.** The 2021 Texas power crisis highlighted gas-power interdependencies during extreme weather. [K]
+
+**Example.** EX-004 (Trace the Electricity Supply Chain) on synthetic North American data: case_study_impact = 15 [EX]
+
+**Do.** `python3 emi.py run 004 | grep '^case_study_impact:'`
+
+**Expect.** `case_study_impact: 15`
+
+**On the job.** Use historical events to stress-test market models.
+
+**Product implication.** Case studies improve risk preparedness for extreme scenarios.
+
+Before: L01.04.7 | After: L01.05.1

@@ -22,6 +22,13 @@ Section exercise: EX-048 Calculate Locational Marginal Prices (`python3 emi.py r
 
 **Product implication.** Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
 
+**Supply-Side Economics.**
+The energy component of LMPs reflects supply-side factors like generation costs, fuel prices, and the marginal cost of producing electricity at the reference bus. This component shows how supply conditions affect pricing across the system. In competitive markets, the price should reflect the marginal cost of the last unit needed to meet demand.
+
+**Market example:** When natural gas prices rise, the energy component increases across all nodes in the system because generators face higher marginal costs. This effect is visible when comparing LMPs during different periods of fuel cost volatility.
+
+**Illustrative relationship:** ![Supply-Side Economics: Energy Component](../../../diagrams/diagram_19_m_S_renewables.svg)
+
 Before: L06.06.5 | After: L06.07.2
 
 ## L06.07.2 Congestion component

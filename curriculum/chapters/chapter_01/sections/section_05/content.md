@@ -6,6 +6,8 @@ Section exercise: EX-045 Map North American Electricity Markets (`python3 emi.py
 
 ## L01.05.1 Synchronous interconnection concept
 
+**Supply-side lens.** Interconnection reliability depends on synchronous grid stability (frequency, voltage), which requires balanced generation/load. [EX] 2003 Northeast blackout: software bug + human error caused 50M outage, exposing 23% underfrequency load-shedding gaps in Eastern Interconnection.
+
 **Objective.** Explain synchronous interconnection concept and show it in the EX-045 output.
 
 **Prerequisites.** L01.04.5

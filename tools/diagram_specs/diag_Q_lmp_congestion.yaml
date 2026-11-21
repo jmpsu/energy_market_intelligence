@@ -1,0 +1,11 @@
+id: Q
+title: LMP Congestion
+axes: {x: 'Quantity (Bcf/d)', y: 'Price ($/MMBtu)'}
+curves:
+  - {id: S, type: supply, style: dashed, label: 'S'}
+  - {id: D, type: demand, style: solid, label: 'D'}
+arrows: []
+equilibrium:
+  - {curves: [S, D], style: filled, label: 'P, Q'}
+labels: [{text: 'Illustrative relationship', position: bottom-right}]
+constraints: {no_numeric_ticks: true, no_legends: true, no_clutter: true}

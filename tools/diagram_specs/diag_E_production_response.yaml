@@ -1,0 +1,13 @@
+id: E
+title: Production Response
+axes: {x: 'Quantity (Bcf/d)', y: 'Price ($/MMBtu)'}
+curves:
+  - {id: S, type: supply, style: dashed, label: 'S'}
+  - {id: D0, type: demand, style: solid, label: 'D₀'}
+  - {id: D1, type: demand, style: solid, label: 'D₁', shift: left}
+arrows: [{from: D0, to: D1, label: 'Demand ↓'}]
+equilibrium:
+  - {curves: [S, D0], style: hollow, label: 'P₀, Q₀'}
+  - {curves: [S, D1], style: filled, label: 'P₁, Q₁'}
+labels: [{text: 'Illustrative relationship', position: bottom-right}]
+constraints: {no_numeric_ticks: true, no_legends: true, no_clutter: true}

@@ -1,0 +1,9 @@
+id: V
+title: Value Effort
+axes: {x: 'Effort', y: 'Value'}
+curves:
+  - {id: V, type: value, style: solid, label: 'Value Curve'}
+arrows: []
+equilibrium: []
+labels: [{text: 'Illustrative relationship', position: bottom-right}]
+constraints: {no_numeric_ticks: true, no_legends: true, no_clutter: true}

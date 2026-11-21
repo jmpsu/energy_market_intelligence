@@ -6,6 +6,8 @@ Section exercise: EX-046 Compare ISO/RTO and Bilateral Markets (`python3 emi.py 
 
 ## L01.07.1 Bilateral contracting mechanics
 
+**Supply-side lens.** Bilateral deals depend on generator availability and transmission capacity: constrained supplies raise counterparty risk. [EX] 2003 Northeast blackout: 23% underfrequency load-shedding exposed bilateral contracts' vulnerability to grid instability.
+
 **Objective.** Explain bilateral contracting mechanics and show it in the EX-046 output.
 
 **Prerequisites.** L01.06.5

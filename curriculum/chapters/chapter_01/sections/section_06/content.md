@@ -6,6 +6,8 @@ Section exercise: EX-045 Map North American Electricity Markets (`python3 emi.py
 
 ## L01.06.1 RTO and ISO functions
 
+**Supply-side lens.** RTOs/ISOs manage physical grid constraints (line capacities, frequency) that directly impact supply reliability. [EX] 2003 Northeast blackout: 50M outage due to 23% underfrequency load-shedding gaps in Eastern Interconnection grid stability.
+
 **Objective.** Explain rTO and ISO functions and show it in the EX-045 output.
 
 **Prerequisites.** L01.05.5

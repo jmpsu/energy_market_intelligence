@@ -22,6 +22,21 @@ Section exercise: EX-045 Map North American Electricity Markets (`python3 emi.py
 
 **Product implication.** Power-market products are judged on nodal price accuracy and on explaining congestion, not on averages.
 
+**Supply-Side Economics.**
+The structure of electricity markets is determined by supply-side factors like generation capacity, transmission constraints, and the physical characteristics of power systems. In restructured markets, competitive forces drive the allocation of resources to meet demand efficiently. In regulated markets, utilities are often incentivized to maintain sufficient capacity to serve customers reliably.
+
+**Market example:** In ERCOT, where there is significant market competition, price signals guide investment in new generation and transmission infrastructure. The system operator can observe how changes in supply (like a power plant outage) or demand (like a heat wave) affect prices across different nodes of the grid.
+
+**Illustrative relationship:** ![Supply-Side Economics: Market Structure](../../../diagrams/diagram_14_m_N_merit_order.svg)
+
+**Predict the shift.** If ERCOT experiences an increase in wind generation capacity, which curve would shift and in what direction?
+* A) Demand curve shifts left (decrease in demand)
+* B) Supply curve shifts right (increase in supply)
+* C) Both curves shift
+* D) Neither curve shifts
+
+Answer: B) Supply curve shifts right (increase in supply)
+
 Before: L05.10.5 | After: L06.01.2
 
 ## L06.01.2 Wholesale vs retail layers

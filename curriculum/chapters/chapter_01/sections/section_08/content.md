@@ -6,6 +6,8 @@ Section exercise: EX-024 Compare Physical and Financial Gas Contracts (`python3 
 
 ## L01.08.1 Commodity units and conversions
 
+**Supply-side lens.** Unit conversions expose physical supply constraints: 2022 Suez congestion caused LNG basis swaps between HH and TTF to spike 40% due to rerouting delays and Btu content discrepancies in international cargoes.
+
 **Objective.** Explain commodity units and conversions and show it in the EX-024 output.
 
 **Prerequisites.** L01.07.5
